@@ -1,7 +1,7 @@
 import styles from "@/styles/style";
 import { stats } from "@/constants";
-const Stats: React.FC = () => (
-  <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}>
+const About: React.FC = () => (
+  <section id="about" className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}>
     {stats.map((stat) => (
       <div
         key={stat.id}
@@ -18,4 +18,4 @@ const Stats: React.FC = () => (
   </section>
 );
 
-export default Stats;
+export default About;

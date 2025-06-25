@@ -1,9 +1,9 @@
 import { feedback } from "@/constants";
 import styles from "@/styles/style";
 import FeedbackCard from "./FeedbackCard";
-const Testimonials: React.FC = () => (
+const Gallery: React.FC = () => (
   <section
-    id="clients"
+    id="gallery"
     className={`${styles.paddingY} ${styles.flexCenter} flex-col relative`}
   >
     <div className="absolute z-[0] w-[60%] h-[60%] -right-[50%] rounded-full blue__gradient" />
@@ -26,4 +26,4 @@ const Testimonials: React.FC = () => (
   </section>
 );
 
-export default Testimonials;
+export default Gallery;

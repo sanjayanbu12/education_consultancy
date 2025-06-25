@@ -24,8 +24,8 @@ const FeaturesCard: React.FC<FeatredCardProps> = ({ icon, title, content, index 
     </div>
   </div>
 );
-const Business: React.FC = () => (
-  <section id="features" className={`${layout.section}`}>
+const Services: React.FC = () => (
+  <section id="services" className={`${layout.section}`}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
         You do the business, <br className="sm:block hidden" />
@@ -46,4 +46,4 @@ const Business: React.FC = () => (
   </section>
 );
 
-export default Business;
+export default Services;

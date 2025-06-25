@@ -1,8 +1,8 @@
 import { apple, bill, google } from "@/public/assets";
 import styles, { layout } from "@/styles/style";
 import Image from "next/image";
-const Billing: React.FC = () => (
-  <section id="product" className={layout.sectionReverse}>
+const Awards: React.FC = () => (
+  <section id="awards" className={layout.sectionReverse}>
     <div className={layout.sectionImgReverse}>
       <Image
         src={bill}
@@ -38,4 +38,4 @@ const Billing: React.FC = () => (
   </section>
 );
 
-export default Billing;
+export default Awards;

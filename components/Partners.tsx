@@ -2,8 +2,8 @@ import { card } from "@/public/assets";
 import styles, { layout } from "@/styles/style";
 import Button from "./Button";
 import Image from "next/image";
-const CardDeal: React.FC = () => (
-  <section className={layout.section}>
+const Partners: React.FC = () => (
+  <section className={layout.section} id="partners">
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
         Find a better card deal <br className="sm:block hidden" /> in few easy
@@ -21,4 +21,4 @@ const CardDeal: React.FC = () => (
   </section>
 );
 
-export default CardDeal;
+export default Partners;
