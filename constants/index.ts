@@ -42,11 +42,11 @@ export const navLinks = [
   },
   {
     id: "how-we-work",
-    title: "How we work"
+    title: "How We Work"
   },
    {
     id: "contact-us",
-    title: "Contact us"
+    title: "Contact Us"
   }
  
 ];
