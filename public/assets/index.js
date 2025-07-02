@@ -24,6 +24,9 @@ import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
 import awards from "./awards.svg"
+import consultancy from "./consultancy.png"
+import graduation from "./graduation.png"
+import college from "./college.png"
 
 export {
   airbnb,
@@ -51,5 +54,8 @@ export {
   people01,
   people02,
   people03,
-  awards
+  awards,
+  consultancy,
+  graduation,
+  college
 };

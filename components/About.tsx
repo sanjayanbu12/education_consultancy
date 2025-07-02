@@ -1,5 +1,5 @@
 import styles, { layout } from "@/styles/style";
-import { graduationCap, target, users, awards, lightbulb, handshake } from "@/public/assets";
+import { graduation,college, target, users, awards,consultancy, lightbulb, handshake } from "@/public/assets";
 import Button from "./Button";
 import Image from "next/image";
 
@@ -12,7 +12,7 @@ const consultancyStats = [
   },
   {
     id: "stat-2", 
-    title: "College Placements",
+    title: " Placements",
     value: "95%",
   },
   {
@@ -31,13 +31,13 @@ const consultancyStats = [
 const expertiseAreas = [
   {
     id: "expertise-1",
-    icon: graduationCap,
+    icon: graduation,
     title: "Career Counseling",
     content: "Personalized career guidance based on aptitude tests, interests, and market trends to help students choose the right path.",
   },
   {
     id: "expertise-2", 
-    icon: target,
+    icon: college,
     title: "College Selection",
     content: "Strategic college selection process matching student profiles with the best-fit institutions globally.",
   },
@@ -77,7 +77,7 @@ const ExpertiseCard: React.FC<ExpertiseCardProps> = ({ icon, title, content, ind
     <div
       className={`w-[64px] h-[64px] rounded-full bg-dimBlue ${styles.flexCenter}`}
     >
-      <Image src={icon} alt="icon" className="w-[50%] h-[50%] object-contain" />
+      <Image src={icon} alt="icon" className="w-[80%] h-[80%] object-contain" />
     </div>
     <div className="flex-1 flex flex-col ml-3">
       <h4 className="font-poppins font-semibold text-white text-[18px] leading-[24px]">
@@ -96,14 +96,7 @@ const About: React.FC = () => (
     {/* Hero About Section */}
     <section id="about" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
-        <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
-          
-          <Image src={awards} alt="awards" className="w-[32px] h-[32px]" />
-          <p className={`${styles.paragraph} ml-2`}>
-            <span className="text-white">Trusted by 2500+</span> Students Worldwide
-          </p>
-        </div>
-
+        
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
             Shaping
@@ -123,7 +116,7 @@ const About: React.FC = () => (
 
       <div className={`${styles.flexCenter} flex-1 flex md:my-0 my-10 relative`}>
         <Image
-          src={graduationCap}
+          src={consultancy}
           alt="education consultancy"
           className="w-[100%] h-[100%] relative z-[5]"
         />
