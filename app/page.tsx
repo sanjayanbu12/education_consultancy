@@ -5,7 +5,7 @@ import Awards from "@components/Awards";
 const Home: React.FC = () => {
   return (
     <>
-      <div className="bg-primary w-full overflow-hidden">
+      <div className="bg-primary w-full overflow-hidden " id="home">
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
             <Navbar />
