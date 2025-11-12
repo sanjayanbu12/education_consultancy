@@ -1,5 +1,5 @@
 import styles, { layout } from "@/styles/style";
-import { graduation,college, target, users, awards,consultancy, lightbulb, handshake } from "@/public/assets";
+import { graduation,college,consultancy } from "@/public/assets";
 import Button from "./Button";
 import Image from "next/image";
 
