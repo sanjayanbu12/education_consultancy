@@ -31,7 +31,7 @@ const Hero: React.FC = () => (
         Choices.
       </h1>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-       Finished school is only the start. With expert support, career mapping, and global education guidance, we bridge the gap between classroom learning and real-world success.
+       Finishing school is only the start. With expert support, career mapping, and global education guidance, we bridge the gap between classroom learning and real-world success.
       </p>
     </div>
    
