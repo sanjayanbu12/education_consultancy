@@ -17,7 +17,7 @@ function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
   )
 }
 
-export default function LandingPage() {
+export default function HeroSection() {
   return (
     <div className="w-full min-h-screen relative bg-gradient-to-b from-[#f0f7ff] to-white overflow-x-hidden flex flex-col items-center">
 
@@ -89,10 +89,12 @@ export default function LandingPage() {
                   {/* <Badge icon={<GraduationCap className="w-4 h-4" />} text="Free Consulting & Admission Assistance" /> */}
 
                   {/* UPDATED HERO HEADING */}
-                  <h1 className="text-[#1a365d] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight font-serif">
+                  <h1 className="text-[#1a365d] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] font-serif">
                     Shape Your Future With the <br />
                     <span className="text-[#0E74D2]">Right College & the Right Course</span> <br />
+                    {/* <span className="text-[#1a365d]">Guidance • Support • Success</span> */}
                   </h1>
+
 
                   {/* UPDATED HERO SUBTEXT */}
                   <p className="text-[#4a5568] text-base sm:text-lg leading-relaxed max-w-[550px]">

@@ -1,6 +1,7 @@
 "use client"
 
 import HeroSection from "@/components/hero-section"
+import AboutPage from "@/components/AboutPage"
 import StatsBentoSection from "@/components/stats-bento-section"
 import ServicesGridSection from "@/components/services-grid-section"
 import CoursePathwaySection from "@/components/course-pathway-section"
@@ -18,6 +19,7 @@ export default function LandingPage() {
   return (
     <div className="w-full min-h-screen bg-white overflow-x-hidden">
       <HeroSection />
+      <AboutPage />
       <StatsBentoSection />
       <ServicesGridSection />
       <CoursePathwaySection />
