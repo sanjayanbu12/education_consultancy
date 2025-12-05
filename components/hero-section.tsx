@@ -1,202 +1,185 @@
 "use client"
 
-import { Phone, Mail, Menu, X, GraduationCap, Clock, Users, Award } from "lucide-react"
-import { useState } from "react"
+import type React from "react"
+import { Phone, Mail, GraduationCap, Users, Award, Clock } from "lucide-react"
 
-export default function HeroSection() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
+// Reusable Badge Component
+function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-[#0a1628] via-[#0d2847] to-[#0E74D2]">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+    <div className="px-4 py-2 bg-white shadow-[0px_0px_0px_4px_rgba(14,116,210,0.08)] overflow-hidden rounded-full flex justify-start items-center gap-2 border border-[rgba(14,116,210,0.15)]">
+      <div className="w-4 h-4 flex items-center justify-center text-[#0E74D2]">
+        {icon}
       </div>
+      <div className="text-center flex justify-center flex-col text-[#0E74D2] text-xs font-medium font-sans">
+        {text}
+      </div>
+    </div>
+  )
+}
 
-      {/* Navigation */}
-      <nav className="relative z-50 w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <div className="flex items-center gap-3">
-              <img
-                src="/images/3rd-ed-logo-final-removebg-preview.png"
-                alt="AL-HUDA Logo"
-                className="w-12 h-12 object-contain"
-              />
-              <div className="hidden sm:block">
-                <div className="text-white font-bold text-lg">AL-HUDA</div>
-                <div className="text-blue-200 text-xs">Educational Consultancy</div>
-              </div>
-            </div>
+export default function LandingPage() {
+  return (
+    <div className="w-full min-h-screen relative bg-gradient-to-b from-[#f0f7ff] to-white overflow-x-hidden flex flex-col items-center">
 
-            {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#services" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
-                Services
-              </a>
-              <a href="#courses" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
-                Courses
-              </a>
-              <a href="#colleges" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
-                Colleges
-              </a>
-              <a href="#contact" className="text-white/80 hover:text-white text-sm font-medium transition-colors">
-                Contact
-              </a>
-            </div>
+      {/* Wrapper Container */}
+      <div className="relative flex flex-col items-center w-full">
 
-            {/* CTA */}
-            <div className="hidden md:flex items-center gap-4">
-              <a href="tel:9578599785" className="flex items-center gap-2 text-white text-sm">
-                <Phone className="w-4 h-4" />
-                9578599785
-              </a>
-              <a
-                href="#contact"
-                className="px-5 py-2.5 bg-white text-[#0E74D2] rounded-full text-sm font-semibold hover:bg-blue-50 transition-colors"
-              >
-                Get Started
-              </a>
-            </div>
+        {/* Main container */}
+        <div className="w-full max-w-none px-4 sm:px-6 md:px-8 lg:px-0 lg:max-w-[1200px] relative flex flex-col items-start">
 
-            {/* Mobile Menu Button */}
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
+          {/* Left vertical line */}
+          <div className="w-[1px] h-full absolute left-4 sm:left-6 md:left-8 lg:left-0 top-0 bg-[rgba(14,116,210,0.08)]"></div>
 
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-[#0a1628] border-t border-white/10 p-4">
-            <div className="flex flex-col gap-4">
-              <a href="#services" className="text-white py-2">
-                Services
-              </a>
-              <a href="#courses" className="text-white py-2">
-                Courses
-              </a>
-              <a href="#colleges" className="text-white py-2">
-                Colleges
-              </a>
-              <a href="#contact" className="text-white py-2">
-                Contact
-              </a>
-              <a href="tel:9578599785" className="flex items-center gap-2 text-white py-2">
-                <Phone className="w-4 h-4" /> 9578599785
-              </a>
-            </div>
-          </div>
-        )}
-      </nav>
+          {/* Right vertical line */}
+          <div className="w-[1px] h-full absolute right-4 sm:right-6 md:right-8 lg:right-0 top-0 bg-[rgba(14,116,210,0.08)]"></div>
 
-      {/* Hero Content - Asymmetric Split Layout */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Content - 7 columns */}
-          <div className="lg:col-span-7 space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-white/90 text-sm">24/7 Admission Helpline Available</span>
-            </div>
+          <div className="self-stretch pt-[9px] flex flex-col items-center gap-4 sm:gap-6 md:gap-8 lg:gap-16 relative z-10">
 
-            {/* Headline */}
-            <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Your Journey to
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">
-                  Academic Excellence
-                </span>
-                Starts Here
-              </h1>
-              <p className="text-lg text-blue-100/80 max-w-xl leading-relaxed">
-                Expert guidance to help you discover the perfect course and institution that aligns with your academic
-                ambitions, career goals, and financial circumstances.
-              </p>
-            </div>
+            {/* ----------------- NAVIGATION ----------------- */}
+            <div className="w-full h-12 sm:h-14 md:h-16 lg:h-20 absolute left-0 top-0 flex justify-center items-center z-20 px-4 sm:px-6 md:px-8 lg:px-0">
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:9578599785"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#0E74D2] rounded-full font-semibold hover:bg-blue-50 transition-all shadow-lg shadow-white/20"
-              >
-                <Phone className="w-5 h-5" />
-                Call: 9578599785
-              </a>
-              <a
-                href="mailto:alhudaeducationalconsultant@gmail.com"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-full font-semibold border border-white/30 hover:bg-white/20 transition-all"
-              >
-                <Mail className="w-5 h-5" />
-                Email Us
-              </a>
-            </div>
+              <div className="w-full h-0 absolute left-0 top-10 border-t border-[rgba(14,116,210,0.1)]"></div>
 
-            {/* Quick Stats Row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/10">
-              {[
-                { value: "5000+", label: "Colleges", icon: <GraduationCap className="w-5 h-5" /> },
-                { value: "200+", label: "Courses", icon: <Award className="w-5 h-5" /> },
-                { value: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> },
-                { value: "10K+", label: "Students", icon: <Users className="w-5 h-5" /> },
-              ].map((stat, i) => (
-                <div key={i} className="text-center sm:text-left">
-                  <div className="flex items-center justify-center sm:justify-start gap-2 text-blue-200 mb-1">
-                    {stat.icon}
-                    <span className="text-2xl font-bold text-white">{stat.value}</span>
+              <div className="w-full max-w-[1100px] h-12 sm:h-14 py-2 px-4 bg-white/90 backdrop-blur-sm shadow-[0px_2px_8px_rgba(14,116,210,0.08)] rounded-full flex justify-between items-center border border-[rgba(14,116,210,0.1)]">
+
+                {/* Logo */}
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/images/3rd-ed-logo-final-removebg-preview.png"
+                    alt="AL-HUDA Educational Consultancy Logo"
+                    className="w-10 h-10 object-contain"
+                  />
+                  <div className="hidden sm:flex flex-col">
+                    <span className="text-[#0E74D2] text-sm sm:text-base font-bold leading-tight">AL-HUDA</span>
+                    <span className="text-[#1a365d] text-[10px] sm:text-xs font-medium leading-tight">
+                      Educational Consultancy
+                    </span>
                   </div>
-                  <div className="text-blue-200/70 text-sm">{stat.label}</div>
                 </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Right Content - 5 columns - Stacked Cards */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative space-y-4">
-              {/* Main Image Card */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="/happy-diverse-students-celebrating-graduation-with.jpg"
-                  alt="Students celebrating graduation"
-                  className="w-full h-[300px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="text-white font-semibold">Free Consulting & Admission Assistance</div>
-                  <div className="text-white/70 text-sm">No Service Charges</div>
+                {/* Nav Links */}
+                <div className="hidden md:flex items-center gap-6">
+                  <a href="#services" className="text-[#1a365d] text-sm font-medium hover:text-[#0E74D2]">Services</a>
+                  <a href="#courses" className="text-[#1a365d] text-sm font-medium hover:text-[#0E74D2]">Courses</a>
+                  <a href="#colleges" className="text-[#1a365d] text-sm font-medium hover:text-[#0E74D2]">Colleges</a>
+                  <a href="#contact" className="text-[#1a365d] text-sm font-medium hover:text-[#0E74D2]">Contact</a>
                 </div>
-              </div>
 
-              {/* Floating Cards */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20">
-                  <div className="text-3xl font-bold text-white">FREE</div>
-                  <div className="text-blue-200 text-sm">Career Counseling</div>
-                </div>
-                <div className="bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl p-4">
-                  <div className="text-3xl font-bold text-white">100%</div>
-                  <div className="text-white/90 text-sm">Guidance Support</div>
+                {/* CTA */}
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <a href="tel:9578599785" className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full">
+                    <Phone className="w-3.5 h-3.5 text-[#0E74D2]" />
+                    <span className="text-[#0E74D2] text-xs font-medium">9578599785</span>
+                  </a>
+                  <a href="#contact" className="px-4 py-2 bg-[#0E74D2] text-white text-xs font-medium rounded-full hover:bg-[#0a5ba8]">
+                    Get Started
+                  </a>
                 </div>
               </div>
             </div>
+
+            {/* ----------------- HERO SECTION ----------------- */}
+            <div className="pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-8 sm:pb-12 md:pb-16 w-full flex justify-center px-4 sm:px-6 md:px-8 lg:px-0">
+
+              <div className="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+                {/* LEFT SIDE */}
+                <div className="lg:col-span-7 flex flex-col items-start space-y-8">
+
+                  {/* <Badge icon={<GraduationCap className="w-4 h-4" />} text="Free Consulting & Admission Assistance" /> */}
+
+                  {/* UPDATED HERO HEADING */}
+                  <h1 className="text-[#1a365d] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight font-serif">
+                    Shape Your Future With the <br />
+                    <span className="text-[#0E74D2]">Right College & the Right Course</span> <br />
+                  </h1>
+
+                  {/* UPDATED HERO SUBTEXT */}
+                  <p className="text-[#4a5568] text-base sm:text-lg leading-relaxed max-w-[550px]">
+                    We guide students toward the right course and college with free, personalized
+                    counseling ensuring your academic path matches your goals and financial needs.
+                  </p>
+
+
+                  {/* OPTIONAL SUPPORTING LINE */}
+                  <p className="text-[#0E74D2] font-medium text-sm sm:text-base">
+                    Your Journey to Academic Excellence Begins With the Right Guidance.
+                  </p>
+
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:9578599785"
+                      className="flex items-center gap-2 h-12 px-8 bg-[#0E74D2] text-white rounded-full font-medium text-sm shadow-lg hover:bg-[#0a5ba8] transition-all">
+                      <Phone className="w-4 h-4" /> Call Now: 9578599785
+                    </a>
+
+                    <a href="mailto:alhudaeducationalconsultant@gmail.com"
+                      className="flex items-center gap-2 h-12 px-8 bg-white text-[#0E74D2] rounded-full font-medium text-sm border-2 border-[#0E74D2] hover:bg-[#0E74D2]/5">
+                      <Mail className="w-4 h-4" /> Email Us
+                    </a>
+                  </div>
+
+                  {/* Stats Row */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-[#0E74D2]/10 w-full">
+                    {[
+                      { value: "5000+", label: "Colleges", icon: <GraduationCap className="w-5 h-5" /> },
+                      { value: "200+", label: "Courses", icon: <Award className="w-5 h-5" /> },
+                      { value: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> },
+                      { value: "10K+", label: "Students", icon: <Users className="w-5 h-5" /> },
+                    ].map((stat, i) => (
+                      <div key={i} className="text-left">
+                        <div className="flex items-center gap-2 text-[#0E74D2] font-bold text-xl">
+                          {stat.icon} {stat.value}
+                        </div>
+                        <div className="text-[#4a5568] text-sm">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
+
+                {/* ----------------- RIGHT SIDE IMAGES ----------------- */}
+                <div className="lg:col-span-5 space-y-4">
+
+                  {/* Main Image Card */}
+                  <div className="relative rounded-3xl overflow-hidden shadow-xl">
+                    <img
+                      src="/happy-diverse-students-celebrating-graduation-with.jpg"
+                      alt="Students celebrating graduation"
+                      className="w-full h-[330px] object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <div className="font-semibold">Free Consulting & Admission Assistance</div>
+                      <div className="text-white/70 text-sm">No Service Charges</div>
+                    </div>
+                  </div>
+
+                  {/* Floating Cards */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20">
+                      <div className="text-3xl font-bold text-[#0E74D2]">FREE</div>
+                      <div className="text-gray-700 text-sm">Career Counseling</div>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl p-4 text-white">
+                      <div className="text-3xl font-bold">100%</div>
+                      <div className="text-white/90 text-sm">Guidance Support</div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
       </div>
 
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-            fill="white"
-          />
-        </svg>
-      </div>
-    </section>
+    </div>
   )
 }
