@@ -1,36 +1,35 @@
 "use client"
-import styles from "@/styles/style";
-import { Navbar, Hero,CTA, About, Services, Partners, Gallery, Howwework, Contactus } from "@/components"
-import Awards from "@components/Awards";
-const Home: React.FC = () => {
+
+import HeroSection from "@/components/hero-section"
+import StatsBentoSection from "@/components/stats-bento-section"
+import ServicesGridSection from "@/components/services-grid-section"
+import CoursePathwaySection from "@/components/course-pathway-section"
+import CourseCatalogSection from "@/components/course-catalog-section"
+import CollegeShowcaseSection from "@/components/college-showcase-section"
+import FacilitiesMarqueeSection from "@/components/facilities-marquee-section"
+import WhyUsSection from "@/components/why-us-section"
+import ProcessTimelineSection from "@/components/process-timeline-section"
+import TestimonialsGridSection from "@/components/testimonials-grid-section"
+import FAQSection from "@/components/faq-section"
+import ContactSection from "@/components/contact-section"
+import FooterSection from "@/components/footer-section"
+
+export default function LandingPage() {
   return (
-    <>
-      <div className="bg-primary w-full overflow-hidden " id="home">
-        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}>
-            <Navbar />
-          </div>
-        </div>
-        <div className={`bg-primary ${styles.flexStart}`}>
-          <div className={`${styles.boxWidth}`}>
-            <Hero />
-          </div>
-        </div>
-        <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-          <div className={`${styles.boxWidth}`}>
-            <About />
-            <Services />
-            <Partners />
-            <Awards />
-            <Gallery />
-            <Howwework />
-            {/* <CTA /> */}
-            <Contactus />
-          </div>
-        </div>
-      </div>
-    </>
+    <div className="w-full min-h-screen bg-white overflow-x-hidden">
+      <HeroSection />
+      <StatsBentoSection />
+      <ServicesGridSection />
+      <CoursePathwaySection />
+      <CourseCatalogSection />
+      <CollegeShowcaseSection />
+      <FacilitiesMarqueeSection />
+      <WhyUsSection />
+      <ProcessTimelineSection />
+      <TestimonialsGridSection />
+      <FAQSection />
+      <ContactSection />
+      <FooterSection />
+    </div>
   )
 }
-
-export default Home
