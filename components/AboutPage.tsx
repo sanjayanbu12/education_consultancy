@@ -88,14 +88,14 @@ export default function AboutPage() {
           </div>
 
           {/* Tab Content */}
-          <div className="relative min-h-[400px]">
+          <div className="relative min-h-[400px]"> 
             {activeTab === "mission" && (
               <div className="animate-[fadeIn_0.5s_ease-in-out] grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full">
+                  {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full">
                     <Compass className="w-5 h-5 text-[#0E74D2]" />
                     <span className="text-sm font-medium text-[#0E74D2]">Our Mission</span>
-                  </div>
+                  </div> */}
                   <h2 className="text-4xl font-light text-[#1a1a1a]">Guiding Your Path to Success</h2>
                   <p className="text-lg text-[#5a5a5a] leading-relaxed">
                     We exist to democratize access to quality education. Through personalized counseling, 
@@ -142,10 +142,10 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="space-y-6 lg:order-1">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full">
+                  {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full">
                     <Target className="w-5 h-5 text-[#0E74D2]" />
                     <span className="text-sm font-medium text-[#0E74D2]">Our Vision</span>
-                  </div>
+                  </div> */}
                   <h2 className="text-4xl font-light text-[#1a1a1a]">Building India's Educational Future</h2>
                   <p className="text-lg text-[#5a5a5a] leading-relaxed">
                     To become India's most trusted educational consultancy—where transparency meets excellence, 
@@ -172,10 +172,10 @@ export default function AboutPage() {
             {activeTab === "values" && (
               <div className="animate-[fadeIn_0.5s_ease-in-out]">
                 <div className="text-center mb-12">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full mb-4">
+                  {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full mb-4">
                     <HeartHandshake className="w-5 h-5 text-[#0E74D2]" />
                     <span className="text-sm font-medium text-[#0E74D2]">Our Core Values</span>
-                  </div>
+                  </div> */}
                   <h2 className="text-4xl font-light text-[#1a1a1a] mb-4">What Drives Us Every Day</h2>
                   <p className="text-lg text-[#5a5a5a] max-w-2xl mx-auto">
                     Our values aren't just words on a page—they're the foundation of every interaction, 
