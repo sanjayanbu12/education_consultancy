@@ -1,9 +1,17 @@
 "use client"
 
 import { Phone } from "lucide-react"
+import { usePathname } from "next/navigation"
 import ThemeToggle from "./theme-toggle"
 
 export default function Header() {
+  const pathname = usePathname()
+
+  // Hide header on course and course-info pages
+  if (pathname?.startsWith('/course/') || pathname?.startsWith('/course-info/')) {
+    return null
+  }
+
   return (
     <div className="w-full h-12 sm:h-14 md:h-16 lg:h-20 fixed left-0 top-0 flex justify-center items-center z-50 px-4 sm:px-6 md:px-8 lg:px-0">
 
@@ -11,7 +19,7 @@ export default function Header() {
 
       <div className="w-full max-w-[1100px] h-12 sm:h-14 py-2 px-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-[0px_2px_8px_rgba(14,116,210,0.08)] dark:shadow-[0px_2px_8px_rgba(0,0,0,0.2)] rounded-full flex justify-between items-center border border-[rgba(14,116,210,0.1)] dark:border-gray-700">
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
           <img
             src="/images/3rd-ed-logo-final-removebg-preview.png"
             alt="AL-HUDA Educational Consultancy Logo"
@@ -23,7 +31,7 @@ export default function Header() {
               Educational Consultancy
             </span>
           </div>
-        </div>
+        </a>
 
         {/* Nav Links */}
         <div className="hidden md:flex items-center gap-6">
