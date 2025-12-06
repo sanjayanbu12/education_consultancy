@@ -176,29 +176,29 @@ const collegeData = {
     ],
   },
   medical: {
-  title: "Medical Colleges (MBBS)",
-  icon: <GraduationCap className="w-5 h-5" />,
-  color: "bg-red-500",
-  colleges: [
-    { name: "Coimbatore Medical College, Coimbatore", rating: 4.6 },
-    { name: "Stanley Medical College, Chennai", rating: 4.8 },
-    { name: "Madras Medical College, Chennai", rating: 4.9 },
-    { name: "Kilpauk Medical College, Chennai", rating: 4.7 },
-    { name: "K.A.P. Viswanatham Government Medical College, Trichy", rating: 4.5 },
-    { name: "Thanjavur Medical College, Thanjavur", rating: 4.6 },
-    { name: "Government Mohan Kumaramangalam Medical College, Salem", rating: 4.5 },
-    { name: "PSG Institute of Medical Sciences & Research, Coimbatore", rating: 4.8 },
-    { name: "Karpagam Faculty of Medical Sciences & Research", rating: 4.3 },
-    { name: "SRM Medical College Hospital & Research Centre, Chennai", rating: 4.7 },
-    { name: "Saveetha Medical College, Chennai", rating: 4.6 },
-    { name: "Meenakshi Medical College Hospital & Research Institute, Kanchipuram", rating: 4.4 },
-    { name: "Chettinad Hospital & Research Institute, Kelambakkam", rating: 4.6 },
-    { name: "Sree Balaji Medical College & Hospital, Chennai", rating: 4.3 },
-    { name: "Sri Ramachandra Institute of Higher Education & Research, Chennai", rating: 4.9 },
-  ],
-},
+    title: "Medical Colleges (MBBS)",
+    icon: <GraduationCap className="w-5 h-5" />,
+    color: "bg-red-500",
+    colleges: [
+      { name: "Coimbatore Medical College, Coimbatore", rating: 4.6 },
+      { name: "Stanley Medical College, Chennai", rating: 4.8 },
+      { name: "Madras Medical College, Chennai", rating: 4.9 },
+      { name: "Kilpauk Medical College, Chennai", rating: 4.7 },
+      { name: "K.A.P. Viswanatham Government Medical College, Trichy", rating: 4.5 },
+      { name: "Thanjavur Medical College, Thanjavur", rating: 4.6 },
+      { name: "Government Mohan Kumaramangalam Medical College, Salem", rating: 4.5 },
+      { name: "PSG Institute of Medical Sciences & Research, Coimbatore", rating: 4.8 },
+      { name: "Karpagam Faculty of Medical Sciences & Research", rating: 4.3 },
+      { name: "SRM Medical College Hospital & Research Centre, Chennai", rating: 4.7 },
+      { name: "Saveetha Medical College, Chennai", rating: 4.6 },
+      { name: "Meenakshi Medical College Hospital & Research Institute, Kanchipuram", rating: 4.4 },
+      { name: "Chettinad Hospital & Research Institute, Kelambakkam", rating: 4.6 },
+      { name: "Sree Balaji Medical College & Hospital, Chennai", rating: 4.3 },
+      { name: "Sri Ramachandra Institute of Higher Education & Research, Chennai", rating: 4.9 },
+    ],
+  },
 
- health: {
+  health: {
     title: "Allied Health Sciences",
     icon: <FlaskConical className="w-5 h-5" />,
     color: "bg-green-500",
@@ -224,21 +224,21 @@ export default function CollegeShowcaseSection() {
   const [activeTab, setActiveTab] = useState<"engineering" | "arts" | "health">("engineering")
 
   return (
-    <section id="colleges" className="w-full py-24 bg-white">
+    <section id="colleges" className="w-full py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ---------- SECTION HEADER ---------- */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
-            <Building className="w-4 h-4 text-[#0E74D2]" />
-            <span className="text-[#0E74D2] text-sm font-medium">Partner Institutions</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
+            <Building className="w-4 h-4 text-[#0E74D2] dark:text-blue-400" />
+            <span className="text-[#0E74D2] dark:text-blue-400 text-sm font-medium">Partner Institutions</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">
             Top Colleges in Tamil Nadu
           </h2>
 
-          <p className="text-[#4a5568] text-lg">
+          <p className="text-[#4a5568] dark:text-gray-400 text-lg">
             Best Career Guidance for a Better Future – Partnered with Top Institutions
           </p>
         </div>
@@ -283,7 +283,7 @@ export default function CollegeShowcaseSection() {
           </div>
 
           {/* ---------- RIGHT: TAB LIST ---------- */}
-          <div className="bg-[#f8fafc] rounded-3xl p-6 border border-gray-100">
+          <div className="bg-[#f8fafc] dark:bg-gray-900 rounded-3xl p-6 border border-gray-100 dark:border-gray-800">
 
             {/* Tabs */}
             <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
@@ -291,11 +291,10 @@ export default function CollegeShowcaseSection() {
                 <button
                   key={key}
                   onClick={() => setActiveTab(key as any)}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium whitespace-nowrap transition-all ${
-                    activeTab === key
-                      ? `${data.color} text-white shadow-lg`
-                      : "bg-white text-[#4a5568] border border-gray-200"
-                  }`}
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium whitespace-nowrap transition-all ${activeTab === key
+                    ? `${data.color} text-white shadow-lg`
+                    : "bg-white dark:bg-gray-800 text-[#4a5568] dark:text-gray-300 border border-gray-200 dark:border-gray-700"
+                    }`}
                 >
                   {data.icon}
                   {data.title}
@@ -308,7 +307,7 @@ export default function CollegeShowcaseSection() {
               {collegeData[activeTab].colleges.map((college, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-4 border border-gray-100 hover:border-[#0E74D2]/30 hover:shadow-md transition-all cursor-pointer group"
+                  className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-md transition-all cursor-pointer group"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex items-start gap-3">
@@ -320,13 +319,13 @@ export default function CollegeShowcaseSection() {
                       </div>
 
                       <div>
-                        <h4 className="font-medium text-[#1a365d] group-hover:text-[#0E74D2] transition-colors text-sm">
+                        <h4 className="font-medium text-[#1a365d] dark:text-gray-200 group-hover:text-[#0E74D2] dark:group-hover:text-blue-400 transition-colors text-sm">
                           {college.name}
                         </h4>
 
                         <div className="flex items-center gap-1 mt-1">
                           <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
-                          <span className="text-xs text-[#4a5568]">{college.rating}</span>
+                          <span className="text-xs text-[#4a5568] dark:text-gray-400">{college.rating}</span>
                         </div>
                       </div>
                     </div>

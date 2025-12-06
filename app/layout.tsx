@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import Header from "@/components/header"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "AL-HUDA Educational Consultancy Services",
@@ -49,8 +50,10 @@ export default function RootLayout({
       </head>
 
       <body className="font-sans antialiased">
-        <Header />
-        <main>{children}</main>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <Header />
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   )

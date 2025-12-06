@@ -17,7 +17,7 @@ import FooterSection from "@/components/footer-section"
 
 export default function LandingPage() {
   return (
-    <div className="w-full min-h-screen bg-white overflow-x-hidden">
+    <div className="w-full min-h-screen bg-white dark:bg-gray-950 overflow-x-hidden transition-colors duration-300">
       <HeroSection />
       <AboutPage />
       <StatsBentoSection />

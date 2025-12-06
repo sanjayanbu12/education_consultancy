@@ -49,7 +49,7 @@ const reasons = [
 
 export default function WhyUsSection() {
   return (
-    <section className="w-full py-24 bg-white">
+    <section className="w-full py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Asymmetric Header Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-end">
@@ -58,10 +58,10 @@ export default function WhyUsSection() {
               <Sparkles className="w-4 h-4 text-[#0E74D2]" />
               <span className="text-[#0E74D2] text-sm font-medium">Why Choose Us</span>
             </div> */}
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d]">Your Success is Our Mission</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100">Your Success is Our Mission</h2>
           </div>
           <div>
-            <p className="text-[#4a5568] text-lg">
+            <p className="text-[#4a5568] dark:text-gray-400 text-lg">
               We go beyond traditional consulting to provide comprehensive support that considers your academic
               background, career aspirations, and financial situation.
             </p>
@@ -73,25 +73,24 @@ export default function WhyUsSection() {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className={`group relative bg-[#f8fafc] rounded-3xl p-8 border border-gray-100 hover:bg-white hover:shadow-xl hover:border-[#0E74D2]/20 transition-all duration-300 ${
-                index === 1 || index === 4 ? "lg:translate-y-8" : ""
-              }`}
+              className={`group relative bg-[#f8fafc] dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 hover:bg-white dark:hover:bg-gray-800 hover:shadow-xl hover:border-[#0E74D2]/20 dark:hover:border-blue-500/30 transition-all duration-300 ${index === 1 || index === 4 ? "lg:translate-y-8" : ""
+                }`}
             >
               {/* Top Stats */}
               <div className="flex items-center justify-between mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-[#0E74D2]/10 flex items-center justify-center text-[#0E74D2] group-hover:bg-[#0E74D2] group-hover:text-white transition-colors">
+                <div className="w-16 h-16 rounded-2xl bg-[#0E74D2]/10 dark:bg-blue-500/20 flex items-center justify-center text-[#0E74D2] dark:text-blue-400 group-hover:bg-[#0E74D2] dark:group-hover:bg-blue-600 group-hover:text-white transition-colors">
                   {reason.icon}
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-[#0E74D2]">{reason.stat}</div>
-                  <div className="text-xs text-[#4a5568]">{reason.statLabel}</div>
+                  <div className="text-2xl font-bold text-[#0E74D2] dark:text-blue-400">{reason.stat}</div>
+                  <div className="text-xs text-[#4a5568] dark:text-gray-400">{reason.statLabel}</div>
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1a365d] mb-3 group-hover:text-[#0E74D2] transition-colors">
+              <h3 className="text-xl font-bold text-[#1a365d] dark:text-gray-100 mb-3 group-hover:text-[#0E74D2] dark:group-hover:text-blue-400 transition-colors">
                 {reason.title}
               </h3>
-              <p className="text-[#4a5568] leading-relaxed">{reason.description}</p>
+              <p className="text-[#4a5568] dark:text-gray-400 leading-relaxed">{reason.description}</p>
             </div>
           ))}
         </div>

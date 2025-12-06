@@ -44,25 +44,25 @@ export default function FAQSection() {
   }
 
   return (
-    <section className="w-full py-20 bg-gradient-to-b from-white to-[#f0f7ff]">
+    <section className="w-full py-20 bg-gradient-to-b from-white dark:from-gray-950 to-[#f0f7ff] dark:to-gray-900 transition-colors duration-300">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column - Header & CTA */}
           <div className="lg:col-span-4 lg:sticky lg:top-8 lg:self-start">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full mb-4">
-              <HelpCircle className="w-4 h-4 text-[#0E74D2]" />
-              <span className="text-[#0E74D2] text-sm font-medium">FAQs</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
+              <HelpCircle className="w-4 h-4 text-[#0E74D2] dark:text-blue-400" />
+              <span className="text-[#0E74D2] dark:text-blue-400 text-sm font-medium">FAQs</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-4 text-balance">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] dark:text-gray-100 mb-4 text-balance">
               Frequently Asked Questions
             </h2>
-            <p className="text-[#4a5568] leading-relaxed mb-8 text-pretty">
+            <p className="text-[#4a5568] dark:text-gray-400 leading-relaxed mb-8 text-pretty">
               Find answers to common questions about our educational consulting services. Can't find what you're looking
               for? Contact us directly.
             </p>
 
             {/* Quick Contact Card */}
-            <div className="bg-[#1a365d] rounded-2xl p-6">
+            <div className="bg-[#1a365d] dark:bg-gray-800 rounded-2xl p-6">
               <h3 className="text-white font-semibold mb-4">Still have questions?</h3>
               <p className="text-white/70 text-sm mb-6">
                 Our expert counselors are available 24/7 to help you with any queries.
@@ -77,7 +77,7 @@ export default function FAQSection() {
                 </a>
                 <a
                   href="mailto:alhudaeducationalconsultant@gmail.com"
-                  className="flex items-center gap-3 px-4 py-3 bg-[#0E74D2] rounded-xl text-white hover:bg-[#0a5ba8] transition-colors"
+                  className="flex items-center gap-3 px-4 py-3 bg-[#0E74D2] dark:bg-blue-600 rounded-xl text-white hover:bg-[#0a5ba8] dark:hover:bg-blue-700 transition-colors"
                 >
                   <MessageCircle className="w-5 h-5" />
                   <span className="text-sm font-medium">Send Message</span>
@@ -94,9 +94,8 @@ export default function FAQSection() {
                 return (
                   <div
                     key={index}
-                    className={`bg-white rounded-2xl border transition-all ${
-                      isOpen ? "border-[#0E74D2]/30 shadow-lg" : "border-[rgba(14,116,210,0.1)] shadow-sm"
-                    }`}
+                    className={`bg-white dark:bg-gray-800 rounded-2xl border transition-all ${isOpen ? "border-[#0E74D2]/30 dark:border-blue-500/30 shadow-lg" : "border-[rgba(14,116,210,0.1)] dark:border-gray-700 shadow-sm"
+                      }`}
                   >
                     <button
                       onClick={() => toggleItem(index)}
@@ -104,27 +103,24 @@ export default function FAQSection() {
                     >
                       <div className="flex items-start gap-4">
                         <div
-                          className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${
-                            isOpen ? "bg-[#0E74D2] text-white" : "bg-[#0E74D2]/10 text-[#0E74D2]"
-                          }`}
+                          className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${isOpen ? "bg-[#0E74D2] dark:bg-blue-600 text-white" : "bg-[#0E74D2]/10 dark:bg-blue-500/20 text-[#0E74D2] dark:text-blue-400"
+                            }`}
                         >
                           <span className="text-sm font-semibold">{index + 1}</span>
                         </div>
-                        <span className="text-[#1a365d] font-medium text-left">{item.question}</span>
+                        <span className="text-[#1a365d] dark:text-gray-100 font-medium text-left">{item.question}</span>
                       </div>
                       <ChevronDown
-                        className={`w-5 h-5 text-[#0E74D2] flex-shrink-0 transition-transform duration-300 mt-1 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
+                        className={`w-5 h-5 text-[#0E74D2] dark:text-blue-400 flex-shrink-0 transition-transform duration-300 mt-1 ${isOpen ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ${
-                        isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                        }`}
                     >
                       <div className="px-6 pb-6 pl-[72px]">
-                        <p className="text-[#4a5568] leading-relaxed">{item.answer}</p>
+                        <p className="text-[#4a5568] dark:text-gray-400 leading-relaxed">{item.answer}</p>
                       </div>
                     </div>
                   </div>

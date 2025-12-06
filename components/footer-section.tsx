@@ -8,13 +8,14 @@ export default function FooterSection() {
   }
 
   return (
-    <footer className="w-full bg-[#1a365d] text-white">
+    <footer className="w-full bg-[#1a365d] dark:bg-gray-900 text-white transition-colors duration-300">
       {/* Top Wave */}
-      <div className="bg-white">
+      <div className="bg-white dark:bg-gray-950">
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M0 60L60 55C120 50 240 40 360 35C480 30 600 30 720 32.5C840 35 960 40 1080 42.5C1200 45 1320 45 1380 45L1440 45V60H1380C1320 60 1200 60 1080 60C960 60 840 60 720 60C600 60 480 60 360 60C240 60 120 60 60 60H0Z"
             fill="#1a365d"
+            className="dark:fill-gray-900"
           />
         </svg>
       </div>
@@ -50,7 +51,7 @@ export default function FooterSection() {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center hover:bg-[#0E74D2] transition-colors border border-white/10"
+                  className="w-10 h-10 rounded-xl bg-white/5 dark:bg-white/10 flex items-center justify-center hover:bg-[#0E74D2] dark:hover:bg-blue-600 transition-colors border border-white/10 dark:border-white/20"
                 >
                   {social.icon}
                 </a>
@@ -117,9 +118,9 @@ export default function FooterSection() {
               <li>
                 <a
                   href="tel:9578599785"
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-xl text-white hover:bg-[#0E74D2]/20 transition-colors group border border-white/5"
+                  className="flex items-center gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl text-white hover:bg-[#0E74D2]/20 dark:hover:bg-blue-600/20 transition-colors group border border-white/5 dark:border-white/10"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#0E74D2] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg bg-[#0E74D2] dark:bg-blue-600 flex items-center justify-center">
                     <Phone className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -131,9 +132,9 @@ export default function FooterSection() {
               <li>
                 <a
                   href="mailto:alhudaeducationalconsultant@gmail.com"
-                  className="flex items-start gap-4 p-4 bg-white/5 rounded-xl text-white hover:bg-[#0E74D2]/20 transition-colors group border border-white/5"
+                  className="flex items-start gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl text-white hover:bg-[#0E74D2]/20 dark:hover:bg-blue-600/20 transition-colors group border border-white/5 dark:border-white/10"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#0E74D2] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-[#0E74D2] dark:bg-blue-600 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -142,8 +143,8 @@ export default function FooterSection() {
                   </div>
                 </a>
               </li>
-              <li className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/5">
-                <div className="w-10 h-10 rounded-lg bg-[#0E74D2] flex items-center justify-center flex-shrink-0">
+              <li className="flex items-start gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl border border-white/5 dark:border-white/10">
+                <div className="w-10 h-10 rounded-lg bg-[#0E74D2] dark:bg-blue-600 flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -176,7 +177,7 @@ export default function FooterSection() {
               </div>
               <button
                 onClick={scrollToTop}
-                className="w-10 h-10 rounded-xl bg-[#0E74D2] flex items-center justify-center hover:bg-[#0a5ba8] transition-colors"
+                className="w-10 h-10 rounded-xl bg-[#0E74D2] dark:bg-blue-600 flex items-center justify-center hover:bg-[#0a5ba8] dark:hover:bg-blue-700 transition-colors"
                 aria-label="Scroll to top"
               >
                 <ArrowUp className="w-5 h-5" />

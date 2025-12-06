@@ -7,12 +7,12 @@ export default function AboutPage() {
   const [activeTab, setActiveTab] = useState("mission")
 
   return (
-    <div className="w-full min-h-screen bg-white overflow-x-hidden">
+    <div className="w-full min-h-screen bg-white dark:bg-gray-950 overflow-x-hidden transition-colors duration-300">
 
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,116,210,0.08)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(14,116,210,0.05)_0%,transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(14,116,210,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(14,116,210,0.02)_1px,transparent_1px)] bg-[size:64px_64px] animate-[pulse_8s_ease-in-out_infinite]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,116,210,0.08)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(14,116,210,0.05)_0%,transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1)_0%,transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(14,116,210,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(14,116,210,0.02)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(59,130,246,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.08)_1px,transparent_1px)] bg-[size:64px_64px] animate-[pulse_8s_ease-in-out_infinite]"></div>
       </div>
 
       <div className="relative">
@@ -20,14 +20,14 @@ export default function AboutPage() {
 
         {/* ------------------------------ HERO WITH PARALLAX EFFECT ------------------------------ */}
         <section className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-          
+
           {/* Floating Decorative Elements */}
           <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-[#0E74D2]/10 to-transparent rounded-full blur-3xl animate-[pulse_6s_ease-in-out_infinite]"></div>
           <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-[#0a5ba8]/10 to-transparent rounded-full blur-3xl animate-[pulse_8s_ease-in-out_infinite]"></div>
 
           <div className="relative z-10 text-center">
 
-            <h1 className="text-5xl lg:text-7xl font-light text-[#1a1a1a] tracking-tight leading-[1.05] mb-8">
+            <h1 className="text-5xl lg:text-7xl font-light text-[#1a1a1a] dark:text-gray-100 tracking-tight leading-[1.05] mb-8">
               Where <span className="relative inline-block">
                 <span className="relative z-10 font-medium bg-gradient-to-r from-[#0E74D2] via-[#0a5ba8] to-[#0E74D2] bg-clip-text text-transparent animate-[pulse_3s_ease-in-out_infinite]">Excellence</span>
                 <div className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-[#0E74D2]/20 via-[#0a5ba8]/20 to-[#0E74D2]/20 blur-sm"></div>
@@ -36,8 +36,8 @@ export default function AboutPage() {
               <span className="block mt-2">Meets Opportunity</span>
             </h1>
 
-            <p className="text-xl text-[#5a5a5a] leading-relaxed max-w-3xl mx-auto font-light mb-12">
-              For over 15 years, Al Huda has been the bridge between ambitious students and world-class institutions. 
+            <p className="text-xl text-[#5a5a5a] dark:text-gray-400 leading-relaxed max-w-3xl mx-auto font-light mb-12">
+              For over 15 years, Al Huda has been the bridge between ambitious students and world-class institutions.
               We don't just guide—we transform educational journeys into success stories.
             </p>
 
@@ -48,11 +48,11 @@ export default function AboutPage() {
                 { icon: <Globe className="w-5 h-5" />, value: "5,000+", label: "Partner Colleges" },
                 { icon: <Award className="w-5 h-5" />, value: "98%", label: "Success Rate" }
               ].map((stat, i) => (
-                <div key={i} className="flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="text-[#0E74D2]">{stat.icon}</div>
+                <div key={i} className="flex items-center gap-3 px-6 py-3 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="text-[#0E74D2] dark:text-blue-400">{stat.icon}</div>
                   <div className="text-left">
-                    <div className="text-2xl font-bold text-[#1a1a1a]">{stat.value}</div>
-                    <div className="text-xs text-[#7a7a7a]">{stat.label}</div>
+                    <div className="text-2xl font-bold text-[#1a1a1a] dark:text-gray-100">{stat.value}</div>
+                    <div className="text-xs text-[#7a7a7a] dark:text-gray-400">{stat.label}</div>
                   </div>
                 </div>
               ))}
@@ -62,10 +62,10 @@ export default function AboutPage() {
 
         {/* ------------------------------ INTERACTIVE TABS SECTION ------------------------------ */}
         <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-32">
-          
+
           {/* Tab Navigation */}
           <div className="flex justify-center mb-12">
-            <div className="inline-flex bg-gray-100 rounded-2xl p-2 gap-2">
+            <div className="inline-flex bg-gray-100 dark:bg-gray-800 rounded-2xl p-2 gap-2">
               {[
                 { id: "mission", icon: <Compass className="w-5 h-5" />, label: "Mission" },
                 { id: "vision", icon: <Target className="w-5 h-5" />, label: "Vision" },
@@ -74,11 +74,10 @@ export default function AboutPage() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-8 py-4 rounded-xl font-medium transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? "bg-white text-[#0E74D2] shadow-lg"
-                      : "text-[#5a5a5a] hover:text-[#1a1a1a]"
-                  }`}
+                  className={`flex items-center gap-2 px-8 py-4 rounded-xl font-medium transition-all duration-300 ${activeTab === tab.id
+                    ? "bg-white dark:bg-gray-900 text-[#0E74D2] dark:text-blue-400 shadow-lg"
+                    : "text-[#5a5a5a] dark:text-gray-400 hover:text-[#1a1a1a] dark:hover:text-gray-200"
+                    }`}
                 >
                   {tab.icon}
                   <span>{tab.label}</span>
@@ -88,7 +87,7 @@ export default function AboutPage() {
           </div>
 
           {/* Tab Content */}
-          <div className="relative min-h-[400px]"> 
+          <div className="relative min-h-[400px]">
             {activeTab === "mission" && (
               <div className="animate-[fadeIn_0.5s_ease-in-out] grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
@@ -96,10 +95,10 @@ export default function AboutPage() {
                     <Compass className="w-5 h-5 text-[#0E74D2]" />
                     <span className="text-sm font-medium text-[#0E74D2]">Our Mission</span>
                   </div> */}
-                  <h2 className="text-4xl font-light text-[#1a1a1a]">Guiding Your Path to Success</h2>
-                  <p className="text-lg text-[#5a5a5a] leading-relaxed">
-                    We exist to democratize access to quality education. Through personalized counseling, 
-                    strategic planning, and unwavering support, we ensure every student finds their perfect 
+                  <h2 className="text-4xl font-light text-[#1a1a1a] dark:text-gray-100">Guiding Your Path to Success</h2>
+                  <p className="text-lg text-[#5a5a5a] dark:text-gray-400 leading-relaxed">
+                    We exist to democratize access to quality education. Through personalized counseling,
+                    strategic planning, and unwavering support, we ensure every student finds their perfect
                     institutional match—regardless of their background or circumstances.
                   </p>
                   <div className="space-y-3 pt-4">
@@ -110,8 +109,8 @@ export default function AboutPage() {
                       "Scholarship and financial guidance"
                     ].map((item, i) => (
                       <div key={i} className="flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-[#0E74D2] flex-shrink-0" />
-                        <span className="text-[#3a3a3a]">{item}</span>
+                        <CheckCircle2 className="w-5 h-5 text-[#0E74D2] dark:text-blue-400 flex-shrink-0" />
+                        <span className="text-[#3a3a3a] dark:text-gray-300">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -146,10 +145,10 @@ export default function AboutPage() {
                     <Target className="w-5 h-5 text-[#0E74D2]" />
                     <span className="text-sm font-medium text-[#0E74D2]">Our Vision</span>
                   </div> */}
-                  <h2 className="text-4xl font-light text-[#1a1a1a]">Building India's Educational Future</h2>
-                  <p className="text-lg text-[#5a5a5a] leading-relaxed">
-                    To become India's most trusted educational consultancy—where transparency meets excellence, 
-                    and every student discovers their true potential. We envision a future where quality 
+                  <h2 className="text-4xl font-light text-[#1a1a1a] dark:text-gray-100">Building India's Educational Future</h2>
+                  <p className="text-lg text-[#5a5a5a] dark:text-gray-400 leading-relaxed">
+                    To become India's most trusted educational consultancy—where transparency meets excellence,
+                    and every student discovers their true potential. We envision a future where quality
                     education is accessible to all, barriers are dismantled, and dreams become degrees.
                   </p>
                   <div className="grid grid-cols-2 gap-4 pt-4">
@@ -159,9 +158,9 @@ export default function AboutPage() {
                       { icon: <Zap className="w-6 h-6" />, text: "Innovation First" },
                       { icon: <Award className="w-6 h-6" />, text: "Student Success" }
                     ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3 p-4 bg-[#0E74D2]/5 rounded-xl">
-                        <div className="text-[#0E74D2]">{item.icon}</div>
-                        <span className="text-sm font-medium text-[#1a1a1a]">{item.text}</span>
+                      <div key={i} className="flex items-center gap-3 p-4 bg-[#0E74D2]/5 dark:bg-blue-500/10 rounded-xl">
+                        <div className="text-[#0E74D2] dark:text-blue-400">{item.icon}</div>
+                        <span className="text-sm font-medium text-[#1a1a1a] dark:text-gray-200">{item.text}</span>
                       </div>
                     ))}
                   </div>
@@ -176,9 +175,9 @@ export default function AboutPage() {
                     <HeartHandshake className="w-5 h-5 text-[#0E74D2]" />
                     <span className="text-sm font-medium text-[#0E74D2]">Our Core Values</span>
                   </div> */}
-                  <h2 className="text-4xl font-light text-[#1a1a1a] mb-4">What Drives Us Every Day</h2>
-                  <p className="text-lg text-[#5a5a5a] max-w-2xl mx-auto">
-                    Our values aren't just words on a page—they're the foundation of every interaction, 
+                  <h2 className="text-4xl font-light text-[#1a1a1a] dark:text-gray-100 mb-4">What Drives Us Every Day</h2>
+                  <p className="text-lg text-[#5a5a5a] dark:text-gray-400 max-w-2xl mx-auto">
+                    Our values aren't just words on a page—they're the foundation of every interaction,
                     every decision, and every success story we create.
                   </p>
                 </div>
@@ -215,14 +214,14 @@ export default function AboutPage() {
                       desc: "We don't just guide—we equip you to make informed decisions"
                     }
                   ].map((value, i) => (
-                    <div key={i} className="group relative bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#0E74D2]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                    <div key={i} className="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#0E74D2]/5 dark:from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                       <div className="relative">
-                        <div className="w-16 h-16 bg-[#0E74D2]/10 rounded-2xl flex items-center justify-center text-[#0E74D2] mb-6 group-hover:bg-[#0E74D2] group-hover:text-white group-hover:scale-110 transition-all duration-500">
+                        <div className="w-16 h-16 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-2xl flex items-center justify-center text-[#0E74D2] dark:text-blue-400 mb-6 group-hover:bg-[#0E74D2] dark:group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition-all duration-500">
                           {value.icon}
                         </div>
-                        <h3 className="text-xl font-semibold text-[#1a1a1a] mb-3">{value.title}</h3>
-                        <p className="text-[#5a5a5a] text-sm leading-relaxed">{value.desc}</p>
+                        <h3 className="text-xl font-semibold text-[#1a1a1a] dark:text-gray-100 mb-3">{value.title}</h3>
+                        <p className="text-[#5a5a5a] dark:text-gray-400 text-sm leading-relaxed">{value.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -233,13 +232,13 @@ export default function AboutPage() {
         </section>
 
         {/* ------------------------------ JOURNEY TIMELINE WITH ANIMATIONS ------------------------------ */}
-        <section className="relative bg-gradient-to-b from-[#f8fafc] to-white py-24 overflow-hidden">
+        <section className="relative bg-gradient-to-b from-[#f8fafc] dark:from-gray-900 to-white dark:to-gray-950 py-24 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(14,116,210,0.03)_0%,transparent_70%)]"></div>
-          
+
           <div className="relative max-w-6xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-20">
-              <h2 className="text-4xl lg:text-5xl font-light text-[#1a1a1a] mb-4">Our Growth Story</h2>
-              <p className="text-[#5a5a5a] text-lg">15+ years of transforming educational dreams into reality</p>
+              <h2 className="text-4xl lg:text-5xl font-light text-[#1a1a1a] dark:text-gray-100 mb-4">Our Growth Story</h2>
+              <p className="text-[#5a5a5a] dark:text-gray-400 text-lg">15+ years of transforming educational dreams into reality</p>
             </div>
 
             <div className="relative">
@@ -279,19 +278,19 @@ export default function AboutPage() {
                 ].map((milestone, i) => (
                   <div key={i} className={`relative flex items-center ${milestone.align === 'right' ? 'lg:flex-row-reverse' : ''}`}>
                     {/* Timeline Dot */}
-                    <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-4 border-[#0E74D2] rounded-full flex items-center justify-center shadow-lg hidden lg:flex z-10">
+                    <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-white dark:bg-gray-900 border-4 border-[#0E74D2] rounded-full flex items-center justify-center shadow-lg hidden lg:flex z-10">
                       <div className="text-[#0E74D2]">{milestone.icon}</div>
                     </div>
 
                     {/* Content Card */}
                     <div className={`w-full lg:w-[calc(50%-60px)] ${milestone.align === 'right' ? 'lg:ml-[60px]' : 'lg:mr-[60px]'}`}>
-                      <div className="group bg-white rounded-3xl p-8 border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                      <div className="group bg-white dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                         <div className="flex items-center gap-4 mb-4">
                           <div className="px-4 py-2 bg-[#0E74D2] text-white text-sm font-bold rounded-full">{milestone.year}</div>
                           <div className="flex-1 h-px bg-gradient-to-r from-[#0E74D2] to-transparent"></div>
                         </div>
-                        <h3 className="text-2xl font-semibold text-[#1a1a1a] mb-3">{milestone.title}</h3>
-                        <p className="text-[#5a5a5a] leading-relaxed">{milestone.desc}</p>
+                        <h3 className="text-2xl font-semibold text-[#1a1a1a] dark:text-gray-100 mb-3">{milestone.title}</h3>
+                        <p className="text-[#5a5a5a] dark:text-gray-400 leading-relaxed">{milestone.desc}</p>
                       </div>
                     </div>
                   </div>
@@ -306,7 +305,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#0E74D2] via-[#0a5ba8] to-[#0E74D2]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.1)_0%,transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
-          
+
           <div className="relative max-w-5xl mx-auto px-6 text-center">
 
             <h2 className="text-4xl lg:text-6xl font-light text-white mb-6 leading-tight">
@@ -315,7 +314,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-white/90 text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-              Join 10,000+ students who trusted Al Huda to turn their educational aspirations into reality. 
+              Join 10,000+ students who trusted Al Huda to turn their educational aspirations into reality.
               Free expert counseling, 24/7 support, 98% success rate.
             </p>
 

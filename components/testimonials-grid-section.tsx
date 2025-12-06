@@ -55,7 +55,7 @@ const testimonials = [
 
 export default function TestimonialsGridSection() {
   return (
-    <section className="w-full py-24 bg-[#f8fafc]">
+    <section className="w-full py-24 bg-[#f8fafc] dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -63,8 +63,8 @@ export default function TestimonialsGridSection() {
             <Star className="w-4 h-4 text-[#0E74D2]" />
             <span className="text-[#0E74D2] text-sm font-medium">Success Stories</span>
           </div> */}
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-4">What Our Students Say</h2>
-          <p className="text-[#4a5568] text-lg">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">What Our Students Say</h2>
+          <p className="text-[#4a5568] dark:text-gray-400 text-lg">
             Join thousands of students who found their perfect educational path with our guidance
           </p>
         </div>
@@ -74,9 +74,8 @@ export default function TestimonialsGridSection() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all ${
-                testimonial.featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""
-              }`}
+              className={`relative bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all ${testimonial.featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""
+                }`}
             >
               {/* Quote Icon */}
               <div className="absolute top-6 right-6">
@@ -91,7 +90,7 @@ export default function TestimonialsGridSection() {
               </div>
 
               {/* Testimonial Text */}
-              <p className={`text-[#4a5568] leading-relaxed mb-6 ${testimonial.featured ? "text-lg" : ""}`}>
+              <p className={`text-[#4a5568] dark:text-gray-400 leading-relaxed mb-6 ${testimonial.featured ? "text-lg" : ""}`}>
                 "{testimonial.text}"
               </p>
 
@@ -101,14 +100,14 @@ export default function TestimonialsGridSection() {
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <div className="font-semibold text-[#1a365d]">{testimonial.name}</div>
-                  <div className="text-sm text-[#4a5568]">{testimonial.course}</div>
-                  <div className="text-xs text-[#0E74D2]">{testimonial.college}</div>
+                  <div className="font-semibold text-[#1a365d] dark:text-gray-100">{testimonial.name}</div>
+                  <div className="text-sm text-[#4a5568] dark:text-gray-400">{testimonial.course}</div>
+                  <div className="text-xs text-[#0E74D2] dark:text-blue-400">{testimonial.college}</div>
                 </div>
               </div>
 
               {testimonial.featured && (
-                <div className="mt-6 pt-6 border-t border-gray-100">
+                <div className="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
                   <img
                     src="/happy-student-with-graduation-cap-celebrating-succ.jpg"
                     alt="Success Story"
@@ -128,9 +127,9 @@ export default function TestimonialsGridSection() {
             { value: "200+", label: "Courses Offered" },
             { value: "100%", label: "Free Services" },
           ].map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-white rounded-2xl border border-gray-100">
-              <div className="text-3xl font-bold text-[#0E74D2] mb-1">{stat.value}</div>
-              <div className="text-sm text-[#4a5568]">{stat.label}</div>
+            <div key={index} className="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700">
+              <div className="text-3xl font-bold text-[#0E74D2] dark:text-blue-400 mb-1">{stat.value}</div>
+              <div className="text-sm text-[#4a5568] dark:text-gray-400">{stat.label}</div>
             </div>
           ))}
         </div>

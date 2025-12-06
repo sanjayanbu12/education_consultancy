@@ -43,7 +43,7 @@ const steps = [
 
 export default function ProcessTimelineSection() {
   return (
-    <section className="w-full py-24 bg-gradient-to-b from-white to-[#f8fafc]">
+    <section className="w-full py-24 bg-gradient-to-b from-white dark:from-gray-950 to-[#f8fafc] dark:to-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -51,8 +51,8 @@ export default function ProcessTimelineSection() {
             <CheckCircle className="w-4 h-4 text-[#0E74D2]" />
             <span className="text-[#0E74D2] text-sm font-medium">How It Works</span>
           </div> */}
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-4">Your Path to Success</h2>
-          <p className="text-[#4a5568] text-lg">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">Your Path to Success</h2>
+          <p className="text-[#4a5568] dark:text-gray-400 text-lg">
             A simple, streamlined process designed to guide you from initial inquiry to successful career launch
           </p>
         </div>
@@ -60,20 +60,20 @@ export default function ProcessTimelineSection() {
         {/* Timeline - Horizontal on Desktop, Vertical on Mobile */}
         <div className="relative">
           {/* Desktop Timeline Line */}
-          <div className="hidden lg:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-[#0E74D2]/20 via-[#0E74D2] to-[#0E74D2]/20"></div>
+          <div className="hidden lg:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-[#0E74D2]/20 dark:from-blue-500/20 via-[#0E74D2] dark:via-blue-500 to-[#0E74D2]/20 dark:to-blue-500/20"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-4">
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 {/* Mobile Connector Line */}
                 {index < steps.length - 1 && (
-                  <div className="lg:hidden absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-to-b from-[#0E74D2] to-[#0E74D2]/20 -mb-8"></div>
+                  <div className="lg:hidden absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-to-b from-[#0E74D2] dark:from-blue-500 to-[#0E74D2]/20 dark:to-blue-500/20 -mb-8"></div>
                 )}
 
                 {/* Step Card */}
                 <div className="relative z-10 flex flex-col items-center lg:items-center text-center">
                   {/* Number Badge */}
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#0E74D2] rounded-full text-white text-xs font-bold flex items-center justify-center shadow-lg">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#0E74D2] dark:bg-blue-600 rounded-full text-white text-xs font-bold flex items-center justify-center shadow-lg">
                     {index + 1}
                   </div>
 
@@ -85,8 +85,8 @@ export default function ProcessTimelineSection() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="font-bold text-[#1a365d] mb-2">{step.title}</h3>
-                  <p className="text-sm text-[#4a5568] leading-relaxed max-w-[200px]">{step.description}</p>
+                  <h3 className="font-bold text-[#1a365d] dark:text-gray-100 mb-2">{step.title}</h3>
+                  <p className="text-sm text-[#4a5568] dark:text-gray-400 leading-relaxed max-w-[200px]">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -95,7 +95,7 @@ export default function ProcessTimelineSection() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <p className="text-[#4a5568] mb-6">Ready to begin your educational journey?</p>
+          <p className="text-[#4a5568] dark:text-gray-400 mb-6">Ready to begin your educational journey?</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:9578599785"

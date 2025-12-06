@@ -4,7 +4,7 @@ import { Building, BookOpen, Users, Trophy, TrendingUp, Target } from "lucide-re
 
 export default function StatsBentoSection() {
   return (
-    <section className="w-full py-20 bg-white">
+    <section className="w-full py-20 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 auto-rows-[140px]">
@@ -22,11 +22,11 @@ export default function StatsBentoSection() {
           </div>
 
           {/* Medium Card */}
-          <div className="col-span-2 bg-[#f0f7ff] rounded-3xl p-6 flex flex-col justify-between">
-            <BookOpen className="w-8 h-8 text-[#0E74D2]" />
+          <div className="col-span-2 bg-[#f0f7ff] dark:bg-gray-900 rounded-3xl p-6 flex flex-col justify-between border dark:border-gray-800">
+            <BookOpen className="w-8 h-8 text-[#0E74D2] dark:text-blue-400" />
             <div>
-              <div className="text-3xl font-bold text-[#1a365d]">200+</div>
-              <div className="text-[#4a5568]">Courses Offered</div>
+              <div className="text-3xl font-bold text-[#1a365d] dark:text-gray-100">200+</div>
+              <div className="text-[#4a5568] dark:text-gray-400">Courses Offered</div>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ export default function StatsBentoSection() {
           </div>
 
           {/* Wide Card */}
-          <div className="col-span-2 md:col-span-4 bg-gradient-to-r from-[#1a365d] to-[#2d4a6f] rounded-3xl p-6 flex items-center justify-between">
+          <div className="col-span-2 md:col-span-4 bg-gradient-to-r from-[#1a365d] to-[#2d4a6f] dark:from-gray-800 dark:to-gray-900 rounded-3xl p-6 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center">
                 <TrendingUp className="w-7 h-7 text-white" />
@@ -75,14 +75,14 @@ export default function StatsBentoSection() {
           </div>
 
           {/* Admission Procedure Card */}
-          <div className="col-span-2 bg-[#0E74D2]/5 rounded-3xl p-6 flex flex-col justify-between border border-[#0E74D2]/10">
+          <div className="col-span-2 bg-[#0E74D2]/5 dark:bg-blue-500/10 rounded-3xl p-6 flex flex-col justify-between border border-[#0E74D2]/10 dark:border-blue-500/20">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#0E74D2] rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#0E74D2] dark:bg-blue-600 rounded-xl flex items-center justify-center">
                 <BookOpen className="w-5 h-5 text-white" />
               </div>
-              <span className="font-semibold text-[#1a365d]">Admission Procedure</span>
+              <span className="font-semibold text-[#1a365d] dark:text-gray-200">Admission Procedure</span>
             </div>
-            <p className="text-[#4a5568] text-sm">Step-by-step guidance for smooth admissions</p>
+            <p className="text-[#4a5568] dark:text-gray-400 text-sm">Step-by-step guidance for smooth admissions</p>
           </div>
         </div>
       </div>
