@@ -83,10 +83,10 @@ export default function ServicesGridSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
             <span className="w-1.5 h-1.5 bg-[#0E74D2] rounded-full"></span>
             <span className="text-[#0E74D2] text-sm font-medium">Our Services</span>
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-4">Comprehensive Educational Guidance</h2>
           <p className="text-[#4a5568] text-lg">
             From course selection to career placement, we guide students through every step of their educational journey
