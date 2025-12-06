@@ -45,10 +45,10 @@ export default function CourseCatalogSection() {
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
           <div>
-            {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
               <BookOpen className="w-4 h-4 text-[#0E74D2]" />
               <span className="text-[#0E74D2] text-sm font-medium">Course Catalog</span>
-            </div> */}
+            </div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-2">
               200+ Courses Available

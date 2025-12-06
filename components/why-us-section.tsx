@@ -54,10 +54,10 @@ export default function WhyUsSection() {
         {/* Asymmetric Header Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-end">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
+            {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
               <Sparkles className="w-4 h-4 text-[#0E74D2]" />
               <span className="text-[#0E74D2] text-sm font-medium">Why Choose Us</span>
-            </div>
+            </div> */}
             <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d]">Your Success is Our Mission</h2>
           </div>
           <div>

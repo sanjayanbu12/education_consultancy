@@ -47,10 +47,10 @@ export default function ProcessTimelineSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
             <CheckCircle className="w-4 h-4 text-[#0E74D2]" />
             <span className="text-[#0E74D2] text-sm font-medium">How It Works</span>
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] mb-4">Your Path to Success</h2>
           <p className="text-[#4a5568] text-lg">
             A simple, streamlined process designed to guide you from initial inquiry to successful career launch
