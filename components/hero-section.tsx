@@ -1,127 +1,135 @@
 "use client"
 
-import { Phone, Mail, GraduationCap, Users, Award, Clock } from "lucide-react"
+import { Phone, Mail, GraduationCap, Users, Award, Clock, ArrowRight, CheckCircle2 } from "lucide-react"
 
 export default function HeroSection() {
   return (
-    <div className="w-full min-h-screen relative bg-gradient-to-b from-[#f0f7ff] to-white overflow-x-hidden flex flex-col items-center">
+    <div className="w-full min-h-screen relative bg-white overflow-x-hidden">
 
-      {/* Wrapper Container */}
-      <div className="relative flex flex-col items-center w-full">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,116,210,0.05)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(14,116,210,0.03)_0%,transparent_50%)]"></div>
 
-        {/* Main container */}
-        <div className="w-full max-w-none px-4 sm:px-6 md:px-8 lg:px-0 lg:max-w-[1200px] relative flex flex-col items-start">
+      {/* Subtle Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(14,116,210,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(14,116,210,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
 
-          {/* Left vertical line */}
-          <div className="w-[1px] h-full absolute left-4 sm:left-6 md:left-8 lg:left-0 top-0 bg-[rgba(14,116,210,0.08)]"></div>
+      <div className="relative">
 
-          {/* Right vertical line */}
-          <div className="w-[1px] h-full absolute right-4 sm:right-6 md:right-8 lg:right-0 top-0 bg-[rgba(14,116,210,0.08)]"></div>
+        {/* Navigation Spacer */}
+        <div className="h-20"></div>
 
-          <div className="self-stretch pt-[9px] flex flex-col items-center gap-4 sm:gap-6 md:gap-8 lg:gap-16 relative z-10">
+        {/* Main Hero Container */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
 
-            {/* ----------------- HERO SECTION ----------------- */}
-            <div className="pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-8 sm:pb-12 md:pb-16 w-full flex justify-center px-4 sm:px-6 md:px-8 lg:px-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-              <div className="w-full max-w-[1200px] grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* LEFT CONTENT */}
+            <div className="space-y-10">
 
-                {/* LEFT SIDE */}
-                <div className="lg:col-span-7 flex flex-col items-start space-y-8">
 
-                  {/* HERO HEADING */}
-                  <h1 className="text-[#1a365d] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] font-serif">
-                    Shape Your Future With the <br />
-                    <span className="text-[#0E74D2]">Right College & the Right Course</span>
-                  </h1>
+              {/* Main Headline */}
+              <div className="space-y-6">
+                <h1 className="text-4xl lg:text-6xl font-light text-[#1a1a1a] tracking-tight leading-[1.1]">
+                  Navigate Your
+                  <span className="block mt-2 font-normal bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] bg-clip-text text-transparent">
+                    Academic Journey
+                  </span>
+                  <span className="block mt-2">With Precision</span>
+                </h1>
 
-                  {/* HERO SUBTEXT */}
-                  <p className="text-[#4a5568] text-base sm:text-lg leading-relaxed max-w-[550px]">
-                    We guide students toward the right course and college with free, personalized
-                    counseling ensuring your academic path matches your goals and financial needs.
-                  </p>
-
-                  {/* SUPPORTING LINE */}
-                  <p className="text-[#0E74D2] font-medium text-sm sm:text-base">
-                    Your Journey to Academic Excellence Begins With the Right Guidance.
-                  </p>
-
-                  {/* CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <a
-                      href="tel:9578599785"
-                      title="Call: 9578599785"
-                      className="flex items-center gap-2 h-12 px-8 bg-[#0E74D2] text-white rounded-full font-medium text-sm shadow-lg hover:bg-[#0a5ba8] transition-all"
-                    >          
-                      <Phone className="w-4 h-4" /> Call Now
-                    </a>
-
-                    <a 
-                      href="mailto:alhudaeducationalconsultant@gmail.com"
-                      className="flex items-center gap-2 h-12 px-8 bg-white text-[#0E74D2] rounded-full font-medium text-sm border-2 border-[#0E74D2] hover:bg-[#0E74D2]/5 transition-all"
-                    >
-                      <Mail className="w-4 h-4" /> Email Us
-                    </a>
-                  </div>
-
-                  {/* Stats Row */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-[#0E74D2]/10 w-full">
-                    {[
-                      { value: "5000+", label: "Colleges", icon: <GraduationCap className="w-5 h-5" /> },
-                      { value: "200+", label: "Courses", icon: <Award className="w-5 h-5" /> },
-                      { value: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> },
-                      { value: "10K+", label: "Students", icon: <Users className="w-5 h-5" /> },
-                    ].map((stat, i) => (
-                      <div key={i} className="text-left">
-                        <div className="flex items-center gap-2 text-[#0E74D2] font-bold text-xl">
-                          {stat.icon} {stat.value}
-                        </div>
-                        <div className="text-[#4a5568] text-sm">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                </div>
-
-                {/* ----------------- RIGHT SIDE IMAGES ----------------- */}
-                <div className="lg:col-span-5 space-y-4">
-
-                  {/* Main Image Card */}
-                  <div className="relative rounded-3xl overflow-hidden shadow-xl">
-                    <img
-                      src="/happy-diverse-students-celebrating-graduation-with.jpg"
-                      alt="Students celebrating graduation"
-                      className="w-full h-[330px] object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-
-                    <div className="absolute bottom-4 left-4 right-4 text-white">
-                      <div className="font-semibold">Free Consulting & Admission Assistance</div>
-                      <div className="text-white/70 text-sm">No Service Charges</div>
-                    </div>
-                  </div>
-
-                  {/* Floating Cards */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20">
-                      <div className="text-3xl font-bold text-[#0E74D2]">FREE</div>
-                      <div className="text-gray-700 text-sm">Career Counseling</div>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl p-4 text-white">
-                      <div className="text-3xl font-bold">100%</div>
-                      <div className="text-white/90 text-sm">Guidance Support</div>
-                    </div>
-                  </div>
-
-                </div>
-
+                <p className="text-lg text-[#5a5a5a] leading-relaxed max-w-xl font-light">
+                  Al Huda Educational Consultants delivers strategic guidance for discerning students and families,
+                  connecting aspirations with premier institutions through our comprehensive advisory framework.
+                </p>
               </div>
+
+              {/* Key Features */}
+              <div className="space-y-3">
+                {[
+                  "Personalized institutional matching",
+                  "Strategic program selection",
+                  "End-to-end admission support"
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#0E74D2] flex-shrink-0" />
+                    <span className="text-[#3a3a3a] font-light">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Section */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <a
+                  href="tel:9578599785"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#0E74D2] text-white font-medium rounded-lg hover:bg-[#0a5ba8] transition-all duration-300 shadow-[0_4px_20px_rgba(14,116,210,0.25)] hover:shadow-[0_8px_30px_rgba(14,116,210,0.35)] hover:-translate-y-0.5"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Book Consultation</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                <a
+                  href="mailto:alhudaeducationalconsultant@gmail.com"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-[#0E74D2] font-medium rounded-lg border-2 border-[#0E74D2]/20 hover:border-[#0E74D2] hover:bg-[#0E74D2]/5 transition-all duration-300"
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>Get Information</span>
+                </a>
+              </div>
+
+            </div>
+
+            {/* RIGHT VISUAL */}
+            <div className="relative lg:pl-12">
+
+              {/* Main Image Card */}
+              <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
+                <div className="relative h-[500px]">
+                  <img
+                    src="/happy-diverse-students-celebrating-graduation-with.jpg"
+                    alt="Academic excellence"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+
+                {/* Bottom Info Card */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <div className="font-semibold">Complimentary Advisory Services</div>
+                    <div className="text-white/70 text-sm">Expert guidance at no cost to families</div>
+                  </div>
+                </div>
+              </div>
+
 
             </div>
 
           </div>
 
+          {/* Stats Bar */}
+          {/* <div className="mt-24 pt-12 border-t border-gray-200">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { icon: <GraduationCap className="w-6 h-6" />, value: "5,000+", label: "Partner Institutions", sublabel: "Worldwide" },
+                { icon: <Award className="w-6 h-6" />, value: "200+", label: "Academic Disciplines", sublabel: "Available" },
+                { icon: <Users className="w-6 h-6" />, value: "10,000+", label: "Students Placed", sublabel: "Since 2009" },
+                { icon: <Clock className="w-6 h-6" />, value: "24/7", label: "Support Available", sublabel: "Year-round" },
+              ].map((stat, i) => (
+                <div key={i} className="text-center lg:text-left">
+                  <div className="inline-flex items-center justify-center lg:justify-start w-12 h-12 bg-[#0E74D2]/5 rounded-lg mb-4 text-[#0E74D2]">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-[#1a1a1a] mb-1">{stat.value}</div>
+                  <div className="text-sm font-medium text-[#3a3a3a]">{stat.label}</div>
+                  <div className="text-xs text-[#7a7a7a] mt-0.5">{stat.sublabel}</div>
+                </div>
+              ))}
+            </div>
+          </div> */}
+
         </div>
+
       </div>
 
     </div>

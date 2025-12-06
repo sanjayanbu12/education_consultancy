@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <div className="w-full h-12 sm:h-14 md:h-16 lg:h-20 fixed left-0 top-0 flex justify-center items-center z-50 px-4 sm:px-6 md:px-8 lg:px-0">
       
-      <div className="w-full h-0 absolute left-0 top-10 border-t border-[rgba(14,116,210,0.1)]"></div>
+      {/* <div className="w-full h-0 absolute left-0 top-10 border-t border-[rgba(14,116,210,0.1)]"></div> */}
 
       <div className="w-full max-w-[1100px] h-12 sm:h-14 py-2 px-4 bg-white/90 backdrop-blur-sm shadow-[0px_2px_8px_rgba(14,116,210,0.08)] rounded-full flex justify-between items-center border border-[rgba(14,116,210,0.1)]">
 

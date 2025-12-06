@@ -1,23 +1,9 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter, Instrument_Serif } from "next/font/google"
+import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import Header from "@/components/header"
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-  preload: true,
-})
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  variable: "--font-instrument-serif",
-  weight: ["400"],
-  display: "swap",
-  preload: true,
-})
 
 export const metadata: Metadata = {
   title: "AL-HUDA Educational Consultancy Services",
@@ -57,16 +43,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable} antialiased`}>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
       <head>
         <link rel="icon" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3rd_ED_logo_final-removebg-preview-EmZWbBGyrR3ayEYVNsJmqvnvgjhtt3.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
 
       <body className="font-sans antialiased">
         <Header />
-        {/* 🔵 MAIN CONTENT */}
         <main>{children}</main>
       </body>
     </html>
