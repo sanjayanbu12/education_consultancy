@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, Instrument_Serif } from "next/font/google"
 import "./globals.css"
+import Header from "@/components/header"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -64,7 +65,7 @@ export default function RootLayout({
       </head>
 
       <body className="font-sans antialiased">
-
+        <Header />
         {/* 🔵 MAIN CONTENT */}
         <main>{children}</main>
       </body>
