@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",  // Commented out to support dynamic routes in development  
+  output: "export",  // Commented out to support dynamic routes in development  
   typescript: {
     ignoreBuildErrors: true,
   },
