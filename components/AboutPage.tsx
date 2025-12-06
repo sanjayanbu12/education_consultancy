@@ -319,7 +319,7 @@ export default function AboutPage() {
               Free expert counseling, 24/7 support, 98% success rate.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a 
                 href="tel:9578599785"
                 className="group inline-flex items-center justify-center gap-3 px-10 py-5 bg-white text-[#0E74D2] font-semibold rounded-2xl hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:-translate-y-1"
@@ -328,7 +328,7 @@ export default function AboutPage() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
 
-            </div>
+            </div> */}
 
             {/* Trust Indicators */}
             <div className="flex flex-wrap justify-center gap-8 mt-16 text-white/80 text-sm">
