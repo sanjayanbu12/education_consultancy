@@ -1,66 +1,68 @@
+import { courseInfo } from "../data"
 import { ChevronRight, Menu, Sparkles } from "lucide-react"
-import { articleData } from "../content"
 
 export function generateStaticParams() {
-  return [
-    { slug: "medical" },
-    { slug: "paramedical" },
-    { slug: "engineering" },
-    { slug: "commerce" },
-    { slug: "law" },
-    { slug: "management" },
-  ]
+  return Object.keys(courseInfo).map((slug) => ({ slug }))
 }
 
-export default function ExtraordinaryPage({ params }: { params: { slug: string } }) {
-  const slug = params.slug.toLowerCase()
-  const title = slug.charAt(0).toUpperCase() + slug.slice(1)
-  const data = articleData[slug]
+export default function CourseInfoPage({ params }: any) {
+  const course = courseInfo[params.slug]
+
+  if (!course)
+    return (
+      <div className="min-h-screen flex items-center justify-center text-xl">
+        Course not found
+      </div>
+    )
 
   return (
     <div className="min-h-screen w-full bg-[#f5f8ff] text-[#1a2a3a]">
 
-      {/* ----------------------------------------------- */}
-      {/* HEADER – Compact + Premium */}
-      {/* ----------------------------------------------- */}
+      {/* ------------------------------------------------ */}
+      {/* HEADER (Reduced spacing) */}
+      {/* ------------------------------------------------ */}
       <header className="py-14 relative overflow-hidden bg-white">
 
-        {/* Floating highlight circles */}
-        <div className="absolute top-8 left-8 w-20 h-20 bg-[#0E74D2]/10 rounded-full blur-xl" />
-        <div className="absolute bottom-8 right-8 w-28 h-28 bg-[#0E74D2]/5 rounded-full blur-xl" />
+        {/* Floating Blobs */}
+        <div className="absolute top-10 left-10 w-20 h-20 bg-[#0E74D2]/10 rounded-full blur-xl" />
+        <div className="absolute bottom-10 right-10 w-28 h-28 bg-[#0E74D2]/5 rounded-full blur-xl" />
 
-        {/* Light Grid */}
+        {/* Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#e6edf5_1px,transparent_1px),linear-gradient(to_bottom,#e6edf5_1px,transparent_1px)] bg-[size:32px_32px]" />
 
         <div className="relative max-w-5xl mx-auto px-6">
 
-          {/* Pre-heading */}
-          {/* <div className="flex items-center gap-2 text-[#0E74D2] uppercase text-xs tracking-wider font-semibold">
+          {/* Label */}
+          {/* <div className="flex items-center gap-2 text-[#0E74D2] uppercase text-[11px] font-semibold tracking-wider">
             <Sparkles className="w-4 h-4" />
-            AL-HUDA INSIGHTS
+            Course Details
           </div> */}
 
           {/* Title */}
           <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-[#1a365d]">
-            Exploring the <span className="text-[#0E74D2]">{title}</span>
-            <br /> Education Landscape
+            {course.title.split("–")[0].trim()}
+            <br />
+            {course.title.split("–")[1] && (
+              <span className="text-[#0E74D2]">
+                {course.title.split("–")[1]}
+              </span>
+            )}
           </h1>
 
           {/* Subtitle */}
           <p className="mt-3 text-base md:text-lg text-[#4a5568] max-w-2xl leading-relaxed">
-            In-depth, research-backed insights for students aspiring to succeed in the {title} domain.
+            {course.subtitle}
           </p>
         </div>
       </header>
 
-      {/* ----------------------------------------------- */}
-      {/* TABLE OF CONTENTS – Compact Premium */}
-      {/* ----------------------------------------------- */}
+      {/* ------------------------------------------------ */}
+      {/* TABLE OF CONTENT – tighter spacing */}
+      {/* ------------------------------------------------ */}
       <section className="max-w-5xl mx-auto px-6 mt-10">
         <div className="bg-white p-6 rounded-2xl shadow-md border border-[#0E74D2]/10 relative">
 
-          {/* Highlight Strip */}
-          <div className="absolute left-0 top-0 w-1.5 h-full bg-[#0E74D2]/70 rounded-l-xl" />
+          <div className="absolute left-0 top-0 w-1.5 h-full bg-[#0E74D2]/70 rounded-l-2xl" />
 
           <div className="flex items-center gap-2 text-lg font-semibold text-[#1a365d] mb-4">
             <Menu className="w-5 h-5 text-[#0E74D2]" />
@@ -70,9 +72,9 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-[#4a5568]">
             {[
               "Overview",
-              "Why Choose This Field?",
               "Eligibility",
-              "Top Courses",
+              "Course Duration",
+              "Syllabus",
               "Career Opportunities",
               "Future Scope",
             ].map((section, i) => (
@@ -88,52 +90,47 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
         </div>
       </section>
 
-      {/* ----------------------------------------------- */}
-      {/* MAIN ARTICLE – Reduced Spacing + Premium Look */}
-      {/* ----------------------------------------------- */}
+      {/* ------------------------------------------------ */}
+      {/* MAIN ARTICLE – Reduced vertical spacing */}
+      {/* ------------------------------------------------ */}
       <article className="max-w-5xl mx-auto px-6 mt-14 space-y-20">
 
         {/* OVERVIEW */}
         <Section title="Overview">
-          <IntroParagraph text={data.overview} />
-        </Section>
-
-        {/* WHY CHOOSE */}
-        <Section title={`Why Choose ${title}?`}>
-          <ul className="space-y-3 text-lg text-[#4a5568]">
-            {data.why.map((point, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <span className="w-2 h-2 mt-2 rounded-full bg-[#0E74D2]" />
-                {point}
-              </li>
-            ))}
-          </ul>
+          <IntroParagraph text={course.overview} />
         </Section>
 
         {/* ELIGIBILITY */}
-        <Section title="Eligibility & Academic Pathway">
+        <Section title="Eligibility Criteria">
           <div className="bg-[#eef5ff] p-5 rounded-xl border border-[#0E74D2]/10">
-            <ul className="space-y-2 text-[#1a2a3a] text-[15px]">
-              {data.eligibility.map((el, i) => (
+            <ul className="space-y-2 text-[15px] text-[#1a2a3a]">
+              {course.eligibility.map((el: any, i: number) => (
                 <li key={i}>• {el}</li>
               ))}
             </ul>
           </div>
         </Section>
 
-        {/* TOP COURSES */}
-        <Section title={`Top Courses in ${title}`}>
+        {/* DURATION */}
+        <Section title="Course Duration">
+          <Card className="bg-[#eef5ff] border-[#0E74D2]/10 text-[16px]">
+            {course.duration}
+          </Card>
+        </Section>
+
+        {/* SYLLABUS */}
+        <Section title="Syllabus Snapshot">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {data.topCourses.map((course, i) => (
-              <Card key={i}>{course}</Card>
+            {course.syllabus.map((sy: string, i: number) => (
+              <Card key={i}>{sy}</Card>
             ))}
           </div>
         </Section>
 
-        {/* CAREERS */}
+        {/* CAREER */}
         <Section title="Career Opportunities">
           <ul className="space-y-2 text-lg text-[#4a5568]">
-            {data.careers.map((c, i) => (
+            {course.careers.map((c: string, i: number) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="w-2 h-2 mt-2 rounded-full bg-[#0E74D2]" />
                 {c}
@@ -142,39 +139,46 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
           </ul>
         </Section>
 
-        {/* FUTURE TRENDS */}
+        {/* FUTURE */}
         <Section title="Future Scope & Trends">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {data.trends.map((t, i) => (
+            {course.future.map((f: string, i: number) => (
               <Card key={i} className="bg-[#eef5ff] border-[#0E74D2]/20">
-                {t}
+                {f}
               </Card>
             ))}
           </div>
         </Section>
       </article>
 
-      {/* ----------------------------------------------- */}
-      {/* CTA – Compact + Professional */}
-      {/* ----------------------------------------------- */}
+      {/* ------------------------------------------------ */}
+      {/* CTA – Compact and clean */}
+      {/* ------------------------------------------------ */}
       <div className="max-w-5xl mx-auto px-6 mt-20 mb-20">
         <div className="p-8 bg-white rounded-2xl shadow-md border border-[#0E74D2]/10 relative">
 
           <h2 className="text-2xl font-serif font-bold text-[#1a365d]">
-            Need Personalized Career Guidance?
+            Need Personalized Guidance?
           </h2>
 
           <p className="mt-2 text-[#4a5568] text-[15px] leading-relaxed">
-            Our counselors offer guidance tailored to your strengths and goals.
+            Speak with our counselors today and discover the best pathway for your future.
           </p>
 
           <div className="mt-6 flex gap-3">
-            <button className="px-6 py-2.5 rounded-full bg-[#0E74D2] text-white text-sm shadow hover:bg-[#0a5ba8]">
+            <a
+              href="tel:9578599785"
+              className="px-6 py-2.5 rounded-full bg-[#0E74D2] text-white text-sm shadow hover:bg-[#0a5ba8]"
+            >
               Call Now
-            </button>
-            <button className="px-6 py-2.5 rounded-full border border-[#0E74D2] text-[#0E74D2] text-sm hover:bg-[#eef5ff]">
+            </a>
+
+            <a
+              href="mailto:alhudaeducationalconsultant@gmail.com"
+              className="px-6 py-2.5 rounded-full border border-[#0E74D2] text-[#0E74D2] text-sm hover:bg-[#eef5ff]"
+            >
               Email Us
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -182,30 +186,28 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
   )
 }
 
-/* ----------------------------------------------- */
-/* COMPONENTS – Reduced Spacing + Dropcap FIX */
-/* ----------------------------------------------- */
+/* ------------------------------------------------ */
+/* COMPONENTS – tighter spacing + cleaner look     */
+/* ------------------------------------------------ */
 
 function Section({ title, children }: any) {
   return (
     <section className="space-y-4">
-      <h2 className="text-3xl font-serif font-bold text-[#1a365d]">{title}</h2>
+      <h2 className="text-3xl font-serif font-bold text-[#1a365d]">
+        {title}
+      </h2>
       {children}
     </section>
   )
 }
 
 function IntroParagraph({ text }: any) {
-  const cleaned = text.trim()
-  const first = cleaned.charAt(0)
-  const rest = cleaned.slice(1)
-
   return (
     <p className="text-lg leading-relaxed text-[#4a5568]">
-      <span className="float-left text-5xl mr-3 font-serif font-bold text-[#0E74D2] leading-none">
-        {first}
+      <span className="float-left text-5xl mr-3 font-serif text-[#0E74D2]">
+        {text.charAt(0)}
       </span>
-      {rest}
+      {text.slice(1)}
     </p>
   )
 }
