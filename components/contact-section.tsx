@@ -51,7 +51,7 @@ export default function ContactSection() {
               </div>
               <h3 className="text-xl font-bold mb-2">Call Us Anytime</h3>
               <p className="text-blue-100 mb-4">24/7 Admission Helpline</p>
-              <div className="text-3xl font-bold">9578599785</div>
+              <div className="text-3xl font-bold">+91 9578599785</div>
             </a>
 
             {/* Email Card */}

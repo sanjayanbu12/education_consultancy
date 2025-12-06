@@ -67,10 +67,15 @@ export default function HeroSection() {
 
                 {/* CTA */}
                 <div className="flex items-center gap-2 sm:gap-3">
-                  <a href="tel:9578599785" className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full">
+                  <a
+                    href="tel:9578599785"
+                    title="Call: 9578599785"
+                    className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full"
+                  >
                     <Phone className="w-3.5 h-3.5 text-[#0E74D2]" />
-                    <span className="text-[#0E74D2] text-xs font-medium">9578599785</span>
+                    <span className="text-[#0E74D2] text-xs font-medium">Contact</span>
                   </a>
+
                   <a href="#contact" className="px-4 py-2 bg-[#0E74D2] text-white text-xs font-medium rounded-full hover:bg-[#0a5ba8]">
                     Get Started
                   </a>
@@ -110,10 +115,12 @@ export default function HeroSection() {
 
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <a href="tel:9578599785"
-                      className="flex items-center gap-2 h-12 px-8 bg-[#0E74D2] text-white rounded-full font-medium text-sm shadow-lg hover:bg-[#0a5ba8] transition-all">
-                      <Phone className="w-4 h-4" /> Call Now: 9578599785
-                    </a>
+                  <a
+                    href="tel:9578599785"
+                    title="Call: 9578599785"
+                      className="flex items-center gap-2 h-12 px-8 bg-[#0E74D2] text-white rounded-full font-medium text-sm shadow-lg hover:bg-[#0a5ba8] transition-all">          
+                    <Phone className="w-4 h-4" /> Call Now
+                  </a>
 
                     <a href="mailto:alhudaeducationalconsultant@gmail.com"
                       className="flex items-center gap-2 h-12 px-8 bg-white text-[#0E74D2] rounded-full font-medium text-sm border-2 border-[#0E74D2] hover:bg-[#0E74D2]/5">

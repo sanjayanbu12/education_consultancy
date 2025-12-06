@@ -99,10 +99,11 @@ export default function ProcessTimelineSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:9578599785"
+              title="Call: 9578599785"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0E74D2] text-white rounded-full font-semibold hover:bg-[#0a5ba8] transition-colors shadow-lg shadow-[#0E74D2]/30"
             >
               <Phone className="w-5 h-5" />
-              Start Now: 9578599785
+              Start Now
             </a>
           </div>
         </div>

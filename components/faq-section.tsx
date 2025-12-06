@@ -32,7 +32,7 @@ const faqData = [
   {
     question: "How do I start the consultation process?",
     answer:
-      "Simply call us at 9578599785 or email us at alhudaeducationalconsultant@gmail.com. Our team is available 24/7 to assist you. You can also visit our office for an in-person consultation. The first step is always a free career assessment.",
+      "Simply call us at +91 9578599785 or email us at alhudaeducationalconsultant@gmail.com. Our team is available 24/7 to assist you. You can also visit our office for an in-person consultation. The first step is always a free career assessment.",
   },
 ]
 

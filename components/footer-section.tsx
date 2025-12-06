@@ -124,7 +124,7 @@ export default function FooterSection() {
                   </div>
                   <div>
                     <div className="text-xs text-white/70">24/7 Helpline</div>
-                    <div className="font-semibold">9578599785</div>
+                    <div className="font-semibold">+91 9578599785</div>
                   </div>
                 </a>
               </li>
