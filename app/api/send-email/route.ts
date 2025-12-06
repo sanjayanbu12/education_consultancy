@@ -132,7 +132,7 @@ export async function POST(request: Request) {
                 <div class="footer">
                   <p><strong>Action Required:</strong> Please follow up with this inquiry within 24 hours.</p>
                   <p style="margin-top: 10px;">📅 Submitted on: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</p>
-                  <p style="margin-top: 10px; font-size: 12px; color: #94a3b8;">This email was sent from your website contact form at alhudaeducational.com</p>
+                  <p style="margin-top: 10px; font-size: 12px; color: #94a3b8;">This email was sent from your website contact form at alhudaedu.com</p>
                 </div>
               </div>
             </div>
