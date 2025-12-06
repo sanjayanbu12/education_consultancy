@@ -16,19 +16,18 @@ export default function CourseInfoPage({ params }: any) {
     )
 
   return (
-    <div className="min-h-screen w-full bg-[#f5f8ff] text-[#1a2a3a]">
+    <div className="min-h-screen w-full bg-[#f5f8ff] dark:bg-gray-950 text-[#1a2a3a] dark:text-gray-100 transition-colors duration-300">
 
       {/* ------------------------------------------------ */}
       {/* HEADER (Reduced spacing) */}
       {/* ------------------------------------------------ */}
-      <header className="py-14 relative overflow-hidden bg-white">
+      <header className="py-14 relative overflow-hidden bg-white dark:bg-gray-950">
 
-        {/* Floating Blobs */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-[#0E74D2]/10 rounded-full blur-xl" />
-        <div className="absolute bottom-10 right-10 w-28 h-28 bg-[#0E74D2]/5 rounded-full blur-xl" />
+        {/* Background Pattern - Same as Hero Section */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,116,210,0.05)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(14,116,210,0.03)_0%,transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1)_0%,transparent_50%)]"></div>
 
-        {/* Grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#e6edf5_1px,transparent_1px),linear-gradient(to_bottom,#e6edf5_1px,transparent_1px)] bg-[size:32px_32px]" />
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(14,116,210,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(14,116,210,0.03)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(59,130,246,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.08)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
 
         <div className="relative max-w-5xl mx-auto px-6">
 
@@ -39,7 +38,7 @@ export default function CourseInfoPage({ params }: any) {
           </div> */}
 
           {/* Title */}
-          <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-[#1a365d]">
+          <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-[#1a365d] dark:text-gray-100">
             {course.title.split("–")[0].trim()}
             <br />
             {course.title.split("–")[1] && (
@@ -50,7 +49,7 @@ export default function CourseInfoPage({ params }: any) {
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-3 text-base md:text-lg text-[#4a5568] max-w-2xl leading-relaxed">
+          <p className="mt-3 text-base md:text-lg text-[#4a5568] dark:text-gray-400 max-w-2xl leading-relaxed">
             {course.subtitle}
           </p>
         </div>
@@ -60,16 +59,16 @@ export default function CourseInfoPage({ params }: any) {
       {/* TABLE OF CONTENT – tighter spacing */}
       {/* ------------------------------------------------ */}
       <section className="max-w-5xl mx-auto px-6 mt-10">
-        <div className="bg-white p-6 rounded-2xl shadow-md border border-[#0E74D2]/10 relative">
+        <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-md border border-[#0E74D2]/10 dark:border-gray-800 relative">
 
           <div className="absolute left-0 top-0 w-1.5 h-full bg-[#0E74D2]/70 rounded-l-2xl" />
 
-          <div className="flex items-center gap-2 text-lg font-semibold text-[#1a365d] mb-4">
+          <div className="flex items-center gap-2 text-lg font-semibold text-[#1a365d] dark:text-gray-100 mb-4">
             <Menu className="w-5 h-5 text-[#0E74D2]" />
             Key Sections
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-[#4a5568]">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-[#4a5568] dark:text-gray-400">
             {[
               "Overview",
               "Eligibility",
@@ -102,8 +101,8 @@ export default function CourseInfoPage({ params }: any) {
 
         {/* ELIGIBILITY */}
         <Section title="Eligibility Criteria">
-          <div className="bg-[#eef5ff] p-5 rounded-xl border border-[#0E74D2]/10">
-            <ul className="space-y-2 text-[15px] text-[#1a2a3a]">
+          <div className="bg-[#eef5ff] dark:bg-gray-800 p-5 rounded-xl border border-[#0E74D2]/10 dark:border-gray-700">
+            <ul className="space-y-2 text-[15px] text-[#1a2a3a] dark:text-gray-300">
               {course.eligibility.map((el: any, i: number) => (
                 <li key={i}>• {el}</li>
               ))}
@@ -113,7 +112,7 @@ export default function CourseInfoPage({ params }: any) {
 
         {/* DURATION */}
         <Section title="Course Duration">
-          <Card className="bg-[#eef5ff] border-[#0E74D2]/10 text-[16px]">
+          <Card className="bg-[#eef5ff] dark:bg-gray-800 border-[#0E74D2]/10 dark:border-gray-700 text-[16px]">
             {course.duration}
           </Card>
         </Section>
@@ -129,7 +128,7 @@ export default function CourseInfoPage({ params }: any) {
 
         {/* CAREER */}
         <Section title="Career Opportunities">
-          <ul className="space-y-2 text-lg text-[#4a5568]">
+          <ul className="space-y-2 text-lg text-[#4a5568] dark:text-gray-400">
             {course.careers.map((c: string, i: number) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="w-2 h-2 mt-2 rounded-full bg-[#0E74D2]" />
@@ -143,7 +142,7 @@ export default function CourseInfoPage({ params }: any) {
         <Section title="Future Scope & Trends">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {course.future.map((f: string, i: number) => (
-              <Card key={i} className="bg-[#eef5ff] border-[#0E74D2]/20">
+              <Card key={i} className="bg-[#eef5ff] dark:bg-gray-800 border-[#0E74D2]/20 dark:border-gray-700">
                 {f}
               </Card>
             ))}
@@ -155,13 +154,13 @@ export default function CourseInfoPage({ params }: any) {
       {/* CTA – Compact and clean */}
       {/* ------------------------------------------------ */}
       <div className="max-w-5xl mx-auto px-6 mt-20 mb-20">
-        <div className="p-8 bg-white rounded-2xl shadow-md border border-[#0E74D2]/10 relative">
+        <div className="p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-md border border-[#0E74D2]/10 dark:border-gray-800 relative">
 
-          <h2 className="text-2xl font-serif font-bold text-[#1a365d]">
+          <h2 className="text-2xl font-serif font-bold text-[#1a365d] dark:text-gray-100">
             Need Personalized Guidance?
           </h2>
 
-          <p className="mt-2 text-[#4a5568] text-[15px] leading-relaxed">
+          <p className="mt-2 text-[#4a5568] dark:text-gray-400 text-[15px] leading-relaxed">
             Speak with our counselors today and discover the best pathway for your future.
           </p>
 
@@ -193,7 +192,7 @@ export default function CourseInfoPage({ params }: any) {
 function Section({ title, children }: any) {
   return (
     <section className="space-y-4">
-      <h2 className="text-3xl font-serif font-bold text-[#1a365d]">
+      <h2 className="text-3xl font-serif font-bold text-[#1a365d] dark:text-gray-100">
         {title}
       </h2>
       {children}
@@ -203,7 +202,7 @@ function Section({ title, children }: any) {
 
 function IntroParagraph({ text }: any) {
   return (
-    <p className="text-lg leading-relaxed text-[#4a5568]">
+    <p className="text-lg leading-relaxed text-[#4a5568] dark:text-gray-400">
       <span className="float-left text-5xl mr-3 font-serif text-[#0E74D2]">
         {text.charAt(0)}
       </span>
@@ -215,7 +214,7 @@ function IntroParagraph({ text }: any) {
 function Card({ children, className = "" }: any) {
   return (
     <div
-      className={`p-5 bg-white border border-[#0E74D2]/10 rounded-xl shadow-sm text-[15px] text-[#1a365d] ${className}`}
+      className={`p-5 bg-white dark:bg-gray-900 border border-[#0E74D2]/10 dark:border-gray-800 rounded-xl shadow-sm text-[15px] text-[#1a365d] dark:text-gray-200 ${className}`}
     >
       {children}
     </div>

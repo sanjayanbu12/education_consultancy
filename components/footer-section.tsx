@@ -118,9 +118,9 @@ export default function FooterSection() {
               <li>
                 <a
                   href="tel:9578599785"
-                  className="flex items-center gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl text-white hover:bg-[#0E74D2]/20 dark:hover:bg-blue-600/20 transition-colors group border border-white/5 dark:border-white/10"
+                  className="flex items-center gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl text-white hover:bg-[#0E74D2]/20 transition-colors group border border-white/5 dark:border-white/10"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#0E74D2] dark:bg-blue-600 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg bg-[#0E74D2] flex items-center justify-center">
                     <Phone className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -132,9 +132,9 @@ export default function FooterSection() {
               <li>
                 <a
                   href="mailto:alhudaeducationalconsultant@gmail.com"
-                  className="flex items-start gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl text-white hover:bg-[#0E74D2]/20 dark:hover:bg-blue-600/20 transition-colors group border border-white/5 dark:border-white/10"
+                  className="flex items-start gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl text-white hover:bg-[#0E74D2]/20 transition-colors group border border-white/5 dark:border-white/10"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#0E74D2] dark:bg-blue-600 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-[#0E74D2] flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -144,7 +144,7 @@ export default function FooterSection() {
                 </a>
               </li>
               <li className="flex items-start gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl border border-white/5 dark:border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-[#0E74D2] dark:bg-blue-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-[#0E74D2] flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -177,7 +177,7 @@ export default function FooterSection() {
               </div>
               <button
                 onClick={scrollToTop}
-                className="w-10 h-10 rounded-xl bg-[#0E74D2] dark:bg-blue-600 flex items-center justify-center hover:bg-[#0a5ba8] dark:hover:bg-blue-700 transition-colors"
+                className="w-10 h-10 rounded-xl bg-[#0E74D2] flex items-center justify-center hover:bg-[#0a5ba8] transition-colors"
                 aria-label="Scroll to top"
               >
                 <ArrowUp className="w-5 h-5" />

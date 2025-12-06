@@ -77,7 +77,7 @@ export default function FAQSection() {
                 </a>
                 <a
                   href="mailto:alhudaeducationalconsultant@gmail.com"
-                  className="flex items-center gap-3 px-4 py-3 bg-[#0E74D2] dark:bg-blue-600 rounded-xl text-white hover:bg-[#0a5ba8] dark:hover:bg-blue-700 transition-colors"
+                  className="flex items-center gap-3 px-4 py-3 bg-[#0E74D2] rounded-xl text-white hover:bg-[#0a5ba8] transition-colors"
                 >
                   <MessageCircle className="w-5 h-5" />
                   <span className="text-sm font-medium">Send Message</span>

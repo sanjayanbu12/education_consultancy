@@ -231,7 +231,7 @@ export default function ContactSection() {
                   <button
                     onClick={handleSubmit}
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#0E74D2] dark:bg-blue-600 text-white rounded-xl font-semibold hover:bg-[#0a5ba8] dark:hover:bg-blue-700 transition-colors shadow-lg shadow-[#0E74D2]/30 dark:shadow-blue-600/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#0E74D2] text-white rounded-xl font-semibold hover:bg-[#0a5ba8] transition-colors shadow-lg shadow-[#0E74D2]/30 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <>
