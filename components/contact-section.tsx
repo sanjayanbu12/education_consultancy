@@ -1,9 +1,8 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from "lucide-react"
 
 export default function ContactSection() {
   const [formState, setFormState] = useState({
@@ -14,12 +13,51 @@ export default function ContactSection() {
     message: "",
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Simulate form submission
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
+  const handleSubmit = async () => {
+    // Validation
+    if (!formState.name || !formState.email || !formState.phone) {
+      setError("Please fill in all required fields")
+      setTimeout(() => setError(""), 3000)
+      return
+    }
+
+    setLoading(true)
+    setError("")
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message")
+      }
+
+      setSubmitted(true)
+      setFormState({
+        name: "",
+        email: "",
+        phone: "",
+        course: "",
+        message: "",
+      })
+      setTimeout(() => setSubmitted(false), 5000)
+    } catch (err) {
+      console.error("Form submission error:", err)
+      setError("Failed to send message. Please try calling us directly at +91 9578599785")
+      setTimeout(() => setError(""), 5000)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -97,11 +135,27 @@ export default function ContactSection() {
                   <h4 className="text-xl font-bold text-[#1a365d] mb-2">Message Sent!</h4>
                   <p className="text-[#4a5568]">We'll get back to you shortly.</p>
                 </div>
+              ) : error ? (
+                <div className="flex flex-col items-center justify-center py-12 text-center">
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                    <AlertCircle className="w-8 h-8 text-red-600" />
+                  </div>
+                  <h4 className="text-xl font-bold text-[#1a365d] mb-2">Oops!</h4>
+                  <p className="text-[#4a5568] mb-4">{error}</p>
+                  <button
+                    onClick={() => setError("")}
+                    className="px-6 py-2 bg-[#0E74D2] text-white rounded-lg font-medium hover:bg-[#0a5ba8] transition-colors"
+                  >
+                    Try Again
+                  </button>
+                </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-[#1a365d] mb-2">Full Name</label>
+                      <label className="block text-sm font-medium text-[#1a365d] mb-2">
+                        Full Name <span className="text-red-500">*</span>
+                      </label>
                       <input
                         type="text"
                         required
@@ -109,10 +163,13 @@ export default function ContactSection() {
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                         className="w-full px-4 py-3 bg-white rounded-xl border border-gray-200 focus:border-[#0E74D2] focus:ring-2 focus:ring-[#0E74D2]/20 outline-none transition-all"
                         placeholder="Your name"
+                        disabled={loading}
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-[#1a365d] mb-2">Phone Number</label>
+                      <label className="block text-sm font-medium text-[#1a365d] mb-2">
+                        Phone Number <span className="text-red-500">*</span>
+                      </label>
                       <input
                         type="tel"
                         required
@@ -120,12 +177,15 @@ export default function ContactSection() {
                         onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                         className="w-full px-4 py-3 bg-white rounded-xl border border-gray-200 focus:border-[#0E74D2] focus:ring-2 focus:ring-[#0E74D2]/20 outline-none transition-all"
                         placeholder="Your phone"
+                        disabled={loading}
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#1a365d] mb-2">Email Address</label>
+                    <label className="block text-sm font-medium text-[#1a365d] mb-2">
+                      Email Address <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="email"
                       required
@@ -133,6 +193,7 @@ export default function ContactSection() {
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       className="w-full px-4 py-3 bg-white rounded-xl border border-gray-200 focus:border-[#0E74D2] focus:ring-2 focus:ring-[#0E74D2]/20 outline-none transition-all"
                       placeholder="your@email.com"
+                      disabled={loading}
                     />
                   </div>
 
@@ -142,6 +203,7 @@ export default function ContactSection() {
                       value={formState.course}
                       onChange={(e) => setFormState({ ...formState, course: e.target.value })}
                       className="w-full px-4 py-3 bg-white rounded-xl border border-gray-200 focus:border-[#0E74D2] focus:ring-2 focus:ring-[#0E74D2]/20 outline-none transition-all"
+                      disabled={loading}
                     >
                       <option value="">Select a course category</option>
                       <option value="medical">Medical / MBBS</option>
@@ -162,17 +224,28 @@ export default function ContactSection() {
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                       className="w-full px-4 py-3 bg-white rounded-xl border border-gray-200 focus:border-[#0E74D2] focus:ring-2 focus:ring-[#0E74D2]/20 outline-none transition-all resize-none"
                       placeholder="Tell us about your educational goals..."
+                      disabled={loading}
                     />
                   </div>
 
                   <button
-                    type="submit"
-                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#0E74D2] text-white rounded-xl font-semibold hover:bg-[#0a5ba8] transition-colors shadow-lg shadow-[#0E74D2]/30"
+                    onClick={handleSubmit}
+                    disabled={loading}
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#0E74D2] text-white rounded-xl font-semibold hover:bg-[#0a5ba8] transition-colors shadow-lg shadow-[#0E74D2]/30 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-5 h-5" />
-                    Send Message
+                    {loading ? (
+                      <>
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        Send Message
+                      </>
+                    )}
                   </button>
-                </form>
+                </div>
               )}
             </div>
           </div>
