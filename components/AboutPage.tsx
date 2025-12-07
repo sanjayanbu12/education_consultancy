@@ -330,7 +330,7 @@ export default function AboutPage() {
             </div> */}
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center gap-8 mt-16 text-white/80 text-sm">
+            {/* <div className="flex flex-wrap justify-center gap-8 mt-16 text-white/80 text-sm">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5" />
                 <span>100% Free Service</span>
@@ -343,7 +343,7 @@ export default function AboutPage() {
                 <CheckCircle2 className="w-5 h-5" />
                 <span>15+ Years Trusted</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 

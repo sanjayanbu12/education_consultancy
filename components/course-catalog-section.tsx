@@ -298,7 +298,7 @@ export default function CourseCatalogSection() {
         )}
 
         {/* CTA */}
-        <div className="mt-12 bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] rounded-2xl p-8 text-center">
+        {/* <div className="mt-12 bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-semibold text-white mb-3">Need Guidance?</h3>
           <p className="text-white/90 mb-6">
             Our experts can help you find the perfect course
@@ -310,7 +310,7 @@ export default function CourseCatalogSection() {
             <span>Contact Us</span>
             <ArrowRight className="w-4 h-4" />
           </a>
-        </div>
+        </div> */}
 
       </div>
     </section>

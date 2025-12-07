@@ -229,10 +229,10 @@ export default function CollegeShowcaseSection() {
 
         {/* ---------- SECTION HEADER ---------- */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
             <Building className="w-4 h-4 text-[#0E74D2] dark:text-blue-400" />
             <span className="text-[#0E74D2] dark:text-blue-400 text-sm font-medium">Partner Institutions</span>
-          </div>
+          </div> */}
 
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">
             Top Colleges in Tamil Nadu
@@ -339,7 +339,7 @@ export default function CollegeShowcaseSection() {
         </div>
 
         {/* ---------- CTA Banner ---------- */}
-        <div className="mt-12 bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* <div className="mt-12 bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-5">
             <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
               <MapPin className="w-8 h-8 text-white" />
@@ -358,7 +358,7 @@ export default function CollegeShowcaseSection() {
           >
             Call Now
           </a>
-        </div>
+        </div> */}
 
       </div>
     </section>
