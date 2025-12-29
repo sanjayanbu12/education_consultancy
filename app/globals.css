@@ -122,6 +122,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -132,6 +133,7 @@
   from {
     height: 0;
   }
+
   to {
     height: var(--radix-accordion-content-height);
   }
@@ -141,6 +143,7 @@
   from {
     height: var(--radix-accordion-content-height);
   }
+
   to {
     height: 0;
   }
@@ -151,6 +154,7 @@
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -162,6 +166,7 @@
     opacity: 1;
     transform: scale(1);
   }
+
   to {
     opacity: 0;
     transform: scale(0.95);
@@ -172,6 +177,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -181,6 +187,7 @@
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
@@ -190,6 +197,7 @@
   from {
     transform: translateY(-100%);
   }
+
   to {
     transform: translateY(0);
   }
@@ -199,6 +207,7 @@
   from {
     transform: translateY(100%);
   }
+
   to {
     transform: translateY(0);
   }
@@ -208,6 +217,7 @@
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -217,6 +227,7 @@
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -226,6 +237,7 @@
   from {
     transform: scale(0.95);
   }
+
   to {
     transform: scale(1);
   }
@@ -235,6 +247,7 @@
   from {
     transform: scale(1);
   }
+
   to {
     transform: scale(0.95);
   }
@@ -244,85 +257,112 @@
 .animate-in {
   animation: enter 0.2s ease-out;
 }
+
 .animate-out {
   animation: exit 0.2s ease-in forwards;
 }
+
 .fade-in-0 {
   animation: fade-in 0.2s ease-out;
 }
+
 .fade-out-0 {
   animation: fade-out 0.2s ease-in forwards;
 }
+
 .fade-out-80 {
   animation: fade-out 0.2s ease-in forwards;
   opacity: 0.8;
 }
+
 .zoom-in-95 {
   animation: zoom-in 0.2s ease-out;
 }
+
 .zoom-out-95 {
   animation: zoom-out 0.2s ease-in forwards;
 }
+
 .slide-in-from-top-2 {
   animation: slide-in-from-top 0.2s ease-out;
 }
+
 .slide-in-from-bottom-2 {
   animation: slide-in-from-bottom 0.2s ease-out;
 }
+
 .slide-in-from-left-2 {
   animation: slide-in-from-left 0.2s ease-out;
 }
+
 .slide-in-from-right-2 {
   animation: slide-in-from-right 0.2s ease-out;
 }
+
 .slide-in-from-top-full {
   animation: slide-in-from-top 0.3s ease-out;
 }
+
 .slide-in-from-bottom-full {
   animation: slide-in-from-bottom 0.3s ease-out;
 }
+
 .slide-in-from-left-52 {
   animation: slide-in-from-left 0.3s ease-out;
 }
+
 .slide-in-from-right-52 {
   animation: slide-in-from-right 0.3s ease-out;
 }
+
 .slide-out-to-right-full {
   animation: slide-in-from-right 0.2s ease-in reverse forwards;
 }
+
 .slide-out-to-left-52 {
   animation: slide-in-from-left 0.2s ease-in reverse forwards;
 }
+
 .slide-out-to-right-52 {
   animation: slide-in-from-right 0.2s ease-in reverse forwards;
 }
+
 .slide-in-from-left {
   animation: slide-in-from-left 0.3s ease-out;
 }
+
 .slide-in-from-right {
   animation: slide-in-from-right 0.3s ease-out;
 }
+
 .slide-in-from-top {
   animation: slide-in-from-top 0.3s ease-out;
 }
+
 .slide-in-from-bottom {
   animation: slide-in-from-bottom 0.3s ease-out;
 }
+
 .slide-out-to-left {
   animation: slide-in-from-left 0.2s ease-in reverse forwards;
 }
+
 .slide-out-to-right {
   animation: slide-in-from-right 0.2s ease-in reverse forwards;
 }
+
 .slide-out-to-top {
   animation: slide-in-from-top 0.2s ease-in reverse forwards;
 }
+
 .slide-out-to-bottom {
   animation: slide-in-from-bottom 0.2s ease-in reverse forwards;
 }
+
 .animate-accordion-down {
   animation: accordion-down 0.2s ease-out;
 }
+
 .animate-accordion-up {
   animation: accordion-up 0.2s ease-out;
 }
@@ -331,19 +371,24 @@
 .text-balance {
   text-wrap: balance;
 }
+
 .text-pretty {
   text-wrap: pretty;
 }
+
 .font-inter {
   font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
 .font-instrument-serif {
   font-family: var(--font-instrument-serif);
   font-display: swap;
 }
+
 .mix-blend-multiply {
   mix-blend-mode: multiply;
 }
+
 .backdrop-blur-custom {
   backdrop-filter: blur(8.25px);
 }
@@ -353,6 +398,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -362,6 +408,7 @@
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -380,6 +427,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

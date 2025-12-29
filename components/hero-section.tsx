@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone, Mail, GraduationCap, Users, Award, Clock, ArrowRight, CheckCircle2 } from "lucide-react"
+import { Phone, Mail, GraduationCap, Users, Award, Clock, ArrowRight, CheckCircle2, MessageCircle } from "lucide-react"
 
 export default function HeroSection() {
   return (
@@ -106,7 +106,18 @@ export default function HeroSection() {
             </div>
 
           </div>
-
+ <a
+        href="https://wa.me/919578599785"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#25D366] text-white px-5 py-3 rounded-full shadow-[0_8px_30px_rgba(37,211,102,0.4)] hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)] hover:scale-105 transition-all duration-300 group animate-bounce-subtle"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-5 h-5" />
+        <span className="hidden sm:inline font-medium">Chat with us</span>
+        <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-ping"></div>
+        <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></div>
+      </a>
           {/* Stats Bar */}
           {/* <div className="mt-24 pt-12 border-t border-gray-200">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
