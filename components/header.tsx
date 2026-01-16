@@ -1,13 +1,14 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Moon, Sun } from "lucide-react"
+import { Menu, X, Moon, Sun, GraduationCap, Building2, Info, Briefcase, MessageSquare, Mail, BookOpen, Award, Users, Target, TrendingUp, CheckCircle } from "lucide-react"
 import { useTheme } from "next-themes"
 import Link from "next/link"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -24,6 +25,73 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const megaMenuContent = {
+    Courses: {
+      title: "Explore 150+ Courses",
+      description: "Find the perfect program for your career goals",
+      stats: [
+        { label: "Medical Programs", value: "35+" },
+        { label: "Engineering Courses", value: "50+" },
+        { label: "Management Programs", value: "13+" },
+      ],
+      features: [
+        "NEET & JEE Guidance",
+        "Career Path Planning",
+        "Scholarship Assistance",
+        "Expert Counseling",
+      ],
+      image: "/api/placeholder/400/300"
+    },
+    Colleges: {
+      title: "5000+ Top Institutions",
+      description: "Discover the best colleges across India",
+      stats: [
+        { label: "Government Colleges", value: "2000+" },
+        { label: "Private Institutions", value: "3000+" },
+        { label: "Partner Colleges", value: "500+" },
+      ],
+      features: [
+        "Verified College Information",
+        "Admission Process Support",
+        "Campus Visit Assistance",
+        "Placement Records",
+      ],
+      image: "/api/placeholder/400/300"
+    },
+    About: {
+      title: "Your Success Partner",
+      description: "15+ years of educational excellence",
+      stats: [
+        { label: "Students Helped", value: "10,000+" },
+        { label: "Success Rate", value: "98%" },
+        { label: "Expert Counselors", value: "50+" },
+      ],
+      features: [
+        "100% Free Services",
+        "24/7 Support Available",
+        "Personalized Guidance",
+        "End-to-End Assistance",
+      ],
+      image: "/api/placeholder/400/300"
+    },
+    Services: {
+      title: "Comprehensive Support",
+      description: "Everything you need for admission success",
+      stats: [
+        { label: "Services Offered", value: "15+" },
+        { label: "Partner Institutions", value: "500+" },
+        { label: "Satisfaction Rate", value: "100%" },
+      ],
+      features: [
+        "Career Counseling",
+        "Admission Guidance",
+        "Document Assistance",
+        "Scholarship Support",
+      ],
+      image: "/api/placeholder/400/300"
+    },
+  }
+
   const navItems = [
     { name: "Courses", href: "#courses" },
     { name: "Colleges", href: "#top-colleges" },
@@ -32,6 +100,16 @@ export default function Header() {
     { name: "Testimonials", href: "#process-timeline" },
     { name: "Contact", href: "#contact" },
   ]
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    setActiveDropdown(null)
+  }
+
+  const hasMegaMenu = (name: string) => name in megaMenuContent
 
   return (
     <>
@@ -46,7 +124,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-12">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
               <img
                 src="/images/3rd-ed-logo-final-removebg-preview.png"
                 alt="AL-HUDA"
@@ -65,25 +143,28 @@ export default function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
-                <a
+                <div
                   key={item.name}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    const element = document.querySelector(item.href)
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                    }
-                  }}
-                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer"
+                  className="relative"
+                  onMouseEnter={() => hasMegaMenu(item.name) && setActiveDropdown(item.name)}
+                  onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  {item.name}
-                </a>
+                  <a
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      scrollToSection(item.href)
+                    }}
+                    className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer"
+                  >
+                    {item.name}
+                  </a>
+                </div>
               ))}
             </nav>
 
             {/* Right Side: Theme Toggle + CTA */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 z-50">
 
               {/* Theme Toggle */}
               {mounted && (
@@ -105,10 +186,7 @@ export default function Header() {
                 href="#contact"
                 onClick={(e) => {
                   e.preventDefault()
-                  const element = document.querySelector('#contact')
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                  }
+                  scrollToSection('#contact')
                 }}
                 className="hidden md:inline-flex items-center px-5 py-2 bg-[#0071E3] hover:bg-[#0077ED] text-white text-sm font-semibold rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
               >
@@ -130,6 +208,86 @@ export default function Header() {
             </div>
           </div>
         </div>
+
+        {/* Full-Width Mega Menu */}
+        {activeDropdown && megaMenuContent[activeDropdown as keyof typeof megaMenuContent] && (
+          <div
+            className="absolute left-0 right-0 top-full bg-white/95 dark:bg-black/95 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50 shadow-2xl"
+            onMouseEnter={() => setActiveDropdown(activeDropdown)}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <div className="max-w-[1400px] mx-auto px-6 lg:px-8 py-12">
+              <div className="grid grid-cols-2 gap-12">
+                {/* Left Side - Rich Content */}
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
+                      {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].title}
+                    </h3>
+                    <p className="text-lg text-gray-600 dark:text-gray-400">
+                      {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].description}
+                    </p>
+                  </div>
+
+                  {/* Stats Grid */}
+                  <div className="grid grid-cols-3 gap-6">
+                    {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].stats.map((stat, index) => (
+                      <div key={index} className="text-center p-4 bg-gray-50 dark:bg-gray-900 rounded-xl">
+                        <div className="text-3xl font-bold text-[#0071E3] dark:text-blue-400 mb-1">
+                          {stat.value}
+                        </div>
+                        <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">
+                          {stat.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Features List */}
+                  <div className="grid grid-cols-2 gap-3">
+                    {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].features.map((feature, index) => (
+                      <div key={index} className="flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 text-[#0071E3] dark:text-blue-400 flex-shrink-0" />
+                        <span className="text-sm text-gray-700 dark:text-gray-300">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* CTA Button */}
+                  <a
+                    href={navItems.find(item => item.name === activeDropdown)?.href || "#"}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      scrollToSection(navItems.find(item => item.name === activeDropdown)?.href || "#")
+                    }}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#0071E3] hover:bg-[#0077ED] text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
+                  >
+                    Explore {activeDropdown}
+                    <TrendingUp className="w-4 h-4" />
+                  </a>
+                </div>
+
+                {/* Right Side - Visual */}
+                <div className="relative">
+                  <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
+                    <img
+                      src={
+                        activeDropdown === "Courses" ? "/courses_mega_menu_1768571159569.png" :
+                          activeDropdown === "Colleges" ? "/colleges_mega_menu_1768571179987.png" :
+                            activeDropdown === "About" ? "/about_mega_menu_1768571207166.png" :
+                              activeDropdown === "Services" ? "/services_mega_menu_1768571237885.png" :
+                                ""
+                      }
+                      alt={`${activeDropdown} visual`}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Mobile Menu - Full Screen Overlay */}
@@ -147,12 +305,7 @@ export default function Header() {
               onClick={(e) => {
                 e.preventDefault()
                 setMobileMenuOpen(false)
-                setTimeout(() => {
-                  const element = document.querySelector(item.href)
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                  }
-                }, 300)
+                setTimeout(() => scrollToSection(item.href), 300)
               }}
               className="text-4xl font-bold text-gray-900 dark:text-white hover:text-[#0071E3] dark:hover:text-[#0077ED] transition-colors cursor-pointer"
               style={{
@@ -170,12 +323,7 @@ export default function Header() {
             onClick={(e) => {
               e.preventDefault()
               setMobileMenuOpen(false)
-              setTimeout(() => {
-                const element = document.querySelector('#contact')
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                }
-              }, 300)
+              setTimeout(() => scrollToSection('#contact'), 300)
             }}
             className="mt-8 px-8 py-4 bg-[#0071E3] hover:bg-[#0077ED] text-white text-lg font-semibold rounded-full transition-all duration-300 cursor-pointer"
             style={{
