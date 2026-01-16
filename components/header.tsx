@@ -132,7 +132,7 @@ export default function Header() {
                           key={idx}
                           href={item.href}
                           onClick={() => setOpenDropdown(null)}
-                          className="block px-4 py-2.5 text-sm text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                          className="block px-4 py-2.5 text-sm text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-zinc-900 transition-colors"
                         >
                           {item.name}
                         </a>

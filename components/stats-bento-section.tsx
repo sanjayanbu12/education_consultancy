@@ -4,7 +4,7 @@ import { Building, BookOpen, Users, Trophy, TrendingUp, Target } from "lucide-re
 
 export default function StatsBentoSection() {
   return (
-    <section className="w-full py-20 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <section className="w-full py-20 bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 auto-rows-[140px]">
@@ -22,7 +22,7 @@ export default function StatsBentoSection() {
           </div>
 
           {/* Medium Card */}
-          <div className="col-span-2 bg-[#f0f7ff] dark:bg-gray-900 rounded-3xl p-6 flex flex-col justify-between border dark:border-gray-800">
+          <div className="col-span-2 bg-[#f0f7ff] dark:bg-black rounded-3xl p-6 flex flex-col justify-between border dark:border-gray-800">
             <BookOpen className="w-8 h-8 text-[#0E74D2] dark:text-blue-400" />
             <div>
               <div className="text-3xl font-bold text-[#1a365d] dark:text-gray-100">200+</div>
@@ -58,7 +58,7 @@ export default function StatsBentoSection() {
           </div>
 
           {/* Wide Card */}
-          <div className="col-span-2 md:col-span-4 bg-gradient-to-r from-[#1a365d] to-[#2d4a6f] dark:from-gray-800 dark:to-gray-900 rounded-3xl p-6 flex items-center justify-between">
+          <div className="col-span-2 md:col-span-4 bg-gradient-to-r from-[#1a365d] to-[#2d4a6f] dark:from-gray-800 dark:to-black rounded-3xl p-6 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center">
                 <TrendingUp className="w-7 h-7 text-white" />

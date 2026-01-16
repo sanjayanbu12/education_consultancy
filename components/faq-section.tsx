@@ -44,7 +44,7 @@ export default function FAQSection() {
   }
 
   return (
-    <section className="w-full py-20 bg-gradient-to-b from-white dark:from-gray-950 to-[#f0f7ff] dark:to-gray-900 transition-colors duration-300">
+    <section className="w-full py-20 bg-gradient-to-b from-white dark:from-black to-[#f0f7ff] dark:to-black transition-colors duration-300">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column - Header & CTA */}
@@ -62,7 +62,7 @@ export default function FAQSection() {
             </p>
 
             {/* Quick Contact Card */}
-            <div className="bg-[#1a365d] dark:bg-gray-800 rounded-2xl p-6">
+            <div className="bg-[#1a365d] dark:bg-zinc-900 rounded-2xl p-6">
               <h3 className="text-white font-semibold mb-4">Still have questions?</h3>
               <p className="text-white/70 text-sm mb-6">
                 Our expert counselors are available 24/7 to help you with any queries.
@@ -94,7 +94,7 @@ export default function FAQSection() {
                 return (
                   <div
                     key={index}
-                    className={`bg-white dark:bg-gray-800 rounded-2xl border transition-all ${isOpen ? "border-[#0E74D2]/30 dark:border-blue-500/30 shadow-lg" : "border-[rgba(14,116,210,0.1)] dark:border-gray-700 shadow-sm"
+                    className={`bg-white dark:bg-zinc-900 rounded-2xl border transition-all ${isOpen ? "border-[#0E74D2]/30 dark:border-blue-500/30 shadow-lg" : "border-[rgba(14,116,210,0.1)] dark:border-gray-700 shadow-sm"
                       }`}
                   >
                     <button

@@ -62,7 +62,7 @@ export default function CollegeShowcaseSection() {
   }
 
   return (
-    <section id="colleges" className="w-full py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <section id="colleges" className="w-full py-24 bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ---------- SECTION HEADER ---------- */}
@@ -93,13 +93,13 @@ export default function CollegeShowcaseSection() {
               placeholder="Search colleges by name or city..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500"
+              className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500"
             />
           </div>
 
           {/* Filter Pills */}
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-lg">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-zinc-900 rounded-lg">
               <Filter className="w-4 h-4 text-gray-600 dark:text-gray-400" />
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Filters:</span>
             </div>
@@ -111,7 +111,7 @@ export default function CollegeShowcaseSection() {
                 setSelectedState(e.target.value)
                 setSelectedCity("All Cities")
               }}
-              className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500 cursor-pointer"
+              className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-gray-100 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500 cursor-pointer"
             >
               {states.map(state => (
                 <option key={state} value={state}>{state}</option>
@@ -122,7 +122,7 @@ export default function CollegeShowcaseSection() {
             <select
               value={selectedCity}
               onChange={(e) => setSelectedCity(e.target.value)}
-              className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500 cursor-pointer"
+              className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-gray-100 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500 cursor-pointer"
               disabled={selectedState === "All States"}
             >
               {cities.map(city => (
@@ -139,7 +139,7 @@ export default function CollegeShowcaseSection() {
                 onClick={() => setSelectedType(key)}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${selectedType === key
                   ? `${type.color} text-white shadow-lg`
-                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2] dark:hover:border-blue-500"
+                  : "bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2] dark:hover:border-blue-500"
                   }`}
               >
                 {type.icon}
@@ -221,7 +221,7 @@ export default function CollegeShowcaseSection() {
           </div>
 
           {/* ---------- RIGHT: COLLEGE LIST ---------- */}
-          <div className="lg:col-span-2 bg-[#f8fafc] dark:bg-gray-900 rounded-3xl p-6 border border-gray-100 dark:border-gray-800">
+          <div className="lg:col-span-2 bg-[#f8fafc] dark:bg-black rounded-3xl p-6 border border-gray-100 dark:border-gray-800">
 
             {filteredColleges.length === 0 ? (
               <div className="text-center py-12">
@@ -237,7 +237,7 @@ export default function CollegeShowcaseSection() {
                   return (
                     <div
                       key={index}
-                      className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-md transition-all cursor-pointer group"
+                      className="bg-white dark:bg-zinc-900 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-md transition-all cursor-pointer group"
                     >
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex items-start gap-3 flex-1">

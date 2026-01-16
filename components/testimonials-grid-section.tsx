@@ -55,7 +55,7 @@ const testimonials = [
 
 export default function TestimonialsGridSection() {
   return (
-    <section className="w-full py-24 bg-[#f8fafc] dark:bg-gray-900 transition-colors duration-300">
+    <section className="w-full py-24 bg-[#f8fafc] dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -74,7 +74,7 @@ export default function TestimonialsGridSection() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`relative bg-white dark:bg-gray-800 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all ${testimonial.featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""
+              className={`relative bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all ${testimonial.featured ? "md:col-span-2 lg:col-span-1 lg:row-span-2" : ""
                 }`}
             >
               {/* Quote Icon */}
@@ -127,7 +127,7 @@ export default function TestimonialsGridSection() {
             { value: "200+", label: "Courses Offered" },
             { value: "100%", label: "Free Services" },
           ].map((stat, index) => (
-            <div key={index} className="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700">
+            <div key={index} className="text-center p-6 bg-white dark:bg-zinc-900 rounded-2xl border border-gray-100 dark:border-gray-700">
               <div className="text-3xl font-bold text-[#0E74D2] dark:text-blue-400 mb-1">{stat.value}</div>
               <div className="text-sm text-[#4a5568] dark:text-gray-400">{stat.label}</div>
             </div>

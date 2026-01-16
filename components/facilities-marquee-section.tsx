@@ -64,7 +64,7 @@ const facilities = [
 
 export default function FacilitiesMarqueeSection() {
   return (
-    <section className="w-full py-24 bg-gradient-to-b from-[#f0f7ff] dark:from-gray-900 to-white dark:to-gray-950 overflow-hidden transition-colors duration-300">
+    <section className="w-full py-24 bg-gradient-to-b from-[#f0f7ff] dark:from-black to-white dark:to-black overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-4">
@@ -86,7 +86,7 @@ export default function FacilitiesMarqueeSection() {
           {[...facilities, ...facilities].map((facility, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[300px] bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm"
+              className="flex-shrink-0 w-[300px] bg-white dark:bg-black rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-sm"
             >
               <div className="w-12 h-12 rounded-xl bg-[#0E74D2]/10 dark:bg-blue-500/20 flex items-center justify-center text-[#0E74D2] dark:text-blue-400 mb-4">
                 {facility.icon}
@@ -120,7 +120,7 @@ export default function FacilitiesMarqueeSection() {
 
       {/* CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-        <div className="bg-[#1a365d] dark:bg-gray-800 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div className="bg-[#1a365d] dark:bg-zinc-900 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#0E74D2]/30 rounded-full blur-3xl"></div>
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Start Your Journey?</h3>

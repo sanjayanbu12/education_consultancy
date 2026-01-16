@@ -61,7 +61,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <section id="contact" className="w-full py-24 bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -95,7 +95,7 @@ export default function ContactSection() {
             {/* Email Card */}
             <a
               href="mailto:alhudaeducationalconsultant@gmail.com"
-              className="block bg-[#1a365d] dark:bg-gray-800 rounded-3xl p-8 text-white hover:shadow-xl transition-all group"
+              className="block bg-[#1a365d] dark:bg-zinc-900 rounded-3xl p-8 text-white hover:shadow-xl transition-all group"
             >
               <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-[#1a365d] transition-colors">
                 <Mail className="w-7 h-7" />
@@ -106,12 +106,12 @@ export default function ContactSection() {
 
             {/* Info Cards Row */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[#f8fafc] dark:bg-gray-900 rounded-2xl p-5 border border-gray-100 dark:border-gray-800">
+              <div className="bg-[#f8fafc] dark:bg-black rounded-2xl p-5 border border-gray-100 dark:border-gray-800">
                 <MapPin className="w-6 h-6 text-[#0E74D2] dark:text-blue-400 mb-3" />
                 <h4 className="font-semibold text-[#1a365d] dark:text-gray-100 text-sm mb-1">Location</h4>
                 <p className="text-[#4a5568] dark:text-gray-400 text-xs">Coimbatore, Tamil Nadu</p>
               </div>
-              <div className="bg-[#f8fafc] dark:bg-gray-900 rounded-2xl p-5 border border-gray-100 dark:border-gray-800">
+              <div className="bg-[#f8fafc] dark:bg-black rounded-2xl p-5 border border-gray-100 dark:border-gray-800">
                 <Clock className="w-6 h-6 text-[#0E74D2] dark:text-blue-400 mb-3" />
                 <h4 className="font-semibold text-[#1a365d] dark:text-gray-100 text-sm mb-1">Available</h4>
                 <p className="text-[#4a5568] dark:text-gray-400 text-xs">24 Hours / 7 Days</p>
@@ -121,7 +121,7 @@ export default function ContactSection() {
 
           {/* Right - Contact Form (3 columns) */}
           <div className="lg:col-span-3">
-            <div className="bg-[#f8fafc] dark:bg-gray-900 rounded-3xl p-8 md:p-10 border border-gray-100 dark:border-gray-800">
+            <div className="bg-[#f8fafc] dark:bg-black rounded-3xl p-8 md:p-10 border border-gray-100 dark:border-gray-800">
               <h3 className="text-2xl font-bold text-[#1a365d] dark:text-gray-100 mb-2">Send Us a Message</h3>
               <p className="text-[#4a5568] dark:text-gray-400 mb-8">
                 Fill out the form and our team will get back to you within 24 hours.
@@ -161,7 +161,7 @@ export default function ContactSection() {
                         required
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                        className="w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                        className="w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
                         placeholder="Your name"
                         disabled={loading}
                       />
@@ -175,7 +175,7 @@ export default function ContactSection() {
                         required
                         value={formState.phone}
                         onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                        className="w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                        className="w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
                         placeholder="Your phone"
                         disabled={loading}
                       />
@@ -191,7 +191,7 @@ export default function ContactSection() {
                       required
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      className="w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                      className="w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
                       placeholder="your@email.com"
                       disabled={loading}
                     />
@@ -202,7 +202,7 @@ export default function ContactSection() {
                     <select
                       value={formState.course}
                       onChange={(e) => setFormState({ ...formState, course: e.target.value })}
-                      className="w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100"
+                      className="w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100"
                       disabled={loading}
                     >
                       <option value="">Select a course category</option>
@@ -222,7 +222,7 @@ export default function ContactSection() {
                       rows={4}
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                      className="w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all resize-none text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                      className="w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all resize-none text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
                       placeholder="Tell us about your educational goals..."
                       disabled={loading}
                     />

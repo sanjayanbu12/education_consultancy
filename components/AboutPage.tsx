@@ -7,7 +7,7 @@ export default function AboutPage() {
   const [activeTab, setActiveTab] = useState("mission")
 
   return (
-    <div className="w-full min-h-screen bg-white dark:bg-gray-950 overflow-x-hidden transition-colors duration-300">
+    <div className="w-full min-h-screen bg-white dark:bg-black overflow-x-hidden transition-colors duration-300">
 
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10">
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 { icon: <Globe className="w-5 h-5" />, value: "5,000+", label: "Partner Colleges" },
                 { icon: <Award className="w-5 h-5" />, value: "98%", label: "Success Rate" }
               ].map((stat, i) => (
-                <div key={i} className="flex items-center gap-3 px-6 py-3 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-full border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div key={i} className="flex items-center gap-3 px-6 py-3 bg-white/80 dark:bg-black/80 backdrop-blur-sm rounded-full border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <div className="text-[#0E74D2] dark:text-blue-400">{stat.icon}</div>
                   <div className="text-left">
                     <div className="text-2xl font-bold text-[#1a1a1a] dark:text-gray-100">{stat.value}</div>
@@ -65,7 +65,7 @@ export default function AboutPage() {
 
           {/* Tab Navigation */}
           <div className="flex justify-center mb-12">
-            <div className="inline-flex bg-gray-100 dark:bg-gray-800 rounded-2xl p-2 gap-2">
+            <div className="inline-flex bg-gray-100 dark:bg-zinc-900 rounded-2xl p-2 gap-2">
               {[
                 { id: "mission", icon: <Compass className="w-5 h-5" />, label: "Mission" },
                 { id: "vision", icon: <Target className="w-5 h-5" />, label: "Vision" },
@@ -75,7 +75,7 @@ export default function AboutPage() {
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center gap-2 px-8 py-4 rounded-xl font-medium transition-all duration-300 ${activeTab === tab.id
-                    ? "bg-white dark:bg-gray-900 text-[#0E74D2] dark:text-blue-400 shadow-lg"
+                    ? "bg-white dark:bg-black text-[#0E74D2] dark:text-blue-400 shadow-lg"
                     : "text-[#5a5a5a] dark:text-gray-400 hover:text-[#1a1a1a] dark:hover:text-gray-200"
                     }`}
                 >
@@ -214,8 +214,8 @@ export default function AboutPage() {
                       desc: "We don't just guide—we equip you to make informed decisions"
                     }
                   ].map((value, i) => (
-                    <div key={i} className="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#0E74D2]/5 dark:from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                    <div key={i} className="group relative bg-white dark:bg-black rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#0E74D2]/5 dark:from-zinc-700/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                       <div className="relative">
                         <div className="w-16 h-16 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-2xl flex items-center justify-center text-[#0E74D2] dark:text-blue-400 mb-6 group-hover:bg-[#0E74D2] dark:group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition-all duration-500">
                           {value.icon}
@@ -232,7 +232,7 @@ export default function AboutPage() {
         </section>
 
         {/* ------------------------------ JOURNEY TIMELINE WITH ANIMATIONS ------------------------------ */}
-        <section className="relative bg-gradient-to-b from-[#f8fafc] dark:from-gray-900 to-white dark:to-gray-950 py-24 overflow-hidden">
+        <section className="relative bg-gradient-to-b from-[#f8fafc] dark:from-black to-white dark:to-black py-24 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(14,116,210,0.03)_0%,transparent_70%)]"></div>
 
           <div className="relative max-w-6xl mx-auto px-6 lg:px-8">
@@ -278,13 +278,13 @@ export default function AboutPage() {
                 ].map((milestone, i) => (
                   <div key={i} className={`relative flex items-center ${milestone.align === 'right' ? 'lg:flex-row-reverse' : ''}`}>
                     {/* Timeline Dot */}
-                    <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-white dark:bg-gray-900 border-4 border-[#0E74D2] rounded-full flex items-center justify-center shadow-lg hidden lg:flex z-10">
+                    <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-white dark:bg-black border-4 border-[#0E74D2] rounded-full flex items-center justify-center shadow-lg hidden lg:flex z-10">
                       <div className="text-[#0E74D2]">{milestone.icon}</div>
                     </div>
 
                     {/* Content Card */}
                     <div className={`w-full lg:w-[calc(50%-60px)] ${milestone.align === 'right' ? 'lg:ml-[60px]' : 'lg:mr-[60px]'}`}>
-                      <div className="group bg-white dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                      <div className="group bg-white dark:bg-black rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                         <div className="flex items-center gap-4 mb-4">
                           <div className="px-4 py-2 bg-[#0E74D2] text-white text-sm font-bold rounded-full">{milestone.year}</div>
                           <div className="flex-1 h-px bg-gradient-to-r from-[#0E74D2] to-transparent"></div>

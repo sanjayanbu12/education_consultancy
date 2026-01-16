@@ -49,7 +49,7 @@ const reasons = [
 
 export default function WhyUsSection() {
   return (
-    <section className="w-full py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <section className="w-full py-24 bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Asymmetric Header Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-end">
@@ -73,7 +73,7 @@ export default function WhyUsSection() {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className={`group relative bg-[#f8fafc] dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 hover:bg-white dark:hover:bg-gray-800 hover:shadow-xl hover:border-[#0E74D2]/20 dark:hover:border-blue-500/30 transition-all duration-300 ${index === 1 || index === 4 ? "lg:translate-y-8" : ""
+              className={`group relative bg-[#f8fafc] dark:bg-black rounded-3xl p-8 border border-gray-100 dark:border-gray-800 hover:bg-white dark:hover:bg-zinc-900 hover:shadow-xl hover:border-[#0E74D2]/20 dark:hover:border-blue-500/30 transition-all duration-300 ${index === 1 || index === 4 ? "lg:translate-y-8" : ""
                 }`}
             >
               {/* Top Stats */}

@@ -78,7 +78,7 @@ export default function CoursePathwaySection() {
   }
 
   return (
-    <section className="w-full py-24 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-300">
+    <section className="w-full py-24 bg-white dark:bg-black overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
@@ -101,7 +101,7 @@ export default function CoursePathwaySection() {
               return (
                 <div key={index} className="group">
 
-                  <div className={`${path.lightColor} dark:bg-gray-900 rounded-3xl p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all relative`}>
+                  <div className={`${path.lightColor} dark:bg-black rounded-3xl p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all relative`}>
 
                     {/* Badge */}
                     <div className={`absolute -top-3 -left-3 w-8 h-8 ${path.color} rounded-full flex justify-center items-center text-white font-bold`}>

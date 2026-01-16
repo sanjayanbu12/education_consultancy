@@ -40,7 +40,7 @@ export default function CourseCatalogSection() {
   })
 
   return (
-    <section id="courses" className="w-full py-20 bg-gradient-to-b from-[#f8fafc] dark:from-gray-900 to-white dark:to-gray-950 transition-colors duration-300">
+    <section id="courses" className="w-full py-20 bg-gradient-to-b from-[#f8fafc] dark:from-black to-white dark:to-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* HEADER */}
@@ -65,7 +65,7 @@ export default function CourseCatalogSection() {
               { icon: <Users className="w-5 h-5" />, label: "5000+ Colleges" },
               { icon: <Award className="w-5 h-5" />, label: "100% Support" }
             ].map((stat, i) => (
-              <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900 rounded-full shadow-md border border-gray-100 dark:border-gray-800">
+              <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-black rounded-full shadow-md border border-gray-100 dark:border-gray-800">
                 <div className="text-[#0E74D2] dark:text-blue-400">{stat.icon}</div>
                 <span className="text-sm font-medium text-[#1a1a1a] dark:text-gray-200">{stat.label}</span>
               </div>
@@ -84,7 +84,7 @@ export default function CourseCatalogSection() {
                 placeholder="Search courses..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-10 py-3 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none text-sm text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                className="w-full pl-10 pr-10 py-3 bg-white dark:bg-black rounded-lg border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none text-sm text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
               />
               {searchQuery && (
                 <button
@@ -102,7 +102,7 @@ export default function CourseCatalogSection() {
                 onClick={() => setViewMode("grid")}
                 className={`p-3 rounded-lg ${viewMode === "grid"
                     ? "bg-[#0E74D2] text-white"
-                    : "bg-white dark:bg-gray-900 text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
+                    : "bg-white dark:bg-black text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
                   }`}
               >
                 <Grid3x3 className="w-4 h-4" />
@@ -111,7 +111,7 @@ export default function CourseCatalogSection() {
                 onClick={() => setViewMode("list")}
                 className={`p-3 rounded-lg ${viewMode === "list"
                     ? "bg-[#0E74D2] text-white"
-                    : "bg-white dark:bg-gray-900 text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
+                    : "bg-white dark:bg-black text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
                   }`}
               >
                 <List className="w-4 h-4" />
@@ -127,7 +127,7 @@ export default function CourseCatalogSection() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium ${activeCategory === category
                     ? "bg-[#0E74D2] text-white"
-                    : "bg-white dark:bg-gray-900 text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
+                    : "bg-white dark:bg-black text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
                   }`}
               >
                 {category}
@@ -157,7 +157,7 @@ export default function CourseCatalogSection() {
               <div
                 key={index}
                 onClick={() => router.push(`/course-info/${course.slug}`)}
-                className="bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-lg cursor-pointer relative"
+                className="bg-white dark:bg-black rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-lg cursor-pointer relative"
               >
                 {course.popular && (
                   <div className="absolute -top-2 -right-2 px-2 py-0.5 bg-amber-400 text-white text-xs font-semibold rounded-full shadow">
@@ -230,7 +230,7 @@ export default function CourseCatalogSection() {
               <div
                 key={index}
                 onClick={() => router.push(`/course-info/${course.slug}`)}
-                className="bg-white dark:bg-gray-900 rounded-xl p-4 border border-gray-100 dark:border-gray-800 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-md cursor-pointer"
+                className="bg-white dark:bg-black rounded-xl p-4 border border-gray-100 dark:border-gray-800 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-md cursor-pointer"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4">
 

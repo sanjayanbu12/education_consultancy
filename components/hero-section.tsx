@@ -4,7 +4,7 @@ import { Phone, Mail, GraduationCap, Users, Award, Clock, ArrowRight, CheckCircl
 
 export default function HeroSection() {
   return (
-    <div className="w-full min-h-screen relative bg-white dark:bg-gray-950 overflow-x-hidden transition-colors duration-300">
+    <div className="w-full min-h-screen relative bg-white dark:bg-black overflow-x-hidden transition-colors duration-300">
 
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0E74D2]/10 via-[#0E74D2]/5 to-[#0E74D2]/8 dark:bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1)_0%,transparent_50%)]"></div>
@@ -30,7 +30,7 @@ export default function HeroSection() {
               <div className="space-y-6">
                 <h1 className="text-4xl lg:text-6xl font-light text-[#1a1a1a] dark:text-gray-100 tracking-tight leading-[1.1]">
                   Navigate Your
-                  <span className="block mt-2 font-normal bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+                  <span className="block mt-2 font-normal bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] dark:from-zinc-400 dark:to-zinc-500 bg-clip-text text-transparent">
                     Academic Journey
                   </span>
                   <span className="block mt-2">With Precision</span>

@@ -435,9 +435,9 @@ export default function CollegePage({ params }: Props) {
     }
 
     return (
-        <main className="min-h-screen bg-white dark:bg-gray-950">
+        <main className="min-h-screen bg-white dark:bg-black">
             {/* Hero Section */}
-            <section className={`relative py-20 bg-gradient-to-r ${college.color} overflow-hidden`}>
+            <section className="relative py-20 bg-[#0E74D2] overflow-hidden">
                 <div className="absolute inset-0 bg-black/20" />
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
                 <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-48 translate-x-48" />
@@ -540,7 +540,7 @@ export default function CollegePage({ params }: Props) {
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 {college.courses.map((course, idx) => (
-                                    <div key={idx} className="p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-all">
+                                    <div key={idx} className="p-6 bg-white dark:bg-black rounded-2xl border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-all">
                                         <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
                                             {course.name}
                                         </h3>
@@ -561,7 +561,7 @@ export default function CollegePage({ params }: Props) {
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 {college.departments.map((dept, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
+                                    <div key={idx} className="flex items-center gap-3 p-4 bg-gray-50 dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800">
                                         <div className="w-2 h-2 bg-blue-600 rounded-full" />
                                         <span className="text-gray-700 dark:text-gray-300">{dept}</span>
                                     </div>
@@ -577,7 +577,7 @@ export default function CollegePage({ params }: Props) {
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                 {college.facilities.map((facility, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
+                                    <div key={idx} className="flex items-start gap-3 p-4 bg-gray-50 dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800">
                                         <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                                         <span className="text-gray-700 dark:text-gray-300">{facility}</span>
                                     </div>
@@ -591,7 +591,7 @@ export default function CollegePage({ params }: Props) {
                                 <Trophy className="w-8 h-8 text-blue-600" />
                                 Placements
                             </h2>
-                            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl p-8 border border-blue-100 dark:border-blue-900">
+                            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-black/30 dark:to-purple-950/30 rounded-2xl p-8 border border-blue-100 dark:border-blue-900">
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                                     <div className="text-center">
                                         <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
@@ -617,7 +617,7 @@ export default function CollegePage({ params }: Props) {
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Top Recruiters</h3>
                                     <div className="flex flex-wrap gap-3">
                                         {college.placements.topRecruiters.map((recruiter, idx) => (
-                                            <span key={idx} className="px-4 py-2 bg-white dark:bg-gray-800 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
+                                            <span key={idx} className="px-4 py-2 bg-white dark:bg-zinc-900 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
                                                 {recruiter}
                                             </span>
                                         ))}
@@ -632,7 +632,7 @@ export default function CollegePage({ params }: Props) {
                         <div className="sticky top-24 space-y-6">
 
                             {/* Contact Card */}
-                            <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
+                            <div className="bg-white dark:bg-black rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-lg">
                                 <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                                     Contact Information
                                 </h3>
@@ -677,7 +677,7 @@ export default function CollegePage({ params }: Props) {
                             </div>
 
                             {/* CTA Card */}
-                            <div className={`bg-gradient-to-r ${college.color} rounded-2xl p-6 text-white`}>
+                            <div className="bg-[#0E74D2] rounded-2xl p-6 text-white">
                                 <h3 className="text-xl font-semibold mb-3">
                                     Interested in Admission?
                                 </h3>
@@ -693,24 +693,24 @@ export default function CollegePage({ params }: Props) {
                             </div>
 
                             {/* Quick Links */}
-                            <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
+                            <div className="bg-white dark:bg-black rounded-2xl p-6 border border-gray-200 dark:border-gray-800">
                                 <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                                     Quick Links
                                 </h3>
                                 <div className="space-y-2">
-                                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all group">
+                                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 dark:bg-zinc-900 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-800 transition-all group">
                                         <span className="text-gray-700 dark:text-gray-300">Download Brochure</span>
                                         <Download className="w-4 h-4 text-gray-400 group-hover:text-blue-600" />
                                     </a>
-                                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all group">
+                                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 dark:bg-zinc-900 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-800 transition-all group">
                                         <span className="text-gray-700 dark:text-gray-300">Admission Process</span>
                                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600" />
                                     </a>
-                                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all group">
+                                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 dark:bg-zinc-900 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-800 transition-all group">
                                         <span className="text-gray-700 dark:text-gray-300">Fee Structure</span>
                                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600" />
                                     </a>
-                                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all group">
+                                    <a href="#" className="flex items-center justify-between p-3 bg-gray-50 dark:bg-zinc-900 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-800 transition-all group">
                                         <span className="text-gray-700 dark:text-gray-300">Scholarships</span>
                                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600" />
                                     </a>
@@ -724,7 +724,7 @@ export default function CollegePage({ params }: Props) {
             </div>
 
             {/* CTA Section */}
-            <section className="py-16 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-950">
+            <section className="py-16 bg-gradient-to-b from-gray-50 to-blue-50 dark:from-black dark:to-black">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-light text-[#1a365d] dark:text-gray-100 mb-4">
                         Ready to Start Your Journey?
@@ -741,7 +741,7 @@ export default function CollegePage({ params }: Props) {
                         </Link>
                         <Link
                             href="/#top-colleges"
-                            className="px-8 py-4 bg-white dark:bg-gray-800 text-[#0E74D2] dark:text-blue-400 border-2 border-[#0E74D2] dark:border-blue-400 rounded-xl font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-all"
+                            className="px-8 py-4 bg-white dark:bg-zinc-900 text-[#0E74D2] dark:text-blue-400 border-2 border-[#0E74D2] dark:border-blue-400 rounded-xl font-semibold hover:bg-blue-50 dark:hover:bg-zinc-800 transition-all"
                         >
                             Explore More Colleges
                         </Link>

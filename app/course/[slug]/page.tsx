@@ -18,12 +18,12 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
   const data = articleData[slug]
 
   return (
-    <div className="min-h-screen w-full bg-[#f5f8ff] dark:bg-gray-950 text-[#1a2a3a] dark:text-gray-100 transition-colors duration-300">
+    <div className="min-h-screen w-full bg-[#f5f8ff] dark:bg-black text-[#1a2a3a] dark:text-gray-100 transition-colors duration-300">
 
       {/* ----------------------------------------------- */}
       {/* HEADER – Compact + Premium */}
       {/* ----------------------------------------------- */}
-      <header className="py-14 relative overflow-hidden bg-white dark:bg-gray-950">
+      <header className="py-14 relative overflow-hidden bg-white dark:bg-black">
 
         {/* Background Pattern - Same as Hero Section */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,116,210,0.05)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(14,116,210,0.03)_0%,transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1)_0%,transparent_50%)]"></div>
@@ -56,7 +56,7 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
       {/* TABLE OF CONTENTS – Compact Premium */}
       {/* ----------------------------------------------- */}
       <section className="max-w-5xl mx-auto px-6 mt-10">
-        <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-md border border-[#0E74D2]/10 dark:border-gray-800 relative">
+        <div className="bg-white dark:bg-black p-6 rounded-2xl shadow-md border border-[#0E74D2]/10 dark:border-gray-800 relative">
 
           {/* Highlight Strip */}
           <div className="absolute left-0 top-0 w-1.5 h-full bg-[#0E74D2]/70 rounded-l-xl" />
@@ -111,7 +111,7 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
 
         {/* ELIGIBILITY */}
         <Section title="Eligibility & Academic Pathway">
-          <div className="bg-[#eef5ff] dark:bg-gray-800 p-5 rounded-xl border border-[#0E74D2]/10 dark:border-gray-700">
+          <div className="bg-[#eef5ff] dark:bg-zinc-900 p-5 rounded-xl border border-[#0E74D2]/10 dark:border-gray-700">
             <ul className="space-y-2 text-[#1a2a3a] dark:text-gray-300 text-[15px]">
               {data.eligibility.map((el, i) => (
                 <li key={i}>• {el}</li>
@@ -145,7 +145,7 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
         <Section title="Future Scope & Trends">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.trends.map((t, i) => (
-              <Card key={i} className="bg-[#eef5ff] dark:bg-gray-800 border-[#0E74D2]/20 dark:border-gray-700">
+              <Card key={i} className="bg-[#eef5ff] dark:bg-zinc-900 border-[#0E74D2]/20 dark:border-gray-700">
                 {t}
               </Card>
             ))}
@@ -157,7 +157,7 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
       {/* CTA – Compact + Professional */}
       {/* ----------------------------------------------- */}
       <div className="max-w-5xl mx-auto px-6 mt-20 mb-20">
-        <div className="p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-md border border-[#0E74D2]/10 dark:border-gray-800 relative">
+        <div className="p-8 bg-white dark:bg-black rounded-2xl shadow-md border border-[#0E74D2]/10 dark:border-gray-800 relative">
 
           <h2 className="text-2xl font-serif font-bold text-[#1a365d] dark:text-gray-100">
             Need Personalized Career Guidance?
@@ -212,7 +212,7 @@ function IntroParagraph({ text }: any) {
 function Card({ children, className = "" }: any) {
   return (
     <div
-      className={`p-5 bg-white dark:bg-gray-900 border border-[#0E74D2]/10 dark:border-gray-800 rounded-xl shadow-sm text-[15px] text-[#1a365d] dark:text-gray-200 ${className}`}
+      className={`p-5 bg-white dark:bg-black border border-[#0E74D2]/10 dark:border-gray-800 rounded-xl shadow-sm text-[15px] text-[#1a365d] dark:text-gray-200 ${className}`}
     >
       {children}
     </div>

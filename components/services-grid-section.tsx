@@ -79,7 +79,7 @@ const additionalServices = [
 
 export default function ServicesGridSection() {
   return (
-    <section id="services" className="w-full py-24 bg-[#f8fafc] dark:bg-gray-900 transition-colors duration-300">
+    <section id="services" className="w-full py-24 bg-[#f8fafc] dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
@@ -99,7 +99,7 @@ export default function ServicesGridSection() {
           {mainServices.map((service, index) => (
             <div
               key={index}
-              className={`group relative ${service.bgColor} dark:bg-gray-900 rounded-3xl p-8 border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300 ${index === 0 ? "lg:row-span-2" : ""
+              className={`group relative ${service.bgColor} dark:bg-black rounded-3xl p-8 border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all duration-300 ${index === 0 ? "lg:row-span-2" : ""
                 }`}
             >
               {/* Gradient Accent */}
@@ -122,7 +122,7 @@ export default function ServicesGridSection() {
                 {service.courses.map((course, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-white dark:bg-gray-800 rounded-full text-xs font-medium text-[#4a5568] dark:text-gray-300 border border-gray-200 dark:border-gray-700"
+                    className="px-3 py-1 bg-white dark:bg-zinc-900 rounded-full text-xs font-medium text-[#4a5568] dark:text-gray-300 border border-gray-200 dark:border-gray-700"
                   >
                     {course}
                   </span>
@@ -148,7 +148,7 @@ export default function ServicesGridSection() {
         </div>
 
         {/* Additional Services - Horizontal Scroll on Mobile */}
-        <div className="bg-gradient-to-br from-[#1a365d] to-[#0E74D2] dark:from-gray-800 dark:to-blue-900 rounded-3xl p-8 md:p-12">
+        <div className="bg-gradient-to-br from-[#1a365d] to-[#0E74D2] dark:from-gray-800 dark:to-black rounded-3xl p-8 md:p-12">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
             <div>
               <h3 className="text-2xl font-bold text-white mb-2">Additional Services</h3>

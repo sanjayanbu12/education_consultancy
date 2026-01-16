@@ -98,7 +98,7 @@ const topColleges = [
 
 export default function TopCollegesSection() {
     return (
-        <section id="top-colleges" className="w-full py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 transition-colors duration-300 relative overflow-hidden">
+        <section id="top-colleges" className="w-full py-24 bg-gradient-to-b from-gray-50 to-white dark:from-black dark:to-black transition-colors duration-300 relative overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
@@ -109,10 +109,10 @@ export default function TopCollegesSection() {
 
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6">
+                    {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6">
                         <Sparkles className="w-4 h-4" />
                         <span>Premier Educational Institutions</span>
-                    </div>
+                    </div> */}
 
                     <h2 className="text-5xl lg:text-6xl font-light text-[#1a1a1a] dark:text-gray-100 mb-6">
                         Top Colleges in
@@ -135,10 +135,9 @@ export default function TopCollegesSection() {
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
                             {/* Main Card */}
-                            <div className="relative bg-white dark:bg-gray-900 rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-[#0E74D2] dark:hover:border-[#0E74D2] transition-all duration-300 hover:shadow-lg">
+                            <div className="relative bg-white dark:bg-black rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-[#0E74D2] dark:hover:border-[#0E74D2] transition-all duration-300 hover:shadow-lg">
 
-                                {/* Gradient Accent Bar */}
-                                <div className={`h-1.5 bg-gradient-to-r ${college.color}`} />
+                                {/* Accent Bar - Removed for professional look */}
 
                                 {/* Card Content */}
                                 <div className="p-6">
@@ -147,7 +146,7 @@ export default function TopCollegesSection() {
                                     <div className="flex items-start justify-between mb-4">
                                         <div className="flex-1">
                                             <div className="flex items-center gap-2 mb-2">
-                                                <div className={`p-2 bg-gradient-to-br ${college.color} rounded-xl`}>
+                                                <div className="p-2 bg-[#0E74D2] rounded-xl">
                                                     <Building2 className="w-5 h-5 text-white" />
                                                 </div>
                                                 <div className="flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
@@ -173,26 +172,26 @@ export default function TopCollegesSection() {
 
                                     {/* Stats Grid */}
                                     <div className="grid grid-cols-3 gap-2 mb-4">
-                                        <div className="text-center p-3 bg-gradient-to-br from-blue-50 to-blue-100/50 dark:from-blue-900/20 dark:to-blue-800/10 rounded-xl border border-blue-100 dark:border-blue-800">
-                                            <Calendar className="w-4 h-4 text-blue-600 dark:text-blue-400 mx-auto mb-1" />
-                                            <div className="text-xs font-bold text-blue-700 dark:text-blue-300">{college.established}</div>
-                                            <div className="text-[10px] text-blue-600/70 dark:text-blue-400/70">Est.</div>
+                                        <div className="text-center p-3 bg-gray-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700">
+                                            <Calendar className="w-4 h-4 text-[#0E74D2] mx-auto mb-1" />
+                                            <div className="text-xs font-bold text-gray-900 dark:text-gray-100">{college.established}</div>
+                                            <div className="text-[10px] text-gray-500 dark:text-gray-400">Est.</div>
                                         </div>
-                                        <div className="text-center p-3 bg-gradient-to-br from-purple-50 to-purple-100/50 dark:from-purple-900/20 dark:to-purple-800/10 rounded-xl border border-purple-100 dark:border-purple-800">
-                                            <Users className="w-4 h-4 text-purple-600 dark:text-purple-400 mx-auto mb-1" />
-                                            <div className="text-xs font-bold text-purple-700 dark:text-purple-300">{college.students}</div>
-                                            <div className="text-[10px] text-purple-600/70 dark:text-purple-400/70">Students</div>
+                                        <div className="text-center p-3 bg-gray-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700">
+                                            <Users className="w-4 h-4 text-[#0E74D2] mx-auto mb-1" />
+                                            <div className="text-xs font-bold text-gray-900 dark:text-gray-100">{college.students}</div>
+                                            <div className="text-[10px] text-gray-500 dark:text-gray-400">Students</div>
                                         </div>
-                                        <div className="text-center p-3 bg-gradient-to-br from-green-50 to-green-100/50 dark:from-green-900/20 dark:to-green-800/10 rounded-xl border border-green-100 dark:border-green-800">
-                                            <Trophy className="w-4 h-4 text-green-600 dark:text-green-400 mx-auto mb-1" />
-                                            <div className="text-xs font-bold text-green-700 dark:text-green-300">{college.placement}</div>
-                                            <div className="text-[10px] text-green-600/70 dark:text-green-400/70">Placed</div>
+                                        <div className="text-center p-3 bg-gray-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700">
+                                            <Trophy className="w-4 h-4 text-[#0E74D2] mx-auto mb-1" />
+                                            <div className="text-xs font-bold text-gray-900 dark:text-gray-100">{college.placement}</div>
+                                            <div className="text-[10px] text-gray-500 dark:text-gray-400">Placed</div>
                                         </div>
                                     </div>
 
                                     {/* Type Badge */}
                                     <div className="mb-4">
-                                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] text-white rounded-lg text-xs font-semibold shadow-lg shadow-blue-500/30">
+                                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0E74D2] text-white rounded-lg text-xs font-semibold">
                                             <Target className="w-3 h-3" />
                                             {college.type}
                                         </span>
@@ -226,7 +225,7 @@ export default function TopCollegesSection() {
                                         </h4>
                                         <div className="flex flex-wrap gap-1.5">
                                             {college.courses.map((course, idx) => (
-                                                <span key={idx} className="px-2.5 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg text-[11px] font-medium border border-gray-200 dark:border-gray-700">
+                                                <span key={idx} className="px-2.5 py-1 bg-gray-100 dark:bg-zinc-900 text-gray-700 dark:text-gray-300 rounded-lg text-[11px] font-medium border border-gray-200 dark:border-gray-700">
                                                     {course}
                                                 </span>
                                             ))}
@@ -249,16 +248,16 @@ export default function TopCollegesSection() {
                     ))}
                 </div>
 
-                {/* View All Button with Enhanced Design */}
+                {/* View All Button */}
                 <div className="text-center">
                     <a
                         href="#colleges"
-                        className="group/cta inline-flex items-center gap-3 px-10 py-5 bg-[#0E74D2] text-white rounded-2xl font-bold text-lg hover:bg-[#0a5ba8] transition-all duration-300 hover:scale-105"
+                        className="group/cta inline-flex items-center gap-2 px-6 py-3 bg-[#0E74D2] text-white rounded-xl font-semibold text-base hover:bg-[#0a5ba8] transition-all duration-300"
                     >
-                        <span className="flex items-center gap-3">
-                            <Sparkles className="w-5 h-5" />
+                        <span className="flex items-center gap-2">
+                            <Sparkles className="w-4 h-4" />
                             Explore All Colleges
-                            <ArrowRight className="w-5 h-5 group-hover/cta:translate-x-2 transition-transform" />
+                            <ArrowRight className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform" />
                         </span>
                     </a>
                 </div>

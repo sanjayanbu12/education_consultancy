@@ -43,7 +43,7 @@ const steps = [
 
 export default function ProcessTimelineSection() {
   return (
-    <section className="w-full py-24 bg-gradient-to-b from-white dark:from-gray-950 to-[#f8fafc] dark:to-gray-900 transition-colors duration-300">
+    <section className="w-full py-24 bg-gradient-to-b from-white dark:from-black to-[#f8fafc] dark:to-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -60,14 +60,14 @@ export default function ProcessTimelineSection() {
         {/* Timeline - Horizontal on Desktop, Vertical on Mobile */}
         <div className="relative">
           {/* Desktop Timeline Line */}
-          <div className="hidden lg:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-[#0E74D2]/20 dark:from-blue-500/20 via-[#0E74D2] dark:via-blue-500 to-[#0E74D2]/20 dark:to-blue-500/20"></div>
+          <div className="hidden lg:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-[#0E74D2]/20 dark:from-zinc-700/20 via-[#0E74D2] dark:via-zinc-600 to-[#0E74D2]/20 dark:to-zinc-700/20"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-4">
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 {/* Mobile Connector Line */}
                 {index < steps.length - 1 && (
-                  <div className="lg:hidden absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-to-b from-[#0E74D2] dark:from-blue-500 to-[#0E74D2]/20 dark:to-blue-500/20 -mb-8"></div>
+                  <div className="lg:hidden absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-to-b from-[#0E74D2] dark:from-zinc-700 to-[#0E74D2]/20 dark:to-zinc-700/20 -mb-8"></div>
                 )}
 
                 {/* Step Card */}
