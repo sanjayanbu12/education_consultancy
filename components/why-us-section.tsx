@@ -49,7 +49,7 @@ const reasons = [
 
 export default function WhyUsSection() {
   return (
-    <section className="w-full py-24 bg-white dark:bg-black transition-colors duration-300">
+    <section id="about" className="w-full py-24 bg-white dark:bg-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Asymmetric Header Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-end">

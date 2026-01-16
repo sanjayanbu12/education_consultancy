@@ -43,7 +43,7 @@ const steps = [
 
 export default function ProcessTimelineSection() {
   return (
-    <section className="w-full py-24 bg-gradient-to-b from-white dark:from-black to-[#f8fafc] dark:to-black transition-colors duration-300">
+    <section id="process-timeline" className="w-full py-24 bg-gradient-to-b from-white dark:from-black to-[#f8fafc] dark:to-black transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

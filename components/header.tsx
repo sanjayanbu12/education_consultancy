@@ -27,7 +27,9 @@ export default function Header() {
   const navItems = [
     { name: "Courses", href: "#courses" },
     { name: "Colleges", href: "#top-colleges" },
+    { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
+    { name: "Testimonials", href: "#process-timeline" },
     { name: "Contact", href: "#contact" },
   ]
 
@@ -44,15 +46,20 @@ export default function Header() {
           <div className="flex items-center justify-between h-12">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <img
                 src="/images/3rd-ed-logo-final-removebg-preview.png"
                 alt="AL-HUDA"
                 className="h-8 w-auto"
               />
-              <span className="text-lg font-semibold text-gray-900 dark:text-white hidden sm:block">
-                AL-HUDA
-              </span>
+              <div className="hidden sm:flex flex-col">
+                <span className="text-lg font-bold text-gray-900 dark:text-white leading-tight">
+                  AL-HUDA
+                </span>
+                <span className="text-xs font-medium text-gray-600 dark:text-gray-400 leading-tight">
+                  Educational Consultancy
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -61,7 +68,14 @@ export default function Header() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    const element = document.querySelector(item.href)
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                    }
+                  }}
+                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer"
                 >
                   {item.name}
                 </a>
@@ -87,12 +101,19 @@ export default function Header() {
               )}
 
               {/* CTA Button - Desktop */}
-              <Link
+              <a
                 href="#contact"
-                className="hidden md:inline-flex items-center px-5 py-2 bg-[#0071E3] hover:bg-[#0077ED] text-white text-sm font-semibold rounded-full transition-all duration-300 hover:scale-105"
+                onClick={(e) => {
+                  e.preventDefault()
+                  const element = document.querySelector('#contact')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                }}
+                className="hidden md:inline-flex items-center px-5 py-2 bg-[#0071E3] hover:bg-[#0077ED] text-white text-sm font-semibold rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
               >
                 Get Started
-              </Link>
+              </a>
 
               {/* Mobile Menu Button */}
               <button
@@ -123,8 +144,17 @@ export default function Header() {
             <a
               key={item.name}
               href={item.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-4xl font-bold text-gray-900 dark:text-white hover:text-[#0071E3] dark:hover:text-[#0077ED] transition-colors"
+              onClick={(e) => {
+                e.preventDefault()
+                setMobileMenuOpen(false)
+                setTimeout(() => {
+                  const element = document.querySelector(item.href)
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                }, 300)
+              }}
+              className="text-4xl font-bold text-gray-900 dark:text-white hover:text-[#0071E3] dark:hover:text-[#0077ED] transition-colors cursor-pointer"
               style={{
                 animation: mobileMenuOpen
                   ? `fadeInUp 0.5s ease-out ${index * 0.1}s both`
@@ -135,10 +165,19 @@ export default function Header() {
             </a>
           ))}
 
-          <Link
+          <a
             href="#contact"
-            onClick={() => setMobileMenuOpen(false)}
-            className="mt-8 px-8 py-4 bg-[#0071E3] hover:bg-[#0077ED] text-white text-lg font-semibold rounded-full transition-all duration-300"
+            onClick={(e) => {
+              e.preventDefault()
+              setMobileMenuOpen(false)
+              setTimeout(() => {
+                const element = document.querySelector('#contact')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }
+              }, 300)
+            }}
+            className="mt-8 px-8 py-4 bg-[#0071E3] hover:bg-[#0077ED] text-white text-lg font-semibold rounded-full transition-all duration-300 cursor-pointer"
             style={{
               animation: mobileMenuOpen
                 ? `fadeInUp 0.5s ease-out 0.4s both`
@@ -146,7 +185,7 @@ export default function Header() {
             }}
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </div>
 
