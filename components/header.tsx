@@ -216,60 +216,60 @@ export default function Header() {
             onMouseEnter={() => setActiveDropdown(activeDropdown)}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <div className="max-w-[1400px] mx-auto px-6 lg:px-8 py-12">
-              <div className="grid grid-cols-2 gap-12">
-                {/* Left Side - Rich Content */}
-                <div className="space-y-8">
+            <div className="max-w-[1400px] mx-auto px-6 lg:px-8 py-8">
+              <div className="grid grid-cols-5 gap-8">
+                {/* Left Side - Rich Content (3 columns) */}
+                <div className="col-span-3 space-y-6">
                   <div>
-                    <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
+                    <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                       {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].title}
                     </h3>
-                    <p className="text-lg text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
                       {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].description}
                     </p>
                   </div>
 
-                  {/* Stats Grid */}
-                  <div className="grid grid-cols-3 gap-6">
+                  {/* Stats Grid - Compact */}
+                  <div className="grid grid-cols-3 gap-4">
                     {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].stats.map((stat, index) => (
-                      <div key={index} className="text-center p-4 bg-gray-50 dark:bg-gray-900 rounded-xl">
-                        <div className="text-3xl font-bold text-[#0071E3] dark:text-blue-400 mb-1">
+                      <div key={index} className="text-center p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
+                        <div className="text-2xl font-bold text-[#0071E3] dark:text-blue-400 mb-0.5">
                           {stat.value}
                         </div>
-                        <div className="text-xs text-gray-600 dark:text-gray-400 font-medium">
+                        <div className="text-[10px] text-gray-600 dark:text-gray-400 font-medium uppercase tracking-wide">
                           {stat.label}
                         </div>
                       </div>
                     ))}
                   </div>
 
-                  {/* Features List */}
-                  <div className="grid grid-cols-2 gap-3">
+                  {/* Features List - Compact 2 columns */}
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                     {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].features.map((feature, index) => (
                       <div key={index} className="flex items-center gap-2">
-                        <CheckCircle className="w-5 h-5 text-[#0071E3] dark:text-blue-400 flex-shrink-0" />
-                        <span className="text-sm text-gray-700 dark:text-gray-300">{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-[#0071E3] dark:text-blue-400 flex-shrink-0" />
+                        <span className="text-xs text-gray-700 dark:text-gray-300">{feature}</span>
                       </div>
                     ))}
                   </div>
 
-                  {/* CTA Button */}
+                  {/* CTA Button - Compact */}
                   <a
                     href={navItems.find(item => item.name === activeDropdown)?.href || "#"}
                     onClick={(e) => {
                       e.preventDefault()
                       scrollToSection(navItems.find(item => item.name === activeDropdown)?.href || "#")
                     }}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#0071E3] hover:bg-[#0077ED] text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0071E3] hover:bg-[#0077ED] text-white text-sm font-semibold rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
                   >
                     Explore {activeDropdown}
                     <TrendingUp className="w-4 h-4" />
                   </a>
                 </div>
 
-                {/* Right Side - Visual */}
-                <div className="relative">
-                  <div className="aspect-[4/3] bg-gray-100 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl">
+                {/* Right Side - Image (2 columns) */}
+                <div className="col-span-2">
+                  <div className="aspect-[16/10] bg-gray-100 dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg">
                     <img
                       src={
                         activeDropdown === "Courses" ? "/courses_mega_menu_1768571159569.png" :
@@ -281,7 +281,7 @@ export default function Header() {
                       alt={`${activeDropdown} visual`}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                   </div>
                 </div>
               </div>
