@@ -6,6 +6,7 @@ import StatsBentoSection from "@/components/stats-bento-section"
 import ServicesGridSection from "@/components/services-grid-section"
 import CoursePathwaySection from "@/components/course-pathway-section"
 import CourseCatalogSection from "@/components/course-catalog-section"
+import TopCollegesSection from "@/components/top-colleges-section"
 import CollegeShowcaseSection from "@/components/college-showcase-section"
 import FacilitiesMarqueeSection from "@/components/facilities-marquee-section"
 import WhyUsSection from "@/components/why-us-section"
@@ -24,6 +25,7 @@ export default function LandingPage() {
       <ServicesGridSection />
       <CoursePathwaySection />
       <CourseCatalogSection />
+      <TopCollegesSection />
       <CollegeShowcaseSection />
       <FacilitiesMarqueeSection />
       <WhyUsSection />

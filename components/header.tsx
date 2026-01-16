@@ -34,9 +34,9 @@ export default function Header() {
   }, [openDropdown])
 
   // Hide header on course and course-info pages
-  if (pathname?.startsWith('/course/') || pathname?.startsWith('/course-info/')) {
-    return null
-  }
+  // if (pathname?.startsWith('/course/') || pathname?.startsWith('/course-info/')) {
+  //   return null
+  // }
 
   const menuItems = [
     {
@@ -60,6 +60,7 @@ export default function Header() {
     {
       label: "Colleges",
       items: [
+        { name: "Top Colleges", href: "#top-colleges" },
         { name: "Partner Colleges", href: "#colleges" },
         // { name: "Top Institutions", href: "#colleges" },
         // { name: "College Details", href: "#colleges" }

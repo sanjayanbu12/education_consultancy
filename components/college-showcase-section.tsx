@@ -67,8 +67,15 @@ export default function CollegeShowcaseSection() {
 
         {/* ---------- SECTION HEADER ---------- */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-4xl md:text-5xl font-light text-[#1a365d] dark:text-gray-100 mb-4">
+          {/* <h2 className="text-4xl md:text-5xl font-light text-[#1a365d] dark:text-gray-100 mb-4">
             Top Colleges Across India
+          </h2> */}
+
+          <h2 className="text-5xl lg:text-6xl font-light text-[#1a1a1a] dark:text-gray-100 mb-6">
+            Top Colleges
+            <span className="block mt-2 font-medium bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] bg-clip-text text-transparent">
+              Across India
+            </span>
           </h2>
 
           <p className="text-[#4a5568] dark:text-gray-400 text-lg">
@@ -131,8 +138,8 @@ export default function CollegeShowcaseSection() {
                 key={key}
                 onClick={() => setSelectedType(key)}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${selectedType === key
-                    ? `${type.color} text-white shadow-lg`
-                    : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2] dark:hover:border-blue-500"
+                  ? `${type.color} text-white shadow-lg`
+                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2] dark:hover:border-blue-500"
                   }`}
               >
                 {type.icon}
