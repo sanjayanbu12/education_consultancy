@@ -1,219 +1,26 @@
 "use client"
 
 import { useState } from "react"
-import { Building, MapPin, Star, ChevronRight, Cog, GraduationCap, FlaskConical } from "lucide-react"
+import { Building, MapPin, Star, ChevronRight, Cog, GraduationCap, FlaskConical, Filter, Search, Heart, Pill, Stethoscope, Briefcase, Leaf } from "lucide-react"
+import { allColleges, getCitiesByState, getStates, type College } from "@/data/colleges-data"
 
 // ========================================================================================
-// ⭐ UPDATED ENGINEERING COLLEGES (ALL REGIONS ADDED AS PER YOUR DATA)
+// ⭐ TYPE CONFIGURATION
 // ========================================================================================
 
-const engineeringColleges = [
-  // --------------------- SALEM ---------------------
-  { name: "Sona College of Technology, Salem", rating: 4.6 },
-  { name: "Vinayaka Mission's Kirupanada Variyar Engineering College, Salem", rating: 4.3 },
-  { name: "Indian Institute of Handloom Technology, Salem", rating: 4.1 },
-  { name: "A.V.S. Engineering College, Salem", rating: 4.0 },
-  { name: "Annaporna Engineering College, Salem", rating: 4.1 },
-  { name: "AVS Technical Campus, Salem", rating: 4.0 },
-  { name: "Bharathiyar Institute of Engineering for Women, Attur", rating: 4.2 },
-  { name: "Dhirajlal Gandhi College of Technology, Salem", rating: 4.3 },
-  { name: "Ganesh College of Engineering, Salem", rating: 4.1 },
-  { name: "Greentech College of Engineering for Women, Attur", rating: 4.0 },
-  { name: "Knowledge Institute of Technology, Salem", rating: 4.4 },
-  { name: "Mahendra College of Engineering, Valapadi", rating: 4.2 },
-  { name: "Narasu's Sarathy Institute of Technology, Omalur", rating: 4.0 },
-  { name: "Rabidhranath Tagore College of Engineering for Women, Sankari", rating: 4.1 },
-  { name: "S.R.S. College of Engineering & Technology, Salem", rating: 4.0 },
-  { name: "Salem College of Engineering and Technology, Salem", rating: 4.0 },
-  { name: "Shree Sathyam College of Engineering and Technology, Salem", rating: 4.2 },
-  { name: "Spectrum College of Technology, Mettur", rating: 4.0 },
-  { name: "Sri Shanmugha College of Engineering and Technology, Salem", rating: 4.1 },
-  { name: "Tagore Institute of Engineering and Technology, Attur", rating: 4.0 },
-  { name: "The Kavery College of Engineering, Mettur", rating: 4.0 },
-  { name: "The Kavery Engineering College, Mettur", rating: 4.1 },
-  { name: "V.S.A. Group of Institutions, Salem", rating: 4.2 },
-  { name: "Vivekanandha College of Technology for Women, Namakkal", rating: 4.5 },
-
-  // --------------------- CHENNAI ---------------------
-  { name: "Aalim Muhammed Salegh College of Engineering, Chennai", rating: 4.2 },
-  { name: "Aarupadai Veedu Institute of Technology, Kanchipuram", rating: 4.3 },
-  { name: "Agni College of Technology, Chennai", rating: 4.2 },
-  { name: "B.S. Abdur Rahman Crescent Institute, Chennai", rating: 4.4 },
-  { name: "Bharath University, Chennai", rating: 4.3 },
-  { name: "Chennai Institute of Technology, Chennai", rating: 4.5 },
-  { name: "Dhanalakshmi College of Engineering, Chennai", rating: 4.1 },
-  { name: "Dr. MGR University, Chennai", rating: 4.3 },
-  { name: "Easwari Engineering College, Chennai", rating: 4.4 },
-  { name: "GKM College of Engineering and Technology, Chennai", rating: 4.0 },
-  { name: "Hindustan University, Chennai", rating: 4.5 },
-  { name: "Jerusalem College of Engineering, Chennai", rating: 4.1 },
-  { name: "KCG College of Technology, Chennai", rating: 4.4 },
-  { name: "Meenakshi Sundararajan Engineering College, Chennai", rating: 4.6 },
-  { name: "PERI Institute of Technology, Chennai", rating: 4.0 },
-  { name: "Rajalakshmi Engineering College, Chennai", rating: 4.5 },
-  { name: "S.A. Engineering College, Thiruverkadu", rating: 4.2 },
-  { name: "S.K.R. Engineering College, Thiruvallur", rating: 4.1 },
-  { name: "Sri Sai Ram Institute of Technology, Chennai", rating: 4.5 },
-  { name: "Sri Sairam Engineering College, Chennai", rating: 4.6 },
-  { name: "St. Peter's University, Chennai", rating: 4.0 },
-  { name: "T.J. Institute of Technology, Chennai", rating: 4.0 },
-  { name: "Tagore Engineering College, Chennai", rating: 4.0 },
-  { name: "Thangavelu Engineering College, Chennai", rating: 4.0 },
-  { name: "Alpha College of Engineering, Chennai", rating: 4.0 },
-  { name: "Anand Institute of Higher Technology, Chengalpattu", rating: 4.1 },
-  { name: "Davinci School of Design and Architecture, Chennai", rating: 4.3 },
-  { name: "Dhaanish Ahmed College of Engineering, Chennai", rating: 4.0 },
-  { name: "Gojan School of Business & Technology, Chennai", rating: 4.0 },
-  { name: "Gopal Ramalingam Memorial College, Chennai", rating: 4.0 },
-  { name: "Jawahar Engineering College, Chennai", rating: 4.1 },
-  { name: "Jeppiaar Engineering College, Chennai", rating: 4.4 },
-  { name: "Loyola-ICAM College of Engineering & Technology, Chennai", rating: 4.6 },
-  { name: "Madha Engineering College, Chennai", rating: 4.0 },
-  { name: "Magna College of Engineering, Chennai", rating: 4.0 },
-  { name: "Measi Academy of Architecture, Chennai", rating: 4.2 },
-  { name: "Mohamed Sathak A.J. College of Engineering, Chennai", rating: 4.0 },
-  { name: "Panimalar Engineering College, Chennai", rating: 4.5 },
-  { name: "Panimalar Institute of Technology, Chennai", rating: 4.4 },
-  { name: "Sathyabama University, Chennai", rating: 4.6 },
-  { name: "Sri Krishna Engineering College, Sriperumbudur", rating: 4.0 },
-  { name: "Sri Muthukumaran Institute of Technology, Chennai", rating: 4.1 },
-  { name: "SSN College of Engineering, Chennai", rating: 4.7 },
-  { name: "Srinivasa Institute of Engineering, Chennai", rating: 4.0 },
-  { name: "St. Joseph's College of Engineering, Chennai", rating: 4.5 },
-  { name: "Vel Tech University, Chennai", rating: 4.4 },
-  { name: "Velammal Engineering College, Chennai", rating: 4.4 },
-
-  // --------------------- TRICHY ---------------------
-  { name: "C.A.R.E. School of Engineering, Trichy", rating: 4.3 },
-  { name: "Cauvery College of Engineering & Tech, Perur", rating: 4.1 },
-  { name: "Dhanalakshmi Srinivasan Institute of Technology, Trichy", rating: 4.2 },
-  { name: "Imayam College of Engineering, Trichy", rating: 4.0 },
-  { name: "Indra Ganesan College of Engineering, Trichy", rating: 4.0 },
-  { name: "JJ College of Engineering & Technology, Trichy", rating: 4.2 },
-  { name: "Jayaram College of Engineering & Tech, Thuraiyur", rating: 4.0 },
-  { name: "K. Ramakrishnan College of Engineering, Trichy", rating: 4.3 },
-  { name: "K. Ramakrishnan College of Technology, Trichy", rating: 4.3 },
-  { name: "Kongunadu College of Engineering & Tech, Trichy", rating: 4.2 },
-  { name: "Kurinji College of Engineering & Tech, Manapparai", rating: 4.0 },
-  { name: "MAM Groups (All Colleges), Trichy", rating: 4.2 },
-  { name: "MIET Engineering College, Trichy", rating: 4.1 },
-  { name: "Mahalakshmi Engineering College, Trichy", rating: 4.0 },
-  { name: "Oxford Engineering College, Trichy", rating: 4.1 },
-  { name: "Pavendar Bharathidasan Institute of IT, Trichy", rating: 4.0 },
-  { name: "Shivani Engineering College, Trichy", rating: 4.0 },
-  { name: "Shivani Institute of Technology, Trichy", rating: 4.0 },
-  { name: "Saranathan College of Engineering, Trichy", rating: 4.5 },
-
-  // --------------------- OOTY ---------------------
-  { name: "CSI College of Engineering, Ooty", rating: 4.2 },
-  { name: "McGan's Ooty School of Architecture, Ooty", rating: 4.3 },
-
-  // --------------------- MADURAI ---------------------
-  { name: "KLN College of Engineering, Madurai", rating: 4.2 },
-  { name: "Sethu Institute of Technology, Kariapatti", rating: 4.3 },
-  { name: "Thiagarajar College of Engineering, Madurai", rating: 4.6 },
-  { name: "Velammal College of Engineering & Technology, Madurai", rating: 4.4 },
-  { name: "Fatima Michael College of Engineering, Madurai", rating: 4.1 },
-  { name: "Raja College of Engineering, Madurai", rating: 4.0 },
-  { name: "Ultra College of Engineering & Tech for Women, Madurai", rating: 4.2 },
-  { name: "Vaigai College of Engineering, Madurai", rating: 4.0 },
-
-  // --------------------- NAMAKKAL ---------------------
-  { name: "KSR College of Engineering, Namakkal", rating: 4.3 },
-  { name: "KSR College of Technology, Namakkal", rating: 4.4 },
-  { name: "Mahendra Engineering College, Namakkal", rating: 4.3 },
-  { name: "Mahendra Institute of Technology, Namakkal", rating: 4.2 },
-  { name: "Paavai College of Engineering, Namakkal", rating: 4.2 },
-  { name: "Paavai Engineering College, Namakkal", rating: 4.3 },
-  { name: "PGP College of Engineering & Technology, Namakkal", rating: 4.0 },
-  { name: "Selvam College of Technology, Namakkal", rating: 4.0 },
-  { name: "Sengunthar Engineering College, Namakkal", rating: 4.2 },
-  { name: "Vidhya Vikkas College of Engineering, Namakkal", rating: 4.1 },
-
-  // --------------------- HOSUR ---------------------
-  { name: "Adhiyamaan College of Engineering, Hosur", rating: 4.4 },
-  { name: "Hosur Institute of Technology & Science, Hosur", rating: 4.1 },
-  { name: "PSV College of Engineering & Technology, Krishnagiri", rating: 4.0 },
-
-  // --------------------- VELLORE ---------------------
-  { name: "VIT University (Vellore Institute of Technology)", rating: 4.8 },
-  { name: "C. Abdul Hakeem College of Engineering, Vellore", rating: 4.2 },
-  { name: "Kingston Engineering College, Vellore", rating: 4.1 },
-  { name: "Priyadarshini Engineering College, Vellore", rating: 4.0 },
-  { name: "Ranippettai Engineering College, Vellore", rating: 4.0 },
-  { name: "Sri Nandhanam College of Engineering, Vellore", rating: 4.0 },
-
-  // --------------------- PUDUKKOTTAI ---------------------
-  { name: "C.A.R.E. School of Engineering, Pudukkottai", rating: 4.1 },
-  { name: "Chendhuran College of Engineering, Pudukkottai", rating: 4.0 },
-  { name: "Mahath Amma Institute of Engineering, Pudukkottai", rating: 4.0 },
-  { name: "Mount Zion College of Engineering & Technology, Pudukkottai", rating: 4.2 },
-  { name: "Shanmuganathan Engineering College, Pudukkottai", rating: 4.0 },
-]
-
-const collegeData = {
-  engineering: {
-    title: "Engineering Colleges",
-    icon: <Cog className="w-5 h-5" />,
-    color: "bg-blue-500",
-    colleges: engineeringColleges,
-  },
-  arts: {
-    title: "Arts & Science Colleges",
-    icon: <GraduationCap className="w-5 h-5" />,
-    color: "bg-purple-500",
-    colleges: [
-      { name: "SNS College of Arts & Science", rating: 4.4 },
-      { name: "Karpagam Arts & Science College", rating: 4.5 },
-      { name: "Hindusthan College of Arts & Science", rating: 4.3 },
-      { name: "Rathinam College of Arts & Science", rating: 4.2 },
-      { name: "Nehru Arts & Science", rating: 4.1 },
-      { name: "RVS College of Arts & Science", rating: 4.3 },
-      { name: "GRD College of Arts & Science", rating: 4.0 },
-      { name: "Avinashilingam University for Women", rating: 4.6 },
-      { name: "CMS College of Arts & Science", rating: 4.2 },
-      { name: "Kongunadu Arts & Science College", rating: 4.4 },
-    ],
-  },
-  medical: {
-    title: "Medical Colleges (MBBS)",
-    icon: <GraduationCap className="w-5 h-5" />,
-    color: "bg-red-500",
-    colleges: [
-      { name: "Coimbatore Medical College, Coimbatore", rating: 4.6 },
-      { name: "Stanley Medical College, Chennai", rating: 4.8 },
-      { name: "Madras Medical College, Chennai", rating: 4.9 },
-      { name: "Kilpauk Medical College, Chennai", rating: 4.7 },
-      { name: "K.A.P. Viswanatham Government Medical College, Trichy", rating: 4.5 },
-      { name: "Thanjavur Medical College, Thanjavur", rating: 4.6 },
-      { name: "Government Mohan Kumaramangalam Medical College, Salem", rating: 4.5 },
-      { name: "PSG Institute of Medical Sciences & Research, Coimbatore", rating: 4.8 },
-      { name: "Karpagam Faculty of Medical Sciences & Research", rating: 4.3 },
-      { name: "SRM Medical College Hospital & Research Centre, Chennai", rating: 4.7 },
-      { name: "Saveetha Medical College, Chennai", rating: 4.6 },
-      { name: "Meenakshi Medical College Hospital & Research Institute, Kanchipuram", rating: 4.4 },
-      { name: "Chettinad Hospital & Research Institute, Kelambakkam", rating: 4.6 },
-      { name: "Sree Balaji Medical College & Hospital, Chennai", rating: 4.3 },
-      { name: "Sri Ramachandra Institute of Higher Education & Research, Chennai", rating: 4.9 },
-    ],
-  },
-
-  health: {
-    title: "Allied Health Sciences",
-    icon: <FlaskConical className="w-5 h-5" />,
-    color: "bg-green-500",
-    colleges: [
-      { name: "Kongunadu Institute of Allied Health Sciences", rating: 4.5 },
-      { name: "Karpagam Faculty of Medical Sciences & Research", rating: 4.7 },
-      { name: "SNS College of Allied Health Sciences", rating: 4.3 },
-      { name: "Hindusthan College of Allied Health Sciences", rating: 4.2 },
-      { name: "Ganga College of Allied Health Sciences", rating: 4.4 },
-      { name: "Abhirami College of Allied Health Sciences", rating: 4.1 },
-      { name: "VG Institute of Paramedical Sciences", rating: 4.0 },
-      { name: "RVS College of Allied Health Sciences", rating: 4.3 },
-      { name: "KMCH College of Allied Health Sciences", rating: 4.6 },
-    ],
-  },
+const typeConfig = {
+  "All Types": { label: "All Types", icon: <Building className="w-4 h-4" />, color: "bg-gray-500" },
+  "engineering": { label: "Engineering", icon: <Cog className="w-4 h-4" />, color: "bg-blue-500" },
+  "medical": { label: "Medical (MBBS)", icon: <Stethoscope className="w-4 h-4" />, color: "bg-red-500" },
+  "dental": { label: "Dental (BDS)", icon: <Heart className="w-4 h-4" />, color: "bg-pink-500" },
+  "nursing": { label: "Nursing", icon: <Heart className="w-4 h-4" />, color: "bg-teal-500" },
+  "pharmacy": { label: "Pharmacy", icon: <Pill className="w-4 h-4" />, color: "bg-indigo-500" },
+  "physiotherapy": { label: "Physiotherapy", icon: <FlaskConical className="w-4 h-4" />, color: "bg-cyan-500" },
+  "mba": { label: "MBA", icon: <Briefcase className="w-4 h-4" />, color: "bg-orange-500" },
+  "homoeopathy": { label: "Homoeopathy", icon: <Leaf className="w-4 h-4" />, color: "bg-green-500" },
+  "ayurveda": { label: "Ayurveda", icon: <Leaf className="w-4 h-4" />, color: "bg-lime-500" },
+  "arts": { label: "Arts & Science", icon: <GraduationCap className="w-4 h-4" />, color: "bg-purple-500" },
+  "health": { label: "Allied Health", icon: <FlaskConical className="w-4 h-4" />, color: "bg-emerald-500" },
 }
 
 // ========================================================================================
@@ -221,7 +28,38 @@ const collegeData = {
 // ========================================================================================
 
 export default function CollegeShowcaseSection() {
-  const [activeTab, setActiveTab] = useState<"engineering" | "arts" | "health">("engineering")
+  const [selectedState, setSelectedState] = useState<string>("Tamil Nadu")
+  const [selectedCity, setSelectedCity] = useState<string>("All Cities")
+  const [selectedType, setSelectedType] = useState<string>("All Types")
+  const [searchQuery, setSearchQuery] = useState<string>("")
+
+  // Get unique states and cities
+  const states = getStates()
+  const cities = selectedState === "All States"
+    ? ["All Cities"]
+    : ["All Cities", ...getCitiesByState(selectedState)]
+
+  const types = Object.entries(typeConfig)
+
+  // Filter colleges
+  const filteredColleges = allColleges.filter(college => {
+    const stateMatch = selectedState === "All States" || college.state === selectedState
+    const cityMatch = selectedCity === "All Cities" || college.city === selectedCity
+    const typeMatch = selectedType === "All Types" || college.type === selectedType
+    const searchMatch = searchQuery === "" ||
+      college.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      college.city.toLowerCase().includes(searchQuery.toLowerCase())
+
+    return stateMatch && cityMatch && typeMatch && searchMatch
+  })
+
+  // Get current type info
+  const currentTypeInfo = typeConfig[selectedType as keyof typeof typeConfig] || typeConfig["All Types"]
+
+  // Get stats for selected state
+  const getTypeCount = (type: string) => {
+    return allColleges.filter(c => c.type === type && c.state === selectedState).length
+  }
 
   return (
     <section id="colleges" className="w-full py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
@@ -229,136 +67,209 @@ export default function CollegeShowcaseSection() {
 
         {/* ---------- SECTION HEADER ---------- */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
-            <Building className="w-4 h-4 text-[#0E74D2] dark:text-blue-400" />
-            <span className="text-[#0E74D2] dark:text-blue-400 text-sm font-medium">Partner Institutions</span>
-          </div> */}
-
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">
-            Top Colleges in Tamil Nadu
+          <h2 className="text-4xl md:text-5xl font-light text-[#1a365d] dark:text-gray-100 mb-4">
+            Top Colleges Across India
           </h2>
 
           <p className="text-[#4a5568] dark:text-gray-400 text-lg">
-            Best Career Guidance for a Better Future – Partnered with Top Institutions
+            Comprehensive database of 400+ colleges from Tamil Nadu, Karnataka, and Kerala
           </p>
         </div>
 
-        {/* ---------- MAIN CONTENT GRID ---------- */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        {/* ---------- FILTERS ---------- */}
+        <div className="mb-8 space-y-4">
+          {/* Search Bar */}
+          <div className="relative max-w-2xl mx-auto">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Search colleges by name or city..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500"
+            />
+          </div>
 
-          {/* ---------- LEFT: IMAGE STACK ---------- */}
-          <div className="space-y-4">
+          {/* Filter Pills */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <Filter className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Filters:</span>
+            </div>
+
+            {/* State Filter */}
+            <select
+              value={selectedState}
+              onChange={(e) => {
+                setSelectedState(e.target.value)
+                setSelectedCity("All Cities")
+              }}
+              className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500 cursor-pointer"
+            >
+              {states.map(state => (
+                <option key={state} value={state}>{state}</option>
+              ))}
+            </select>
+
+            {/* City Filter */}
+            <select
+              value={selectedCity}
+              onChange={(e) => setSelectedCity(e.target.value)}
+              className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500 cursor-pointer"
+              disabled={selectedState === "All States"}
+            >
+              {cities.map(city => (
+                <option key={city} value={city}>{city}</option>
+              ))}
+            </select>
+          </div>
+
+          {/* Type Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-2">
+            {types.map(([key, type]) => (
+              <button
+                key={key}
+                onClick={() => setSelectedType(key)}
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${selectedType === key
+                    ? `${type.color} text-white shadow-lg`
+                    : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2] dark:hover:border-blue-500"
+                  }`}
+              >
+                {type.icon}
+                {type.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Results Count */}
+          <div className="text-center">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Showing <span className="font-semibold text-[#0E74D2] dark:text-blue-400">{filteredColleges.length}</span> colleges
+              {selectedState !== "All States" && ` in ${selectedState}`}
+              {selectedCity !== "All Cities" && ` - ${selectedCity}`}
+            </p>
+          </div>
+        </div>
+
+        {/* ---------- MAIN CONTENT GRID ---------- */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+          {/* ---------- LEFT: STATS & IMAGE ---------- */}
+          <div className="lg:col-span-1 space-y-4">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src="/modern-college-campus-entrance-gate-with-students-.jpg"
                 alt="College Campus"
-                className="w-full h-[350px] object-cover"
+                className="w-full h-[300px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="flex items-center gap-2 mb-2">
                   <MapPin className="w-4 h-4 text-white" />
-                  <span className="text-white/80 text-sm">Tamil Nadu, India</span>
+                  <span className="text-white/80 text-sm">{selectedState}</span>
                 </div>
                 <h3 className="text-2xl font-bold text-white">Premier Educational Hub</h3>
               </div>
             </div>
 
             {/* Quick Stats */}
-
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-blue-50 rounded-2xl p-4 text-center border border-blue-100">
-                <div className="text-2xl font-bold text-blue-600">100+</div>
-                <div className="text-xs text-blue-600/80">Engineering</div>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-3 text-center border border-blue-100 dark:border-blue-800">
+                <div className="text-xl font-bold text-blue-600 dark:text-blue-400">
+                  {getTypeCount("engineering")}
+                </div>
+                <div className="text-xs text-blue-600/80 dark:text-blue-400/80">Engineering</div>
               </div>
-              <div className="bg-purple-50 rounded-2xl p-4 text-center border border-purple-100">
-                <div className="text-2xl font-bold text-purple-600">20+</div>
-                <div className="text-xs text-purple-600/80">Arts & Science</div>
+              <div className="bg-red-50 dark:bg-red-900/20 rounded-2xl p-3 text-center border border-red-100 dark:border-red-800">
+                <div className="text-xl font-bold text-red-600 dark:text-red-400">
+                  {getTypeCount("medical")}
+                </div>
+                <div className="text-xs text-red-600/80 dark:text-red-400/80">Medical</div>
               </div>
-              <div className="bg-green-50 rounded-2xl p-4 text-center border border-green-100">
-                <div className="text-2xl font-bold text-green-600">10+</div>
-                <div className="text-xs text-green-600/80">Medical</div>
+              <div className="bg-teal-50 dark:bg-teal-900/20 rounded-2xl p-3 text-center border border-teal-100 dark:border-teal-800">
+                <div className="text-xl font-bold text-teal-600 dark:text-teal-400">
+                  {getTypeCount("nursing")}
+                </div>
+                <div className="text-xs text-teal-600/80 dark:text-teal-400/80">Nursing</div>
+              </div>
+              <div className="bg-orange-50 dark:bg-orange-900/20 rounded-2xl p-3 text-center border border-orange-100 dark:border-orange-800">
+                <div className="text-xl font-bold text-orange-600 dark:text-orange-400">
+                  {getTypeCount("mba")}
+                </div>
+                <div className="text-xs text-orange-600/80 dark:text-orange-400/80">MBA</div>
+              </div>
+              <div className="bg-pink-50 dark:bg-pink-900/20 rounded-2xl p-3 text-center border border-pink-100 dark:border-pink-800">
+                <div className="text-xl font-bold text-pink-600 dark:text-pink-400">
+                  {getTypeCount("dental")}
+                </div>
+                <div className="text-xs text-pink-600/80 dark:text-pink-400/80">Dental</div>
+              </div>
+              <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-2xl p-3 text-center border border-indigo-100 dark:border-indigo-800">
+                <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                  {getTypeCount("pharmacy")}
+                </div>
+                <div className="text-xs text-indigo-600/80 dark:text-indigo-400/80">Pharmacy</div>
               </div>
             </div>
           </div>
 
-          {/* ---------- RIGHT: TAB LIST ---------- */}
-          <div className="bg-[#f8fafc] dark:bg-gray-900 rounded-3xl p-6 border border-gray-100 dark:border-gray-800">
+          {/* ---------- RIGHT: COLLEGE LIST ---------- */}
+          <div className="lg:col-span-2 bg-[#f8fafc] dark:bg-gray-900 rounded-3xl p-6 border border-gray-100 dark:border-gray-800">
 
-            {/* Tabs */}
-            <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
-              {Object.entries(collegeData).map(([key, data]) => (
-                <button
-                  key={key}
-                  onClick={() => setActiveTab(key as any)}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium whitespace-nowrap transition-all ${activeTab === key
-                    ? `${data.color} text-white shadow-lg`
-                    : "bg-white dark:bg-gray-800 text-[#4a5568] dark:text-gray-300 border border-gray-200 dark:border-gray-700"
-                    }`}
-                >
-                  {data.icon}
-                  {data.title}
-                </button>
-              ))}
-            </div>
+            {filteredColleges.length === 0 ? (
+              <div className="text-center py-12">
+                <Building className="w-16 h-16 text-gray-300 dark:text-gray-700 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mb-2">No colleges found</h3>
+                <p className="text-gray-500 dark:text-gray-500">Try adjusting your filters or search query</p>
+              </div>
+            ) : (
+              <div className="space-y-3 max-h-[600px] overflow-y-auto pr-2">
+                {filteredColleges.map((college, index) => {
+                  const typeInfo = typeConfig[college.type as keyof typeof typeConfig] || typeConfig["All Types"]
 
-            {/* College List */}
-            <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2">
-              {collegeData[activeTab].colleges.map((college, index) => (
-                <div
-                  key={index}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-md transition-all cursor-pointer group"
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex items-start gap-3">
+                  return (
+                    <div
+                      key={index}
+                      className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-md transition-all cursor-pointer group"
+                    >
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex items-start gap-3 flex-1">
+                          <div
+                            className={`w-10 h-10 ${typeInfo.color} rounded-lg flex items-center justify-center text-white flex-shrink-0`}
+                          >
+                            {typeInfo.icon}
+                          </div>
 
-                      <div
-                        className={`w-8 h-8 ${collegeData[activeTab].color} rounded-lg flex items-center justify-center text-white text-sm font-bold`}
-                      >
-                        {index + 1}
-                      </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-medium text-[#1a365d] dark:text-gray-200 group-hover:text-[#0E74D2] dark:group-hover:text-blue-400 transition-colors text-sm mb-1">
+                              {college.name}
+                            </h4>
 
-                      <div>
-                        <h4 className="font-medium text-[#1a365d] dark:text-gray-200 group-hover:text-[#0E74D2] dark:group-hover:text-blue-400 transition-colors text-sm">
-                          {college.name}
-                        </h4>
-
-                        <div className="flex items-center gap-1 mt-1">
-                          <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
-                          <span className="text-xs text-[#4a5568] dark:text-gray-400">{college.rating}</span>
+                            <div className="flex flex-wrap items-center gap-3 text-xs text-gray-600 dark:text-gray-400">
+                              <div className="flex items-center gap-1">
+                                <MapPin className="w-3 h-3" />
+                                <span>{college.city}, {college.state}</span>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
+                                <span className="font-medium">{college.rating}</span>
+                              </div>
+                              <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${typeInfo.color} text-white`}>
+                                {typeInfo.label}
+                              </span>
+                            </div>
+                          </div>
                         </div>
+
+                        <ChevronRight className="w-5 h-5 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
                       </div>
                     </div>
-
-                    <ChevronRight className="w-4 h-4 text-[#4a5568] opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                </div>
-              ))}
-            </div>
+                  )
+                })}
+              </div>
+            )}
           </div>
         </div>
-
-        {/* ---------- CTA Banner ---------- */}
-        {/* <div className="mt-12 bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-5">
-            <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
-              <MapPin className="w-8 h-8 text-white" />
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-white">For Admission Assistance</h3>
-              <p className="text-blue-200">Contact us for expert guidance on choosing the right college</p>
-            </div>
-          </div>
-
-          <a
-            href="tel:9578599785"
-            title="Call: 9578599785"
-            className="flex items-center gap-2 px-8 py-4 bg-white text-[#0E74D2] rounded-full font-semibold hover:bg-blue-50 transition-colors shadow-lg"
-          >
-            Call Now
-          </a>
-        </div> */}
 
       </div>
     </section>
