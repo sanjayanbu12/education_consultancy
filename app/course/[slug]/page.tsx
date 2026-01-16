@@ -4,11 +4,13 @@ import { articleData } from "../content"
 export function generateStaticParams() {
   return [
     { slug: "medical" },
-    { slug: "paramedical" },
+    { slug: "nursing" },
     { slug: "engineering" },
+    { slug: "polytechnic" },
     { slug: "commerce" },
     { slug: "law" },
     { slug: "management" },
+    { slug: "science" },
   ]
 }
 

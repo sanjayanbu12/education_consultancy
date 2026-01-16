@@ -3,29 +3,7 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Search, ChevronRight, BookOpen, Clock, Award, TrendingUp, Users, Star, Grid3x3, List, ArrowRight, X, Zap } from "lucide-react"
-
-const categories = ["All", "Medical", "Engineering", "Science", "Commerce", "Arts", "Law"]
-
-const courses = [
-  { slug: "mbbs", name: "MBBS", category: "Medical", duration: "5.5 Years", type: "UG", popular: true, students: "2,500+", rating: 4.9 },
-  { slug: "bds", name: "BDS", category: "Medical", duration: "5 Years", type: "UG", popular: false, students: "1,200+", rating: 4.7 },
-  { slug: "bsc-nursing", name: "B.Sc Nursing", category: "Medical", duration: "4 Years", type: "UG", popular: true, students: "3,000+", rating: 4.8 },
-  { slug: "pharm-d", name: "Pharm.D", category: "Medical", duration: "6 Years", type: "UG", popular: false, students: "800+", rating: 4.6 },
-
-  { slug: "btech-cse", name: "B.Tech Computer Science", category: "Engineering", duration: "4 Years", type: "UG", popular: true, students: "4,200+", rating: 4.9 },
-  { slug: "btech-ai", name: "B.Tech AI & Data Science", category: "Engineering", duration: "4 Years", type: "UG", popular: true, students: "1,800+", rating: 4.8 },
-  { slug: "mtech", name: "M.Tech", category: "Engineering", duration: "2 Years", type: "PG", popular: false, students: "950+", rating: 4.7 },
-
-  { slug: "bcom", name: "B.Com", category: "Commerce", duration: "3 Years", type: "UG", popular: false, students: "2,100+", rating: 4.5 },
-  { slug: "mba", name: "MBA", category: "Commerce", duration: "2 Years", type: "PG", popular: true, students: "3,500+", rating: 4.9 },
-  { slug: "mca", name: "MCA", category: "Commerce", duration: "2 Years", type: "PG", popular: true, students: "1,600+", rating: 4.7 },
-
-  { slug: "ba-llb", name: "BA LLB", category: "Law", duration: "5 Years", type: "UG", popular: true, students: "1,400+", rating: 4.8 },
-  { slug: "llm", name: "LLM", category: "Law", duration: "2 Years", type: "PG", popular: false, students: "600+", rating: 4.6 },
-
-  { slug: "ba", name: "BA", category: "Arts", duration: "3 Years", type: "UG", popular: false, students: "1,800+", rating: 4.4 },
-  { slug: "bsc-physics", name: "B.Sc Physics", category: "Science", duration: "3 Years", type: "UG", popular: false, students: "900+", rating: 4.5 },
-]
+import { allCourses, categories } from "@/data/courses-data"
 
 export default function CourseCatalogSection() {
   const router = useRouter()
@@ -33,7 +11,7 @@ export default function CourseCatalogSection() {
   const [searchQuery, setSearchQuery] = useState("")
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
 
-  const filteredCourses = courses.filter((course) => {
+  const filteredCourses = allCourses.filter((course) => {
     const matchesCategory = activeCategory === "All" || course.category === activeCategory
     const matchesSearch = course.name.toLowerCase().includes(searchQuery.toLowerCase())
     return matchesCategory && matchesSearch
@@ -61,7 +39,7 @@ export default function CourseCatalogSection() {
           {/* Quick Stats */}
           <div className="flex flex-wrap justify-center gap-6 mt-10">
             {[
-              { icon: <BookOpen className="w-5 h-5" />, label: "200+ Courses" },
+              { icon: <BookOpen className="w-5 h-5" />, label: `${allCourses.length}+ Courses` },
               { icon: <Users className="w-5 h-5" />, label: "5000+ Colleges" },
               { icon: <Award className="w-5 h-5" />, label: "100% Support" }
             ].map((stat, i) => (
@@ -101,8 +79,8 @@ export default function CourseCatalogSection() {
               <button
                 onClick={() => setViewMode("grid")}
                 className={`p-3 rounded-lg ${viewMode === "grid"
-                    ? "bg-[#0E74D2] text-white"
-                    : "bg-white dark:bg-black text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
+                  ? "bg-[#0E74D2] text-white"
+                  : "bg-white dark:bg-black text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
                   }`}
               >
                 <Grid3x3 className="w-4 h-4" />
@@ -110,8 +88,8 @@ export default function CourseCatalogSection() {
               <button
                 onClick={() => setViewMode("list")}
                 className={`p-3 rounded-lg ${viewMode === "list"
-                    ? "bg-[#0E74D2] text-white"
-                    : "bg-white dark:bg-black text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
+                  ? "bg-[#0E74D2] text-white"
+                  : "bg-white dark:bg-black text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
                   }`}
               >
                 <List className="w-4 h-4" />
@@ -126,8 +104,8 @@ export default function CourseCatalogSection() {
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium ${activeCategory === category
-                    ? "bg-[#0E74D2] text-white"
-                    : "bg-white dark:bg-black text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
+                  ? "bg-[#0E74D2] text-white"
+                  : "bg-white dark:bg-black text-[#5a5a5a] dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2]/30"
                   }`}
               >
                 {category}

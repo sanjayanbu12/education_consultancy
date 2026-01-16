@@ -10,26 +10,29 @@ import {
   Calculator,
   Scale,
   Briefcase,
+  Heart,
+  Wrench,
 } from "lucide-react"
+import { getCoursesByCategory } from "@/data/courses-data"
 
 const pathways = [
   {
     category: "Medical",
-    duration: "5 Years",
+    duration: "3-6 Years",
     icon: <Stethoscope className="w-6 h-6" />,
     color: "bg-red-500",
     lightColor: "bg-red-50",
     textColor: "text-red-600",
-    courses: ["MBBS", "BUMS", "BHMS", "BAMS", "BSMS", "BNYS", "BDS", "BVSc"],
+    courses: getCoursesByCategory("Medical").filter(c => c.type === "UG" && !c.name.includes("Nursing")).slice(0, 12).map(c => c.name),
   },
   {
-    category: "Paramedical",
-    duration: "2–3 Years",
-    icon: <FlaskConical className="w-6 h-6" />,
+    category: "Nursing",
+    duration: "2-4 Years",
+    icon: <Heart className="w-6 h-6" />,
     color: "bg-pink-500",
     lightColor: "bg-pink-50",
     textColor: "text-pink-600",
-    courses: ["Nursing", "Pharmacy", "Physiotherapy", "Medical Lab Tech", "Radiology", "Cardiac Care"],
+    courses: getCoursesByCategory("Medical").filter(c => c.name.includes("Nursing") || c.name.includes("ANM") || c.name.includes("DGNM")).slice(0, 8).map(c => c.name),
   },
   {
     category: "Engineering",
@@ -38,25 +41,34 @@ const pathways = [
     color: "bg-blue-500",
     lightColor: "bg-blue-50",
     textColor: "text-blue-600",
-    courses: ["Aeronautical", "Aerospace", "Computer Science", "AI & Robotics", "Civil", "Mechanical"],
+    courses: getCoursesByCategory("Engineering").filter(c => c.type === "UG").slice(0, 12).map(c => c.name.replace("B.Tech ", "")),
+  },
+  {
+    category: "Polytechnic",
+    duration: "3 Years",
+    icon: <Wrench className="w-6 h-6" />,
+    color: "bg-teal-500",
+    lightColor: "bg-teal-50",
+    textColor: "text-teal-600",
+    courses: ["Civil", "Mechanical", "ECE", "EEE", "CSE", "Automobile", "Architecture", "Chemical", "Bio-Medical", "Food Technology", "Fashion Technology", "Interior Design"],
   },
   {
     category: "Commerce",
-    duration: "3 Years",
+    duration: "2-3 Years",
     icon: <Calculator className="w-6 h-6" />,
     color: "bg-amber-500",
     lightColor: "bg-amber-50",
     textColor: "text-amber-600",
-    courses: ["B.Com", "BBA", "Bank Management", "CA", "CMA", "Chartered Accountancy"],
+    courses: getCoursesByCategory("Commerce").slice(0, 10).map(c => c.name),
   },
   {
     category: "Law",
-    duration: "3–5 Years",
+    duration: "3-5 Years",
     icon: <Scale className="w-6 h-6" />,
     color: "bg-green-500",
     lightColor: "bg-green-50",
     textColor: "text-green-600",
-    courses: ["LLB", "BA + LLB", "B.Com + LLB", "LLM", "IPCC"],
+    courses: getCoursesByCategory("Law").map(c => c.name),
   },
   {
     category: "Management",
@@ -65,7 +77,16 @@ const pathways = [
     color: "bg-purple-500",
     lightColor: "bg-purple-50",
     textColor: "text-purple-600",
-    courses: ["MBA", "MIB", "MCA", "M.Tech", "M.Com", "Ph.D"],
+    courses: getCoursesByCategory("Engineering").filter(c => c.type === "PG").slice(0, 10).map(c => c.name.replace("M.Tech ", "")),
+  },
+  {
+    category: "Science",
+    duration: "3-4 Years",
+    icon: <FlaskConical className="w-6 h-6" />,
+    color: "bg-indigo-500",
+    lightColor: "bg-indigo-50",
+    textColor: "text-indigo-600",
+    courses: getCoursesByCategory("Science").map(c => c.name),
   },
 ]
 
@@ -93,7 +114,7 @@ export default function CoursePathwaySection() {
 
         <div className="relative">
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 relative z-10">
             {pathways.map((path, index) => {
               const expanded = expandedIndex === index
               const shown = expanded ? path.courses : path.courses.slice(0, 4)

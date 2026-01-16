@@ -1,314 +1,320 @@
+import { getCoursesByCategory } from "@/data/courses-data"
+
 export const articleData: Record<string, any> = {
   medical: {
-  overview: `
-Medical education remains one of the most prestigious, respected, and sought-after academic pathways. 
-With rapid advancements in global healthcare systems, biotechnology, and surgical technologies, the 
-medical profession has evolved beyond traditional clinical roles into research, public health leadership, 
-and specialized global care.
+    overview:
+      "Medical education in India represents one of the most prestigious and demanding academic pathways. From MBBS to specialized fields like dentistry, ayurveda, and para-medical sciences, the medical domain offers diverse opportunities to serve humanity while building a rewarding career. With NEET as the gateway, students embark on a journey of rigorous training, clinical practice, and lifelong learning.",
+    why: [
+      "Unmatched respect and social status in society",
+      "Recession-proof career with consistent demand",
+      "Opportunity to save lives and make a real difference",
+      "Global career opportunities with competitive salaries",
+      "Diverse specialization options from surgery to research",
+      "Growing healthcare industry with continuous innovation",
+    ],
+    eligibility: [
+      "10+2 with Physics, Chemistry, Biology (PCB)",
+      "Minimum 50% aggregate marks (40% for reserved categories)",
+      "NEET qualification mandatory for most medical courses",
+      "Age limit: 17-25 years (relaxation for reserved categories)",
+    ],
+    topCourses: getCoursesByCategory("Medical").slice(0, 12).map(c => c.name),
+    careers: [
+      "Medical Doctor (General Physician, Specialist, Surgeon)",
+      "Dentist & Orthodontist",
+      "Ayurvedic / Homeopathic / Unani Practitioner",
+      "Physiotherapist & Occupational Therapist",
+      "Medical Lab Technician & Radiologist",
+      "Pharmacist & Clinical Pharmacologist",
+      "Hospital Administrator & Healthcare Manager",
+      "Medical Research Scientist",
+    ],
+    trends: [
+      "AI-assisted diagnostics revolutionizing healthcare",
+      "Telemedicine expanding access to remote areas",
+      "Personalized medicine & genomics",
+      "Robotic surgery becoming mainstream",
+      "Preventive healthcare gaining importance",
+      "Medical tourism boosting opportunities",
+    ],
+  },
 
-Pursuing medicine is more than acquiring a degree—it is a lifelong commitment to healing, innovation, 
-and service. Students entering this field gain access to a career that offers unmatched societal respect, 
-high earning potential, and the opportunity to impact lives at every stage of human development.
-`,
+  nursing: {
+    overview:
+      "Nursing is one of the most employable and globally recognized healthcare professions. With opportunities spanning from India to UK, Canada, Australia, and the Middle East, nursing offers both job security and international mobility. The profession combines compassionate care with technical expertise, making nurses indispensable in modern healthcare systems.",
+    why: [
+      "Guaranteed employment with global demand",
+      "Fastest pathway for international migration",
+      "Respected profession with job satisfaction",
+      "Diverse specialization options (ICU, OT, Pediatric, etc.)",
+      "Competitive salaries, especially abroad",
+      "Opportunity to make a direct impact on patient lives",
+    ],
+    eligibility: [
+      "10+2 with Physics, Chemistry, Biology",
+      "Minimum 45% marks in PCB",
+      "State-specific entrance exams",
+      "Age limit: 17-35 years (varies by state)",
+    ],
+    topCourses: getCoursesByCategory("Medical").filter(c => c.name.includes("Nursing") || c.name.includes("ANM") || c.name.includes("DGNM")).map(c => c.name),
+    careers: [
+      "Registered Nurse (RN) in hospitals",
+      "ICU & Critical Care Nurse",
+      "Operation Theater Technician",
+      "Community Health Nurse",
+      "Nursing Officer in government hospitals",
+      "International Nurse (UK NHS, Canada, Australia)",
+      "Nursing Educator & Researcher",
+      "Tele-nursing Specialist",
+    ],
+    trends: [
+      "International nursing demand at all-time high",
+      "Tele-nursing & remote healthcare expansion",
+      "Specialized critical care roles growing",
+      "Nurse practitioners gaining autonomy",
+      "Geriatric nursing demand increasing",
+      "Mental health nursing specialization boom",
+    ],
+  },
 
-  why: [
-    "Ever-growing demand for skilled doctors worldwide",
-    "High salary potential in government and private sectors",
-    "Global mobility—medical degrees are recognized internationally",
-    "Opportunity to specialize in 70+ fields including surgery, pediatrics, cardiology, oncology, and more",
-    "Strong job security compared to other professions",
-    "Access to cutting-edge medical technologies such as robotic surgery and genomics"
-  ],
+  engineering: {
+    overview:
+      "Engineering remains India's most sought-after professional education, offering diverse specializations from Computer Science to Aerospace. With JEE as the primary gateway, engineering programs combine theoretical knowledge with practical application, preparing students for careers in technology, infrastructure, innovation, and research. The field continues to evolve with emerging technologies like AI, IoT, and sustainable engineering.",
+    why: [
+      "Highest salary potential among all fields",
+      "Global career opportunities in tech giants",
+      "Innovation-driven field with constant evolution",
+      "Entrepreneurship opportunities in tech startups",
+      "Diverse specializations matching various interests",
+      "Strong foundation for higher studies (M.Tech, MBA, MS abroad)",
+    ],
+    eligibility: [
+      "10+2 with Physics, Chemistry, Mathematics (PCM)",
+      "Minimum 50% aggregate marks (45% for reserved categories)",
+      "JEE Main / JEE Advanced / State CET qualification",
+      "Age limit: No upper age limit for JEE Main",
+    ],
+    topCourses: getCoursesByCategory("Engineering").filter(c => c.type === "UG").slice(0, 12).map(c => c.name.replace("B.Tech ", "")),
+    careers: [
+      "Software Engineer & Full Stack Developer",
+      "AI/ML Engineer & Data Scientist",
+      "Civil Engineer & Structural Designer",
+      "Mechanical Engineer & Robotics Specialist",
+      "Electronics & Communication Engineer",
+      "Cloud Architect & DevOps Engineer",
+      "Aerospace Engineer & Automotive Designer",
+      "Research & Development Engineer",
+    ],
+    trends: [
+      "AI & Machine Learning integration everywhere",
+      "Sustainable & green engineering focus",
+      "Industry 4.0 & automation revolution",
+      "Electric vehicles & renewable energy boom",
+      "Quantum computing & advanced materials",
+      "Space technology & satellite engineering",
+    ],
+  },
 
-  eligibility: [
-    "10+2 with Physics, Chemistry, Biology (minimum 50–60%)",
-    "NEET qualification mandatory for MBBS, BDS, BAMS, BHMS, and allied medical degrees",
-    "Strong foundation in biology and human science",
-    "Communication, problem-solving, and empathy"
-  ],
+  polytechnic: {
+    overview:
+      "Polytechnic education offers practical, skill-based diploma programs that prepare students for immediate employment in technical fields. These 3-year programs focus on hands-on training, making graduates industry-ready. Polytechnic is an excellent choice for students seeking faster entry into the workforce or as a stepping stone to engineering degrees through lateral entry.",
+    why: [
+      "Faster entry into workforce (3 years vs 4 years)",
+      "Practical, skill-based training",
+      "Lower education costs compared to engineering",
+      "Lateral entry option to B.Tech (direct 2nd year)",
+      "High employability in technical roles",
+      "Government job opportunities in technical departments",
+    ],
+    eligibility: [
+      "10th pass for diploma programs",
+      "Minimum 35% marks in 10th",
+      "State polytechnic entrance exams",
+      "Age limit: Usually 14-40 years",
+    ],
+    topCourses: [
+      "Diploma in Civil Engineering",
+      "Diploma in Mechanical Engineering",
+      "Diploma in Electrical Engineering",
+      "Diploma in Electronics & Communication",
+      "Diploma in Computer Science",
+      "Diploma in Automobile Engineering",
+      "Diploma in Architecture",
+      "Diploma in Chemical Engineering",
+      "Diploma in Bio-Medical Engineering",
+      "Diploma in Food Technology",
+      "Diploma in Fashion Technology",
+      "Diploma in Interior Design",
+    ],
+    careers: [
+      "Junior Engineer in government departments",
+      "Technical Supervisor in manufacturing",
+      "CAD Designer & Draftsman",
+      "Quality Control Inspector",
+      "Maintenance Engineer",
+      "Technical Sales Engineer",
+      "Site Supervisor in construction",
+      "Lab Technician in industries",
+    ],
+    trends: [
+      "Skill India initiative boosting polytechnic value",
+      "Industry partnerships for placements",
+      "Advanced diploma programs emerging",
+      "Digital manufacturing skills in demand",
+      "Renewable energy technician roles growing",
+      "Smart manufacturing & automation focus",
+    ],
+  },
 
-  topCourses: [
-    "MBBS (Bachelor of Medicine & Bachelor of Surgery)",
-    "BDS (Dentistry)",
-    "BAMS (Ayurvedic Medicine)",
-    "BHMS (Homeopathy)",
-    "BSMS (Siddha Medicine)",
-    "BNYS (Naturopathy & Yoga)",
-    "BPT — Physiotherapy",
-    "B.Sc Nursing",
-    "B.Sc Radiology & Imaging",
-    "B.Pharm / Pharm.D",
-    "B.Sc Cardiology, Anesthesia, Neuroscience"
-  ],
+  commerce: {
+    overview:
+      "Commerce education forms the backbone of business, finance, and management careers. From B.Com to MBA, commerce programs develop analytical, financial, and managerial skills essential for corporate success. With the rise of FinTech, e-commerce, and digital business, commerce graduates are more relevant than ever in shaping the modern economy.",
+    why: [
+      "Versatile career options in business & finance",
+      "Foundation for CA, CMA, MBA, and CS",
+      "Entrepreneurship opportunities",
+      "Growing demand in FinTech & digital business",
+      "Stable career with good growth potential",
+      "Options for both corporate and independent practice",
+    ],
+    eligibility: [
+      "10+2 any stream (Commerce preferred)",
+      "Minimum 50% marks for most programs",
+      "CAT/MAT/XAT for MBA programs",
+      "No specific entrance for B.Com (merit-based)",
+    ],
+    topCourses: getCoursesByCategory("Commerce").map(c => c.name),
+    careers: [
+      "Chartered Accountant (CA)",
+      "Business Manager & Entrepreneur",
+      "Financial Analyst & Investment Banker",
+      "Marketing Manager & Brand Strategist",
+      "HR Manager & Talent Acquisition Specialist",
+      "Data Analyst & Business Intelligence Expert",
+      "Tax Consultant & Auditor",
+      "E-commerce Manager & Digital Marketer",
+    ],
+    trends: [
+      "FinTech revolution transforming finance",
+      "Data analytics in business decision-making",
+      "E-commerce & digital marketing boom",
+      "Cryptocurrency & blockchain opportunities",
+      "Sustainable business & ESG focus",
+      "Remote work creating global opportunities",
+    ],
+  },
 
-  careers: [
-    "General Physician / Surgeon",
-    "Specialist Doctor (Cardiologist, Dermatologist, Neurologist, etc.)",
-    "Dentist / Orthodontist",
-    "Medical Research Scientist",
-    "Public Health Officer",
-    "Medical Superintendent / Hospital Administrator",
-    "International Medical Practitioner (UK, UAE, Australia, Canada)",
-  ],
+  law: {
+    overview:
+      "Legal education in India offers a prestigious career path combining intellectual rigor with social impact. From constitutional law to corporate practice, the legal profession provides diverse opportunities in litigation, corporate advisory, judiciary, and legal research. With CLAT as the primary entrance, law programs develop critical thinking, argumentation, and research skills.",
+    why: [
+      "Respected profession with social impact",
+      "Diverse career paths (litigation, corporate, judiciary)",
+      "Intellectual stimulation and continuous learning",
+      "Opportunity to fight for justice and rights",
+      "Growing demand in corporate legal roles",
+      "Potential for high earnings in specialized practice",
+    ],
+    eligibility: [
+      "10+2 any stream for 5-year integrated programs",
+      "Any graduation for 3-year LLB",
+      "CLAT / LSAT / State law entrance exams",
+      "Minimum 45% marks in qualifying exam",
+    ],
+    topCourses: getCoursesByCategory("Law").map(c => c.name),
+    careers: [
+      "Advocate & Litigator",
+      "Corporate Lawyer & Legal Advisor",
+      "Judge & Magistrate (after judiciary exams)",
+      "Legal Consultant for businesses",
+      "Public Prosecutor & Government Counsel",
+      "Legal Researcher & Academic",
+      "Cyber Law & IPR Specialist",
+      "International Law Expert",
+    ],
+    trends: [
+      "Cyber law & data privacy specialization growing",
+      "Corporate legal demand increasing",
+      "AI in legal research & contract drafting",
+      "International arbitration opportunities",
+      "Environmental & climate law emerging",
+      "Legal tech startups creating new roles",
+    ],
+  },
 
-  trends: [
-    "AI-assisted diagnostics becoming mainstream",
-    "Rise of telemedicine and virtual hospital ecosystems",
-    "Robotic surgery adoption across India",
-    "Demand for lifestyle physicians (preventive medicine)",
-    "Integration of traditional medicine with modern therapeutics"
-  ]
-},
+  management: {
+    overview:
+      "Management education, particularly through M.Tech programs, combines technical expertise with leadership skills. These postgraduate programs offer specialization in cutting-edge fields like AI, VLSI, robotics, and sustainable engineering. Management roles in engineering require both deep technical knowledge and the ability to lead teams, manage projects, and drive innovation.",
+    why: [
+      "Higher-level technical and leadership roles",
+      "Specialization in emerging technologies",
+      "Research opportunities in advanced fields",
+      "Better salary packages than B.Tech",
+      "Path to academic and R&D careers",
+      "GATE qualification opens PSU opportunities",
+    ],
+    eligibility: [
+      "B.Tech / BE in relevant field",
+      "GATE qualification (preferred for top institutes)",
+      "Minimum 55% marks in graduation",
+      "Some institutes accept non-GATE candidates",
+    ],
+    topCourses: getCoursesByCategory("Engineering").filter(c => c.type === "PG").slice(0, 12).map(c => c.name.replace("M.Tech ", "")),
+    careers: [
+      "Senior Software Engineer & Architect",
+      "Research Engineer in R&D labs",
+      "Technical Project Manager",
+      "Robotics & Automation Engineer",
+      "VLSI Design Engineer",
+      "Data Scientist & AI Researcher",
+      "Technical Consultant",
+      "Professor & Academic Researcher",
+    ],
+    trends: [
+      "AI & ML specializations in high demand",
+      "Robotics & automation expanding",
+      "Renewable energy engineering growing",
+      "Advanced materials research opportunities",
+      "Quantum computing & photonics emerging",
+      "Industry-academia collaboration increasing",
+    ],
+  },
 
-paramedical: {
-  overview: `
-Paramedical sciences form the backbone of modern healthcare delivery. As hospitals expand their 
-diagnostic, imaging, and emergency care capabilities, the demand for professionally trained 
-paramedical staff continues to grow exponentially.
-
-Paramedical careers offer excellent job stability, opportunities to work in global healthcare systems, 
-and specializations that require shorter course durations compared to MBBS—while still being impactful 
-and highly rewarding.
-`,
-
-  why: [
-    "Massive global demand across hospitals and diagnostic centers",
-    "Shorter course duration (1–4 years) with quick job entry",
-    "High employability in India and abroad, especially Gulf countries",
-    "Essential roles in ICU, emergency, and surgical support",
-    "Stable income with opportunities for specialization"
-  ],
-
-  eligibility: [
-    "10+2 with Science (preferably PCB)",
-    "Some courses allow any stream with basic science subjects",
-    "Practical mindset and interest in patient care"
-  ],
-
-  topCourses: [
-    "B.Sc Nursing / GNM Nursing",
-    "BPT – Physiotherapy",
-    "B.Sc Medical Lab Technology (MLT)",
-    "B.Sc Radiology & Imaging",
-    "B.Sc Anaesthesia Technology",
-    "B.Sc Cardiac Care / Perfusion Technology",
-    "B.Sc Optometry",
-    "B.Pharm / D.Pharm",
-  ],
-
-  careers: [
-    "Nurse (Govt & Private Hospitals)",
-    "Physiotherapist",
-    "Radiology & Imaging Technologist (MRI, CT, X-ray)",
-    "Cardiac & Operation Theatre Technologist",
-    "Medical Lab Technologist",
-    "Pharmacist / Clinical Pharmacology Assistant"
-  ],
-
-  trends: [
-    "Increased need for ICU-trained paramedics",
-    "Rise of advanced diagnostic imaging technologies",
-    "Demand for physiotherapists in sports and rehabilitation",
-    "Global nursing shortages driving foreign recruitment"
-  ]
-},
-
-
-engineering: {
-  overview: `
-Engineering is one of the most versatile and future-ready academic fields. Engineers play a critical 
-role in shaping industries such as technology, aerospace, infrastructure, robotics, energy, and artificial intelligence.
-
-With India becoming a global hub for software development and manufacturing, engineering graduates 
-have access to high-paying domestic and international opportunities across more than 25 specializations.
-`,
-
-  why: [
-    "High-paying job opportunities in IT and core industries",
-    "Fastest growing fields: AI, Cybersecurity, Robotics, Electric Vehicles",
-    "Opportunities for research, innovation, and patents",
-    "Excellent career mobility across countries",
-    "Strong foundation for entrepreneurship and startup ecosystem"
-  ],
-
-  eligibility: [
-    "10+2 with Physics, Chemistry, Mathematics",
-    "Entrance Exams: JEE Main, JEE Advanced, TNEA, state-level exams",
-    "Problem-solving attitude and strong mathematical skills"
-  ],
-
-  topCourses: [
-    "Computer Science Engineering",
-    "AI & Machine Learning",
-    "Cybersecurity",
-    "Electronics & Communication Engineering",
-    "Mechanical Engineering",
-    "Civil Engineering",
-    "Aerospace Engineering",
-    "Robotics & Mechatronics",
-    "Biotechnology Engineering"
-  ],
-
-  careers: [
-    "Software Developer / Full Stack Engineer",
-    "AI/ML Engineer",
-    "Cybersecurity Analyst",
-    "Mechanical / Civil Designer",
-    "Aerospace Engineer",
-    "Data Scientist / Data Engineer",
-    "Robotics Engineer",
-    "Cloud Architect"
-  ],
-
-  trends: [
-    "AI-driven automation replacing manual tasks",
-    "Electric vehicles and renewable energy growth",
-    "Satellite & space technology boom (ISRO, SpaceX)",
-    "Robotics in manufacturing and healthcare",
-    "5G & IoT powering smart infrastructure"
-  ]
-},
-
-commerce: {
-  overview: `
-Commerce is a practical and career-rich academic stream that opens doors to business, finance, 
-accounting, banking, taxation, and corporate leadership. It is one of the most stable and predictable 
-career pathways with excellent growth potential.
-`,
-
-  why: [
-    "High-paying careers in finance and corporate sectors",
-    "Ideal stream for entrepreneurship and business",
-    "Opportunity to pursue globally recognized qualifications like CA, CMA, CFA",
-    "Strong job security with stable career progression"
-  ],
-
-  eligibility: [
-    "10+2 (any stream; commerce preferred)",
-    "Good mathematical and analytical skills",
-    "Strong interest in business, economics, or finance"
-  ],
-
-  topCourses: [
-    "B.Com (General, Finance, Accounting)",
-    "BBA",
-    "CA – Chartered Accountancy",
-    "CMA – Cost & Management Accountant",
-    "CS – Company Secretary",
-    "BMS",
-    "MBA Integrated"
-  ],
-
-  careers: [
-    "Chartered Accountant (CA)",
-    "Auditor / Tax Consultant",
-    "Banking Professional",
-    "Business Analyst",
-    "Financial Planning & Investment Advisor",
-    "Corporate Finance Officer",
-  ],
-
-  trends: [
-    "FinTech revolution transforming finance",
-    "Digital banking growth",
-    "Global outsourcing of accounting roles",
-    "Rise of investment advisory and wealth management"
-  ]
-},
-
-
-law: {
-  overview: `
-Law is a prestigious and intellectually stimulating field focused on justice, governance, legal 
-interpretation, and protecting rights. With rapid growth in corporate sectors, cybercrime, and 
-international trade, legal professionals are in high demand across industries.
-`,
-
-  why: [
-    "High career respect and influence",
-    "Diverse specialization options including Corporate Law, Cyber Law, IPR, Criminal Law",
-    "Great pathway for civil services and judiciary exams",
-    "High growth in corporate legal markets"
-  ],
-
-  eligibility: [
-    "5-year integrated LLB after 10+2",
-    "3-year LLB after any bachelor’s degree",
-    "Entrance exams: CLAT, LSAT, AILET"
-  ],
-
-  topCourses: [
-    "BA LLB",
-    "BBA LLB",
-    "BCOM LLB",
-    "LLM",
-    "Diploma in Cyber Law",
-    "Diploma in Corporate Law"
-  ],
-
-  careers: [
-    "Advocate / Litigator",
-    "Corporate Lawyer",
-    "Legal Advisor for MNCs",
-    "Judge (via PCS-J exams)",
-    "Cybercrime & Intellectual Property Specialist"
-  ],
-
-  trends: [
-    "Boom in corporate law due to startup ecosystem",
-    "Rise in cyber law and privacy litigations",
-    "Global demand for arbitration lawyers",
-    "Intellectual property rights gaining importance"
-  ]
-},
-
-
-management: {
-  overview: `
-Management studies develop strategic, analytical, and leadership capabilities essential for supervising 
-teams, running organizations, and making high-impact business decisions. MBA is one of the most respected 
-and financially rewarding postgraduate degrees globally.
-`,
-
-  why: [
-    "Highest-paying non-technical career path",
-    "Global job opportunities in corporate leadership",
-    "Builds strong managerial and entrepreneurial skills",
-    "Allows specialization in HR, Marketing, Finance, Data Analytics"
-  ],
-
-  eligibility: [
-    "Any undergraduate degree",
-    "Entrance exams: CAT, MAT, XAT, GMAT, TANCET",
-    "Communication & leadership skills"
-  ],
-
-  topCourses: [
-    "MBA (General Management)",
-    "MBA Marketing",
-    "MBA Finance",
-    "MBA HR",
-    "MBA in Business Analytics",
-    "MBA International Business"
-  ],
-
-  careers: [
-    "Business Manager",
-    "Marketing Strategist",
-    "HR Manager",
-    "Financial Analyst",
-    "Product Manager",
-    "Operations Manager",
-    "Brand Director"
-  ],
-
-  trends: [
-    "Data-driven business decision making",
-    "AI-powered business analytics roles",
-    "Automation in HR and operations",
-    "Remote global workforce management",
-    "Growth of startup ecosystem"
-  ]
-}
-
+  science: {
+    overview:
+      "Science education builds the foundation for research, innovation, and technical careers. B.Sc programs in Physics, Chemistry, Mathematics, and Biology develop analytical thinking, scientific reasoning, and research skills. Science graduates contribute to fields ranging from pharmaceuticals to space research, making them essential for technological advancement.",
+    why: [
+      "Strong foundation for research careers",
+      "Gateway to higher studies (M.Sc, Ph.D)",
+      "Diverse career options in research & industry",
+      "Opportunities in teaching and academics",
+      "Essential for scientific innovation",
+      "Growing demand in biotech & pharma",
+    ],
+    eligibility: [
+      "10+2 with Science stream (PCM/PCB)",
+      "Minimum 50% marks in science subjects",
+      "Merit-based admission in most colleges",
+      "Some institutes conduct entrance exams",
+    ],
+    topCourses: getCoursesByCategory("Science").map(c => c.name),
+    careers: [
+      "Research Scientist in labs",
+      "Quality Control Analyst",
+      "Laboratory Technician",
+      "Science Educator & Professor",
+      "Pharmaceutical Researcher",
+      "Environmental Scientist",
+      "Data Analyst & Statistician",
+      "Biotechnology Specialist",
+    ],
+    trends: [
+      "Biotechnology & genetic research expanding",
+      "Environmental science gaining importance",
+      "Data science applications in research",
+      "Pharmaceutical R&D opportunities",
+      "Space research & astronomy growing",
+      "Interdisciplinary science fields emerging",
+    ],
+  },
 }
