@@ -39,6 +39,31 @@
   --sidebar-ring: oklch(0.55 0.2 240);
   --font-inter: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-instrument-serif: "Instrument Serif", ui-serif, serif;
+
+  /* Apple.com Color Scheme */
+  --apple-white: #ffffff;
+  --apple-black: #1d1d1f;
+  --apple-gray-50: #f5f5f7;
+  --apple-gray-100: #e8e8ed;
+  --apple-gray-200: #d2d2d7;
+  --apple-gray-300: #b0b0b5;
+  --apple-gray-400: #86868b;
+  --apple-gray-500: #6e6e73;
+  --apple-gray-600: #515154;
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+
+  /* Apple.com Spacing Scale */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 80px;
+  --space-5xl: 96px;
+  --space-6xl: 128px;
 }
 
 .dark {
@@ -74,6 +99,19 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.15 0 0);
   --sidebar-ring: oklch(0.3 0 0);
+
+  /* Apple.com Dark Mode Colors */
+  --apple-white: #f5f5f7;
+  --apple-black: #000000;
+  --apple-gray-50: #1d1d1f;
+  --apple-gray-100: #2c2c2e;
+  --apple-gray-200: #3a3a3c;
+  --apple-gray-300: #48484a;
+  --apple-gray-400: #636366;
+  --apple-gray-500: #8e8e93;
+  --apple-gray-600: #aeaeb2;
+  --apple-blue: #0a84ff;
+  --apple-blue-hover: #409cff;
 }
 
 @theme inline {
@@ -125,6 +163,144 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-size: 17px;
+    /* Apple's base font size */
+    line-height: 1.47059;
+  }
+
+  /* Apple.com heading sizes - Responsive */
+  h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.003em;
+    line-height: 1.08349;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 64px;
+      line-height: 1.0625;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 80px;
+      line-height: 1.05;
+    }
+  }
+
+  h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.003em;
+    line-height: 1.125;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 40px;
+      line-height: 1.1;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 48px;
+      line-height: 1.08349;
+    }
+  }
+
+  h3 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.002em;
+    line-height: 1.16667;
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 28px;
+      line-height: 1.14286;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 32px;
+      line-height: 1.125;
+    }
+  }
+
+  h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.002em;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 1024px) {
+    h4 {
+      font-size: 24px;
+      line-height: 1.16667;
+    }
+  }
+
+  h5 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.002em;
+    line-height: 1.23536;
+  }
+
+  @media (min-width: 1024px) {
+    h5 {
+      font-size: 19px;
+      line-height: 1.21053;
+    }
+  }
+
+  h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.001em;
+    line-height: 1.28577;
+  }
+
+  @media (min-width: 1024px) {
+    h6 {
+      font-size: 17px;
+      line-height: 1.23536;
+    }
+  }
+
+  /* Apple-style body text */
+  p {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    line-height: 1.47059;
+  }
+
+  /* Apple-style buttons and links */
+  button,
+  a {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.022em;
   }
 }
 

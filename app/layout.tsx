@@ -1,8 +1,7 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
 import "./globals.css"
+import "./apple-utilities.css"
 import Header from "@/components/header"
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -44,12 +43,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+    <html lang="en" className="antialiased">
       <head>
         <link rel="icon" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3rd_ED_logo_final-removebg-preview-EmZWbBGyrR3ayEYVNsJmqvnvgjhtt3.png" />
       </head>
 
-      <body className="font-sans antialiased">
+      <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Header />
           <main>{children}</main>

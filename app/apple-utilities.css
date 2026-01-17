@@ -1,0 +1,172 @@
+/* Apple.com Exact Color & Spacing Utilities */
+
+/* Apply Apple text colors globally */
+.apple-text {
+    color: #1d1d1f;
+}
+
+.dark .apple-text {
+    color: #f5f5f7;
+}
+
+/* Apple heading colors */
+.apple-heading {
+    color: #1d1d1f;
+}
+
+.dark .apple-heading {
+    color: #f5f5f7;
+}
+
+/* Apple secondary text */
+.apple-text-secondary {
+    color: #6e6e73;
+}
+
+.dark .apple-text-secondary {
+    color: #8e8e93;
+}
+
+/* Apple link color */
+.apple-link {
+    color: #0071e3;
+}
+
+.apple-link:hover {
+    color: #0077ed;
+}
+
+.dark .apple-link {
+    color: #0a84ff;
+}
+
+.dark .apple-link:hover {
+    color: #409cff;
+}
+
+/* Apple backgrounds */
+.apple-bg {
+    background-color: #ffffff;
+}
+
+.dark .apple-bg {
+    background-color: #000000;
+}
+
+.apple-bg-secondary {
+    background-color: #f5f5f7;
+}
+
+.dark .apple-bg-secondary {
+    background-color: #1d1d1f;
+}
+
+/* Apple spacing utilities */
+.apple-space-xs {
+    margin: 8px;
+}
+
+.apple-space-sm {
+    margin: 12px;
+}
+
+.apple-space-md {
+    margin: 16px;
+}
+
+.apple-space-lg {
+    margin: 24px;
+}
+
+.apple-space-xl {
+    margin: 32px;
+}
+
+.apple-space-2xl {
+    margin: 48px;
+}
+
+.apple-space-3xl {
+    margin: 64px;
+}
+
+.apple-space-4xl {
+    margin: 80px;
+}
+
+.apple-space-5xl {
+    margin: 96px;
+}
+
+.apple-space-6xl {
+    margin: 128px;
+}
+
+/* Apple padding utilities */
+.apple-p-xs {
+    padding: 8px;
+}
+
+.apple-p-sm {
+    padding: 12px;
+}
+
+.apple-p-md {
+    padding: 16px;
+}
+
+.apple-p-lg {
+    padding: 24px;
+}
+
+.apple-p-xl {
+    padding: 32px;
+}
+
+.apple-p-2xl {
+    padding: 48px;
+}
+
+.apple-p-3xl {
+    padding: 64px;
+}
+
+.apple-p-4xl {
+    padding: 80px;
+}
+
+.apple-p-5xl {
+    padding: 96px;
+}
+
+.apple-p-6xl {
+    padding: 128px;
+}
+
+/* Apple section spacing */
+.apple-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media (min-width: 1024px) {
+    .apple-section {
+        padding-top: 128px;
+        padding-bottom: 128px;
+    }
+}
+
+/* Apple container */
+.apple-container {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media (min-width: 1024px) {
+    .apple-container {
+        max-width: 1200px;
+    }
+}
