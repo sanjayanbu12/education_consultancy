@@ -131,7 +131,7 @@ export default function Header() {
                 className="h-8 w-auto"
               />
               <div className="hidden sm:flex flex-col">
-                <span className="text-lg font-bold text-gray-900 dark:text-white leading-tight">
+                <span className="text-md font-bold text-gray-900 dark:text-white leading-tight">
                   AL-HUDA
                 </span>
                 <span className="text-xs font-medium text-gray-600 dark:text-gray-400 leading-tight">
