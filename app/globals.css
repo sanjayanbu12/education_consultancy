@@ -607,3 +607,150 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal-up {
+  transform: translateY(60px);
+}
+
+.scroll-reveal-down {
+  transform: translateY(-60px);
+}
+
+.scroll-reveal-left {
+  transform: translateX(60px);
+}
+
+.scroll-reveal-right {
+  transform: translateX(-60px);
+}
+
+.scroll-reveal-fade {
+  transform: scale(0.95);
+}
+
+.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Page Loader Animations */
+@keyframes fade-in-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-scale {
+  animation: fade-in-scale 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced scroll padding for fixed header */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Floating Animations for Hero Background Orbs */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(20px, -20px) scale(1.05);
+  }
+
+  50% {
+    transform: translate(-15px, 15px) scale(0.95);
+  }
+
+  75% {
+    transform: translate(15px, 10px) scale(1.02);
+  }
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(-25px, 25px) scale(1.08);
+  }
+
+  66% {
+    transform: translate(25px, -15px) scale(0.92);
+  }
+}
+
+@keyframes float-delayed {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  40% {
+    transform: translate(30px, 20px) scale(1.06);
+  }
+
+  80% {
+    transform: translate(-20px, -25px) scale(0.94);
+  }
+}
+
+.animate-float {
+  animation: float 20s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 25s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 22s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Subtle bounce for WhatsApp button */
+@keyframes bounce-subtle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}

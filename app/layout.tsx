@@ -4,6 +4,7 @@ import "./globals.css"
 import "./apple-utilities.css"
 import Header from "@/components/header"
 import { ThemeProvider } from "@/components/theme-provider"
+import PageLoader from "@/components/page-loader"
 
 export const metadata: Metadata = {
   title: "AL-HUDA Educational Consultancy Services",
@@ -49,6 +50,7 @@ export default function RootLayout({
       </head>
 
       <body className="antialiased">
+        <PageLoader />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Header />
           <main>{children}</main>
