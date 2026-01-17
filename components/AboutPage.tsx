@@ -11,8 +11,8 @@ export default function AboutPage() {
 
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,116,210,0.08)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(14,116,210,0.05)_0%,transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1)_0%,transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(14,116,210,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(14,116,210,0.02)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(59,130,246,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.08)_1px,transparent_1px)] bg-[size:64px_64px] animate-[pulse_8s_ease-in-out_infinite]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,116,210,0.03)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(14,116,210,0.02)_0%,transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.06)_0%,transparent_50%),radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.04)_0%,transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(14,116,210,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(14,116,210,0.01)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:64px_64px] animate-[pulse_8s_ease-in-out_infinite]"></div>
       </div>
 
       <div className="relative">
@@ -22,8 +22,8 @@ export default function AboutPage() {
         <section className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
 
           {/* Floating Decorative Elements */}
-          <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-[#0E74D2]/10 to-transparent rounded-full blur-3xl animate-[pulse_6s_ease-in-out_infinite]"></div>
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-[#0a5ba8]/10 to-transparent rounded-full blur-3xl animate-[pulse_8s_ease-in-out_infinite]"></div>
+          <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-[#0E74D2]/4 to-transparent rounded-full blur-3xl animate-[pulse_6s_ease-in-out_infinite]"></div>
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-[#0a5ba8]/4 to-transparent rounded-full blur-3xl animate-[pulse_8s_ease-in-out_infinite]"></div>
 
           <div className="relative z-10 text-center">
 
