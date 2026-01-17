@@ -113,39 +113,39 @@ export default function Header() {
 
   return (
     <>
-      {/* Apple-style minimal header */}
+      {/* Apple-style ultra-minimal header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-white/80 dark:bg-black/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50"
+          ? "bg-white/70 dark:bg-black/70 backdrop-blur-2xl border-b border-gray-200/20 dark:border-gray-800/20"
           : "bg-transparent"
           }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
+        <div className="max-w-[980px] mx-auto px-6">
           <div className="flex items-center justify-between h-12">
 
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity z-50">
+            {/* Logo - Minimal */}
+            <Link href="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity z-50">
               <img
                 src="/images/3rd-ed-logo-final-removebg-preview.png"
                 alt="AL-HUDA"
-                className="h-8 w-auto"
+                className="h-7 w-auto"
               />
               <div className="hidden sm:flex flex-col">
-                <span className="text-md font-bold text-gray-900 dark:text-white leading-tight">
+
+                <span className="text-sm font-semibold text-gray-900 dark:text-white hidden sm:inline">
                   AL-HUDA
                 </span>
-                <span className="text-xs font-medium text-gray-600 dark:text-gray-400 leading-tight">
+                <span className="text-xs font-medium text-gray-600 dark:text-gray-400 hidden sm:inline">
                   Educational Consultancy
                 </span>
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Ultra Minimal */}
             <nav className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
                 <div
                   key={item.name}
-                  className="relative"
                   onMouseEnter={() => hasMegaMenu(item.name) && setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
@@ -155,7 +155,7 @@ export default function Header() {
                       e.preventDefault()
                       scrollToSection(item.href)
                     }}
-                    className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer"
+                    className="text-xs font-normal text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer"
                   >
                     {item.name}
                   </a>
@@ -164,9 +164,9 @@ export default function Header() {
             </nav>
 
             {/* Right Side: Theme Toggle + CTA */}
-            <div className="flex items-center gap-4 z-50">
+            <div className="flex items-center gap-3 z-50">
 
-              {/* Theme Toggle */}
+              {/* Theme Toggle - Minimal */}
               {mounted && (
                 <button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -174,9 +174,9 @@ export default function Header() {
                   aria-label="Toggle theme"
                 >
                   {theme === "dark" ? (
-                    <Sun className="w-5 h-5 text-gray-300" />
+                    <Sun className="w-4 h-4 text-gray-400" />
                   ) : (
-                    <Moon className="w-5 h-5 text-gray-700" />
+                    <Moon className="w-4 h-4 text-gray-600" />
                   )}
                 </button>
               )}
@@ -188,7 +188,7 @@ export default function Header() {
                   e.preventDefault()
                   scrollToSection('#contact')
                 }}
-                className="hidden md:inline-flex items-center px-5 py-2 bg-[#0071E3] hover:bg-[#0077ED] text-white text-sm font-semibold rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
+                className="hidden md:inline-flex items-center px-4 py-1.5 bg-[#0071E3] hover:bg-[#0077ED] text-white text-xs font-semibold rounded-full transition-all duration-300 cursor-pointer"
               >
                 Get Started
               </a>
@@ -200,9 +200,9 @@ export default function Header() {
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? (
-                  <X className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+                  <X className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                 ) : (
-                  <Menu className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+                  <Menu className="w-5 h-5 text-gray-700 dark:text-gray-300" />
                 )}
               </button>
             </div>
