@@ -15,7 +15,7 @@ export default function HeroSection() {
       <div className="relative">
 
         {/* Navigation Spacer */}
-        <div className="h-20"></div>
+        <div className="h-10"></div>
 
         {/* Main Hero Container */}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
@@ -23,47 +23,52 @@ export default function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
             {/* LEFT CONTENT */}
-            <div className="space-y-10">
-
+            <div className="space-y-8">
 
               {/* Main Headline */}
-              <div className="space-y-6">
+              <div className="space-y-5">
                 <h1 className="text-4xl lg:text-6xl font-light text-[#1a1a1a] dark:text-gray-100 tracking-tight leading-[1.1]">
                   Navigate Your
-                  <span className="block mt-2 font-normal bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] dark:from-zinc-400 dark:to-zinc-500 bg-clip-text text-transparent">
+                  <span className="block mt-2 font-normal bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] dark:from-blue-400 dark:to-blue-500 bg-clip-text text-transparent">
                     Academic Journey
                   </span>
                   <span className="block mt-2">With Precision</span>
                 </h1>
 
-                <p className="text-lg text-[#5a5a5a] dark:text-gray-400 leading-relaxed max-w-xl font-light">
-                  Al Huda Educational Consultants delivers strategic guidance for discerning students and families,
-                  connecting aspirations with premier institutions through our comprehensive advisory framework.
+                <p className="text-lg text-[#5a5a5a] dark:text-gray-400 leading-relaxed max-w-xl">
+                  Al Huda Educational Consultancy is your trusted partner in navigating the complex world of higher education.
+                  We provide personalized, professional guidance to help you discover the perfect course and institution
+                  that aligns with your academic goals, career aspirations, and financial circumstances.
                 </p>
+
               </div>
 
               {/* Key Features */}
               <div className="space-y-3">
                 {[
-                  "Personalized institutional matching",
-                  "Strategic program selection",
-                  "End-to-end admission support"
+                  { text: "Free personalized career counseling & course selection", highlight: true },
+                  { text: "Expert guidance for admissions to 5,000+ top institutions", highlight: false },
+                  { text: "Comprehensive scholarship & financial aid assistance", highlight: false },
+                  { text: "End-to-end support from application to enrollment", highlight: false },
+                  { text: "24/7 availability with zero service charges", highlight: true }
                 ].map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#0E74D2] dark:text-blue-400 flex-shrink-0" />
-                    <span className="text-[#3a3a3a] dark:text-gray-300 font-light">{feature}</span>
+                  <div key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className={`w-5 h-5 flex-shrink-0 mt-0.5 ${feature.highlight ? 'text-green-500 dark:text-green-400' : 'text-[#0E74D2] dark:text-blue-400'}`} />
+                    <span className={`${feature.highlight ? 'text-[#2a2a2a] dark:text-gray-200 font-medium' : 'text-[#3a3a3a] dark:text-gray-300'}`}>
+                      {feature.text}
+                    </span>
                   </div>
                 ))}
               </div>
 
               {/* CTA Section */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <a
                   href="tel:9578599785"
                   className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#0E74D2] text-white font-medium rounded-lg hover:bg-[#0a5ba8] transition-all duration-300 shadow-[0_4px_20px_rgba(14,116,210,0.25)] hover:shadow-[0_8px_30px_rgba(14,116,210,0.35)] hover:-translate-y-0.5"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Book Consultation</span>
+                  <span>Book Free Consultation</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
 
@@ -72,8 +77,24 @@ export default function HeroSection() {
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-[#0E74D2] dark:text-blue-400 font-medium rounded-lg border-2 border-[#0E74D2]/20 dark:border-blue-500/30 hover:border-[#0E74D2] dark:hover:border-blue-400 hover:bg-[#0E74D2]/5 dark:hover:bg-blue-500/10 transition-all duration-300"
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Get Information</span>
+                  <span>Get Course Details</span>
                 </a>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-3 gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+                <div>
+                  <div className="text-2xl font-bold text-[#0E74D2] dark:text-blue-400">5,000+</div>
+                  <div className="text-xs text-[#6a6a6a] dark:text-gray-500 mt-1">Partner Colleges</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-[#0E74D2] dark:text-blue-400">200+</div>
+                  <div className="text-xs text-[#6a6a6a] dark:text-gray-500 mt-1">Course Options</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-[#0E74D2] dark:text-blue-400">100%</div>
+                  <div className="text-xs text-[#6a6a6a] dark:text-gray-500 mt-1">Free Service</div>
+                </div>
               </div>
 
             </div>
@@ -86,22 +107,12 @@ export default function HeroSection() {
                 <div className="relative h-[500px]">
                   <img
                     src="/happy-diverse-students-celebrating-graduation-with.jpg"
-                    alt="Academic excellence"
+                    alt="Students celebrating academic success"
                     className="w-full h-full object-cover"
                   />
                 </div>
 
-
-                {/* Bottom Info Card */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 dark:from-black/80 to-transparent">
-
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <div className="font-semibold">Complimentary Advisory Services</div>
-                    <div className="text-white/70 dark:text-white/80 text-sm">Expert guidance at no cost to families</div>
-                  </div>
-                </div>
               </div>
-
 
             </div>
 
