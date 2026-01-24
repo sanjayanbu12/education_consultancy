@@ -123,74 +123,76 @@ export default function CourseCatalogSection() {
 
         {/* COURSE CARDS - GRID VIEW */}
         {viewMode === "grid" && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {filteredCourses.length === 0 && (
-              <div className="col-span-full text-center py-16">
-                <Search className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-                <p className="text-[#5a5a5a]">No courses found</p>
-              </div>
-            )}
-
-            {filteredCourses.map((course, index) => (
-              <div
-                key={index}
-                onClick={() => router.push(`/course-info/${course.slug}`)}
-                className="bg-white dark:bg-black rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-lg cursor-pointer relative"
-              >
-                {course.popular && (
-                  <div className="absolute -top-2 -right-2 px-2 py-0.5 bg-amber-400 text-white text-xs font-semibold rounded-full shadow">
-                    Popular
-                  </div>
-                )}
-
-                <div className="flex items-start justify-between mb-3">
-                  <div
-                    className={`w-10 h-10 rounded-lg flex items-center justify-center ${course.category === "Medical"
-                      ? "bg-red-100 text-red-600"
-                      : course.category === "Engineering"
-                        ? "bg-blue-100 text-blue-600"
-                        : course.category === "Commerce"
-                          ? "bg-amber-100 text-amber-600"
-                          : course.category === "Law"
-                            ? "bg-green-100 text-green-600"
-                            : course.category === "Science"
-                              ? "bg-purple-100 text-purple-600"
-                              : "bg-gray-100 text-gray-600"
-                      }`}
-                  >
-                    <BookOpen className="w-5 h-5" />
-                  </div>
-                  <span className={`text-xs font-medium px-2 py-1 rounded ${course.type === "PG" ? "bg-purple-100 text-purple-700" : "bg-blue-100 text-blue-700"
-                    }`}>
-                    {course.type}
-                  </span>
+          <div className="max-h-[900px] overflow-y-auto scrollbar-hide pr-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {filteredCourses.length === 0 && (
+                <div className="col-span-full text-center py-16">
+                  <Search className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+                  <p className="text-[#5a5a5a]">No courses found</p>
                 </div>
+              )}
 
-                <h3 className="font-semibold text-[#1a1a1a] dark:text-gray-100 mb-3 text-sm leading-tight">
-                  {course.name}
-                </h3>
+              {filteredCourses.map((course, index) => (
+                <div
+                  key={index}
+                  onClick={() => router.push(`/course-info/${course.slug}`)}
+                  className="bg-white dark:bg-black rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-lg cursor-pointer relative transition-all duration-300"
+                >
+                  {course.popular && (
+                    <div className="absolute -top-2 -right-2 px-2 py-0.5 bg-amber-400 text-white text-xs font-semibold rounded-full shadow">
+                      Popular
+                    </div>
+                  )}
 
-                <div className="space-y-1.5 mb-3 text-xs text-[#5a5a5a] dark:text-gray-400">
-                  <div className="flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5" />
-                    <span>{course.duration}</span>
+                  <div className="flex items-start justify-between mb-3">
+                    <div
+                      className={`w-10 h-10 rounded-lg flex items-center justify-center ${course.category === "Medical"
+                        ? "bg-red-100 text-red-600"
+                        : course.category === "Engineering"
+                          ? "bg-blue-100 text-blue-600"
+                          : course.category === "Commerce"
+                            ? "bg-amber-100 text-amber-600"
+                            : course.category === "Law"
+                              ? "bg-green-100 text-green-600"
+                              : course.category === "Science"
+                                ? "bg-purple-100 text-purple-600"
+                                : "bg-gray-100 text-gray-600"
+                        }`}
+                    >
+                      <BookOpen className="w-5 h-5" />
+                    </div>
+                    <span className={`text-xs font-medium px-2 py-1 rounded ${course.type === "PG" ? "bg-purple-100 text-purple-700" : "bg-blue-100 text-blue-700"
+                      }`}>
+                      {course.type}
+                    </span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <Users className="w-3.5 h-3.5" />
-                    <span>{course.students}</span>
+
+                  <h3 className="font-semibold text-[#1a1a1a] dark:text-gray-100 mb-3 text-sm leading-tight">
+                    {course.name}
+                  </h3>
+
+                  <div className="space-y-1.5 mb-3 text-xs text-[#5a5a5a] dark:text-gray-400">
+                    <div className="flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5" />
+                      <span>{course.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5" />
+                      <span>{course.students}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Star className="w-3.5 h-3.5 text-amber-500 fill-current" />
+                      <span className="font-medium">{course.rating}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <Star className="w-3.5 h-3.5 text-amber-500 fill-current" />
-                    <span className="font-medium">{course.rating}</span>
+
+                  <div className="pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-[#0E74D2] dark:text-blue-400 text-xs font-medium">
+                    <span>View Details</span>
+                    <ChevronRight className="w-4 h-4" />
                   </div>
                 </div>
-
-                <div className="pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-[#0E74D2] dark:text-blue-400 text-xs font-medium">
-                  <span>View Details</span>
-                  <ChevronRight className="w-4 h-4" />
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         )}
 
