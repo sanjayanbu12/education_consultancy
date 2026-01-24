@@ -163,7 +163,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", sans-serif;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -175,7 +175,7 @@
 
   /* Apple.com heading sizes - Responsive */
   h1 {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
     font-size: 48px;
     font-weight: 700;
     letter-spacing: -0.003em;
@@ -197,7 +197,7 @@
   }
 
   h2 {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
     font-size: 32px;
     font-weight: 700;
     letter-spacing: -0.003em;
@@ -219,7 +219,7 @@
   }
 
   h3 {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
     font-size: 24px;
     font-weight: 600;
     letter-spacing: -0.002em;
@@ -241,7 +241,7 @@
   }
 
   h4 {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: -0.002em;
@@ -256,7 +256,7 @@
   }
 
   h5 {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
     font-size: 17px;
     font-weight: 600;
     letter-spacing: -0.002em;
@@ -271,7 +271,7 @@
   }
 
   h6 {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: -0.001em;
@@ -287,7 +287,7 @@
 
   /* Apple-style body text */
   p {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
     font-size: 17px;
     font-weight: 400;
     letter-spacing: -0.022em;
@@ -297,7 +297,7 @@
   /* Apple-style buttons and links */
   button,
   a {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
     font-size: 17px;
     font-weight: 500;
     letter-spacing: -0.022em;
@@ -553,7 +553,7 @@
 }
 
 .font-inter {
-  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", sans-serif;
 }
 
 .font-instrument-serif {

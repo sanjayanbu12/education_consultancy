@@ -68,10 +68,10 @@ export default function FacilitiesMarqueeSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
             <Award className="w-4 h-4 text-[#0E74D2] dark:text-blue-400" />
             <span className="text-[#0E74D2] dark:text-blue-400 text-sm font-medium">Our Facilities</span>
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">Everything You Need to Succeed</h2>
           <p className="text-[#4a5568] dark:text-gray-400 text-lg italic">
             "We help students choose the course and institution that matches their personal circumstances - academic,

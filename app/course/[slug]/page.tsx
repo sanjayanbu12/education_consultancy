@@ -42,7 +42,7 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
           </div> */}
 
           {/* Title */}
-          <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-[#1a365d] dark:text-gray-100">
+          <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1a365d] dark:text-gray-100">
             Exploring the <span className="text-[#0E74D2]">{title}</span>
             <br /> Education Landscape
           </h1>
@@ -161,7 +161,7 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
       <div className="max-w-5xl mx-auto px-6 mt-20 mb-20">
         <div className="p-8 bg-white dark:bg-black rounded-2xl shadow-md border border-[#0E74D2]/10 dark:border-gray-800 relative">
 
-          <h2 className="text-2xl font-serif font-bold text-[#1a365d] dark:text-gray-100">
+          <h2 className="text-2xl font-bold text-[#1a365d] dark:text-gray-100">
             Need Personalized Career Guidance?
           </h2>
 
@@ -190,7 +190,7 @@ export default function ExtraordinaryPage({ params }: { params: { slug: string }
 function Section({ title, children }: any) {
   return (
     <section className="space-y-4">
-      <h2 className="text-3xl font-serif font-bold text-[#1a365d] dark:text-gray-100">{title}</h2>
+      <h2 className="text-3xl font-bold text-[#1a365d] dark:text-gray-100">{title}</h2>
       {children}
     </section>
   )
@@ -203,7 +203,7 @@ function IntroParagraph({ text }: any) {
 
   return (
     <p className="text-lg leading-relaxed text-[#4a5568] dark:text-gray-400">
-      <span className="float-left text-5xl mr-3 font-serif font-bold text-[#0E74D2] leading-none">
+      <span className="float-left text-5xl mr-3 font-bold text-[#0E74D2] leading-none">
         {first}
       </span>
       {rest}
