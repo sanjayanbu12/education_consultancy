@@ -10,7 +10,7 @@ export default function FooterSection() {
   return (
     <>
       {/* Map Section */}
-      <div className="w-full bg-white dark:bg-black py-12 border-t border-gray-200 dark:border-gray-800">
+      <div id="map" className="w-full bg-white dark:bg-black py-12 border-t border-gray-200 dark:border-gray-800">
         <div className="max-w-[980px] mx-auto px-6">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-2">Visit Our Office</h3>
@@ -200,7 +200,7 @@ export default function FooterSection() {
                     Terms of Use
                   </a>
                   <span className="text-xs text-[#d2d2d7] dark:text-[#424245]">|</span>
-                  <a href="#" className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors">
+                  <a href="#map" className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors">
                     Sitemap
                   </a>
                 </div>
