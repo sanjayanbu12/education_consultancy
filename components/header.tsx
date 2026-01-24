@@ -144,7 +144,7 @@ export default function Header() {
             {/* Desktop Navigation - Ultra Minimal */}
             <nav className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
-                <div
+                <div 
                   key={item.name}
                   onMouseEnter={() => hasMegaMenu(item.name) && setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
