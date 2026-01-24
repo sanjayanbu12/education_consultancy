@@ -15,7 +15,7 @@ export default function HeroSection() {
       <div className="relative">
 
         {/* Navigation Spacer */}
-        <div className="h-14"></div>
+        <div className="h-14"></div> 
 
         {/* Main Hero Container */}
         <div className="w-full mx-auto px-10 lg:px-20 py-16 lg:py-20">
