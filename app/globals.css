@@ -173,89 +173,74 @@
     line-height: 1.47059;
   }
 
-  /* Apple.com heading sizes - Responsive */
+  /* Apple.com heading sizes - Responsive (Smaller, more refined) */
   h1 {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 600;
     letter-spacing: -0.003em;
-    line-height: 1.08349;
+    line-height: 1.1;
   }
 
   @media (min-width: 768px) {
     h1 {
-      font-size: 64px;
-      line-height: 1.0625;
+      font-size: 48px;
+      line-height: 1.08349;
     }
   }
 
   @media (min-width: 1024px) {
     h1 {
-      font-size: 80px;
-      line-height: 1.05;
+      font-size: 56px;
+      line-height: 1.07143;
     }
   }
 
   h2 {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 600;
     letter-spacing: -0.003em;
-    line-height: 1.125;
+    line-height: 1.14286;
   }
 
   @media (min-width: 768px) {
+    h2 {
+      font-size: 32px;
+      line-height: 1.125;
+    }
+  }
+
+  @media (min-width: 1024px) {
     h2 {
       font-size: 40px;
       line-height: 1.1;
     }
   }
 
-  @media (min-width: 1024px) {
-    h2 {
-      font-size: 48px;
-      line-height: 1.08349;
-    }
-  }
-
   h3 {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 600;
     letter-spacing: -0.002em;
-    line-height: 1.16667;
+    line-height: 1.19048;
   }
 
   @media (min-width: 768px) {
+    h3 {
+      font-size: 24px;
+      line-height: 1.16667;
+    }
+  }
+
+  @media (min-width: 1024px) {
     h3 {
       font-size: 28px;
       line-height: 1.14286;
     }
   }
 
-  @media (min-width: 1024px) {
-    h3 {
-      font-size: 32px;
-      line-height: 1.125;
-    }
-  }
-
   h4 {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: -0.002em;
-    line-height: 1.2;
-  }
-
-  @media (min-width: 1024px) {
-    h4 {
-      font-size: 24px;
-      line-height: 1.16667;
-    }
-  }
-
-  h5 {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
     font-size: 17px;
     font-weight: 600;
@@ -264,24 +249,39 @@
   }
 
   @media (min-width: 1024px) {
-    h5 {
+    h4 {
       font-size: 19px;
       line-height: 1.21053;
     }
   }
 
+  h5 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.002em;
+    line-height: 1.26667;
+  }
+
+  @media (min-width: 1024px) {
+    h5 {
+      font-size: 17px;
+      line-height: 1.23536;
+    }
+  }
+
   h6 {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: -0.001em;
-    line-height: 1.28577;
+    line-height: 1.33337;
   }
 
   @media (min-width: 1024px) {
     h6 {
-      font-size: 17px;
-      line-height: 1.23536;
+      font-size: 14px;
+      line-height: 1.28577;
     }
   }
 
@@ -299,7 +299,7 @@
   a {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: -0.022em;
   }
 }
