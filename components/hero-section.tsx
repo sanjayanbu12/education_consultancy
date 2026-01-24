@@ -62,21 +62,21 @@ export default function HeroSection() {
               </div>
 
               {/* CTA Section */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <a
                   href="tel:9578599785"
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#0E74D2] text-white font-medium rounded-lg hover:bg-[#0a5ba8] transition-all duration-300 shadow-[0_4px_20px_rgba(14,116,210,0.25)] hover:shadow-[0_8px_30px_rgba(14,116,210,0.35)] hover:-translate-y-0.5"
+                  className="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0E74D2] text-white font-medium rounded-lg hover:bg-[#0a5ba8] transition-all duration-300 shadow-[0_4px_20px_rgba(14,116,210,0.25)] hover:shadow-[0_8px_30px_rgba(14,116,210,0.35)] hover:-translate-y-0.5"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-4 h-4" />
                   <span>Book Free Consultation</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
 
                 <a
                   href="mailto:alhudaeducationalconsultant@gmail.com"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-[#0E74D2] dark:text-blue-400 font-medium rounded-lg border-2 border-[#0E74D2]/20 dark:border-blue-500/30 hover:border-[#0E74D2] dark:hover:border-blue-400 hover:bg-[#0E74D2]/5 dark:hover:bg-blue-500/10 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-[#0E74D2] dark:text-blue-400 font-medium rounded-lg border-2 border-[#0E74D2]/20 dark:border-blue-500/30 hover:border-[#0E74D2] dark:hover:border-blue-400 hover:bg-[#0E74D2]/5 dark:hover:bg-blue-500/10 transition-all duration-300"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-4 h-4" />
                   <span>Get Course Details</span>
                 </a>
               </div>
