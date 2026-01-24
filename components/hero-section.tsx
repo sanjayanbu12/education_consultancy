@@ -18,27 +18,28 @@ export default function HeroSection() {
         <div className="h-10"></div>
 
         {/* Main Hero Container */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
+        <div className="w-full mx-auto px-8 lg:px-16 py-16 lg:py-20">
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             {/* LEFT CONTENT */}
             <div className="space-y-8">
 
               {/* Main Headline */}
               <div className="space-y-5">
-                <h1 className="text-4xl lg:text-6xl font-light text-[#1a1a1a] dark:text-gray-100 tracking-tight leading-[1.1]">
-                  Navigate Your
+                <h1 className="text-3xl lg:text-5xl font-light text-[#1a1a1a] dark:text-gray-100 tracking-tight leading-[1.1]">
+                  Navigate Your Academic Journey
                   <span className="block mt-2 font-normal bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] dark:from-blue-400 dark:to-blue-500 bg-clip-text text-transparent">
-                    Academic Journey
+                    Expert Educational Guidance
                   </span>
-                  <span className="block mt-2">With Precision</span>
+                  <span className="block mt-2">That's Completely Free</span>
                 </h1>
 
-                <p className="text-lg text-[#5a5a5a] dark:text-gray-400 leading-relaxed max-w-xl">
+                <p className="text-lg text-[#5a5a5a] dark:text-gray-400 leading-relaxed">
                   Al Huda Educational Consultancy is your trusted partner in navigating the complex world of higher education.
-                  We provide personalized, professional guidance to help you discover the perfect course and institution
-                  that aligns with your academic goals, career aspirations, and financial circumstances.
+                  With over 15 years of experience and partnerships with 5,000+ premier institutions across India,
+                  we provide personalized guidance to help you discover the perfect course and institution that aligns
+                  with your goals completely free of charge.
                 </p>
 
               </div>
@@ -106,8 +107,8 @@ export default function HeroSection() {
               <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.12)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
                 <div className="relative h-[500px]">
                   <img
-                    src="/happy-diverse-students-celebrating-graduation-with.jpg"
-                    alt="Students celebrating academic success"
+                    src="/Sanjay2.jpg"
+                    alt="Professional educational consultancy - Students achieving academic success"
                     className="w-full h-full object-cover"
                   />
                 </div>
