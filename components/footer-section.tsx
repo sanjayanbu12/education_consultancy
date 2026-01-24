@@ -8,181 +8,195 @@ export default function FooterSection() {
   }
 
   return (
-    <footer className="w-full bg-[#1a365d] dark:bg-gray-900 text-white transition-colors duration-300">
-      {/* Top Wave */}
-      <div className="bg-white dark:bg-gray-950">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M0 60L60 55C120 50 240 40 360 35C480 30 600 30 720 32.5C840 35 960 40 1080 42.5C1200 45 1320 45 1380 45L1440 45V60H1380C1320 60 1200 60 1080 60C960 60 840 60 720 60C600 60 480 60 360 60C240 60 120 60 60 60H0Z"
-            fill="#1a365d"
-            className="dark:fill-gray-900"
-          />
-        </svg>
-      </div>
+    <footer className="w-full bg-[#f5f5f7] dark:bg-[#1d1d1f] transition-colors duration-300">
 
       {/* Main Footer */}
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand Section */}
+      <div className="max-w-[980px] mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+
+          {/* Services */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3rd_ED_logo_final-removebg-preview-EmZWbBGyrR3ayEYVNsJmqvnvgjhtt3.png"
-                alt="AL-HUDA Logo"
-                className="w-12 h-12 object-contain"
-              />
-              <div>
-                <h3 className="font-bold text-lg">AL-HUDA</h3>
-                <p className="text-white/70 text-sm">Educational Consultancy</p>
-              </div>
-            </div>
-            <p className="text-white/70 leading-relaxed mb-6">
-              Empowering students to achieve their academic dreams through expert guidance and personalized support.
-              Free consulting services available 24/7.
-            </p>
-            {/* Social Icons */}
-            <div className="flex gap-3">
+            <h4 className="text-xs font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-3 tracking-wide">SERVICES</h4>
+            <ul className="space-y-2.5">
               {[
-                { icon: <Facebook className="w-4 h-4" />, href: "#", label: "Facebook" },
-                { icon: <Instagram className="w-4 h-4" />, href: "#", label: "Instagram" },
-                { icon: <ArrowUp className="w-4 h-4" />, href: "#", label: "ArrowUp" },
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-xl bg-white/5 dark:bg-white/10 flex items-center justify-center hover:bg-[#0E74D2] dark:hover:bg-blue-600 transition-colors border border-white/10 dark:border-white/20"
-                >
-                  {social.icon}
-                </a>
+                "Course Selection",
+                "Admission Guidance",
+                "Career Counseling",
+                "Scholarship Assistance",
+                "Educational Loans",
+                "Placement Support",
+              ].map((item, i) => (
+                <li key={i}>
+                  <a
+                    href="#services"
+                    className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors leading-relaxed"
+                  >
+                    {item}
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Medical Courses */}
           <div>
-            <h4 className="font-semibold text-lg mb-6 text-white">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-xs font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-3 tracking-wide">MEDICAL</h4>
+            <ul className="space-y-2.5">
               {[
-                { name: "About Us", href: "#" },
-                { name: "Our Services", href: "#services" },
-                { name: "Courses", href: "#courses" },
+                "MBBS",
+                "BDS",
+                "BAMS",
+                "BHMS",
+                "Nursing",
+                "Pharmacy",
+                "Physiotherapy",
+                "Paramedical",
+              ].map((item, i) => (
+                <li key={i}>
+                  <a
+                    href="#courses"
+                    className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors leading-relaxed"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Engineering */}
+          <div>
+            <h4 className="text-xs font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-3 tracking-wide">ENGINEERING</h4>
+            <ul className="space-y-2.5">
+              {[
+                "Computer Science",
+                "Mechanical",
+                "Civil Engineering",
+                "Electrical",
+                "Electronics",
+                "Aerospace",
+                "Automobile",
+                "Chemical",
+              ].map((item, i) => (
+                <li key={i}>
+                  <a
+                    href="#courses"
+                    className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors leading-relaxed"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Management & Others */}
+          <div>
+            <h4 className="text-xs font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-3 tracking-wide">MANAGEMENT</h4>
+            <ul className="space-y-2.5">
+              {[
+                "MBA",
+                "BBA",
+                "B.Com",
+                "M.Com",
+                "Hotel Management",
+                "Event Management",
+                "Finance",
+                "Marketing",
+              ].map((item, i) => (
+                <li key={i}>
+                  <a
+                    href="#courses"
+                    className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors leading-relaxed"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* About AL-HUDA */}
+          <div>
+            <h4 className="text-xs font-semibold text-[#1d1d1f] dark:text-[#f5f5f7] mb-3 tracking-wide">ABOUT AL-HUDA</h4>
+            <ul className="space-y-2.5">
+              {[
+                { name: "Our Story", href: "#about" },
+                { name: "Why Choose Us", href: "#about" },
                 { name: "Partner Colleges", href: "#colleges" },
+                { name: "Success Stories", href: "#testimonials" },
                 { name: "FAQs", href: "#faq" },
                 { name: "Contact Us", href: "#contact" },
               ].map((link, i) => (
                 <li key={i}>
                   <a
                     href={link.href}
-                    className="text-white/70 hover:text-[#60a5fa] transition-colors text-sm flex items-center gap-2"
+                    className="text-xs text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors leading-relaxed"
                   >
-                    <span className="w-1 h-1 bg-[#0E74D2] rounded-full"></span>
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Courses */}
-          <div>
-            <h4 className="font-semibold text-lg mb-6 text-white">Popular Courses</h4>
-            <ul className="space-y-3">
-              {[
-                "Medical / MBBS",
-                "Engineering",
-                "Nursing & Paramedical",
-                "MBA / Management",
-                "Arts & Science",
-                "Law",
-                "Aviation & Marine",
-                "Agriculture",
-              ].map((course, i) => (
-                <li key={i}>
-                  <a
-                    href="#courses"
-                    className="text-white/70 hover:text-[#60a5fa] transition-colors text-sm flex items-center gap-2"
-                  >
-                    <span className="w-3 h-3 bg-[#0E74D2] rounded-full"></span>
-                    {course}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-semibold text-lg mb-6 text-white">Contact Us</h4>
-            <ul className="space-y-4">
-              <li>
-                <a
-                  href="tel:9578599785"
-                  className="flex items-center gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl text-white hover:bg-[#0E74D2]/20 transition-colors group border border-white/5 dark:border-white/10"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-[#0E74D2] flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-white/70">24/7 Helpline</div>
-                    <div className="font-semibold">+91 9578599785</div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:alhudaeducationalconsultant@gmail.com"
-                  className="flex items-start gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl text-white hover:bg-[#0E74D2]/20 transition-colors group border border-white/5 dark:border-white/10"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-[#0E74D2] flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-white/70">Email Us</div>
-                    <div className="text-sm break-all">alhudaeducationalconsultant@gmail.com</div>
-                  </div>
-                </a>
-              </li>
-              <li className="flex items-start gap-4 p-4 bg-white/5 dark:bg-white/10 rounded-xl border border-white/5 dark:border-white/10">
-                <div className="w-10 h-10 rounded-lg bg-[#0E74D2] flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <div className="text-xs text-white/70">Location</div>
-                  <div className="text-sm">Coimbatore, Tamil Nadu, India</div>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/70 text-sm">
-              &copy; 2025 AL-HUDA Educational Consultancy. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-4 text-white/70 text-sm">
-                <span className="flex items-center gap-1">
-                  <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                  Free Consulting
-                </span>
-                <span>|</span>
-                <span>No Service Charges</span>
-                <span>|</span>
-                <span>24/7 Support</span>
+        {/* Divider */}
+        <div className="border-t border-[#d2d2d7] dark:border-[#424245] pt-4 pb-2">
+
+          {/* Contact Information */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4 text-xs text-[#6e6e73] dark:text-[#a1a1a6]">
+            <span>More ways to connect:</span>
+            <a href="tel:9578599785" className="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors">
+              Call +91 9578599785
+            </a>
+            <span className="hidden sm:inline text-[#d2d2d7] dark:text-[#424245]">|</span>
+            <a href="mailto:alhudaeducationalconsultant@gmail.com" className="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors">
+              Email Us
+            </a>
+            <span className="hidden sm:inline text-[#d2d2d7] dark:text-[#424245]">|</span>
+            <a href="#contact" className="hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors">
+              Visit Our Office
+            </a>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-t border-[#d2d2d7] dark:border-[#424245] pt-4">
+
+            {/* Left Side */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+              <p className="text-xs text-[#6e6e73] dark:text-[#a1a1a6]">
+                Copyright © 2025 AL-HUDA Educational Consultancy. All rights reserved.
+              </p>
+              <div className="flex items-center gap-3 text-xs">
+                <a href="#" className="text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors">
+                  Privacy Policy
+                </a>
+                <span className="text-[#d2d2d7] dark:text-[#424245]">|</span>
+                <a href="#" className="text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors">
+                  Terms of Use
+                </a>
+                <span className="text-[#d2d2d7] dark:text-[#424245]">|</span>
+                <a href="#" className="text-[#6e6e73] dark:text-[#a1a1a6] hover:text-[#1d1d1f] dark:hover:text-[#f5f5f7] hover:underline transition-colors">
+                  Sitemap
+                </a>
               </div>
-              <button
-                onClick={scrollToTop}
-                className="w-10 h-10 rounded-xl bg-[#0E74D2] flex items-center justify-center hover:bg-[#0a5ba8] transition-colors"
-                aria-label="Scroll to top"
-              >
-                <ArrowUp className="w-5 h-5" />
-              </button>
             </div>
+
+            {/* Right Side - Scroll to Top */}
+            <button
+              onClick={scrollToTop}
+              className="flex items-center gap-2 text-xs text-[#0071E3] dark:text-[#2997ff] hover:underline transition-colors group"
+              aria-label="Scroll to top"
+            >
+              <span>Back to Top</span>
+              <ArrowUp className="w-3 h-3 group-hover:-translate-y-0.5 transition-transform" />
+            </button>
+          </div>
+
+          {/* Region */}
+          <div className="pt-3 text-xs text-[#6e6e73] dark:text-[#a1a1a6]">
+            India
           </div>
         </div>
       </div>
