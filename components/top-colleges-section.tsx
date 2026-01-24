@@ -116,7 +116,7 @@ export default function TopCollegesSection() {
 
                     <h2 className="text-5xl lg:text-6xl font-light text-[#1a1a1a] dark:text-gray-100 mb-6">
                         Top Colleges in
-                        <span className="block mt-2 font-medium bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] bg-clip-text text-transparent">
+                        <span className="block mt-2 font-medium bg-gradient-to-r from-[#0071E3] to-[#0077ED] bg-clip-text text-transparent">
                             India
                         </span>
                     </h2>
@@ -135,7 +135,7 @@ export default function TopCollegesSection() {
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
                             {/* Main Card */}
-                            <div className="relative bg-white dark:bg-black rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-[#0E74D2] dark:hover:border-[#0E74D2] transition-all duration-300 hover:shadow-lg">
+                            <div className="relative bg-white dark:bg-black rounded-3xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:border-[#0071E3] dark:hover:border-[#0071E3] transition-all duration-300 hover:shadow-lg">
 
                                 {/* Accent Bar - Removed for professional look */}
 
@@ -146,7 +146,7 @@ export default function TopCollegesSection() {
                                     <div className="flex items-start justify-between mb-4">
                                         <div className="flex-1">
                                             <div className="flex items-center gap-2 mb-2">
-                                                <div className="p-2 bg-[#0E74D2] rounded-xl">
+                                                <div className="p-2 bg-[#0071E3] rounded-xl">
                                                     <Building2 className="w-5 h-5 text-white" />
                                                 </div>
                                                 <div className="flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
@@ -155,7 +155,7 @@ export default function TopCollegesSection() {
                                                 </div>
                                             </div>
 
-                                            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1 group-hover:text-[#0E74D2] transition-colors">
+                                            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1 group-hover:text-[#0071E3] transition-colors">
                                                 {college.name}
                                             </h3>
 
@@ -173,17 +173,17 @@ export default function TopCollegesSection() {
                                     {/* Stats Grid */}
                                     <div className="grid grid-cols-3 gap-2 mb-4">
                                         <div className="text-center p-3 bg-gray-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700">
-                                            <Calendar className="w-4 h-4 text-[#0E74D2] mx-auto mb-1" />
+                                            <Calendar className="w-4 h-4 text-[#0071E3] mx-auto mb-1" />
                                             <div className="text-xs font-bold text-gray-900 dark:text-gray-100">{college.established}</div>
                                             <div className="text-[10px] text-gray-500 dark:text-gray-400">Est.</div>
                                         </div>
                                         <div className="text-center p-3 bg-gray-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700">
-                                            <Users className="w-4 h-4 text-[#0E74D2] mx-auto mb-1" />
+                                            <Users className="w-4 h-4 text-[#0071E3] mx-auto mb-1" />
                                             <div className="text-xs font-bold text-gray-900 dark:text-gray-100">{college.students}</div>
                                             <div className="text-[10px] text-gray-500 dark:text-gray-400">Students</div>
                                         </div>
                                         <div className="text-center p-3 bg-gray-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700">
-                                            <Trophy className="w-4 h-4 text-[#0E74D2] mx-auto mb-1" />
+                                            <Trophy className="w-4 h-4 text-[#0071E3] mx-auto mb-1" />
                                             <div className="text-xs font-bold text-gray-900 dark:text-gray-100">{college.placement}</div>
                                             <div className="text-[10px] text-gray-500 dark:text-gray-400">Placed</div>
                                         </div>
@@ -191,7 +191,7 @@ export default function TopCollegesSection() {
 
                                     {/* Type Badge */}
                                     <div className="mb-4">
-                                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0E74D2] text-white rounded-lg text-xs font-semibold">
+                                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0071E3] text-white rounded-lg text-xs font-semibold">
                                             <Target className="w-3 h-3" />
                                             {college.type}
                                         </span>
@@ -200,7 +200,7 @@ export default function TopCollegesSection() {
                                     {/* Highlights */}
                                     <div className="mb-4">
                                         <h4 className="text-xs font-bold text-gray-900 dark:text-gray-100 mb-2.5 flex items-center gap-1.5">
-                                            <TrendingUp className="w-3.5 h-3.5 text-[#0E74D2]" />
+                                            <TrendingUp className="w-3.5 h-3.5 text-[#0071E3]" />
                                             Key Highlights
                                         </h4>
                                         <div className="space-y-1.5">
@@ -220,7 +220,7 @@ export default function TopCollegesSection() {
                                     {/* Courses */}
                                     <div className="mb-5">
                                         <h4 className="text-xs font-bold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-1.5">
-                                            <GraduationCap className="w-3.5 h-3.5 text-[#0E74D2]" />
+                                            <GraduationCap className="w-3.5 h-3.5 text-[#0071E3]" />
                                             Courses Offered
                                         </h4>
                                         <div className="flex flex-wrap gap-1.5">
@@ -236,7 +236,7 @@ export default function TopCollegesSection() {
                                     <div className="flex justify-end">
                                         <Link
                                             href={`/college/${college.slug}`}
-                                            className="group/btn inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0E74D2] text-white text-sm font-semibold hover:bg-[#0a5ba8] transition-all duration-300"
+                                            className="group/btn inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0071E3] text-white text-sm font-semibold hover:bg-[#0077ED] transition-all duration-300"
                                         >
                                             <span>View Details</span>
                                             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -252,7 +252,7 @@ export default function TopCollegesSection() {
                 <div className="text-center">
                     <a
                         href="#colleges"
-                        className="group/cta inline-flex items-center gap-2 px-6 py-3 bg-[#0E74D2] text-white rounded-xl font-semibold text-base hover:bg-[#0a5ba8] transition-all duration-300"
+                        className="group/cta inline-flex items-center gap-2 px-6 py-3 bg-[#0071E3] text-white rounded-xl font-semibold text-base hover:bg-[#0077ED] transition-all duration-300"
                     >
                         <span className="flex items-center gap-2">
                             <Sparkles className="w-4 h-4" />
