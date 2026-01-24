@@ -147,7 +147,7 @@ export default function ContactSection() {
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
                     <CheckCircle className="w-8 h-8 text-green-600" />
                   </div>
-                  <h4 className="text-xl font-bold text-[#1a365d] mb-2">Message Sent!</h4>
+                  <h4 className="text-xl font-bold text-[#1a365d] dark:text-gray-100 mb-2">Message Sent!</h4>
                   <p className="text-[#4a5568]">We'll get back to you shortly.</p>
                 </div>
               ) : error ? (
@@ -155,7 +155,7 @@ export default function ContactSection() {
                   <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
                     <AlertCircle className="w-8 h-8 text-red-600" />
                   </div>
-                  <h4 className="text-xl font-bold text-[#1a365d] mb-2">Oops!</h4>
+                  <h4 className="text-xl font-bold text-[#1a365d] dark:text-gray-100 mb-2">Oops!</h4>
                   <p className="text-[#4a5568] mb-4">{error}</p>
                   <button
                     onClick={() => setError("")}
@@ -168,7 +168,7 @@ export default function ContactSection() {
                 <div className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-[#1a365d] mb-2">
+                      <label className="block text-sm font-medium text-[#1a365d] dark:text-gray-100 mb-2">
                         Full Name <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -182,7 +182,7 @@ export default function ContactSection() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-[#1a365d] mb-2">
+                      <label className="block text-sm font-medium text-[#1a365d] dark:text-gray-100 mb-2">
                         Phone Number <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -198,7 +198,7 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#1a365d] mb-2">
+                    <label className="block text-sm font-medium text-[#1a365d] dark:text-gray-100 mb-2">
                       Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -213,7 +213,7 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#1a365d] mb-2">Interested Course</label>
+                    <label className="block text-sm font-medium text-[#1a365d] dark:text-gray-100 mb-2">Interested Course</label>
                     <select
                       value={formState.course}
                       onChange={(e) => setFormState({ ...formState, course: e.target.value })}
@@ -232,7 +232,7 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#1a365d] mb-2">Your Message</label>
+                    <label className="block text-sm font-medium text-[#1a365d] dark:text-gray-100 mb-2">Your Message</label>
                     <textarea
                       rows={4}
                       value={formState.message}
