@@ -38,18 +38,18 @@ export default function PricingSection() {
                 />
               </svg>
             </div>
-            <div className="text-center flex justify-center flex-col text-[#37322F] text-xs font-medium leading-3 font-sans">
+            <div className="text-center flex justify-center flex-col text-[#37322F] text-xs font-medium leading-3">
               Plans & Pricing
             </div>
           </div>
 
           {/* Title */}
-          <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
+          <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] tracking-tight">
             Choose the perfect plan for your business
           </div>
 
           {/* Description */}
-          <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
+          <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7">
             Scale your operations with flexible pricing that grows with your team.
             <br />
             Start free, upgrade when you're ready.
@@ -76,7 +76,7 @@ export default function PricingSection() {
               className="px-4 py-1 rounded-[99px] flex justify-center items-center gap-2 transition-colors duration-300 relative z-10 flex-1"
             >
               <div
-                className={`text-[13px] font-medium leading-5 font-sans transition-colors duration-300 ${
+                className={`text-[13px] font-medium leading-5 transition-colors duration-300 ${
                   billingPeriod === "annually" ? "text-[#37322F]" : "text-[#6B7280]"
                 }`}
               >
@@ -89,7 +89,7 @@ export default function PricingSection() {
               className="px-4 py-1 rounded-[99px] flex justify-center items-center gap-2 transition-colors duration-300 relative z-10 flex-1"
             >
               <div
-                className={`text-[13px] font-medium leading-5 font-sans transition-colors duration-300 ${
+                className={`text-[13px] font-medium leading-5 transition-colors duration-300 ${
                   billingPeriod === "monthly" ? "text-[#37322F]" : "text-[#6B7280]"
                 }`}
               >
@@ -128,15 +128,15 @@ export default function PricingSection() {
               {/* Plan Header */}
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Starter</div>
-                  <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5 font-sans">
+                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7">Starter</div>
+                  <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5">
                     Perfect for individuals and small teams getting started.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
-                    <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px] font-serif">
+                    <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px]">
                       <span className="invisible">${pricing.starter[billingPeriod]}</span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
@@ -161,7 +161,7 @@ export default function PricingSection() {
                         ${pricing.starter.monthly}
                       </span>
                     </div>
-                    <div className="text-[#847971] text-sm font-medium font-sans">
+                    <div className="text-[#847971] text-sm font-medium">
                       per {billingPeriod === "monthly" ? "month" : "year"}, per user.
                     </div>
                   </div>
@@ -169,7 +169,7 @@ export default function PricingSection() {
 
                 <div className="self-stretch px-4 py-[10px] relative bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center">
                   <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0.20)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
-                  <div className="max-w-[108px] flex justify-center flex-col text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans">
+                  <div className="max-w-[108px] flex justify-center flex-col text-[#FBFAF9] text-[13px] font-medium leading-5">
                     Start for free
                   </div>
                 </div>
@@ -195,7 +195,7 @@ export default function PricingSection() {
                         />
                       </svg>
                     </div>
-                    <div className="flex-1 text-[rgba(55,50,47,0.80)] text-[12.5px] font-normal leading-5 font-sans">
+                    <div className="flex-1 text-[rgba(55,50,47,0.80)] text-[12.5px] font-normal leading-5">
                       {feature}
                     </div>
                   </div>
@@ -208,15 +208,15 @@ export default function PricingSection() {
               {/* Plan Header */}
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[#FBFAF9] text-lg font-medium leading-7 font-sans">Professional</div>
-                  <div className="w-full max-w-[242px] text-[#B2AEA9] text-sm font-normal leading-5 font-sans">
+                  <div className="text-[#FBFAF9] text-lg font-medium leading-7">Professional</div>
+                  <div className="w-full max-w-[242px] text-[#B2AEA9] text-sm font-normal leading-5">
                     Advanced features for growing teams and businesses.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
-                    <div className="relative h-[60px] flex items-center text-[#F0EFEE] text-5xl font-medium leading-[60px] font-serif">
+                    <div className="relative h-[60px] flex items-center text-[#F0EFEE] text-5xl font-medium leading-[60px]">
                       <span className="invisible">${pricing.professional[billingPeriod]}</span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
@@ -241,7 +241,7 @@ export default function PricingSection() {
                         ${pricing.professional.monthly}
                       </span>
                     </div>
-                    <div className="text-[#D2C6BF] text-sm font-medium font-sans">
+                    <div className="text-[#D2C6BF] text-sm font-medium">
                       per {billingPeriod === "monthly" ? "month" : "year"}, per user.
                     </div>
                   </div>
@@ -250,7 +250,7 @@ export default function PricingSection() {
                 {/* CTA Button */}
                 <div className="self-stretch px-4 py-[10px] relative bg-[#FBFAF9] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center">
                   <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
-                  <div className="max-w-[108px] flex justify-center flex-col text-[#37322F] text-[13px] font-medium leading-5 font-sans">
+                  <div className="max-w-[108px] flex justify-center flex-col text-[#37322F] text-[13px] font-medium leading-5">
                     Get started
                   </div>
                 </div>
@@ -279,7 +279,7 @@ export default function PricingSection() {
                         />
                       </svg>
                     </div>
-                    <div className="flex-1 text-[#F0EFEE] text-[12.5px] font-normal leading-5 font-sans">{feature}</div>
+                    <div className="flex-1 text-[#F0EFEE] text-[12.5px] font-normal leading-5">{feature}</div>
                   </div>
                 ))}
               </div>
@@ -290,15 +290,15 @@ export default function PricingSection() {
               {/* Plan Header */}
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7 font-sans">Enterprise</div>
-                  <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5 font-sans">
+                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7">Enterprise</div>
+                  <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5">
                     Complete solution for large organizations and enterprises.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
-                    <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px] font-serif">
+                    <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px]">
                       <span className="invisible">${pricing.enterprise[billingPeriod]}</span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
@@ -323,7 +323,7 @@ export default function PricingSection() {
                         ${pricing.enterprise.monthly}
                       </span>
                     </div>
-                    <div className="text-[#847971] text-sm font-medium font-sans">
+                    <div className="text-[#847971] text-sm font-medium">
                       per {billingPeriod === "monthly" ? "month" : "year"}, per user.
                     </div>
                   </div>
@@ -331,7 +331,7 @@ export default function PricingSection() {
 
                 <div className="self-stretch px-4 py-[10px] relative bg-[#37322F] shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center">
                   <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0.20)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
-                  <div className="max-w-[108px] flex justify-center flex-col text-[#FBFAF9] text-[13px] font-medium leading-5 font-sans">
+                  <div className="max-w-[108px] flex justify-center flex-col text-[#FBFAF9] text-[13px] font-medium leading-5">
                     Contact sales
                   </div>
                 </div>
@@ -360,7 +360,7 @@ export default function PricingSection() {
                         />
                       </svg>
                     </div>
-                    <div className="flex-1 text-[rgba(55,50,47,0.80)] text-[12.5px] font-normal leading-5 font-sans">
+                    <div className="flex-1 text-[rgba(55,50,47,0.80)] text-[12.5px] font-normal leading-5">
                       {feature}
                     </div>
                   </div>

@@ -15,10 +15,10 @@ export default function HeroSection() {
       <div className="relative">
 
         {/* Navigation Spacer */}
-        <div className="h-10"></div>
+        <div className="h-16"></div>
 
         {/* Main Hero Container */}
-        <div className="w-full mx-auto px-8 lg:px-16 py-16 lg:py-20">
+        <div className="w-full mx-auto px-10 lg:px-20 py-16 lg:py-20">
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
