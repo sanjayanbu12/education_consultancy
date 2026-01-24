@@ -28,29 +28,44 @@ export default function ContactSection() {
     setError("")
 
     try {
-      const response = await fetch("/api/send-email", {
+      // Using Web3Forms - a free form submission service
+      const formData = new FormData()
+
+      // Web3Forms access key (you can get your own free key from https://web3forms.com)
+      formData.append("access_key", "a369de97-2ddd-4edd-96b9-977b8e8707de")
+
+      // Form fields
+      formData.append("name", formState.name)
+      formData.append("email", formState.email)
+      formData.append("phone", formState.phone)
+      formData.append("course", formState.course || "Not specified")
+      formData.append("message", formState.message || "No message provided")
+
+      // Additional settings
+      formData.append("subject", `New Inquiry from ${formState.name}`)
+      formData.append("from_name", "AL-HUDA Educational Consultant Website")
+      formData.append("redirect", "false")
+
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formState),
+        body: formData,
       })
 
       const data = await response.json()
 
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to send message")
+      if (data.success) {
+        setSubmitted(true)
+        setFormState({
+          name: "",
+          email: "",
+          phone: "",
+          course: "",
+          message: "",
+        })
+        setTimeout(() => setSubmitted(false), 5000)
+      } else {
+        throw new Error(data.message || "Failed to send message")
       }
-
-      setSubmitted(true)
-      setFormState({
-        name: "",
-        email: "",
-        phone: "",
-        course: "",
-        message: "",
-      })
-      setTimeout(() => setSubmitted(false), 5000)
     } catch (err) {
       console.error("Form submission error:", err)
       setError("Failed to send message. Please try calling us directly at +91 9578599785")
@@ -65,10 +80,10 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
+          {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
             <Phone className="w-4 h-4 text-[#0E74D2] dark:text-blue-400" />
             <span className="text-[#0E74D2] dark:text-blue-400 text-sm font-medium">Get In Touch</span>
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">Start Your Journey Today</h2>
           <p className="text-[#4a5568] dark:text-gray-400 text-lg">
             Ready to take the first step? Contact us for free consultation and personalized guidance.
