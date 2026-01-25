@@ -304,6 +304,123 @@
   }
 }
 
+/* ============================================
+   Apple Typography Utility Classes
+   Use these for Apple-accurate text sizing
+   ============================================ */
+
+@layer utilities {
+
+  /* Apple Display Sizes (for large headlines) */
+  .text-apple-display-large {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    line-height: 1.07143;
+  }
+
+  .text-apple-display {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    line-height: 1.08349;
+  }
+
+  .text-apple-display-medium {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    line-height: 1.1;
+  }
+
+  .text-apple-display-small {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    line-height: 1.125;
+  }
+
+  /* Apple Title Sizes */
+  .text-apple-title-1 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    line-height: 1.14286;
+  }
+
+  .text-apple-title-2 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.002em;
+    line-height: 1.16667;
+  }
+
+  .text-apple-title-3 {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -0.002em;
+    line-height: 1.19048;
+  }
+
+  /* Apple Headline Sizes */
+  .text-apple-headline {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.002em;
+    line-height: 1.21053;
+  }
+
+  .text-apple-subheadline {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    line-height: 1.23536;
+  }
+
+  /* Apple Body Sizes */
+  .text-apple-body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    line-height: 1.47059;
+  }
+
+  .text-apple-callout {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.016em;
+    line-height: 1.26667;
+  }
+
+  /* Apple Caption Sizes */
+  .text-apple-caption {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.016em;
+    line-height: 1.28577;
+  }
+
+  .text-apple-footnote {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.33337;
+  }
+}
+
 /* Animation keyframes */
 @keyframes accordion-down {
   from {
