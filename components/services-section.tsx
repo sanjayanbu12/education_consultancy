@@ -78,9 +78,9 @@ export default function ServicesSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full mb-4">
             <Briefcase className="w-4 h-4 text-[#0E74D2]" />
-            <span className="text-[#0E74D2] text-sm font-medium">Our Services</span>
+            <span className="text-[#0E74D2] text-apple-callout font-medium">Our Services</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-4 text-balance">
+          <h2 className="text-apple-display-small md:text-apple-display-medium font-semibold text-[#1a365d] mb-4 text-balance">
             Comprehensive Educational Services
           </h2>
           <p className="text-[#4a5568] max-w-2xl mx-auto text-pretty">
@@ -104,19 +104,19 @@ export default function ServicesSection() {
                 <div className="w-14 h-14 rounded-xl bg-white flex items-center justify-center mb-4 shadow-sm">
                   {service.icon}
                 </div>
-                <h3 className={`font-semibold text-[#1a365d] mb-2 ${index === 0 ? "text-xl" : "text-lg"}`}>
+                <h3 className={`font-semibold text-[#1a365d] mb-2 ${index === 0 ? "text-apple-title-2" : "text-apple-body"}`}>
                   {service.title}
                 </h3>
-                <p className={`text-[#4a5568] leading-relaxed ${index === 0 ? "text-base" : "text-sm"}`}>
+                <p className={`text-[#4a5568] leading-relaxed ${index === 0 ? "text-base" : "text-apple-callout"}`}>
                   {service.description}
                 </p>
 
                 {index === 0 && (
                   <div className="mt-6 pt-6 border-t border-gray-200">
-                    <div className="text-[#1a365d] text-sm font-medium mb-3">Popular Courses:</div>
+                    <div className="text-[#1a365d] text-apple-callout font-medium mb-3">Popular Courses:</div>
                     <div className="flex flex-wrap gap-2">
                       {["MBBS", "BDS", "Nursing", "Pharmacy"].map((course) => (
-                        <span key={course} className="px-3 py-1 bg-white text-[#4a5568] text-xs rounded-full border">
+                        <span key={course} className="px-3 py-1 bg-white text-[#4a5568] text-apple-footnote rounded-full border">
                           {course}
                         </span>
                       ))}
@@ -124,7 +124,7 @@ export default function ServicesSection() {
                   </div>
                 )}
 
-                <div className="mt-4 flex items-center gap-2 text-[#0E74D2] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="mt-4 flex items-center gap-2 text-[#0E74D2] text-apple-callout font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   Explore courses <ChevronRight className="w-4 h-4" />
                 </div>
               </div>
@@ -135,10 +135,10 @@ export default function ServicesSection() {
         <div className="bg-gradient-to-br from-[#0E74D2] to-[#0a5ba8] rounded-3xl p-8 md:p-10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
             <div>
-              <h3 className="text-white text-xl font-semibold mb-2">Additional Services</h3>
-              <p className="text-white/70 text-sm">Beyond admissions, we support your complete educational journey</p>
+              <h3 className="text-white text-apple-title-2 font-semibold mb-2">Additional Services</h3>
+              <p className="text-white/70 text-apple-callout">Beyond admissions, we support your complete educational journey</p>
             </div>
-            <div className="px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium">All Services Free</div>
+            <div className="px-4 py-2 bg-white/20 rounded-full text-white text-apple-callout font-medium">All Services Free</div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -150,7 +150,7 @@ export default function ServicesSection() {
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center text-white mb-3 group-hover:bg-white group-hover:text-[#0E74D2] transition-colors">
                   {service.icon}
                 </div>
-                <div className="text-white text-sm font-medium">{service.name}</div>
+                <div className="text-white text-apple-callout font-medium">{service.name}</div>
               </div>
             ))}
           </div>

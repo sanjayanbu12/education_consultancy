@@ -454,7 +454,7 @@ export default function CollegePage({ params }: Props) {
 
                         <div className="flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
                             <Star className="w-5 h-5 text-yellow-300 fill-yellow-300" />
-                            <span className="text-white font-bold text-lg">{college.rating}</span>
+                            <span className="text-white font-semibold text-lg">{college.rating}</span>
                         </div>
                     </div>
 
@@ -464,7 +464,7 @@ export default function CollegePage({ params }: Props) {
                                 <Building2 className="w-12 h-12 text-white" />
                             </div>
                             <div>
-                                <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+                                <h1 className="text-4xl md:text-apple-display font-semibold text-white mb-2">
                                     {college.name}
                                 </h1>
                                 <p className="text-white/90 text-lg">{college.fullName}</p>
@@ -544,7 +544,7 @@ export default function CollegePage({ params }: Props) {
                                         <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
                                             {course.name}
                                         </h3>
-                                        <div className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                                        <div className="space-y-1 text-apple-callout text-gray-600 dark:text-gray-400">
                                             <p>Duration: {course.duration}</p>
                                             <p>Seats: {course.seats}</p>
                                         </div>
@@ -594,30 +594,30 @@ export default function CollegePage({ params }: Props) {
                             <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-black/30 dark:to-purple-950/30 rounded-2xl p-8 border border-blue-100 dark:border-blue-900">
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                                        <div className="text-apple-display-medium font-semibold text-blue-600 dark:text-blue-400 mb-2">
                                             {college.placements.percentage}
                                         </div>
-                                        <div className="text-sm text-gray-600 dark:text-gray-400">Placement Rate</div>
+                                        <div className="text-apple-callout text-gray-600 dark:text-gray-400">Placement Rate</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">
+                                        <div className="text-apple-display-medium font-semibold text-green-600 dark:text-green-400 mb-2">
                                             {college.placements.highestPackage}
                                         </div>
-                                        <div className="text-sm text-gray-600 dark:text-gray-400">Highest Package</div>
+                                        <div className="text-apple-callout text-gray-600 dark:text-gray-400">Highest Package</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+                                        <div className="text-apple-display-medium font-semibold text-purple-600 dark:text-purple-400 mb-2">
                                             {college.placements.averagePackage}
                                         </div>
-                                        <div className="text-sm text-gray-600 dark:text-gray-400">Average Package</div>
+                                        <div className="text-apple-callout text-gray-600 dark:text-gray-400">Average Package</div>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Top Recruiters</h3>
+                                    <h3 className="text-apple-body font-semibold text-gray-900 dark:text-gray-100 mb-4">Top Recruiters</h3>
                                     <div className="flex flex-wrap gap-3">
                                         {college.placements.topRecruiters.map((recruiter, idx) => (
-                                            <span key={idx} className="px-4 py-2 bg-white dark:bg-zinc-900 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
+                                            <span key={idx} className="px-4 py-2 bg-white dark:bg-zinc-900 rounded-lg text-apple-callout font-medium text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
                                                 {recruiter}
                                             </span>
                                         ))}
@@ -640,7 +640,7 @@ export default function CollegePage({ params }: Props) {
                                     <div className="flex items-start gap-3">
                                         <Phone className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                                         <div>
-                                            <p className="text-sm text-gray-500 dark:text-gray-500">Phone</p>
+                                            <p className="text-apple-callout text-gray-500 dark:text-gray-500">Phone</p>
                                             <a href={`tel:${college.contact.phone}`} className="text-gray-900 dark:text-gray-100 hover:text-blue-600">
                                                 {college.contact.phone}
                                             </a>
@@ -649,7 +649,7 @@ export default function CollegePage({ params }: Props) {
                                     <div className="flex items-start gap-3">
                                         <Mail className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                                         <div>
-                                            <p className="text-sm text-gray-500 dark:text-gray-500">Email</p>
+                                            <p className="text-apple-callout text-gray-500 dark:text-gray-500">Email</p>
                                             <a href={`mailto:${college.contact.email}`} className="text-gray-900 dark:text-gray-100 hover:text-blue-600 break-all">
                                                 {college.contact.email}
                                             </a>
@@ -658,7 +658,7 @@ export default function CollegePage({ params }: Props) {
                                     <div className="flex items-start gap-3">
                                         <Globe className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                                         <div>
-                                            <p className="text-sm text-gray-500 dark:text-gray-500">Website</p>
+                                            <p className="text-apple-callout text-gray-500 dark:text-gray-500">Website</p>
                                             <a href={`https://${college.contact.website}`} target="_blank" rel="noopener noreferrer" className="text-gray-900 dark:text-gray-100 hover:text-blue-600 break-all">
                                                 {college.contact.website}
                                             </a>
@@ -667,7 +667,7 @@ export default function CollegePage({ params }: Props) {
                                     <div className="flex items-start gap-3">
                                         <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                                         <div>
-                                            <p className="text-sm text-gray-500 dark:text-gray-500">Address</p>
+                                            <p className="text-apple-callout text-gray-500 dark:text-gray-500">Address</p>
                                             <p className="text-gray-900 dark:text-gray-100">
                                                 {college.contact.address}
                                             </p>
@@ -681,7 +681,7 @@ export default function CollegePage({ params }: Props) {
                                 <h3 className="text-xl font-semibold mb-3">
                                     Interested in Admission?
                                 </h3>
-                                <p className="text-white/90 text-sm mb-6">
+                                <p className="text-white/90 text-apple-callout mb-6">
                                     Get expert guidance from our counselors and secure your admission
                                 </p>
                                 <Link
@@ -729,7 +729,7 @@ export default function CollegePage({ params }: Props) {
                     <h2 className="text-3xl md:text-4xl font-light text-[#1a365d] dark:text-gray-100 mb-4">
                         Ready to Start Your Journey?
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">
+                    <p className="text-gray-600 dark:text-gray-400 text-apple-body mb-8">
                         Get personalized guidance from our expert counselors
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center">

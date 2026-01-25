@@ -104,10 +104,10 @@ export default function CoursePathwaySection() {
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">
+          <h2 className="text-apple-display-medium md:text-apple-display font-semibold text-[#1a365d] dark:text-gray-100 mb-4">
             Your Educational Pathway
           </h2>
-          <p className="text-[#4a5568] dark:text-gray-400 text-lg">
+          <p className="text-[#4a5568] dark:text-gray-400 text-apple-body">
             From school to professional success — we guide you every step
           </p>
         </div>
@@ -125,7 +125,7 @@ export default function CoursePathwaySection() {
                   <div className={`${path.lightColor} dark:bg-black rounded-3xl p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl transition-all relative`}>
 
                     {/* Badge */}
-                    <div className={`absolute -top-3 -left-3 w-8 h-8 ${path.color} rounded-full flex justify-center items-center text-white font-bold`}>
+                    <div className={`absolute -top-3 -left-3 w-8 h-8 ${path.color} rounded-full flex justify-center items-center text-white font-semibold`}>
                       {index + 1}
                     </div>
 
@@ -135,13 +135,13 @@ export default function CoursePathwaySection() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-bold text-[#1a365d] dark:text-gray-100">{path.category}</h3>
-                    <p className={`text-xs ${path.textColor} dark:text-gray-400 mb-4`}>{path.duration}</p>
+                    <h3 className="font-semibold text-[#1a365d] dark:text-gray-100">{path.category}</h3>
+                    <p className={`text-apple-footnote ${path.textColor} dark:text-gray-400 mb-4`}>{path.duration}</p>
 
                     {/* Course list */}
                     <div className="space-y-1.5">
                       {shown.map((course, i) => (
-                        <div key={i} className="flex gap-2 text-sm text-[#4a5568] dark:text-gray-400">
+                        <div key={i} className="flex gap-2 text-apple-callout text-[#4a5568] dark:text-gray-400">
                           <div className={`w-1.5 h-1.5 rounded-full ${path.color}`} />
                           {course}
                         </div>
@@ -150,7 +150,7 @@ export default function CoursePathwaySection() {
                       {path.courses.length > 4 && (
                         <button
                           onClick={() => toggleCourses(index)}
-                          className="text-xs text-[#0E74D2] dark:text-blue-400 font-semibold hover:underline mt-1"
+                          className="text-apple-footnote text-[#0E74D2] dark:text-blue-400 font-semibold hover:underline mt-1"
                         >
                           {expanded ? "Show Less" : `+${path.courses.length - 4} more courses`}
                         </button>

@@ -70,10 +70,10 @@ export default function FacilitiesMarqueeSection() {
         <div className="text-center max-w-3xl mx-auto mb-4">
           {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
             <Award className="w-4 h-4 text-[#0E74D2] dark:text-blue-400" />
-            <span className="text-[#0E74D2] dark:text-blue-400 text-sm font-medium">Our Facilities</span>
+            <span className="text-[#0E74D2] dark:text-blue-400 text-apple-callout font-medium">Our Facilities</span>
           </div> */}
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">Everything You Need to Succeed</h2>
-          <p className="text-[#4a5568] dark:text-gray-400 text-lg italic">
+          <h2 className="text-apple-display-medium md:text-apple-display font-semibold text-[#1a365d] dark:text-gray-100 mb-4">Everything You Need to Succeed</h2>
+          <p className="text-[#4a5568] dark:text-gray-400 text-apple-body italic">
             "We help students choose the course and institution that matches their personal circumstances - academic,
             employment, and financial background."
           </p>
@@ -92,7 +92,7 @@ export default function FacilitiesMarqueeSection() {
                 {facility.icon}
               </div>
               <h3 className="font-semibold text-[#1a365d] dark:text-gray-100 mb-1">{facility.title}</h3>
-              <p className="text-sm text-[#4a5568] dark:text-gray-400">{facility.description}</p>
+              <p className="text-apple-callout text-[#4a5568] dark:text-gray-400">{facility.description}</p>
             </div>
           ))}
         </div>
@@ -111,7 +111,7 @@ export default function FacilitiesMarqueeSection() {
                   {facility.icon}
                 </div>
                 <h3 className="font-semibold text-white mb-1">{facility.title}</h3>
-                <p className="text-sm text-blue-100">{facility.description}</p>
+                <p className="text-apple-callout text-blue-100">{facility.description}</p>
               </div>
             ),
           )}
@@ -123,7 +123,7 @@ export default function FacilitiesMarqueeSection() {
         <div className="bg-[#1a365d] dark:bg-zinc-900 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#0E74D2]/30 rounded-full blur-3xl"></div>
           <div className="relative z-10">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Start Your Journey?</h3>
+            <h3 className="text-apple-title-1 md:text-apple-display-small font-semibold text-white mb-4">Ready to Start Your Journey?</h3>
             <p className="text-blue-200 mb-8 max-w-2xl mx-auto">
               Get free personalized guidance from our expert counselors. No hidden charges, no obligations.
             </p>

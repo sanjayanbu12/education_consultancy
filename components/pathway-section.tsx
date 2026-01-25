@@ -41,7 +41,7 @@ export default function PathwaySection() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-balance">Your Journey with AL-HUDA</h2>
+          <h2 className="text-apple-display-small md:text-apple-display-medium font-semibold text-white mb-4 text-balance">Your Journey with AL-HUDA</h2>
           <p className="text-white/70 max-w-2xl mx-auto text-pretty">
             From initial consultation to career launch, we're with you every step of the way
           </p>
@@ -71,9 +71,9 @@ export default function PathwaySection() {
 
                 {/* Content Card */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/10 h-full">
-                  <div className="text-white/50 text-xs font-medium mb-2">Step {index + 1}</div>
+                  <div className="text-white/50 text-apple-footnote font-medium mb-2">Step {index + 1}</div>
                   <h4 className="text-white font-semibold mb-2">{step.title}</h4>
-                  <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
+                  <p className="text-white/70 text-apple-callout leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -93,9 +93,9 @@ export default function PathwaySection() {
                 {step.icon}
               </div>
               <div className="flex-1">
-                <div className="text-white/50 text-xs font-medium mb-1">Step {index + 1}</div>
+                <div className="text-white/50 text-apple-footnote font-medium mb-1">Step {index + 1}</div>
                 <h4 className="text-white font-semibold mb-1">{step.title}</h4>
-                <p className="text-white/70 text-sm leading-relaxed">{step.description}</p>
+                <p className="text-white/70 text-apple-callout leading-relaxed">{step.description}</p>
               </div>
               {index < steps.length - 1 && <ArrowRight className="w-5 h-5 text-white/30 flex-shrink-0 mt-3" />}
             </div>

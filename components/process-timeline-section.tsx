@@ -49,10 +49,10 @@ export default function ProcessTimelineSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
             <CheckCircle className="w-4 h-4 text-[#0E74D2]" />
-            <span className="text-[#0E74D2] text-sm font-medium">How It Works</span>
+            <span className="text-[#0E74D2] text-apple-callout font-medium">How It Works</span>
           </div> */}
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">Your Path to Success</h2>
-          <p className="text-[#4a5568] dark:text-gray-400 text-lg">
+          <h2 className="text-apple-display-medium md:text-apple-display font-semibold text-[#1a365d] dark:text-gray-100 mb-4">Your Path to Success</h2>
+          <p className="text-[#4a5568] dark:text-gray-400 text-apple-body">
             A simple, streamlined process designed to guide you from initial inquiry to successful career launch
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function ProcessTimelineSection() {
                 {/* Step Card */}
                 <div className="relative z-10 flex flex-col items-center lg:items-center text-center">
                   {/* Number Badge */}
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#0E74D2] dark:bg-blue-600 rounded-full text-white text-xs font-bold flex items-center justify-center shadow-lg">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-[#0E74D2] dark:bg-blue-600 rounded-full text-white text-apple-footnote font-semibold flex items-center justify-center shadow-lg">
                     {index + 1}
                   </div>
 
@@ -85,8 +85,8 @@ export default function ProcessTimelineSection() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="font-bold text-[#1a365d] dark:text-gray-100 mb-2">{step.title}</h3>
-                  <p className="text-sm text-[#4a5568] dark:text-gray-400 leading-relaxed max-w-[200px]">{step.description}</p>
+                  <h3 className="font-semibold text-[#1a365d] dark:text-gray-100 mb-2">{step.title}</h3>
+                  <p className="text-apple-callout text-[#4a5568] dark:text-gray-400 leading-relaxed max-w-[200px]">{step.description}</p>
                 </div>
               </div>
             ))}

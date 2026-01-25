@@ -73,9 +73,9 @@
 //         <div className="text-center mb-12">
 //           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full mb-4">
 //             <Building className="w-4 h-4 text-[#0E74D2]" />
-//             <span className="text-[#0E74D2] text-sm font-medium">Partner Colleges</span>
+//             <span className="text-[#0E74D2] text-apple-callout font-medium">Partner Colleges</span>
 //           </div>
-//           <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-4 text-balance">
+//           <h2 className="text-apple-display-small md:text-apple-display-medium font-semibold text-[#1a365d] mb-4 text-balance">
 //             Top Colleges in TamilNadu
 //           </h2>
 //           <p className="text-[#4a5568] max-w-2xl mx-auto text-pretty">
@@ -113,7 +113,7 @@
 //                     </div>
 //                     <div className="text-left">
 //                       <h3 className="text-[#1a365d] font-semibold">{category.title}</h3>
-//                       <p className="text-[#4a5568] text-sm">{category.colleges.length} institutions</p>
+//                       <p className="text-[#4a5568] text-apple-callout">{category.colleges.length} institutions</p>
 //                     </div>
 //                   </div>
 //                   {expandedCategory === category.id ? (
@@ -134,7 +134,7 @@
 //                             className="flex items-start gap-2 p-3 bg-[#f8fafc] rounded-lg hover:bg-[#0E74D2]/5 transition-colors"
 //                           >
 //                             <div className={`w-1.5 h-1.5 rounded-full ${category.color} mt-2 flex-shrink-0`}></div>
-//                             <span className="text-[#1a365d] text-sm">{college}</span>
+//                             <span className="text-[#1a365d] text-apple-callout">{college}</span>
 //                           </div>
 //                         ))}
 //                       </div>
@@ -153,7 +153,7 @@
 //               <MapPin className="w-8 h-8 text-white" />
 //             </div>
 //             <div>
-//               <h3 className="text-white text-xl font-semibold">Need Admission Assistance?</h3>
+//               <h3 className="text-white text-apple-title-2 font-semibold">Need Admission Assistance?</h3>
 //               <p className="text-white/80">Contact us for expert guidance on college selection</p>
 //             </div>
 //           </div>

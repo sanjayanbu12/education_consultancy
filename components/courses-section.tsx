@@ -134,9 +134,9 @@ export default function CoursesSection() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full mb-4">
             <BookOpen className="w-4 h-4 text-[#0E74D2]" />
-            <span className="text-[#0E74D2] text-sm font-medium">Courses Offered</span>
+            <span className="text-[#0E74D2] text-apple-callout font-medium">Courses Offered</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-4 text-balance">
+          <h2 className="text-apple-display-small md:text-apple-display-medium font-semibold text-[#1a365d] mb-4 text-balance">
             Right Course. Right Career. Right Now.
           </h2>
           <p className="text-[#4a5568] max-w-2xl mx-auto text-pretty">
@@ -157,16 +157,16 @@ export default function CoursesSection() {
             <div className="absolute bottom-0 left-0 right-0 p-8">
               <div className="flex items-center gap-2 mb-3">
                 <Sparkles className="w-5 h-5 text-amber-400" />
-                <span className="text-amber-400 text-sm font-medium">Featured Programs</span>
+                <span className="text-amber-400 text-apple-callout font-medium">Featured Programs</span>
               </div>
-              <h3 className="text-white text-2xl md:text-3xl font-bold mb-2">Find Your Path</h3>
-              <p className="text-white/80 text-sm">Expert guidance to choose the course that shapes your future</p>
+              <h3 className="text-white text-apple-title-1 md:text-apple-display-small font-semibold mb-2">Find Your Path</h3>
+              <p className="text-white/80 text-apple-callout">Expert guidance to choose the course that shapes your future</p>
             </div>
           </div>
 
           {/* Category Selection - Vertical Tabs */}
           <div className="bg-white rounded-3xl p-6 shadow-lg border border-[rgba(14,116,210,0.1)]">
-            <h3 className="text-[#1a365d] text-lg font-semibold mb-4">Select a Category</h3>
+            <h3 className="text-[#1a365d] text-apple-body font-semibold mb-4">Select a Category</h3>
             <div className="space-y-3">
               {courseCategories.map((category) => (
                 <button
@@ -188,7 +188,7 @@ export default function CoursesSection() {
                     </div>
                     <div className="text-left">
                       <div className="font-medium">{category.name}</div>
-                      <div className={`text-xs ${activeCategory === category.id ? "text-white/70" : "text-[#4a5568]"}`}>
+                      <div className={`text-apple-footnote ${activeCategory === category.id ? "text-white/70" : "text-[#4a5568]"}`}>
                         {category.courses.length} courses • {category.duration}
                       </div>
                     </div>
@@ -210,11 +210,11 @@ export default function CoursesSection() {
                   {activeData.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#1a365d]">{activeData.name} Courses</h3>
-                  <p className="text-[#4a5568] text-sm">Duration: {activeData.duration}</p>
+                  <h3 className="text-apple-title-2 font-semibold text-[#1a365d]">{activeData.name} Courses</h3>
+                  <p className="text-[#4a5568] text-apple-callout">Duration: {activeData.duration}</p>
                 </div>
               </div>
-              <div className="text-sm text-[#4a5568] bg-[#f8fafc] px-4 py-2 rounded-full">
+              <div className="text-apple-callout text-[#4a5568] bg-[#f8fafc] px-4 py-2 rounded-full">
                 {activeData.courses.length} programs available
               </div>
             </div>
@@ -227,7 +227,7 @@ export default function CoursesSection() {
                   className="flex items-center gap-2 px-4 py-3 bg-[#f8fafc] rounded-xl hover:bg-[#0E74D2]/5 hover:border-[#0E74D2]/20 transition-colors cursor-pointer border border-gray-100 group"
                 >
                   <div className={`w-2 h-2 rounded-full ${activeData.color}`}></div>
-                  <span className="text-[#1a365d] text-sm font-medium group-hover:text-[#0E74D2] transition-colors">
+                  <span className="text-[#1a365d] text-apple-callout font-medium group-hover:text-[#0E74D2] transition-colors">
                     {course}
                   </span>
                 </div>

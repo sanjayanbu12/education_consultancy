@@ -13,10 +13,10 @@ export default function StatsBentoSection() {
             <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-2xl transform translate-x-10 -translate-y-10"></div>
             <div>
               <Building className="w-10 h-10 text-white/80 mb-4" />
-              <div className="text-5xl font-bold text-white">5000+</div>
+              <div className="text-apple-display font-semibold text-white">5000+</div>
             </div>
             <div>
-              <div className="text-xl font-semibold text-white">Partner Colleges</div>
+              <div className="text-apple-title-2 font-semibold text-white">Partner Colleges</div>
               <div className="text-blue-200">Across India</div>
             </div>
           </div>
@@ -25,7 +25,7 @@ export default function StatsBentoSection() {
           <div className="col-span-2 bg-[#f0f7ff] dark:bg-black rounded-3xl p-6 flex flex-col justify-between border dark:border-gray-800">
             <BookOpen className="w-8 h-8 text-[#0E74D2] dark:text-blue-400" />
             <div>
-              <div className="text-3xl font-bold text-[#1a365d] dark:text-gray-100">200+</div>
+              <div className="text-apple-display-small font-semibold text-[#1a365d] dark:text-gray-100">200+</div>
               <div className="text-[#4a5568] dark:text-gray-400">Courses Offered</div>
             </div>
           </div>
@@ -36,7 +36,7 @@ export default function StatsBentoSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-4 left-4">
               <div className="text-white font-semibold">Premium Institutions</div>
-              <div className="text-white/70 text-sm">Top-rated colleges nationwide</div>
+              <div className="text-white/70 text-apple-callout">Top-rated colleges nationwide</div>
             </div>
           </div>
 
@@ -44,16 +44,16 @@ export default function StatsBentoSection() {
           <div className="bg-green-50 rounded-3xl p-4 flex flex-col justify-between border border-green-100">
             <Users className="w-6 h-6 text-green-600" />
             <div>
-              <div className="text-2xl font-bold text-green-700">10K+</div>
-              <div className="text-green-600 text-xs">Students Guided</div>
+              <div className="text-apple-title-1 font-semibold text-green-700">10K+</div>
+              <div className="text-green-600 text-apple-footnote">Students Guided</div>
             </div>
           </div>
 
           <div className="bg-amber-50 rounded-3xl p-4 flex flex-col justify-between border border-amber-100">
             <Trophy className="w-6 h-6 text-amber-600" />
             <div>
-              <div className="text-2xl font-bold text-amber-700">15+</div>
-              <div className="text-amber-600 text-xs">Years Experience</div>
+              <div className="text-apple-title-1 font-semibold text-amber-700">15+</div>
+              <div className="text-amber-600 text-apple-footnote">Years Experience</div>
             </div>
           </div>
 
@@ -64,11 +64,11 @@ export default function StatsBentoSection() {
                 <TrendingUp className="w-7 h-7 text-white" />
               </div>
               <div>
-                <div className="text-white font-semibold text-lg">MBA College Rankings</div>
-                <div className="text-blue-200 text-sm">Find top-ranked institutions for your MBA journey</div>
+                <div className="text-white font-semibold text-apple-body">MBA College Rankings</div>
+                <div className="text-blue-200 text-apple-callout">Find top-ranked institutions for your MBA journey</div>
               </div>
             </div>
-            <div className="hidden sm:flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-white text-sm">
+            <div className="hidden sm:flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full text-white text-apple-callout">
               <Target className="w-4 h-4" />
               Apply Online
             </div>
@@ -82,7 +82,7 @@ export default function StatsBentoSection() {
               </div>
               <span className="font-semibold text-[#1a365d] dark:text-gray-200">Admission Procedure</span>
             </div>
-            <p className="text-[#4a5568] dark:text-gray-400 text-sm">Step-by-step guidance for smooth admissions</p>
+            <p className="text-[#4a5568] dark:text-gray-400 text-apple-callout">Step-by-step guidance for smooth admissions</p>
           </div>
         </div>
       </div>

@@ -38,18 +38,18 @@ export default function PricingSection() {
                 />
               </svg>
             </div>
-            <div className="text-center flex justify-center flex-col text-[#37322F] text-xs font-medium leading-3">
+            <div className="text-center flex justify-center flex-col text-[#37322F] text-apple-footnote font-medium leading-3">
               Plans & Pricing
             </div>
           </div>
 
           {/* Title */}
-          <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] tracking-tight">
+          <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-apple-display-small md:text-apple-display font-semibold leading-tight md:leading-[60px] tracking-tight">
             Choose the perfect plan for your business
           </div>
 
           {/* Description */}
-          <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7">
+          <div className="self-stretch text-center text-[#605A57] text-apple-body font-normal leading-7">
             Scale your operations with flexible pricing that grows with your team.
             <br />
             Start free, upgrade when you're ready.
@@ -128,15 +128,15 @@ export default function PricingSection() {
               {/* Plan Header */}
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7">Starter</div>
-                  <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5">
+                  <div className="text-[rgba(55,50,47,0.90)] text-apple-body font-medium leading-7">Starter</div>
+                  <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-apple-callout font-normal leading-5">
                     Perfect for individuals and small teams getting started.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
-                    <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px]">
+                    <div className="relative h-[60px] flex items-center text-[#37322F] text-apple-display font-medium leading-[60px]">
                       <span className="invisible">${pricing.starter[billingPeriod]}</span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
@@ -161,7 +161,7 @@ export default function PricingSection() {
                         ${pricing.starter.monthly}
                       </span>
                     </div>
-                    <div className="text-[#847971] text-sm font-medium">
+                    <div className="text-[#847971] text-apple-callout font-medium">
                       per {billingPeriod === "monthly" ? "month" : "year"}, per user.
                     </div>
                   </div>
@@ -208,15 +208,15 @@ export default function PricingSection() {
               {/* Plan Header */}
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[#FBFAF9] text-lg font-medium leading-7">Professional</div>
-                  <div className="w-full max-w-[242px] text-[#B2AEA9] text-sm font-normal leading-5">
+                  <div className="text-[#FBFAF9] text-apple-body font-medium leading-7">Professional</div>
+                  <div className="w-full max-w-[242px] text-[#B2AEA9] text-apple-callout font-normal leading-5">
                     Advanced features for growing teams and businesses.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
-                    <div className="relative h-[60px] flex items-center text-[#F0EFEE] text-5xl font-medium leading-[60px]">
+                    <div className="relative h-[60px] flex items-center text-[#F0EFEE] text-apple-display font-medium leading-[60px]">
                       <span className="invisible">${pricing.professional[billingPeriod]}</span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
@@ -241,7 +241,7 @@ export default function PricingSection() {
                         ${pricing.professional.monthly}
                       </span>
                     </div>
-                    <div className="text-[#D2C6BF] text-sm font-medium">
+                    <div className="text-[#D2C6BF] text-apple-callout font-medium">
                       per {billingPeriod === "monthly" ? "month" : "year"}, per user.
                     </div>
                   </div>
@@ -290,15 +290,15 @@ export default function PricingSection() {
               {/* Plan Header */}
               <div className="self-stretch flex flex-col justify-start items-center gap-9">
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
-                  <div className="text-[rgba(55,50,47,0.90)] text-lg font-medium leading-7">Enterprise</div>
-                  <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-sm font-normal leading-5">
+                  <div className="text-[rgba(55,50,47,0.90)] text-apple-body font-medium leading-7">Enterprise</div>
+                  <div className="w-full max-w-[242px] text-[rgba(41,37,35,0.70)] text-apple-callout font-normal leading-5">
                     Complete solution for large organizations and enterprises.
                   </div>
                 </div>
 
                 <div className="self-stretch flex flex-col justify-start items-start gap-2">
                   <div className="flex flex-col justify-start items-start gap-1">
-                    <div className="relative h-[60px] flex items-center text-[#37322F] text-5xl font-medium leading-[60px]">
+                    <div className="relative h-[60px] flex items-center text-[#37322F] text-apple-display font-medium leading-[60px]">
                       <span className="invisible">${pricing.enterprise[billingPeriod]}</span>
                       <span
                         className="absolute inset-0 flex items-center transition-all duration-500"
@@ -323,7 +323,7 @@ export default function PricingSection() {
                         ${pricing.enterprise.monthly}
                       </span>
                     </div>
-                    <div className="text-[#847971] text-sm font-medium">
+                    <div className="text-[#847971] text-apple-callout font-medium">
                       per {billingPeriod === "monthly" ? "month" : "year"}, per user.
                     </div>
                   </div>

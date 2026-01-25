@@ -135,7 +135,7 @@ export default function Header() {
                 <span className="text-sm font-semibold text-gray-900 dark:text-white hidden sm:inline">
                   AL-HUDA
                 </span>
-                <span className="text-xs font-medium text-gray-600 dark:text-gray-400 hidden sm:inline">
+                <span className="text-apple-footnote font-normal text-gray-600 dark:text-gray-400 hidden sm:inline">
                   Educational Consultancy
                 </span>
               </div>
@@ -144,7 +144,7 @@ export default function Header() {
             {/* Desktop Navigation - Ultra Minimal */}
             <nav className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
-                <div 
+                <div
                   key={item.name}
                   onMouseEnter={() => hasMegaMenu(item.name) && setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
@@ -155,7 +155,7 @@ export default function Header() {
                       e.preventDefault()
                       scrollToSection(item.href)
                     }}
-                    className="text-xs font-normal text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer"
+                    className="text-apple-footnote font-normal text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer"
                   >
                     {item.name}
                   </a>
@@ -187,7 +187,7 @@ export default function Header() {
                   e.preventDefault()
                   scrollToSection('#contact')
                 }}
-                className="hidden md:inline-flex items-center px-4 py-1.5 bg-[#0071E3] hover:bg-[#0077ED] text-white text-xs font-semibold rounded-full transition-all duration-300 cursor-pointer"
+                className="hidden md:inline-flex items-center px-4 py-1.5 bg-[#0071E3] hover:bg-[#0077ED] text-white text-apple-footnote font-semibold rounded-full transition-all duration-300 cursor-pointer"
               >
                 Get Started
               </a>
@@ -220,10 +220,10 @@ export default function Header() {
                 {/* Left Side - Rich Content (3 columns) */}
                 <div className="col-span-3 space-y-6">
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-apple-display-small font-semibold text-gray-900 dark:text-white mb-2">
                       {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].title}
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-apple-callout text-gray-600 dark:text-gray-400">
                       {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].description}
                     </p>
                   </div>
@@ -232,7 +232,7 @@ export default function Header() {
                   <div className="grid grid-cols-3 gap-4">
                     {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].stats.map((stat, index) => (
                       <div key={index} className="text-center p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
-                        <div className="text-2xl font-bold text-[#0071E3] dark:text-blue-400 mb-0.5">
+                        <div className="text-apple-title-1 font-semibold text-[#0071E3] dark:text-blue-400 mb-0.5">
                           {stat.value}
                         </div>
                         <div className="text-[10px] text-gray-600 dark:text-gray-400 font-medium uppercase tracking-wide">
@@ -247,7 +247,7 @@ export default function Header() {
                     {megaMenuContent[activeDropdown as keyof typeof megaMenuContent].features.map((feature, index) => (
                       <div key={index} className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-[#0071E3] dark:text-blue-400 flex-shrink-0" />
-                        <span className="text-xs text-gray-700 dark:text-gray-300">{feature}</span>
+                        <span className="text-apple-footnote text-gray-700 dark:text-gray-300">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -259,7 +259,7 @@ export default function Header() {
                       e.preventDefault()
                       scrollToSection(navItems.find(item => item.name === activeDropdown)?.href || "#")
                     }}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0071E3] hover:bg-[#0077ED] text-white text-sm font-semibold rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#0071E3] hover:bg-[#0077ED] text-white text-apple-callout font-semibold rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
                   >
                     Explore {activeDropdown}
                     <TrendingUp className="w-4 h-4" />
@@ -306,7 +306,7 @@ export default function Header() {
                 setMobileMenuOpen(false)
                 setTimeout(() => scrollToSection(item.href), 300)
               }}
-              className="text-4xl font-bold text-gray-900 dark:text-white hover:text-[#0071E3] dark:hover:text-[#0077ED] transition-colors cursor-pointer"
+              className="text-apple-display-medium font-semibold text-gray-900 dark:text-white hover:text-[#0071E3] dark:hover:text-[#0077ED] transition-colors cursor-pointer"
               style={{
                 animation: mobileMenuOpen
                   ? `fadeInUp 0.5s ease-out ${index * 0.1}s both`
@@ -324,7 +324,7 @@ export default function Header() {
               setMobileMenuOpen(false)
               setTimeout(() => scrollToSection('#contact'), 300)
             }}
-            className="mt-8 px-8 py-4 bg-[#0071E3] hover:bg-[#0077ED] text-white text-lg font-semibold rounded-full transition-all duration-300 cursor-pointer"
+            className="mt-8 px-8 py-4 bg-[#0071E3] hover:bg-[#0077ED] text-white text-apple-body font-semibold rounded-full transition-all duration-300 cursor-pointer"
             style={{
               animation: mobileMenuOpen
                 ? `fadeInUp 0.5s ease-out 0.4s both`

@@ -67,18 +67,18 @@ export default function CollegeShowcaseSection() {
 
         {/* ---------- SECTION HEADER ---------- */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          {/* <h2 className="text-4xl md:text-5xl font-light text-[#1a365d] dark:text-gray-100 mb-4">
+          {/* <h2 className="text-apple-display-medium md:text-apple-display font-light text-[#1a365d] dark:text-gray-100 mb-4">
             Top Colleges Across India
           </h2> */}
 
-          <h2 className="text-5xl lg:text-6xl font-light text-[#1a1a1a] dark:text-gray-100 mb-6">
+          <h2 className="text-apple-display lg:text-apple-display-large font-light text-[#1a1a1a] dark:text-gray-100 mb-6">
             Top Colleges
             <span className="block mt-2 font-medium bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] bg-clip-text text-transparent">
               Across India
             </span>
           </h2>
 
-          <p className="text-[#4a5568] dark:text-gray-400 text-lg">
+          <p className="text-[#4a5568] dark:text-gray-400 text-apple-body">
             Comprehensive database of 400+ colleges from Tamil Nadu, Karnataka, and Kerala
           </p>
         </div>
@@ -101,7 +101,7 @@ export default function CollegeShowcaseSection() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-zinc-900 rounded-lg">
               <Filter className="w-4 h-4 text-gray-600 dark:text-gray-400" />
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Filters:</span>
+              <span className="text-apple-callout font-medium text-gray-700 dark:text-gray-300">Filters:</span>
             </div>
 
             {/* State Filter */}
@@ -111,7 +111,7 @@ export default function CollegeShowcaseSection() {
                 setSelectedState(e.target.value)
                 setSelectedCity("All Cities")
               }}
-              className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-gray-100 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500 cursor-pointer"
+              className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-gray-100 text-apple-callout font-medium focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500 cursor-pointer"
             >
               {states.map(state => (
                 <option key={state} value={state}>{state}</option>
@@ -122,7 +122,7 @@ export default function CollegeShowcaseSection() {
             <select
               value={selectedCity}
               onChange={(e) => setSelectedCity(e.target.value)}
-              className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-gray-100 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500 cursor-pointer"
+              className="px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-gray-900 dark:text-gray-100 text-apple-callout font-medium focus:outline-none focus:ring-2 focus:ring-[#0E74D2] dark:focus:ring-blue-500 cursor-pointer"
               disabled={selectedState === "All States"}
             >
               {cities.map(city => (
@@ -137,7 +137,7 @@ export default function CollegeShowcaseSection() {
               <button
                 key={key}
                 onClick={() => setSelectedType(key)}
-                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${selectedType === key
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-apple-footnote font-medium transition-all ${selectedType === key
                   ? `${type.color} text-white shadow-lg`
                   : "bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-[#0E74D2] dark:hover:border-blue-500"
                   }`}
@@ -150,7 +150,7 @@ export default function CollegeShowcaseSection() {
 
           {/* Results Count */}
           <div className="text-center">
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-apple-callout text-gray-600 dark:text-gray-400">
               Showing <span className="font-semibold text-[#0E74D2] dark:text-blue-400">{filteredColleges.length}</span> colleges
               {selectedState !== "All States" && ` in ${selectedState}`}
               {selectedCity !== "All Cities" && ` - ${selectedCity}`}
@@ -173,49 +173,49 @@ export default function CollegeShowcaseSection() {
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="flex items-center gap-2 mb-2">
                   <MapPin className="w-4 h-4 text-white" />
-                  <span className="text-white/80 text-sm">{selectedState}</span>
+                  <span className="text-white/80 text-apple-callout">{selectedState}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white">Premier Educational Hub</h3>
+                <h3 className="text-apple-title-1 font-semibold text-white">Premier Educational Hub</h3>
               </div>
             </div>
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-3 text-center border border-blue-100 dark:border-blue-800">
-                <div className="text-xl font-bold text-blue-600 dark:text-blue-400">
+                <div className="text-apple-title-2 font-semibold text-blue-600 dark:text-blue-400">
                   {getTypeCount("engineering")}
                 </div>
-                <div className="text-xs text-blue-600/80 dark:text-blue-400/80">Engineering</div>
+                <div className="text-apple-footnote text-blue-600/80 dark:text-blue-400/80">Engineering</div>
               </div>
               <div className="bg-red-50 dark:bg-red-900/20 rounded-2xl p-3 text-center border border-red-100 dark:border-red-800">
-                <div className="text-xl font-bold text-red-600 dark:text-red-400">
+                <div className="text-apple-title-2 font-semibold text-red-600 dark:text-red-400">
                   {getTypeCount("medical")}
                 </div>
-                <div className="text-xs text-red-600/80 dark:text-red-400/80">Medical</div>
+                <div className="text-apple-footnote text-red-600/80 dark:text-red-400/80">Medical</div>
               </div>
               <div className="bg-teal-50 dark:bg-teal-900/20 rounded-2xl p-3 text-center border border-teal-100 dark:border-teal-800">
-                <div className="text-xl font-bold text-teal-600 dark:text-teal-400">
+                <div className="text-apple-title-2 font-semibold text-teal-600 dark:text-teal-400">
                   {getTypeCount("nursing")}
                 </div>
-                <div className="text-xs text-teal-600/80 dark:text-teal-400/80">Nursing</div>
+                <div className="text-apple-footnote text-teal-600/80 dark:text-teal-400/80">Nursing</div>
               </div>
               <div className="bg-orange-50 dark:bg-orange-900/20 rounded-2xl p-3 text-center border border-orange-100 dark:border-orange-800">
-                <div className="text-xl font-bold text-orange-600 dark:text-orange-400">
+                <div className="text-apple-title-2 font-semibold text-orange-600 dark:text-orange-400">
                   {getTypeCount("mba")}
                 </div>
-                <div className="text-xs text-orange-600/80 dark:text-orange-400/80">MBA</div>
+                <div className="text-apple-footnote text-orange-600/80 dark:text-orange-400/80">MBA</div>
               </div>
               <div className="bg-pink-50 dark:bg-pink-900/20 rounded-2xl p-3 text-center border border-pink-100 dark:border-pink-800">
-                <div className="text-xl font-bold text-pink-600 dark:text-pink-400">
+                <div className="text-apple-title-2 font-semibold text-pink-600 dark:text-pink-400">
                   {getTypeCount("dental")}
                 </div>
-                <div className="text-xs text-pink-600/80 dark:text-pink-400/80">Dental</div>
+                <div className="text-apple-footnote text-pink-600/80 dark:text-pink-400/80">Dental</div>
               </div>
               <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-2xl p-3 text-center border border-indigo-100 dark:border-indigo-800">
-                <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <div className="text-apple-title-2 font-semibold text-indigo-600 dark:text-indigo-400">
                   {getTypeCount("pharmacy")}
                 </div>
-                <div className="text-xs text-indigo-600/80 dark:text-indigo-400/80">Pharmacy</div>
+                <div className="text-apple-footnote text-indigo-600/80 dark:text-indigo-400/80">Pharmacy</div>
               </div>
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function CollegeShowcaseSection() {
             {filteredColleges.length === 0 ? (
               <div className="text-center py-12">
                 <Building className="w-16 h-16 text-gray-300 dark:text-gray-700 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mb-2">No colleges found</h3>
+                <h3 className="text-apple-title-2 font-semibold text-gray-600 dark:text-gray-400 mb-2">No colleges found</h3>
                 <p className="text-gray-500 dark:text-gray-500">Try adjusting your filters or search query</p>
               </div>
             ) : (
@@ -248,11 +248,11 @@ export default function CollegeShowcaseSection() {
                           </div>
 
                           <div className="flex-1 min-w-0">
-                            <h4 className="font-medium text-[#1a365d] dark:text-gray-200 group-hover:text-[#0E74D2] dark:group-hover:text-blue-400 transition-colors text-sm mb-1">
+                            <h4 className="font-medium text-[#1a365d] dark:text-gray-200 group-hover:text-[#0E74D2] dark:group-hover:text-blue-400 transition-colors text-apple-callout mb-1">
                               {college.name}
                             </h4>
 
-                            <div className="flex flex-wrap items-center gap-3 text-xs text-gray-600 dark:text-gray-400">
+                            <div className="flex flex-wrap items-center gap-3 text-apple-footnote text-gray-600 dark:text-gray-400">
                               <div className="flex items-center gap-1">
                                 <MapPin className="w-3 h-3" />
                                 <span>{college.city}, {college.state}</span>
@@ -261,7 +261,7 @@ export default function CollegeShowcaseSection() {
                                 <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
                                 <span className="font-medium">{college.rating}</span>
                               </div>
-                              <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${typeInfo.color} text-white`}>
+                              <span className={`px-2 py-0.5 rounded-full text-apple-footnote font-medium ${typeInfo.color} text-white`}>
                                 {typeInfo.label}
                               </span>
                             </div>

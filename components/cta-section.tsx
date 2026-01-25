@@ -23,10 +23,10 @@ export default function CTASection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 text-balance">
+            <h2 className="text-apple-display-medium md:text-apple-display lg:text-apple-display-large font-semibold text-white mb-6 text-balance">
               Ready to Start Your Educational Journey?
             </h2>
-            <p className="text-white/80 text-lg mb-8 text-pretty">
+            <p className="text-white/80 text-apple-body mb-8 text-pretty">
               Get expert guidance for admission to top colleges across India. Our consultants are available 24/7 to
               assist you with free career counseling and admission support.
             </p>
@@ -36,7 +36,7 @@ export default function CTASection() {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-white/90 text-sm">{benefit}</span>
+                  <span className="text-white/90 text-apple-callout">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -52,7 +52,7 @@ export default function CTASection() {
                     <Phone className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-white/70 text-xs mb-1">24/7 Helpline</p>
+                    <p className="text-white/70 text-apple-footnote mb-1">24/7 Helpline</p>
                     <p className="text-white font-semibold">9578599785</p>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ export default function CTASection() {
                     <Mail className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-white/70 text-xs mb-1">Email Us</p>
+                    <p className="text-white/70 text-apple-footnote mb-1">Email Us</p>
                     <p className="text-white font-semibold text-sm">alhuda...@gmail.com</p>
                   </div>
                 </div>
@@ -77,12 +77,12 @@ export default function CTASection() {
 
           {/* Right Column - Inquiry Form Card */}
           <div className="bg-white rounded-3xl p-8 shadow-2xl">
-            <h3 className="text-[#1a365d] text-xl font-bold mb-2">Get Free Consultation</h3>
-            <p className="text-[#4a5568] text-sm mb-6">Fill in your details and we'll call you back within 24 hours</p>
+            <h3 className="text-[#1a365d] text-apple-title-2 font-semibold mb-2">Get Free Consultation</h3>
+            <p className="text-[#4a5568] text-apple-callout mb-6">Fill in your details and we'll call you back within 24 hours</p>
 
             <form className="space-y-4">
               <div>
-                <label className="block text-[#1a365d] text-sm font-medium mb-2">Full Name</label>
+                <label className="block text-[#1a365d] text-apple-callout font-semibold mb-2">Full Name</label>
                 <input
                   type="text"
                   placeholder="Enter your name"
@@ -91,7 +91,7 @@ export default function CTASection() {
               </div>
 
               <div>
-                <label className="block text-[#1a365d] text-sm font-medium mb-2">Phone Number</label>
+                <label className="block text-[#1a365d] text-apple-callout font-semibold mb-2">Phone Number</label>
                 <input
                   type="tel"
                   placeholder="Enter your phone number"
@@ -100,7 +100,7 @@ export default function CTASection() {
               </div>
 
               <div>
-                <label className="block text-[#1a365d] text-sm font-medium mb-2">Interested Course</label>
+                <label className="block text-[#1a365d] text-apple-callout font-semibold mb-2">Interested Course</label>
                 <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#0E74D2] focus:ring-2 focus:ring-[#0E74D2]/20 outline-none transition-all text-sm text-[#4a5568]">
                   <option value="">Select a course category</option>
                   <option value="medical">Medical / MBBS</option>
@@ -114,7 +114,7 @@ export default function CTASection() {
               </div>
 
               <div>
-                <label className="block text-[#1a365d] text-sm font-medium mb-2">Message (Optional)</label>
+                <label className="block text-[#1a365d] text-apple-callout font-semibold mb-2">Message (Optional)</label>
                 <textarea
                   placeholder="Tell us about your requirements..."
                   rows={3}

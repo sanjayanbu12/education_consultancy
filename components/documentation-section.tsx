@@ -8,7 +8,7 @@ function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
     <div className="px-[14px] py-[6px] bg-white shadow-[0px_0px_0px_4px_rgba(55,50,47,0.05)] overflow-hidden rounded-[90px] flex justify-start items-center gap-[8px] border border-[rgba(2,6,23,0.08)] shadow-xs">
       <div className="w-[14px] h-[14px] relative overflow-hidden flex items-center justify-center">{icon}</div>
-      <div className="text-center flex justify-center flex-col text-[#37322F] text-xs font-medium leading-3">
+      <div className="text-center flex justify-center flex-col text-[#37322F] text-apple-footnote font-medium leading-3">
         {text}
       </div>
     </div>
@@ -62,10 +62,10 @@ export default function DocumentationSection() {
             }
             text="Platform Features"
           />
-          <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] tracking-tight">
+          <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-apple-display-small md:text-apple-display font-semibold leading-tight md:leading-[60px] tracking-tight">
             Streamline your business operations
           </div>
-          <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7">
+          <div className="self-stretch text-center text-[#605A57] text-apple-body font-normal leading-7">
             Manage schedules, analyze data, and collaborate with your team
             <br />
             all in one powerful platform.
@@ -99,7 +99,7 @@ export default function DocumentationSection() {
                     />
                   </div>
                   <div className="px-6 py-5 w-full flex flex-col gap-2">
-                    <div className="self-stretch flex justify-center flex-col text-[#49423D] text-sm font-semibold leading-6">
+                    <div className="self-stretch flex justify-center flex-col text-[#49423D] text-apple-callout font-semibold leading-6">
                       {card.title}
                     </div>
                     <div className="self-stretch text-[#605A57] text-[13px] font-normal leading-[22px] whitespace-pre-line">

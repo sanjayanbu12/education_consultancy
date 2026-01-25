@@ -27,7 +27,7 @@ export default function AboutPage() {
 
           <div className="relative z-10 text-center">
 
-            <h1 className="text-5xl lg:text-7xl font-light text-[#1a1a1a] dark:text-gray-100 tracking-tight leading-[1.05] mb-8">
+            <h1 className="text-apple-display lg:text-7xl font-light text-[#1a1a1a] dark:text-gray-100 tracking-tight leading-[1.05] mb-8">
               Where <span className="relative inline-block">
                 <span className="relative z-10 font-medium bg-gradient-to-r from-[#0E74D2] via-[#0a5ba8] to-[#0E74D2] bg-clip-text text-transparent animate-[pulse_3s_ease-in-out_infinite]">Excellence</span>
                 <div className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-[#0E74D2]/20 via-[#0a5ba8]/20 to-[#0E74D2]/20 blur-sm"></div>
@@ -36,7 +36,7 @@ export default function AboutPage() {
               <span className="block mt-2">Meets Opportunity</span>
             </h1>
 
-            <p className="text-xl text-[#5a5a5a] dark:text-gray-400 leading-relaxed max-w-3xl mx-auto font-light mb-12">
+            <p className="text-apple-title-2 text-[#5a5a5a] dark:text-gray-400 leading-relaxed max-w-3xl mx-auto font-light mb-12">
               For over 15 years, Al Huda has been the bridge between ambitious students and world-class institutions.
               We don't just guide—we transform educational journeys into success stories.
             </p>
@@ -51,8 +51,8 @@ export default function AboutPage() {
                 <div key={i} className="flex items-center gap-3 px-6 py-3 bg-white/80 dark:bg-black/80 backdrop-blur-sm rounded-full border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <div className="text-[#0E74D2] dark:text-blue-400">{stat.icon}</div>
                   <div className="text-left">
-                    <div className="text-2xl font-bold text-[#1a1a1a] dark:text-gray-100">{stat.value}</div>
-                    <div className="text-xs text-[#7a7a7a] dark:text-gray-400">{stat.label}</div>
+                    <div className="text-apple-title-1 font-semibold text-[#1a1a1a] dark:text-gray-100">{stat.value}</div>
+                    <div className="text-apple-footnote text-[#7a7a7a] dark:text-gray-400">{stat.label}</div>
                   </div>
                 </div>
               ))}
@@ -93,10 +93,10 @@ export default function AboutPage() {
                 <div className="space-y-6">
                   {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full">
                     <Compass className="w-5 h-5 text-[#0E74D2]" />
-                    <span className="text-sm font-medium text-[#0E74D2]">Our Mission</span>
+                    <span className="text-apple-callout font-medium text-[#0E74D2]">Our Mission</span>
                   </div> */}
-                  <h2 className="text-4xl font-light text-[#1a1a1a] dark:text-gray-100">Guiding Your Path to Success</h2>
-                  <p className="text-lg text-[#5a5a5a] dark:text-gray-400 leading-relaxed">
+                  <h2 className="text-apple-display-medium font-light text-[#1a1a1a] dark:text-gray-100">Guiding Your Path to Success</h2>
+                  <p className="text-apple-body text-[#5a5a5a] dark:text-gray-400 leading-relaxed">
                     We exist to democratize access to quality education. Through personalized counseling,
                     strategic planning, and unwavering support, we ensure every student finds their perfect
                     institutional match—regardless of their background or circumstances.
@@ -120,7 +120,7 @@ export default function AboutPage() {
                     <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800" alt="Students studying" className="w-full h-[500px] object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0E74D2]/80 via-transparent to-transparent"></div>
                     <div className="absolute bottom-8 left-8 right-8 text-white">
-                      <div className="text-2xl font-medium mb-2">Empowering 10,000+ Students</div>
+                      <div className="text-apple-title-1 font-medium mb-2">Empowering 10,000+ Students</div>
                       <div className="text-white/80">Since 2009</div>
                     </div>
                   </div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
                     <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80" alt="Future vision" className="w-full h-[500px] object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a5ba8]/80 via-transparent to-transparent"></div>
                     <div className="absolute bottom-8 left-8 right-8 text-white">
-                      <div className="text-2xl font-medium mb-2">Shaping Tomorrow's Leaders</div>
+                      <div className="text-apple-title-1 font-medium mb-2">Shaping Tomorrow's Leaders</div>
                       <div className="text-white/80">One Student at a Time</div>
                     </div>
                   </div>
@@ -143,10 +143,10 @@ export default function AboutPage() {
                 <div className="space-y-6 lg:order-1">
                   {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full">
                     <Target className="w-5 h-5 text-[#0E74D2]" />
-                    <span className="text-sm font-medium text-[#0E74D2]">Our Vision</span>
+                    <span className="text-apple-callout font-medium text-[#0E74D2]">Our Vision</span>
                   </div> */}
-                  <h2 className="text-4xl font-light text-[#1a1a1a] dark:text-gray-100">Building India's Educational Future</h2>
-                  <p className="text-lg text-[#5a5a5a] dark:text-gray-400 leading-relaxed">
+                  <h2 className="text-apple-display-medium font-light text-[#1a1a1a] dark:text-gray-100">Building India's Educational Future</h2>
+                  <p className="text-apple-body text-[#5a5a5a] dark:text-gray-400 leading-relaxed">
                     To become India's most trusted educational consultancy—where transparency meets excellence,
                     and every student discovers their true potential. We envision a future where quality
                     education is accessible to all, barriers are dismantled, and dreams become degrees.
@@ -160,7 +160,7 @@ export default function AboutPage() {
                     ].map((item, i) => (
                       <div key={i} className="flex items-center gap-3 p-4 bg-[#0E74D2]/5 dark:bg-blue-500/10 rounded-xl">
                         <div className="text-[#0E74D2] dark:text-blue-400">{item.icon}</div>
-                        <span className="text-sm font-medium text-[#1a1a1a] dark:text-gray-200">{item.text}</span>
+                        <span className="text-apple-callout font-medium text-[#1a1a1a] dark:text-gray-200">{item.text}</span>
                       </div>
                     ))}
                   </div>
@@ -173,10 +173,10 @@ export default function AboutPage() {
                 <div className="text-center mb-12">
                   {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full mb-4">
                     <HeartHandshake className="w-5 h-5 text-[#0E74D2]" />
-                    <span className="text-sm font-medium text-[#0E74D2]">Our Core Values</span>
+                    <span className="text-apple-callout font-medium text-[#0E74D2]">Our Core Values</span>
                   </div> */}
-                  <h2 className="text-4xl font-light text-[#1a1a1a] dark:text-gray-100 mb-4">What Drives Us Every Day</h2>
-                  <p className="text-lg text-[#5a5a5a] dark:text-gray-400 max-w-2xl mx-auto">
+                  <h2 className="text-apple-display-medium font-light text-[#1a1a1a] dark:text-gray-100 mb-4">What Drives Us Every Day</h2>
+                  <p className="text-apple-body text-[#5a5a5a] dark:text-gray-400 max-w-2xl mx-auto">
                     Our values aren't just words on a page—they're the foundation of every interaction,
                     every decision, and every success story we create.
                   </p>
@@ -220,8 +220,8 @@ export default function AboutPage() {
                         <div className="w-16 h-16 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-2xl flex items-center justify-center text-[#0E74D2] dark:text-blue-400 mb-6 group-hover:bg-[#0E74D2] dark:group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition-all duration-500">
                           {value.icon}
                         </div>
-                        <h3 className="text-xl font-semibold text-[#1a1a1a] dark:text-gray-100 mb-3">{value.title}</h3>
-                        <p className="text-[#5a5a5a] dark:text-gray-400 text-sm leading-relaxed">{value.desc}</p>
+                        <h3 className="text-apple-title-2 font-semibold text-[#1a1a1a] dark:text-gray-100 mb-3">{value.title}</h3>
+                        <p className="text-[#5a5a5a] dark:text-gray-400 text-apple-callout leading-relaxed">{value.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -237,8 +237,8 @@ export default function AboutPage() {
 
           <div className="relative max-w-6xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-20">
-              <h2 className="text-4xl lg:text-5xl font-light text-[#1a1a1a] dark:text-gray-100 mb-4">Our Growth Story</h2>
-              <p className="text-[#5a5a5a] dark:text-gray-400 text-lg">15+ years of transforming educational dreams into reality</p>
+              <h2 className="text-apple-display-medium lg:text-apple-display font-light text-[#1a1a1a] dark:text-gray-100 mb-4">Our Growth Story</h2>
+              <p className="text-[#5a5a5a] dark:text-gray-400 text-apple-body">15+ years of transforming educational dreams into reality</p>
             </div>
 
             <div className="relative">
@@ -286,10 +286,10 @@ export default function AboutPage() {
                     <div className={`w-full lg:w-[calc(50%-60px)] ${milestone.align === 'right' ? 'lg:ml-[60px]' : 'lg:mr-[60px]'}`}>
                       <div className="group bg-white dark:bg-black rounded-3xl p-8 border border-gray-100 dark:border-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                         <div className="flex items-center gap-4 mb-4">
-                          <div className="px-4 py-2 bg-[#0E74D2] text-white text-sm font-bold rounded-full">{milestone.year}</div>
+                          <div className="px-4 py-2 bg-[#0E74D2] text-white text-apple-callout font-semibold rounded-full">{milestone.year}</div>
                           <div className="flex-1 h-px bg-gradient-to-r from-[#0E74D2] to-transparent"></div>
                         </div>
-                        <h3 className="text-2xl font-semibold text-[#1a1a1a] dark:text-gray-100 mb-3">{milestone.title}</h3>
+                        <h3 className="text-apple-title-1 font-semibold text-[#1a1a1a] dark:text-gray-100 mb-3">{milestone.title}</h3>
                         <p className="text-[#5a5a5a] dark:text-gray-400 leading-relaxed">{milestone.desc}</p>
                       </div>
                     </div>
@@ -308,12 +308,12 @@ export default function AboutPage() {
 
           <div className="relative max-w-5xl mx-auto px-6 text-center">
 
-            <h2 className="text-4xl lg:text-6xl font-light text-white mb-6 leading-tight">
+            <h2 className="text-apple-display-medium lg:text-apple-display-large font-light text-white mb-6 leading-tight">
               Your Dream College
               <span className="block mt-2 font-medium">Is Just a Call Away</span>
             </h2>
 
-            <p className="text-white/90 text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-white/90 text-apple-title-2 mb-12 max-w-3xl mx-auto leading-relaxed">
               Join 10,000+ students who trusted Al Huda to turn their educational aspirations into reality.
               Free expert counseling, 24/7 support, 98% success rate.
             </p>
@@ -330,7 +330,7 @@ export default function AboutPage() {
             </div> */}
 
             {/* Trust Indicators */}
-            {/* <div className="flex flex-wrap justify-center gap-8 mt-16 text-white/80 text-sm">
+            {/* <div className="flex flex-wrap justify-center gap-8 mt-16 text-white/80 text-apple-callout">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5" />
                 <span>100% Free Service</span>

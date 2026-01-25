@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
             <Quote className="w-4 h-4 text-[#0E74D2]" />
             <span className="text-[#0E74D2] text-sm font-medium">Student Testimonials</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-4 text-balance">
+          <h2 className="text-3xl md:text-apple-display-medium font-semibold text-[#1a365d] mb-4 text-balance">
             Success Stories from Our Students
           </h2>
           <p className="text-[#4a5568] max-w-2xl mx-auto text-pretty">
@@ -163,7 +163,7 @@ export default function TestimonialsSection() {
           <div className="flex flex-col gap-6">
             {/* Stats Card */}
             <div className="bg-[#f0f7ff] rounded-2xl p-6 border border-[rgba(14,116,210,0.1)]">
-              <div className="text-[#0E74D2] text-4xl font-bold mb-2">10,000+</div>
+              <div className="text-[#0E74D2] text-apple-display-medium font-semibold mb-2">10,000+</div>
               <div className="text-[#1a365d] font-semibold mb-1">Students Guided</div>
               <p className="text-[#4a5568] text-sm">Successfully placed in top institutions across India</p>
             </div>

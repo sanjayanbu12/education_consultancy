@@ -82,10 +82,10 @@ export default function ContactSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 dark:bg-blue-500/20 rounded-full mb-4">
             <Phone className="w-4 h-4 text-[#0E74D2] dark:text-blue-400" />
-            <span className="text-[#0E74D2] dark:text-blue-400 text-sm font-medium">Get In Touch</span>
+            <span className="text-[#0E74D2] dark:text-blue-400 text-apple-callout font-semibold">Get In Touch</span>
           </div> */}
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">Start Your Journey Today</h2>
-          <p className="text-[#4a5568] dark:text-gray-400 text-lg">
+          <h2 className="text-apple-display-medium md:text-apple-display font-semibold text-[#1a365d] dark:text-gray-100 mb-4">Start Your Journey Today</h2>
+          <p className="text-[#4a5568] dark:text-gray-400 text-apple-body">
             Ready to take the first step? Contact us for free consultation and personalized guidance.
           </p>
         </div>
@@ -102,9 +102,9 @@ export default function ContactSection() {
               <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-[#0E74D2] transition-colors">
                 <Phone className="w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Call Us Anytime</h3>
+              <h3 className="text-apple-title-2 font-semibold mb-2">Call Us Anytime</h3>
               <p className="text-blue-100 mb-4">24/7 Admission Helpline</p>
-              <div className="text-3xl font-bold">+91 9578599785</div>
+              <div className="text-apple-display-small font-semibold">+91 9578599785</div>
             </a>
 
             {/* Email Card */}
@@ -115,21 +115,21 @@ export default function ContactSection() {
               <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-[#1a365d] transition-colors">
                 <Mail className="w-7 h-7" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Email Us</h3>
-              <p className="text-blue-200 text-sm break-all">alhudaeducationalconsultant@gmail.com</p>
+              <h3 className="text-apple-title-2 font-semibold mb-2">Email Us</h3>
+              <p className="text-blue-200 text-apple-callout break-all">alhudaeducationalconsultant@gmail.com</p>
             </a>
 
             {/* Info Cards Row */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-[#f8fafc] dark:bg-black rounded-2xl p-5 border border-gray-100 dark:border-gray-800">
                 <MapPin className="w-6 h-6 text-[#0E74D2] dark:text-blue-400 mb-3" />
-                <h4 className="font-semibold text-[#1a365d] dark:text-gray-100 text-sm mb-1">Location</h4>
-                <p className="text-[#4a5568] dark:text-gray-400 text-xs">Coimbatore, Tamil Nadu</p>
+                <h4 className="font-semibold text-[#1a365d] dark:text-gray-100 text-apple-callout mb-1">Location</h4>
+                <p className="text-[#4a5568] dark:text-gray-400 text-apple-footnote">Coimbatore, Tamil Nadu</p>
               </div>
               <div className="bg-[#f8fafc] dark:bg-black rounded-2xl p-5 border border-gray-100 dark:border-gray-800">
                 <Clock className="w-6 h-6 text-[#0E74D2] dark:text-blue-400 mb-3" />
-                <h4 className="font-semibold text-[#1a365d] dark:text-gray-100 text-sm mb-1">Available</h4>
-                <p className="text-[#4a5568] dark:text-gray-400 text-xs">24 Hours / 7 Days</p>
+                <h4 className="font-semibold text-[#1a365d] dark:text-gray-100 text-apple-callout mb-1">Available</h4>
+                <p className="text-[#4a5568] dark:text-gray-400 text-apple-footnote">24 Hours / 7 Days</p>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function ContactSection() {
           {/* Right - Contact Form (3 columns) */}
           <div className="lg:col-span-3">
             <div className="bg-[#f8fafc] dark:bg-black rounded-3xl p-8 md:p-10 border border-gray-100 dark:border-gray-800">
-              <h3 className="text-2xl font-bold text-[#1a365d] dark:text-gray-100 mb-2">Send Us a Message</h3>
+              <h3 className="text-apple-title-1 font-semibold text-[#1a365d] dark:text-gray-100 mb-2">Send Us a Message</h3>
               <p className="text-[#4a5568] dark:text-gray-400 mb-8">
                 Fill out the form and our team will get back to you within 24 hours.
               </p>
@@ -147,7 +147,7 @@ export default function ContactSection() {
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
                     <CheckCircle className="w-8 h-8 text-green-600" />
                   </div>
-                  <h4 className="text-xl font-bold text-[#1a365d] dark:text-gray-100 mb-2">Message Sent!</h4>
+                  <h4 className="text-apple-title-2 font-semibold text-[#1a365d] dark:text-gray-100 mb-2">Message Sent!</h4>
                   <p className="text-[#4a5568]">We'll get back to you shortly.</p>
                 </div>
               ) : error ? (
@@ -155,7 +155,7 @@ export default function ContactSection() {
                   <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
                     <AlertCircle className="w-8 h-8 text-red-600" />
                   </div>
-                  <h4 className="text-xl font-bold text-[#1a365d] dark:text-gray-100 mb-2">Oops!</h4>
+                  <h4 className="text-apple-title-2 font-semibold text-[#1a365d] dark:text-gray-100 mb-2">Oops!</h4>
                   <p className="text-[#4a5568] mb-4">{error}</p>
                   <button
                     onClick={() => setError("")}
@@ -168,7 +168,7 @@ export default function ContactSection() {
                 <div className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-sm font-medium text-[#1a365d] dark:text-gray-100 mb-2">
+                      <label className="block text-apple-callout font-semibold text-[#1a365d] dark:text-gray-100 mb-2">
                         Full Name <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -182,7 +182,7 @@ export default function ContactSection() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-[#1a365d] dark:text-gray-100 mb-2">
+                      <label className="block text-apple-callout font-semibold text-[#1a365d] dark:text-gray-100 mb-2">
                         Phone Number <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -198,7 +198,7 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#1a365d] dark:text-gray-100 mb-2">
+                    <label className="block text-apple-callout font-semibold text-[#1a365d] dark:text-gray-100 mb-2">
                       Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -213,7 +213,7 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#1a365d] dark:text-gray-100 mb-2">Interested Course</label>
+                    <label className="block text-apple-callout font-semibold text-[#1a365d] dark:text-gray-100 mb-2">Interested Course</label>
                     <select
                       value={formState.course}
                       onChange={(e) => setFormState({ ...formState, course: e.target.value })}
@@ -232,7 +232,7 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-[#1a365d] dark:text-gray-100 mb-2">Your Message</label>
+                    <label className="block text-apple-callout font-semibold text-[#1a365d] dark:text-gray-100 mb-2">Your Message</label>
                     <textarea
                       rows={4}
                       value={formState.message}

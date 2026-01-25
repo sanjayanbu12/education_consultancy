@@ -46,9 +46,9 @@ export default function WhyChooseUsSection() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0E74D2]/10 rounded-full mb-4">
             <Target className="w-4 h-4 text-[#0E74D2]" />
-            <span className="text-[#0E74D2] text-sm font-medium">Why AL-HUDA?</span>
+            <span className="text-[#0E74D2] text-apple-callout font-medium">Why AL-HUDA?</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-4 text-balance">
+          <h2 className="text-apple-display-small md:text-apple-display-medium font-semibold text-[#1a365d] mb-4 text-balance">
             Your Success is Our Mission
           </h2>
           <p className="text-[#4a5568] max-w-2xl mx-auto text-pretty">
@@ -65,7 +65,7 @@ export default function WhyChooseUsSection() {
               <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
                 <Lightbulb className="w-7 h-7 text-[#60a5fa]" />
               </div>
-              <h3 className="text-white text-2xl md:text-3xl font-bold mb-4 text-balance">
+              <h3 className="text-white text-apple-title-1 md:text-apple-display-small font-semibold mb-4 text-balance">
                 Guiding Students to Their Perfect Academic Path
               </h3>
               <p className="text-white/70 leading-relaxed mb-6 text-pretty">
@@ -77,7 +77,7 @@ export default function WhyChooseUsSection() {
                 {highlights.map((item, index) => (
                   <div key={index} className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-[#60a5fa] flex-shrink-0" />
-                    <span className="text-white/80 text-sm">{item}</span>
+                    <span className="text-white/80 text-apple-callout">{item}</span>
                   </div>
                 ))}
               </div>
@@ -89,10 +89,10 @@ export default function WhyChooseUsSection() {
             {/* CTA Card */}
             <div className="bg-[#0E74D2] rounded-3xl p-6 text-center">
               <h4 className="text-white font-semibold mb-2">Ready to Start?</h4>
-              <p className="text-white/80 text-sm mb-4">Get free counseling today</p>
+              <p className="text-white/80 text-apple-callout mb-4">Get free counseling today</p>
               <a
                 href="tel:9578599785"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0E74D2] rounded-full font-medium text-sm hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0E74D2] rounded-full font-medium text-apple-callout hover:bg-gray-100 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 9578599785
@@ -101,14 +101,14 @@ export default function WhyChooseUsSection() {
 
             {/* Quote Card */}
             <div className="flex-1 bg-white rounded-3xl p-6 border border-[rgba(14,116,210,0.1)] shadow-sm">
-              <div className="text-4xl text-[#0E74D2] mb-3">"</div>
+              <div className="text-apple-display-medium text-[#0E74D2] mb-3">"</div>
               <p className="text-[#1a365d] italic leading-relaxed text-pretty">
                 We help students choose the course and institution that matches their personal circumstances, while
                 taking their career objectives into consideration.
               </p>
               <div className="mt-4 pt-4 border-t border-gray-100">
                 <div className="text-[#1a365d] font-semibold">AL-HUDA Team</div>
-                <div className="text-[#4a5568] text-sm">Educational Consultants</div>
+                <div className="text-[#4a5568] text-apple-callout">Educational Consultants</div>
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function WhyChooseUsSection() {
                   {reason.icon}
                 </div>
                 <h4 className="text-[#1a365d] font-semibold mb-2">{reason.title}</h4>
-                <p className="text-[#4a5568] text-sm leading-relaxed">{reason.description}</p>
+                <p className="text-[#4a5568] text-apple-callout leading-relaxed">{reason.description}</p>
               </div>
             ))}
           </div>

@@ -85,9 +85,9 @@ export default function ServicesGridSection() {
         <div className="max-w-3xl mb-16">
           {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
             <span className="w-1.5 h-1.5 bg-[#0E74D2] rounded-full"></span>
-            <span className="text-[#0E74D2] text-sm font-medium">Our Services</span>
+            <span className="text-[#0E74D2] text-apple-callout font-semibold">Our Services</span>
           </div> */}
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">Comprehensive Educational Guidance</h2>
+          <h2 className="text-apple-display-medium md:text-apple-display font-semibold text-[#1a365d] dark:text-gray-100 mb-4">Comprehensive Educational Guidance</h2>
           <p className="text-[#4a5568] dark:text-gray-400 text-lg">
             From course selection to career placement, we guide students through every step of their educational journey
             with expert advice and personalized support.
@@ -111,11 +111,11 @@ export default function ServicesGridSection() {
                 {service.icon}
               </div>
 
-              <h3 className="text-xl font-bold text-[#1a365d] dark:text-gray-100 mb-3 group-hover:text-[#0E74D2] dark:group-hover:text-blue-400 transition-colors">
+              <h3 className="text-apple-title-2 font-semibold text-[#1a365d] dark:text-gray-100 mb-3 group-hover:text-[#0E74D2] dark:group-hover:text-blue-400 transition-colors">
                 {service.title}
               </h3>
 
-              <p className="text-[#4a5568] dark:text-gray-400 text-sm leading-relaxed mb-6">{service.description}</p>
+              <p className="text-[#4a5568] dark:text-gray-400 text-apple-callout mb-6">{service.description}</p>
 
               {/* Course Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
@@ -130,7 +130,7 @@ export default function ServicesGridSection() {
               </div>
 
               {/* Explore Link */}
-              <div className="flex items-center gap-2 text-[#0E74D2] dark:text-blue-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="flex items-center gap-2 text-[#0E74D2] dark:text-blue-400 text-apple-callout font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
                 Explore Courses <ArrowUpRight className="w-4 h-4" />
               </div>
 
@@ -151,7 +151,7 @@ export default function ServicesGridSection() {
         <div className="bg-gradient-to-br from-[#1a365d] to-[#0E74D2] dark:from-gray-800 dark:to-black rounded-3xl p-8 md:p-12">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-2">Additional Services</h3>
+              <h3 className="text-2xl font-semibold text-white mb-2">Additional Services</h3>
               <p className="text-blue-200">Beyond admissions - complete educational support</p>
             </div>
             <div className="px-5 py-2.5 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">

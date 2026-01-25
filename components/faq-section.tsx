@@ -53,7 +53,7 @@ export default function FAQSection() {
               <HelpCircle className="w-4 h-4 text-[#0E74D2] dark:text-blue-400" />
               <span className="text-[#0E74D2] dark:text-blue-400 text-sm font-medium">FAQs</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] dark:text-gray-100 mb-4 text-balance">
+            <h2 className="text-3xl md:text-apple-display-medium font-semibold text-[#1a365d] dark:text-gray-100 mb-4 text-balance">
               Frequently Asked Questions
             </h2>
             <p className="text-[#4a5568] dark:text-gray-400 leading-relaxed mb-8 text-pretty">

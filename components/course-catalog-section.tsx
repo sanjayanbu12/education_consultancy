@@ -25,14 +25,14 @@ export default function CourseCatalogSection() {
         <div className="text-center mb-16">
 
 
-          <h2 className="text-5xl lg:text-6xl font-light text-[#1a1a1a] dark:text-gray-100 mb-6">
+          <h2 className="text-apple-display lg:text-apple-display-large text-[#1a1a1a] dark:text-gray-100 mb-6">
             Find Your Perfect
-            <span className="block mt-2 font-medium bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-[#0E74D2] to-[#0a5ba8] bg-clip-text text-transparent">
               Academic Path
             </span>
           </h2>
 
-          <p className="text-xl text-[#5a5a5a] dark:text-gray-400 max-w-2xl mx-auto font-light">
+          <p className="text-apple-body text-[#5a5a5a] dark:text-gray-400 max-w-2xl mx-auto">
             Discover programs tailored to your aspirations across Medicine, Engineering, Commerce, and more
           </p>
 
@@ -45,7 +45,7 @@ export default function CourseCatalogSection() {
             ].map((stat, i) => (
               <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-black rounded-full shadow-md border border-gray-100 dark:border-gray-800">
                 <div className="text-[#0E74D2] dark:text-blue-400">{stat.icon}</div>
-                <span className="text-sm font-medium text-[#1a1a1a] dark:text-gray-200">{stat.label}</span>
+                <span className="text-apple-callout font-semibold text-[#1a1a1a] dark:text-gray-200">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -116,7 +116,7 @@ export default function CourseCatalogSection() {
 
         {/* Results Count */}
         <div className="mb-4">
-          <p className="text-sm text-[#5a5a5a] dark:text-gray-400">
+          <p className="text-apple-callout text-[#5a5a5a] dark:text-gray-400">
             <span className="font-semibold text-[#1a1a1a] dark:text-gray-200">{filteredCourses.length}</span> programs found
           </p>
         </div>
@@ -139,7 +139,7 @@ export default function CourseCatalogSection() {
                   className="bg-white dark:bg-black rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-[#0E74D2]/30 dark:hover:border-blue-500/30 hover:shadow-lg cursor-pointer relative transition-all duration-300"
                 >
                   {course.popular && (
-                    <div className="absolute -top-2 -right-2 px-2 py-0.5 bg-amber-400 text-white text-xs font-semibold rounded-full shadow">
+                    <div className="absolute -top-2 -right-2 px-2 py-0.5 bg-amber-400 text-white text-apple-footnote font-semibold rounded-full shadow">
                       Popular
                     </div>
                   )}
@@ -161,17 +161,17 @@ export default function CourseCatalogSection() {
                     >
                       <BookOpen className="w-5 h-5" />
                     </div>
-                    <span className={`text-xs font-medium px-2 py-1 rounded ${course.type === "PG" ? "bg-purple-100 text-purple-700" : "bg-blue-100 text-blue-700"
+                    <span className={`text-apple-footnote font-semibold px-2 py-1 rounded ${course.type === "PG" ? "bg-purple-100 text-purple-700" : "bg-blue-100 text-blue-700"
                       }`}>
                       {course.type}
                     </span>
                   </div>
 
-                  <h3 className="font-semibold text-[#1a1a1a] dark:text-gray-100 mb-3 text-sm leading-tight">
+                  <h3 className="text-apple-callout font-semibold text-[#1a1a1a] dark:text-gray-100 mb-3 leading-tight">
                     {course.name}
                   </h3>
 
-                  <div className="space-y-1.5 mb-3 text-xs text-[#5a5a5a] dark:text-gray-400">
+                  <div className="space-y-1.5 mb-3 text-apple-footnote text-[#5a5a5a] dark:text-gray-400">
                     <div className="flex items-center gap-1.5">
                       <Clock className="w-3.5 h-3.5" />
                       <span>{course.duration}</span>
@@ -186,7 +186,7 @@ export default function CourseCatalogSection() {
                     </div>
                   </div>
 
-                  <div className="pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-[#0E74D2] dark:text-blue-400 text-xs font-medium">
+                  <div className="pt-3 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-[#0E74D2] dark:text-blue-400 text-apple-footnote font-semibold">
                     <span>View Details</span>
                     <ChevronRight className="w-4 h-4" />
                   </div>
@@ -233,17 +233,17 @@ export default function CourseCatalogSection() {
 
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-2 mb-2">
-                      <h3 className="font-semibold text-[#1a1a1a] dark:text-gray-100 text-base">
+                      <h3 className="text-apple-subheadline text-[#1a1a1a] dark:text-gray-100">
                         {course.name}
                       </h3>
                       {course.popular && (
-                        <span className="px-2 py-0.5 bg-amber-400 text-white text-xs font-semibold rounded whitespace-nowrap">
+                        <span className="px-2 py-0.5 bg-amber-400 text-white text-apple-footnote font-semibold rounded whitespace-nowrap">
                           Popular
                         </span>
                       )}
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-4 text-xs text-[#5a5a5a] dark:text-gray-400">
+                    <div className="flex flex-wrap items-center gap-4 text-apple-footnote text-[#5a5a5a] dark:text-gray-400">
                       <div className="flex items-center gap-1">
                         <Clock className="w-3.5 h-3.5" />
                         <span>{course.duration}</span>
@@ -260,14 +260,14 @@ export default function CourseCatalogSection() {
                         <Award className="w-3.5 h-3.5" />
                         <span>{course.category}</span>
                       </div>
-                      <span className={`px-2 py-0.5 rounded text-xs font-medium ${course.type === "PG" ? "bg-purple-100 text-purple-700" : "bg-blue-100 text-blue-700"
+                      <span className={`px-2 py-0.5 rounded text-apple-footnote font-semibold ${course.type === "PG" ? "bg-purple-100 text-purple-700" : "bg-blue-100 text-blue-700"
                         }`}>
                         {course.type}
                       </span>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 text-[#0E74D2] dark:text-blue-400 text-xs font-medium sm:flex-shrink-0">
+                  <div className="flex items-center gap-2 text-[#0E74D2] dark:text-blue-400 text-apple-footnote font-semibold sm:flex-shrink-0">
                     <span className="hidden sm:inline">Details</span>
                     <ChevronRight className="w-4 h-4" />
                   </div>

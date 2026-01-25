@@ -61,10 +61,10 @@ export default function TestimonialsGridSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
             <Star className="w-4 h-4 text-[#0E74D2]" />
-            <span className="text-[#0E74D2] text-sm font-medium">Success Stories</span>
+            <span className="text-[#0E74D2] text-apple-callout font-medium">Success Stories</span>
           </div> */}
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100 mb-4">What Our Students Say</h2>
-          <p className="text-[#4a5568] dark:text-gray-400 text-lg">
+          <h2 className="text-apple-display-medium md:text-apple-display font-semibold text-[#1a365d] dark:text-gray-100 mb-4">What Our Students Say</h2>
+          <p className="text-[#4a5568] dark:text-gray-400 text-apple-body">
             Join thousands of students who found their perfect educational path with our guidance
           </p>
         </div>
@@ -90,19 +90,19 @@ export default function TestimonialsGridSection() {
               </div>
 
               {/* Testimonial Text */}
-              <p className={`text-[#4a5568] dark:text-gray-400 leading-relaxed mb-6 ${testimonial.featured ? "text-lg" : ""}`}>
+              <p className={`text-[#4a5568] dark:text-gray-400 leading-relaxed mb-6 ${testimonial.featured ? "text-apple-body" : ""}`}>
                 "{testimonial.text}"
               </p>
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#0E74D2] to-[#0a5ba8] rounded-full flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#0E74D2] to-[#0a5ba8] rounded-full flex items-center justify-center text-white font-semibold">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
                   <div className="font-semibold text-[#1a365d] dark:text-gray-100">{testimonial.name}</div>
-                  <div className="text-sm text-[#4a5568] dark:text-gray-400">{testimonial.course}</div>
-                  <div className="text-xs text-[#0E74D2] dark:text-blue-400">{testimonial.college}</div>
+                  <div className="text-apple-callout text-[#4a5568] dark:text-gray-400">{testimonial.course}</div>
+                  <div className="text-apple-footnote text-[#0E74D2] dark:text-blue-400">{testimonial.college}</div>
                 </div>
               </div>
 
@@ -128,8 +128,8 @@ export default function TestimonialsGridSection() {
             { value: "100%", label: "Free Services" },
           ].map((stat, index) => (
             <div key={index} className="text-center p-6 bg-white dark:bg-zinc-900 rounded-2xl border border-gray-100 dark:border-gray-700">
-              <div className="text-3xl font-bold text-[#0E74D2] dark:text-blue-400 mb-1">{stat.value}</div>
-              <div className="text-sm text-[#4a5568] dark:text-gray-400">{stat.label}</div>
+              <div className="text-apple-display-small font-semibold text-[#0E74D2] dark:text-blue-400 mb-1">{stat.value}</div>
+              <div className="text-apple-callout text-[#4a5568] dark:text-gray-400">{stat.label}</div>
             </div>
           ))}
         </div>

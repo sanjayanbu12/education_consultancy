@@ -56,12 +56,12 @@ export default function WhyUsSection() {
           <div>
             {/* <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#0E74D2]/10 rounded-full mb-4">
               <Sparkles className="w-4 h-4 text-[#0E74D2]" />
-              <span className="text-[#0E74D2] text-sm font-medium">Why Choose Us</span>
+              <span className="text-[#0E74D2] text-apple-callout font-medium">Why Choose Us</span>
             </div> */}
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1a365d] dark:text-gray-100">Your Success is Our Mission</h2>
+            <h2 className="text-apple-display-medium md:text-apple-display font-semibold text-[#1a365d] dark:text-gray-100">Your Success is Our Mission</h2>
           </div>
           <div>
-            <p className="text-[#4a5568] dark:text-gray-400 text-lg">
+            <p className="text-[#4a5568] dark:text-gray-400 text-apple-body">
               We go beyond traditional consulting to provide comprehensive support that considers your academic
               background, career aspirations, and financial situation.
             </p>
@@ -82,12 +82,12 @@ export default function WhyUsSection() {
                   {reason.icon}
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-[#0E74D2] dark:text-blue-400">{reason.stat}</div>
-                  <div className="text-xs text-[#4a5568] dark:text-gray-400">{reason.statLabel}</div>
+                  <div className="text-apple-title-1 font-semibold text-[#0E74D2] dark:text-blue-400">{reason.stat}</div>
+                  <div className="text-apple-footnote text-[#4a5568] dark:text-gray-400">{reason.statLabel}</div>
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-[#1a365d] dark:text-gray-100 mb-3 group-hover:text-[#0E74D2] dark:group-hover:text-blue-400 transition-colors">
+              <h3 className="text-apple-title-2 font-semibold text-[#1a365d] dark:text-gray-100 mb-3 group-hover:text-[#0E74D2] dark:group-hover:text-blue-400 transition-colors">
                 {reason.title}
               </h3>
               <p className="text-[#4a5568] dark:text-gray-400 leading-relaxed">{reason.description}</p>
@@ -105,8 +105,8 @@ export default function WhyUsSection() {
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a365d]/90 via-[#1a365d]/60 to-transparent"></div>
           <div className="absolute inset-0 flex items-center">
             <div className="px-8 md:px-12 max-w-xl">
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Expert Guidance Every Step of the Way</h3>
-              <p className="text-white/80 mb-6 text-lg">
+              <h3 className="text-apple-display-small md:text-apple-display-medium font-semibold text-white mb-4">Expert Guidance Every Step of the Way</h3>
+              <p className="text-white/80 mb-6 text-apple-body">
                 Our experienced counselors provide personalized support to help you make the right educational
                 decisions.
               </p>

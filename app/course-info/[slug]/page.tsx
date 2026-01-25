@@ -38,7 +38,7 @@ export default function CourseInfoPage({ params }: any) {
           </div> */}
 
           {/* Title */}
-          <h1 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#1a365d] dark:text-gray-100">
+          <h1 className="mt-4 text-4xl md:text-5xl lg:text-apple-display-large font-semibold leading-tight text-[#1a365d] dark:text-gray-100">
             {course.title.split("–")[0].trim()}
             <br />
             {course.title.split("–")[1] && (
@@ -49,7 +49,7 @@ export default function CourseInfoPage({ params }: any) {
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-3 text-base md:text-lg text-[#4a5568] dark:text-gray-400 max-w-2xl leading-relaxed">
+          <p className="mt-3 text-apple-body md:text-apple-body text-[#4a5568] dark:text-gray-400 max-w-2xl leading-relaxed">
             {course.subtitle}
           </p>
         </div>
@@ -63,12 +63,12 @@ export default function CourseInfoPage({ params }: any) {
 
           <div className="absolute left-0 top-0 w-1.5 h-full bg-[#0E74D2]/70 rounded-l-2xl" />
 
-          <div className="flex items-center gap-2 text-lg font-semibold text-[#1a365d] dark:text-gray-100 mb-4">
+          <div className="flex items-center gap-2 text-apple-body font-semibold text-[#1a365d] dark:text-gray-100 mb-4">
             <Menu className="w-5 h-5 text-[#0E74D2]" />
             Key Sections
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-[#4a5568] dark:text-gray-400">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-apple-callout text-[#4a5568] dark:text-gray-400">
             {[
               "Overview",
               "Eligibility",
@@ -128,7 +128,7 @@ export default function CourseInfoPage({ params }: any) {
 
         {/* CAREER */}
         <Section title="Career Opportunities">
-          <ul className="space-y-2 text-lg text-[#4a5568] dark:text-gray-400">
+          <ul className="space-y-2 text-apple-body text-[#4a5568] dark:text-gray-400">
             {course.careers.map((c: string, i: number) => (
               <li key={i} className="flex items-start gap-2">
                 <span className="w-2 h-2 mt-2 rounded-full bg-[#0E74D2]" />
@@ -156,7 +156,7 @@ export default function CourseInfoPage({ params }: any) {
       <div className="max-w-5xl mx-auto px-6 mt-20 mb-20">
         <div className="p-8 bg-white dark:bg-black rounded-2xl shadow-md border border-[#0E74D2]/10 dark:border-gray-800 relative">
 
-          <h2 className="text-2xl font-bold text-[#1a365d] dark:text-gray-100">
+          <h2 className="text-apple-title-1 font-semibold text-[#1a365d] dark:text-gray-100">
             Need Personalized Guidance?
           </h2>
 
@@ -167,14 +167,14 @@ export default function CourseInfoPage({ params }: any) {
           <div className="mt-6 flex gap-3">
             <a
               href="tel:9578599785"
-              className="px-6 py-2.5 rounded-full bg-[#0E74D2] text-white text-sm shadow hover:bg-[#0a5ba8]"
+              className="px-6 py-2.5 rounded-full bg-[#0E74D2] text-white text-apple-callout shadow hover:bg-[#0a5ba8]"
             >
               Call Now
             </a>
 
             <a
               href="mailto:alhudaeducationalconsultant@gmail.com"
-              className="px-6 py-2.5 rounded-full border border-[#0E74D2] text-[#0E74D2] text-sm hover:bg-[#eef5ff]"
+              className="px-6 py-2.5 rounded-full border border-[#0E74D2] text-[#0E74D2] text-apple-callout hover:bg-[#eef5ff]"
             >
               Email Us
             </a>
@@ -192,7 +192,7 @@ export default function CourseInfoPage({ params }: any) {
 function Section({ title, children }: any) {
   return (
     <section className="space-y-4">
-      <h2 className="text-3xl font-bold text-[#1a365d] dark:text-gray-100">
+      <h2 className="text-apple-display-small font-semibold text-[#1a365d] dark:text-gray-100">
         {title}
       </h2>
       {children}
@@ -202,7 +202,7 @@ function Section({ title, children }: any) {
 
 function IntroParagraph({ text }: any) {
   return (
-    <p className="text-lg leading-relaxed text-[#4a5568] dark:text-gray-400">
+    <p className="text-apple-body leading-relaxed text-[#4a5568] dark:text-gray-400">
       <span className="float-left text-5xl mr-3 text-[#0E74D2]">
         {text.charAt(0)}
       </span>

@@ -114,7 +114,7 @@ export default function TopCollegesSection() {
                         <span>Premier Educational Institutions</span>
                     </div> */}
 
-                    <h2 className="text-5xl lg:text-6xl font-light text-[#1a1a1a] dark:text-gray-100 mb-6">
+                    <h2 className="text-apple-display lg:text-apple-display-large text-[#1a1a1a] dark:text-gray-100 mb-6">
                         Top Colleges in
                         <span className="block mt-2 font-medium bg-gradient-to-r from-[#0071E3] to-[#0077ED] bg-clip-text text-transparent">
                             India
@@ -151,11 +151,11 @@ export default function TopCollegesSection() {
                                                 </div>
                                                 <div className="flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-800">
                                                     <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
-                                                    <span className="text-xs font-bold text-amber-700 dark:text-amber-300">{college.rating}</span>
+                                                    <span className="text-apple-footnote font-semibold text-amber-700 dark:text-amber-300">{college.rating}</span>
                                                 </div>
                                             </div>
 
-                                            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-1 group-hover:text-[#0071E3] transition-colors">
+                                            <h3 className="text-apple-title-2 font-semibold text-gray-900 dark:text-gray-100 mb-1 group-hover:text-[#0071E3] transition-colors">
                                                 {college.name}
                                             </h3>
 
@@ -174,17 +174,17 @@ export default function TopCollegesSection() {
                                     <div className="grid grid-cols-3 gap-2 mb-4">
                                         <div className="text-center p-3 bg-gray-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700">
                                             <Calendar className="w-4 h-4 text-[#0071E3] mx-auto mb-1" />
-                                            <div className="text-xs font-bold text-gray-900 dark:text-gray-100">{college.established}</div>
+                                            <div className="text-apple-footnote font-semibold text-gray-900 dark:text-gray-100">{college.established}</div>
                                             <div className="text-[10px] text-gray-500 dark:text-gray-400">Est.</div>
                                         </div>
                                         <div className="text-center p-3 bg-gray-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700">
                                             <Users className="w-4 h-4 text-[#0071E3] mx-auto mb-1" />
-                                            <div className="text-xs font-bold text-gray-900 dark:text-gray-100">{college.students}</div>
+                                            <div className="text-apple-footnote font-semibold text-gray-900 dark:text-gray-100">{college.students}</div>
                                             <div className="text-[10px] text-gray-500 dark:text-gray-400">Students</div>
                                         </div>
                                         <div className="text-center p-3 bg-gray-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700">
                                             <Trophy className="w-4 h-4 text-[#0071E3] mx-auto mb-1" />
-                                            <div className="text-xs font-bold text-gray-900 dark:text-gray-100">{college.placement}</div>
+                                            <div className="text-apple-footnote font-semibold text-gray-900 dark:text-gray-100">{college.placement}</div>
                                             <div className="text-[10px] text-gray-500 dark:text-gray-400">Placed</div>
                                         </div>
                                     </div>
@@ -199,7 +199,7 @@ export default function TopCollegesSection() {
 
                                     {/* Highlights */}
                                     <div className="mb-4">
-                                        <h4 className="text-xs font-bold text-gray-900 dark:text-gray-100 mb-2.5 flex items-center gap-1.5">
+                                        <h4 className="text-apple-footnote font-semibold text-gray-900 dark:text-gray-100 mb-2.5 flex items-center gap-1.5">
                                             <TrendingUp className="w-3.5 h-3.5 text-[#0071E3]" />
                                             Key Highlights
                                         </h4>
@@ -219,7 +219,7 @@ export default function TopCollegesSection() {
 
                                     {/* Courses */}
                                     <div className="mb-5">
-                                        <h4 className="text-xs font-bold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-1.5">
+                                        <h4 className="text-apple-footnote font-semibold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-1.5">
                                             <GraduationCap className="w-3.5 h-3.5 text-[#0071E3]" />
                                             Courses Offered
                                         </h4>

@@ -65,10 +65,10 @@ export default function FacilitiesSection() {
             <Award className="w-4 h-4 text-[#0E74D2]" />
             <span className="text-[#0E74D2] text-sm font-medium">Our Facilities</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1a365d] mb-4 text-balance">
+          <h2 className="text-3xl md:text-apple-display-medium font-semibold text-[#1a365d] mb-4 text-balance">
             Comprehensive Support for Your Success
           </h2>
-          <p className="text-[#4a5568] max-w-3xl mx-auto text-lg italic text-pretty">
+          <p className="text-[#4a5568] max-w-3xl mx-auto text-apple-body italic text-pretty">
             "We help students choose the course and institution that matches their personal circumstances such as
             academic, employment and financial background."
           </p>
