@@ -12,15 +12,46 @@ export default function ContactSection() {
     course: "",
     message: "",
   })
+  const [fieldErrors, setFieldErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
 
   const handleSubmit = async () => {
+    // Reset field errors
+    setFieldErrors({ name: "", email: "", phone: "" })
+
     // Validation
-    if (!formState.name || !formState.email || !formState.phone) {
-      setError("Please fill in all required fields")
-      setTimeout(() => setError(""), 3000)
+    let hasErrors = false
+    const errors = { name: "", email: "", phone: "" }
+
+    if (!formState.name.trim()) {
+      errors.name = "Please enter your name"
+      hasErrors = true
+    }
+
+    if (!formState.email.trim()) {
+      errors.email = "Please enter your email address"
+      hasErrors = true
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formState.email)) {
+      errors.email = "Please enter a valid email address"
+      hasErrors = true
+    }
+
+    if (!formState.phone.trim()) {
+      errors.phone = "Please enter your phone number"
+      hasErrors = true
+    } else if (!/^[0-9]{10}$/.test(formState.phone.replace(/[\s-]/g, ''))) {
+      errors.phone = "Please enter a valid 10-digit phone number"
+      hasErrors = true
+    }
+
+    if (hasErrors) {
+      setFieldErrors(errors)
       return
     }
 
@@ -175,11 +206,17 @@ export default function ContactSection() {
                         type="text"
                         required
                         value={formState.name}
-                        onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                        className="w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                        onChange={(e) => {
+                          setFormState({ ...formState, name: e.target.value })
+                          if (fieldErrors.name) setFieldErrors({ ...fieldErrors, name: "" })
+                        }}
+                        className={`w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border ${fieldErrors.name ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'} focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400`}
                         placeholder="Your name"
                         disabled={loading}
                       />
+                      {fieldErrors.name && (
+                        <p className="mt-1 text-apple-footnote text-red-500 dark:text-red-400">{fieldErrors.name}</p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-apple-callout font-semibold text-[#1a365d] dark:text-gray-100 mb-2">
@@ -189,11 +226,17 @@ export default function ContactSection() {
                         type="tel"
                         required
                         value={formState.phone}
-                        onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                        className="w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                        onChange={(e) => {
+                          setFormState({ ...formState, phone: e.target.value })
+                          if (fieldErrors.phone) setFieldErrors({ ...fieldErrors, phone: "" })
+                        }}
+                        className={`w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border ${fieldErrors.phone ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'} focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400`}
                         placeholder="Your phone"
                         disabled={loading}
                       />
+                      {fieldErrors.phone && (
+                        <p className="mt-1 text-apple-footnote text-red-500 dark:text-red-400">{fieldErrors.phone}</p>
+                      )}
                     </div>
                   </div>
 
@@ -205,11 +248,17 @@ export default function ContactSection() {
                       type="email"
                       required
                       value={formState.email}
-                      onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      className="w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-gray-700 focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                      onChange={(e) => {
+                        setFormState({ ...formState, email: e.target.value })
+                        if (fieldErrors.email) setFieldErrors({ ...fieldErrors, email: "" })
+                      }}
+                      className={`w-full px-4 py-3 bg-white dark:bg-zinc-900 rounded-xl border ${fieldErrors.email ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'} focus:border-[#0E74D2] dark:focus:border-blue-500 focus:ring-2 focus:ring-[#0E74D2]/20 dark:focus:ring-blue-500/20 outline-none transition-all text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400`}
                       placeholder="your@email.com"
                       disabled={loading}
                     />
+                    {fieldErrors.email && (
+                      <p className="mt-1 text-apple-footnote text-red-500 dark:text-red-400">{fieldErrors.email}</p>
+                    )}
                   </div>
 
                   <div>
