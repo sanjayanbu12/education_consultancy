@@ -131,7 +131,7 @@ export default function Header() {
                 className="h-12 w-auto object-cover object-center"
                 style={{ objectPosition: 'center' }}
               />
-              <div className="hidden sm:flex flex-col mt-3">
+              <div className="hidden sm:flex flex-col mt-4">
 
                 <span className="text-sm font-semibold text-gray-900 dark:text-white hidden sm:inline">
                   AL-HUDA
