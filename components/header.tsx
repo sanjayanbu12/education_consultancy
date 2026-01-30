@@ -126,11 +126,12 @@ export default function Header() {
             {/* Logo - Minimal */}
             <Link href="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity z-50">
               <img
-                src="/images/3rd-ed-logo-final-removebg-preview.png"
+                src="/images/alhuda.png"
                 alt="AL-HUDA"
-                className="h-7 w-auto"
+                className="h-12 w-auto object-cover object-center"
+                style={{ objectPosition: 'center' }}
               />
-              <div className="hidden sm:flex flex-col">
+              <div className="hidden sm:flex flex-col mt-3">
 
                 <span className="text-sm font-semibold text-gray-900 dark:text-white hidden sm:inline">
                   AL-HUDA

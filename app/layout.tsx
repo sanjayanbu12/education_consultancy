@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <head>
-        <link rel="icon" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3rd_ED_logo_final-removebg-preview-EmZWbBGyrR3ayEYVNsJmqvnvgjhtt3.png" />
+        <link rel="icon" href="/images/alhuda.png" />
       </head>
 
       <body className="antialiased">

@@ -23,11 +23,11 @@ export default function PageLoader() {
                 {/* Logo with professional animation */}
                 <div className="animate-fade-in-scale">
                     <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3rd_ED_logo_final-removebg-preview-EmZWbBGyrR3ayEYVNsJmqvnvgjhtt3.png"
+                        src="/images/alhuda.png"
                         alt="AL-HUDA Educational Consultancy"
-                        width={200}
-                        height={200}
-                        className="object-contain"
+                        width={300}
+                        height={300}
+                        className="object-cover"
                         priority
                     />
                 </div>
